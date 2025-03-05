@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Blockchain in Diagnostics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; text-align: center;width: 100%;overflow: none;">
+
+    <!-- Navigation Bar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+        
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+            <div>
+                <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+                <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div style="display: flex; gap: 15px;">
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Blood Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#blood-records" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">BloodRecords▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#diagnostics" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#x-ray" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="#ultrasound" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="#mri" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#general-physicians" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#patients" onclick="openForm()" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#insights" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Insights</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="#contact" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+        <!-- overlay -->
+        <div id="overlay" style="display: none; position: fixed; top: 15; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; overflow-y: auto;" onclick="closeForm(event)">
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; width: 100%; margin: 20px auto;" onclick="event.stopPropagation()">
+                <button onclick="closeForm()" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; float: right; font-size: 16px; border-radius: 5px;">X</button>
+                <h2 style="text-align: center; color: #333;">Patient Registration Form</h2>
+                <form action="#" method="POST">
+                    <label for="name" style="font-weight: bold;">Full Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="aadhar" style="font-weight: bold;">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" title="Aadhar must be 12 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="phone" style="font-weight: bold;">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number must be 10 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="email" style="font-weight: bold;">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="address" style="font-weight: bold;">Address:</label>
+                    <textarea id="address" name="address" required rows="3" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                    
+                    <label for="disease" style="font-weight: bold;">Disease:</label>
+                    <input type="text" id="disease" name="disease" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="dob" style="font-weight: bold;">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="gender" style="font-weight: bold;">Gender:</label>
+                    <select id="gender" name="gender" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    
+                    <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            function openForm() {
+                document.getElementById("overlay").style.display = "flex";
+            }
+            function closeForm(event) {
+                if (!event || event.target === document.getElementById("overlay")) {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            }
+        </script>
+    </nav>
+
+
+    <div style="margin: auto; padding: 20px; background: white; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 10px;width: 100%;">
+        <h1 style="color: #333; font-size: 36px;">AI & Blockchain in Diagnostics</h1>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 30px; margin-bottom: 50px; border-radius: 12px; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e3f2fd; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://cdn.prod.website-files.com/665f065a950e89499f5bd298/66798a71e7f90468366f30fb_Screenshot%202024-06-24%20at%2011.01.47.png" alt="AI Image Analysis" style="width: 100%; border-radius: 12px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi7m8G9I5D3opSzCiOz-_tdzeBmiHgoc-pvA&s" alt="AI Image" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #01579b; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Automated Image Analysis</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">AI-powered image analysis can detect abnormalities in X-rays, MRIs, and CT scans with high accuracy, reducing the workload on radiologists. By leveraging deep learning algorithms, AI enhances early disease detection, improves diagnostic precision, and helps medical professionals make informed decisions faster.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Moreover, AI-powered imaging reduces human error and ensures consistent diagnosis across various healthcare institutions, improving patient safety and treatment outcomes.</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; padding: 30px; margin-bottom: 50px; border-radius: 12px; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e8f5e9; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://www.intertek.com/siteassets/blogs/2024-04-16-blog-widebanner.jpg" alt="Predictive Diagnostics" style="width: 100%; border-radius: 12px;">
+                <img src="https://www.alcimed.com/wp-content/uploads/2023/09/ai-medical-imaging-1.jpg" alt="Predictive AI" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #1b5e20; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Predictive Diagnostics</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">By analyzing patient history, genetics, and lifestyle factors, AI models predict disease risks with remarkable precision. This enables healthcare providers to offer personalized preventive care, identify high-risk patients, and intervene before severe conditions develop.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Predictive diagnostics also help in population health management by identifying trends in disease outbreaks, allowing authorities to take proactive measures to prevent widespread infections.</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 30px; margin-bottom: 50px; border-radius: 12px; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e3f2fd; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQFopEys-D8VMQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1737018298668?e=2147483647&v=beta&t=mcVOxhG_-tM8hJdbwvskz2soh85wNkJdPIDXXU5BFdQ" alt="Chatbots in Healthcare" style="width: 100%; border-radius: 12px;">
+                <img src="https://technology.online.city.ac.uk/media/mageplaza/blog/post/c/i/city_ai_in_healthcare_1_1.jpg" alt="Chatbots in Healthcare" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #007bff; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Chatbots & Virtual Assistants</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">AI-powered chatbots enhance patient engagement by answering queries, scheduling appointments, and providing medical guidance. These virtual assistants reduce administrative burdens, improve patient experience, and ensure accessibility to healthcare services 24/7.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Additionally, chatbots can provide mental health support, reminding patients to take medications, and offering symptom assessments, making healthcare more interactive and efficient.</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 30px; margin-bottom: 50px; border-radius: 12px; flex-direction: row-reverse; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e3f2fd; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://www.aha.org/sites/default/files/styles/900x400/public/2018-08/IA-technology-ai.jpg?itok=znwQtYBl" alt="Secure Patient Records" style="width: 100%; border-radius: 12px;">
+                <img src="https://www.dell.com/wp-uploads/2024/09/iStock-1483794083-640x461.jpg" alt="Secure Patient Records" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #007bff; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Secure Patient Records</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Blockchain technology ensures the security and integrity of patient records, preventing data breaches and unauthorized access. With decentralized storage and encryption, sensitive medical information remains protected, fostering trust between patients and healthcare providers.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Furthermore, secure records enable seamless data sharing between different healthcare providers, ensuring accurate medical histories and preventing errors in treatments.</p>
+            </div>
+        </div>
+        
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 30px; margin-bottom: 50px; border-radius: 12px; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e3f2fd; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://cdn1.expresscomputer.in/wp-content/uploads/2020/07/14184654/healthcare-it-healthtech-ec.jpg" alt="Predictive Diagnostics" style="width: 100%; border-radius: 12px;">
+                <img src="https://www.pymnts.com/wp-content/uploads/2021/11/health-technology.jpg?w=457" alt="Healthcare Data Sharing" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #007bff; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Interoperability in Healthcare</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Blockchain technology enables seamless and secure data sharing among different healthcare providers, including hospitals, clinics, and specialists. This ensures a unified and real-time patient record system, reducing redundant tests and improving treatment accuracy. By eliminating data silos, interoperability fosters coordinated care, improves patient outcomes, and enhances medical research capabilities.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Additionally, blockchain-powered interoperability ensures compliance with healthcare regulations like HIPAA and GDPR, maintaining privacy while granting authorized personnel access to crucial medical data.</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 30px; margin-bottom: 50px; border-radius: 12px; flex-direction: row-reverse; box-shadow: 0px 6px 12px rgba(0,0,0,0.15); background: #e3f2fd; font-family: 'Arial', sans-serif;">
+            <div class="carousel" style="width: 50%;">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/636063ae49e46108de0472a1/Medical-technology-concept--Remote-medicine--Electronic-medical-record-/960x0.jpg?format=jpg&width=960" alt="Predictive Diagnostics" style="width: 100%; border-radius: 12px;">
+                <img src="https://www.psychologs.com/wp-content/uploads/2023/05/Health-experts-are-warning-about-the-dangers-of-AI-.jpg" alt="Smart Contracts in Healthcare" style="width: 100%; border-radius: 12px; margin-top: 10px;">
+            </div>
+            <div style="width: 45%; text-align: left;">
+                <h2 style="color: #007bff; font-size: 26px; font-weight: bold; margin-bottom: 15px;">Smart Contracts in Healthcare</h2>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">Smart contracts are self-executing agreements powered by blockchain, revolutionizing healthcare operations. They automate processes such as insurance claims, diagnostic report verifications, and patient consent management. By eliminating intermediaries, smart contracts reduce administrative burdens, minimize fraud, and expedite service delivery.</p>
+                <p style="color: #333; font-size: 18px; line-height: 1.6;">For example, insurance companies can instantly validate treatment records and process claims without manual intervention, ensuring faster reimbursements. In clinical trials, smart contracts help enforce research protocols, ensuring data transparency and regulatory compliance.</p>
+            </div>
+        </div>
+        
+
+        <script>
+            $(document).ready(function(){
+                $('.carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                });
+            });
+        </script>
+    </div>
+    
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
+        
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+  
+
+
+    <!-- footer -->
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+  
+</body>
+</html>

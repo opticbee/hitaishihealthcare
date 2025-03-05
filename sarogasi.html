@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services & Categories</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://www.safefertilitygroup.com/storage/default/bg/bg-blue2.png') no-repeat center;
+            background-size: cover;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .text-content {
+            max-width: 50%;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .highlight {
+            color: #0099ff;
+            font-weight: bold;
+        }
+        .explore-btn {
+            background: linear-gradient(to right, #4a90e2, #56ccf2);
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .explore-btn:hover {
+            opacity: 0.8;
+        }
+        .image-container img {
+            max-height: 200px;
+        }
+        .cards-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        .card {
+            position: relative;
+            background-color: white;
+            border-radius: 50px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 50px;
+        }
+        .card h2 {
+            color: #0096FF;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        .card-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 150, 255, 0.8);
+            color: white;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .card:hover .card-details {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+        
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+            <div>
+                <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+                <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div style="display: flex; gap: 15px;">
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Blood Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#blood-records" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">BloodRecords▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#diagnostics" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#x-ray" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="#ultrasound" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="#mri" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#general-physicians" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#patients" onclick="openForm()" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#insights" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Insights</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="#contact" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+        <!-- overlay -->
+        <div id="overlay" style="display: none; position: fixed; top: 15; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; overflow-y: auto;" onclick="closeForm(event)">
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; width: 100%; margin: 20px auto;" onclick="event.stopPropagation()">
+                <button onclick="closeForm()" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; float: right; font-size: 16px; border-radius: 5px;">X</button>
+                <h2 style="text-align: center; color: #333;">Patient Registration Form</h2>
+                <form action="#" method="POST">
+                    <label for="name" style="font-weight: bold;">Full Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="aadhar" style="font-weight: bold;">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" title="Aadhar must be 12 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="phone" style="font-weight: bold;">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number must be 10 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="email" style="font-weight: bold;">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="address" style="font-weight: bold;">Address:</label>
+                    <textarea id="address" name="address" required rows="3" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                    
+                    <label for="disease" style="font-weight: bold;">Disease:</label>
+                    <input type="text" id="disease" name="disease" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="dob" style="font-weight: bold;">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="gender" style="font-weight: bold;">Gender:</label>
+                    <select id="gender" name="gender" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    
+                    <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            function openForm() {
+                document.getElementById("overlay").style.display = "flex";
+            }
+            function closeForm(event) {
+                if (!event || event.target === document.getElementById("overlay")) {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            }
+        </script>
+    </nav>
+
+
+    <!-- about sarogasi -->
+    <div style="position: relative; max-width: 100%; height: 500px; background: url('https://en.ermateb.com/uploads/medicines/services/615-en/files/0ezFzknJefkcGdmZTPqz2NUxdgRhB5Unl1i6pgjK.webp') no-repeat center; background-size: cover; display: flex; align-items: center; justify-content: flex-start; padding: 50px;">
+
+        <!-- Left Content -->
+        <div style="max-width: 50%;  padding: 30px; border-radius: 10px; ">
+            <h1 style="font-size: 40px; color: #222; margin: 0;">Surrogacy: A Journey to Parenthood</h1>
+            <p style="font-size: 18px; color: #555; margin: 10px 0;">
+                Experience the joy of parenthood with our expert-guided 
+                <span style="color: #55c1f5; font-weight: bold;">surrogacy program</span>.  
+                Our compassionate and highly skilled team ensures a safe, ethical, and successful journey for intended parents.
+            </p>
+    
+            <ul style="font-size: 16px; color: #444; margin-top: 20px;">
+                <li>✅ High Success Rates</li>
+                <li>✅ Ethical and Transparent Process</li>
+                <li>✅ Personalized Support for Parents</li>
+            </ul>
+    
+            <!-- Button -->
+            <div style="margin-top: 30px;">
+                <button style="background: #55c1f5; color: #fff; font-size: 16px; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer;">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    
+    </div>
+    
+
+
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Our Services</h1>
+            <p>We are <span class="highlight">committed</span> to ongoing education in fertility for our medical team. Allowing us to keep in pace is.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://img.freepik.com/premium-vector/blue-dna-helix-eps-vector-illustration-science-genetics_1380826-3127.jpg" alt="DNA Structure">
+            <a href="#" class="explore-btn">Explore</a>
+        </div>
+    </div>
+
+    <div class="cards-section">
+        <div class="card">
+            <h2>FOR WOMEN</h2>
+            <img src="https://images.pexels.com/photos/15621856/pexels-photo-15621856/free-photo-of-close-up-of-pregnant-woman-stomach.jpeg" alt="For Women">
+            <div class="card-details">
+                <h2>FOR WOMEN</h2>
+                <ul>
+                    <li>IVF/ICSI</li>
+                    <li>IUI</li>
+                    <li>Egg Freezing</li>
+                    <li>Embryo Transfer</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>FOR MEN</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX-5HJz88wpv7bCoHggDTIgwHzLPuEmeJGOg&s" alt="For Men">
+            <div class="card-details">
+                <h2>FOR MEN</h2>
+                <ul>
+                    <li>TESE/PESA</li>
+                    <li>IMSI</li>
+                    <li>MACS Sperm</li>
+                    <li>Sperm Analysis</li>
+                    <li>Sperm Freezing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>OTHERS</h2>
+            <img src="https://images.pexels.com/photos/8376314/pexels-photo-8376314.jpeg" alt="Others">
+            <div class="card-details">
+                <h2>OTHERS</h2>
+                <ul>
+                    <li>Couple Check-up</li>
+                    <li>EmbryoScope Plus</li>
+                    <li>PGT-A</li>
+                    <li>PGT-M</li>
+                    <li>Acupuncture</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <!-- 2boxes -->
+    <div style="display: flex; margin-left: 10%; width: 80%; max-width: 1100px; border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        
+        <!-- Left Side -->
+        <div style="width: 40%; background: #fff; padding: 40px;  border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+            <h1 style="font-size: 28px; color: #222; margin: 0;">Your Journey to Parenthood Starts Here</h1>
+            <p style="font-size: 16px; color: #666; margin-top: 5px;">Expert care, compassionate support, and advanced fertility solutions to help you build the family of your dreams.</p>
+            <div style="display: flex; align-items: center; margin-top: 20px;">
+                <span style="font-size: 50px; font-weight: bold; color: #007bff;"></span>
+                <p style="font-size: 18px; font-weight: bold; color: #333; margin-left: 10px;">Hope. Science. Success. Take the first step today!</p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div style="width: 60%; background: linear-gradient(to right, #4caefe, #1688df); color: #fff; padding: 50px; position: relative; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+            <h2 style="font-size: 28px; font-weight: bold; margin: 0;">Let’s Start</h2>
+            <p style="font-size: 16px; margin-top: 10px;">Your journey to parenthood together with our specialist team. <br>Bringing You Closer to Parenthood, One Step at a Time!</p>
+
+            <!-- Buttons -->
+            <div style="margin-top: 20px; display: flex; align-items: center;">
+                <button style="font-size: 16px; font-weight: bold; padding: 12px 24px; border-radius: 30px; cursor: pointer; transition: 0.3s; background: #fff; color: #007bff; border: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); margin-right: 10px;">
+                    Make Appointment
+                </button>
+                <button style="font-size: 16px; font-weight: bold; padding: 12px 24px; border-radius: 30px; cursor: pointer; transition: 0.3s; background: transparent; color: #fff; border: 2px solid #fff;">
+                    Contact Us
+                </button>
+            </div>
+
+            <!-- Location Pin Icon -->
+            <div style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); background: #007bff; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://cdn-icons-png.flaticon.com/512/3179/3179068.png" alt="Location Icon" style="width: 50px; height: 50px;">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- What's New Section -->
+    <div style="margin-top: 60px; padding: 50px 60px; background: linear-gradient(to bottom, #ffffff, #eaf4fc); position: relative;">
+        <h1 style="font-size: 36px; font-weight: bold; color: #333; margin: 0;">What’s New</h1>
+        <p style="font-size: 18px; color: #555; margin-top: 10px;">
+            Researchers at SAFE are composed of veteran researchers to 
+            respond immediately to any case procedure.
+        </p>
+
+        <!-- Tabs -->
+        <div style="display: flex; justify-content: center; margin-top: 30px; border-bottom: 2px solid #ddd;">
+            <div onclick="showSection('news', this)" style="padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; color: #000; position: relative; border-bottom: 2px solid #0066cc;">
+                SAFE NEWS
+            </div>
+            <div onclick="showSection('articles', this)" style="padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; color: #999; position: relative;">
+                ARTICLES
+            </div>
+            <div onclick="showSection('research', this)" style="padding: 15px 20px; font-size: 16px; font-weight: bold; cursor: pointer; color: #999; position: relative;">
+                SAFE RESEARCH
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <!-- SAFE NEWS Section -->
+        <div id="news" style="position: relative; width: 100%; max-width: 100vw; height: 400px; overflow: hidden;">
+
+            <!-- Background Image -->
+            <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202406/66792f8fd6145-pregnancy-262712782-16x9.jpeg?size=1200:675" 
+                alt="Surrogacy Safety" 
+                style="width: 100%; height: 100%; object-fit: cover;">
+
+            <!-- Text Overlay on Right Side -->
+            <div style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%);  padding: 20px; border-radius: 8px; max-width: 40%; color: white;">
+                <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 15px;">Surrogacy Safety: What You Need to Know</h2>
+                <p style="font-size: 18px; line-height: 1.6; color: #fff;">
+                    Surrogacy is a complex yet beautiful journey, but safety is a top priority.  
+                    Ensuring medical, legal, and emotional preparedness is crucial for both  
+                    surrogates and intended parents. Proper screening, ethical guidelines, and  
+                    legal protection help make the process safe and successful.
+                </p>
+                <button style="margin-top: 20px; padding: 10px 20px; font-size: 16px; background: #0066cc; color: #fff; border: none; cursor: pointer; border-radius: 5px;">Read More</button>
+            </div>
+
+        </div>
+
+        <!-- Articles Section -->
+        <div id="articles" style="display: none; margin-top: 20px; padding: 20px; background: #f5f5f5; border-radius: 5px; text-align: center;">
+
+            <h2 style="font-size: 28px; font-weight: bold; color: #333; margin-bottom: 20px;">Surrogacy Articles</h2>
+
+            <!-- Articles Grid -->
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+                <!-- Article 1 -->
+                <div style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 300px; text-align: center;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsEgaUisa2NFOnFORscipQyHwE3hp5Nei6-Q&s" alt="Surrogacy Journey" style="width: 100%; border-radius: 5px;">
+                    <h3 style="font-size: 20px; margin-top: 10px;">The Surrogacy Journey</h3>
+                    <p style="font-size: 16px; color: #555; margin-top: 5px;">
+                        Understanding the steps involved in the surrogacy process from start to finish.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 15px; font-size: 14px; background: #0066cc; color: #fff; border: none; cursor: pointer; border-radius: 5px;">Read More</button>
+                </div>
+
+                <!-- Article 2 -->
+                <div style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 300px; text-align: center;">
+                    <img src="https://www.rmany.com/media/pages/blog/gestational-surrogacy-101-medical-aspects-for-the-surrogate/5219b3e605-1729794589/shutterstock_448888519.jpg" alt="Medical Aspects of Surrogacy" style="width: 100%; border-radius: 5px;">
+                    <h3 style="font-size: 20px; margin-top: 10px;">Medical Aspects of Surrogacy</h3>
+                    <p style="font-size: 16px; color: #555; margin-top: 5px;">
+                        Learn about the medical procedures and health considerations in surrogacy.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 15px; font-size: 14px; background: #0066cc; color: #fff; border: none; cursor: pointer; border-radius: 5px;">Read More</button>
+                </div>
+
+                <!-- Article 3 -->
+                <div style="background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 300px; text-align: center;">
+                    <img src="https://risaaivf.com/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-16-at-6.26.02-PM.jpeg" alt="Legal Considerations" style="width: 100%; border-radius: 5px;">
+                    <h3 style="font-size: 20px; margin-top: 10px;">Legal Considerations</h3>
+                    <p style="font-size: 16px; color: #555; margin-top: 5px;">
+                        A guide to understanding the legal aspects of surrogacy agreements and rights.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 15px; font-size: 14px; background: #0066cc; color: #fff; border: none; cursor: pointer; border-radius: 5px;">Read More</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Research Section -->
+        <div id="research" style="display: none; margin-top: 20px; padding: 50px; background: linear-gradient(to right, #ffffff, #eaf4fc); position: relative; display: flex; align-items: center; justify-content: space-between; gap: 30px;">
+
+            <!-- Left Side: Text Content -->
+            <div style="flex: 1; max-width: 50%;">
+                <h2 style="font-size: 28px; font-weight: bold; color: #333; margin-bottom: 15px;">Latest Research on Surrogacy</h2>
+                <p style="font-size: 18px; color: #555; line-height: 1.6;">
+                    Explore SAFE's latest research findings on surrogacy,  
+                    covering medical advancements, legal frameworks, and ethical considerations.  
+                    Learn about how surrogacy has evolved and the impact it has on families worldwide.
+                </p>
+
+                <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                    <li style="font-size: 16px; color: #555; margin-bottom: 5px;">✔ Medical Advances in IVF</li>
+                    <li style="font-size: 16px; color: #555; margin-bottom: 5px;">✔ Global Legal Frameworks</li>
+                    <li style="font-size: 16px; color: #555; margin-bottom: 5px;">✔ Ethical Considerations</li>
+                </ul>
+
+                <button style="margin-top: 20px; padding: 10px 20px; font-size: 16px; background: #0066cc; color: #fff; border: none; cursor: pointer; border-radius: 5px;">View More</button>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div style="flex: 1; text-align: right;">
+                <img src="https://scitechdaily.com/images/Surrogate-Mother.jpg" alt="Surrogacy Research" style="width: 400px; border-radius: 10px;">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId, element) {
+            // Hide all sections
+            document.getElementById('news').style.display = 'none';
+            document.getElementById('articles').style.display = 'none';
+            document.getElementById('research').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Reset tab colors
+            let tabs = document.querySelectorAll("div[onclick^='showSection']");
+            tabs.forEach(tab => {
+                tab.style.color = "#999";
+                tab.style.borderBottom = "none";
+            });
+
+            // Highlight the active tab
+            element.style.color = "#000";
+            element.style.borderBottom = "2px solid #0066cc";
+        }
+    </script>
+
+
+    <!-- success rate -->
+    <div style="margin-top: 30px; display: flex; align-items: center; padding: 50px; background: linear-gradient(to right, #fff, #f2faff);">
+        
+        <!-- Left Content -->
+        <div style="flex: 1; padding-right: 50px;">
+            <h1 style="font-size: 40px; color: #222; margin: 0;">Success Rates</h1>
+            <p style="font-size: 18px; color: #555; margin: 10px 0;">
+                As important as the medical staff in the ovulation procedure, 
+                the <span style="color: #55c1f5; font-weight: bold;">culture skill</span> is.
+            </p>
+
+            <div style="display: flex; align-items: center; margin-top: 30px;">
+                <!-- 66% Box -->
+                <div style="text-align: center; margin-right: 40px;">
+                    <span style="font-size: 60px; font-weight: bold; color: #55c1f5;">66%</span>
+                    <p style="font-size: 16px; color: #222; margin-top: 5px;">IVF/ICSI (1 Embryo)</p>
+                </div>
+
+                <!-- 75% Box -->
+                <div style="text-align: center;">
+                    <span style="font-size: 60px; font-weight: bold; color: #55c1f5;">75%</span>
+                    <p style="font-size: 16px; color: #222; margin-top: 5px;">IVF/ICSi-illumina NGS (1 Embryo)</p>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div style="margin-top: 30px;">
+                <button style="background: #55c1f5; color: #fff; font-size: 16px; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer;">
+                    Explore
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Image -->
+        <div style="flex: 1;">
+            <img src="https://t4.ftcdn.net/jpg/02/72/22/01/360_F_272220138_vj2NbNbpuZoIktW6Q6YTyWXWTI3GERf0.jpg" alt="Medical Equipment" style="width: 100%; max-width: 500px; border-radius: 10px;">
+        </div>
+
+    </div>
+
+
+    <!-- chatbot -->
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
+        
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+
+
+    <!-- footer -->
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p style="color: #fff;">© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+    <!-- Navigation Bar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+        
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+            <div>
+                <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+                <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div style="display: flex; gap: 15px;">
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Blood Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#blood-records" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">BloodRecords▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#diagnostics" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#x-ray" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="#ultrasound" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="#mri" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#general-physicians" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility▼</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#patients" onclick="openForm()" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="#insights" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Insights</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="#contact" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+        <!-- overlay -->
+        <div id="overlay" style="display: none; position: fixed; top: 15; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; overflow-y: auto;" onclick="closeForm(event)">
+            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; width: 100%; margin: 20px auto;" onclick="event.stopPropagation()">
+                <button onclick="closeForm()" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; float: right; font-size: 16px; border-radius: 5px;">X</button>
+                <h2 style="text-align: center; color: #333;">Patient Registration Form</h2>
+                <form action="#" method="POST">
+                    <label for="name" style="font-weight: bold;">Full Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="aadhar" style="font-weight: bold;">Aadhar Number:</label>
+                    <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" title="Aadhar must be 12 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="phone" style="font-weight: bold;">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number must be 10 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="email" style="font-weight: bold;">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="address" style="font-weight: bold;">Address:</label>
+                    <textarea id="address" name="address" required rows="3" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                    
+                    <label for="disease" style="font-weight: bold;">Disease:</label>
+                    <input type="text" id="disease" name="disease" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="dob" style="font-weight: bold;">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                    
+                    <label for="gender" style="font-weight: bold;">Gender:</label>
+                    <select id="gender" name="gender" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    
+                    <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            function openForm() {
+                document.getElementById("overlay").style.display = "flex";
+            }
+            function closeForm(event) {
+                if (!event || event.target === document.getElementById("overlay")) {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            }
+        </script>
+    </nav>
+
+    <!-- Main Section -->
+    <main style="position: relative; padding: 6rem 2rem; max-width: 100%; margin: 0 auto; background-image: url(https://img.freepik.com/premium-photo/futuristic-hospital-radiology-room-with-mri-scanner-xray-machine-robotic-surgical-equipment-concept-medical-technology-radiology-room-futuristic-healthcare-mri-xray-machines_864588-70800.jpg); background-size: cover; background-position: center; color: #fff;">
+        <!-- Overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+        
+        <!-- Content -->
+        <h1 style="position: relative; z-index: 1; color: #ffffff; margin-bottom: 2rem; padding-bottom: 0.5rem; text-align: center; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to Hitaishi Healthcare Services</h1>
+    </main>
+
+
+    <!-- search clinic -->
+    <div style="font-family: Arial, sans-serif; text-align: center;">
+
+        <!-- Search Section -->
+        <div style="width: 80%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #b71c33;">Find Nearby Clinics</h2>
+            
+            <input type="text" id="city" placeholder="Enter City" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" id="area" placeholder="Enter Area" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" id="pincode" placeholder="Enter Pincode" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            
+            <button onclick="searchClinics()" style="padding: 10px 20px; margin-top: 10px; background: #b71c33; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Search
+            </button>
+        </div>
+    
+        <!-- Clinics Section (Hidden Initially) -->
+        <div id="clinicSection" style="display: none; margin-top: 20px;">
+            <h2 style="color: #b71c33;">Nearby Clinics</h2>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    
+                <!-- Clinic 1 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 1" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">City Health Clinic</h3>
+                    <p style="color: #555;">Best healthcare services in your area.</p>
+                </div>
+    
+                <!-- Clinic 2 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 2" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">Wellness Center</h3>
+                    <p style="color: #555;">Affordable and quality healthcare.</p>
+                </div>
+    
+                <!-- Clinic 3 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 3" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">Sunrise Hospital</h3>
+                    <p style="color: #555;">Experienced doctors and modern facilities.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function searchClinics() {
+                var city = document.getElementById("city").value;
+                var area = document.getElementById("area").value;
+                var pincode = document.getElementById("pincode").value;
+    
+                if (city && area && pincode) {
+                    document.getElementById("clinicSection").style.display = "block";
+                } else {
+                    alert("Please enter all fields before searching!");
+                }
+            }
+        </script>
+    
+    </div>
+
+    <!-- test's -->
+    <div style="font-family: Arial, sans-serif; text-align: center; background-color: #fff; margin: 0; padding: 0;">
+
+        <h1 style="color: #00A6A6; font-size: 28px; padding-top: 30px;">Book Lab Tests Online</h1>
+    
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; margin: auto;">
+            <!-- Lab Test Items -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_diabetes_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Diabetes</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_pregnancy_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Pregnancy</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_thyroid_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Thyroid</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_liver_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Liver</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_covid_disease_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>COVID</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_prostate_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Prostate</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_fertility_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Fertility</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_bones_joints_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Bone</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_gastro_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Gastro</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_cervix_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Cervix</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_heart_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Heart</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_kidney_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Kidney</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_cancer_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Cancer</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_breast_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Breast</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_vitamins_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Vitamins</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_tuberculosis_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Tuberculosis (TB)</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_anemia_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Anemia</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_lungs_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Lungs</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_fever_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Fever</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_allergy_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <span>Allergy</span>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+<!-- asdfg -->
+    <div>
+        <!-- Services Section -->
+        <div style="text-align: center; padding: 50px 20px;">
+            <h2 style="color: #3E2E92; font-size: 26px; font-weight: bold; margin-bottom: 20px;">Our Services</h2>
+
+            <!-- Service Category Buttons -->
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+                <button style="border: 2px solid #000; background: white; padding: 10px 20px; border-radius: 30px; font-size: 16px; cursor: pointer;">Laboratory Services</button>
+                <button style="border: 2px solid #000; background: white; padding: 10px 20px; border-radius: 30px; font-size: 16px; cursor: pointer;">Radiology Services</button>
+                <button style="border: 2px solid #000; background: white; padding: 10px 20px; border-radius: 30px; font-size: 16px; cursor: pointer;">Advanced Radiology Services</button>
+            </div>
+
+            <!-- Cards Container -->
+            <div style=" margin-left: 15px; display: flex; flex-wrap: nowrap; overflow-x: auto; justify-content: center;  gap: 20px; max-width: 100%;">
+                
+                <!-- Card 1 -->
+                <div style="background: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+                    <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">CLINICAL PATHOLOGY</h3>
+                    <p style="font-size: 14px; color: #333;">Clinical Pathology is a highly specialized branch in health care. Its realm is vast and variegated. Also...</p>
+                    <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+                </div>
+
+                <!-- Card 2 -->
+                <div style="background: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+                    <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">MICROBIOLOGY</h3>
+                    <p style="font-size: 14px; color: #333;">In the unseen landscape teeming beneath the microscope tip and beyond the naked eye lies the...</p>
+                    <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+                </div>
+
+                <!-- Card 3 -->
+                <div style="background: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+                    <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">HAEMATOLOGY</h3>
+                    <p style="font-size: 14px; color: #333;">The domain of Hematology is a pivotal field in medical science dedicated to the comprehensive...</p>
+                    <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+                </div>
+
+                <!-- Card 4 -->
+                <div style="background: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+                    <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">SEROLOGY</h3>
+                    <p style="font-size: 14px; color: #333;">Serology, a cornerstone of diagnostic medicine, meticulously examines antibodies in bodily fluids...</p>
+                    <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+                </div>
+
+            </div>
+
+            <!-- View More -->
+            <div style="text-align: right; margin-right: 10%; margin-top: 20px;">
+                <a href="#" style="text-decoration: none; color: #0097A7; font-weight: bold; font-size: 16px;">VIEW MORE</a>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <!-- sort by -->
+    <div>
+        <style>
+            .hidden {
+                display: none;
+            }
+            .test-price-item {
+                border: 2px solid #d1c4e9;
+                border-radius: 8px;
+                padding: 20px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 150px;
+            }
+            .test-price-item div {
+                font-size: 16px;
+                font-weight: bold;
+                color: #000;
+            }
+            .test-price-item div.price {
+                font-size: 18px;
+                font-weight: bold;
+                color: #2e3192;
+            }
+            .test-price-item a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #17b8c2;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 15px;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                border: 1px solid #17b8c2;
+            }
+            .test-price-item a img {
+                width: 14px;
+                margin-left: 5px;
+            }
+        </style>
+        <!-- Sort by and Search Section -->
+        <div style="background-color: #fff; padding-top: 90px; padding-left: 160px; padding-bottom: 60px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 80%; padding: 15px; background: #f0f0f0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                <!-- Title -->
+                <div style="font-size: 24px; font-weight: bold; color: #2e3192; margin-left: 10px;">Search a Test</div>
+            
+                <!-- Search Box -->
+                <input type="text" id="search-box" placeholder="Search for test and health checkup" 
+                    style="border: 2px solid #17b8c2; padding: 12px; width: 350px; font-size: 16px; color: #333; border-radius: 6px; outline: none; transition: 0.3s ease-in-out;"
+                    onfocus="this.style.borderColor='#0fa3af';" onblur="this.style.borderColor='#17b8c2';">
+            
+                <!-- Dropdown for Sorting -->
+                <select id="sort-by" style="background: #f9f9f9; padding: 12px; border-radius: 6px; border: 2px solid #ddd; cursor: pointer; font-size: 16px; outline: none; transition: 0.3s ease-in-out;">
+                    <option value="popular">Sort by: Popular ▼</option>
+                    <option value="price-low-to-high">Sort by: Price (Low to High)</option>
+                    <option value="price-high-to-low">Sort by: Price (High to Low)</option>
+                    <option value="ratings">Sort by: Ratings</option>
+                </select>
+            </div>
+        </div>
+    
+        <!-- Test Prices Grid -->
+        <div id="test-prices-grid" style="margin-left: 15px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; justify-content: center; max-width: 1200px; margin: auto;">
+            <!-- Test items will be dynamically populated here -->
+        </div>
+    
+        <script>
+            // Sample data for tests
+            const tests = [
+                { name: "FASTING PLASMA GLUCOSE", price: 120, rating: 4.5 },
+                { name: "COMPLETE BLOOD PICTURE (CBP)", price: 390, rating: 4.2 },
+                { name: "CREATININE", price: 260, rating: 4.0 },
+                { name: "POST LUNCH GLUCOSE", price: 120, rating: 3.8 },
+                { name: "GLYCATED HEMOGLOBIN (HbA1c)", price: 580, rating: 4.7 },
+                { name: "THYROID PROFILE", price: 650, rating: 4.6 },
+                { name: "LIPID PROFILE", price: 750, rating: 4.4 },
+                { name: "COMPLETE URINE EXAMINATION (CUE)", price: 150, rating: 3.9 },
+                { name: "LIVER FUNCTION TEST (LFT-A)", price: 450, rating: 4.1 },
+                { name: "ELECTROCARDIOGRAM (ECG)", price: 250, rating: 4.3 },
+                { name: "THYROID STIMULATING HORMONE (TSH)- Ultrasensitive", price: 250, rating: 4.0 },
+                { name: "ERYTHROCYTE SEDIMENTATION RATE (ESR)", price: 290, rating: 3.7 },
+                { name: "UREA", price: 150, rating: 3.5 },
+                { name: "X-CHEST PA VIEW", price: 250, rating: 4.2 },
+                { name: "URIC ACID", price: 180, rating: 3.8 },
+                { name: "ULTRASOUND-ABDOMEN AND PELVIS", price: 1200, rating: 4.8 },
+                { name: "RANDOM PLASMA GLUCOSE", price: 120, rating: 3.9 },
+                { name: "C-REACTIVE PROTEIN (CRP)", price: 250, rating: 4.1 },
+                { name: "VITAMIN B12", price: 250, rating: 4.0 },
+                { name: "ELECTROLYTES", price: 250, rating: 3.6 },
+                { name: "CALCIUM", price: 250, rating: 3.7 },
+            ];
+    
+            // Function to render test items
+            function renderTests(filteredTests) {
+                const grid = document.getElementById("test-prices-grid");
+                grid.innerHTML = ""; // Clear the grid
+    
+                filteredTests.forEach(test => {
+                    const item = document.createElement("div");
+                    item.className = "test-price-item";
+                    item.innerHTML = `
+                        <div>${test.name}</div>
+                        <div class="price">₹ ${test.price}</div>
+                        <a href="#">
+                            BOOK <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="cart">
+                        </a>
+                    `;
+                    grid.appendChild(item);
+                });
+            }
+    
+            // Initial render
+            renderTests(tests);
+    
+            // Search functionality
+            const searchBox = document.getElementById("search-box");
+            searchBox.addEventListener("input", () => {
+                const searchTerm = searchBox.value.toLowerCase();
+                const filteredTests = tests.filter(test => 
+                    test.name.toLowerCase().includes(searchTerm)
+                );
+                renderTests(filteredTests);
+            });
+    
+            // Sort functionality
+            const sortBy = document.getElementById("sort-by");
+            sortBy.addEventListener("change", () => {
+                const sortValue = sortBy.value;
+                let sortedTests = [...tests];
+    
+                switch (sortValue) {
+                    case "price-low-to-high":
+                        sortedTests.sort((a, b) => a.price - b.price);
+                        break;
+                    case "price-high-to-low":
+                        sortedTests.sort((a, b) => b.price - a.price);
+                        break;
+                    case "ratings":
+                        sortedTests.sort((a, b) => b.rating - a.rating);
+                        break;
+                    case "popular":
+                    default:
+                        // Default sorting (by popularity or original order)
+                        break;
+                }
+    
+                renderTests(sortedTests);
+            });
+        </script>
+    </div>
+
+
+    <!-- highlight section -->
+    <div style="background: #0097A7; color: white; text-align: center; padding: 40px 20px; margin-top: 30px;">
+
+        <h2 style="margin: 0; font-size: 24px; font-weight: bold;">INDIA'S LARGEST HEALTHCARE PLATFORM</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1100px; margin: 30px auto; gap: 30px; text-align: center;">
+            
+            <div>
+                <div style="font-size: 32px; font-weight: bold;">200 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Professionals</div>
+                <div style="font-size: 14px;">Radiologists, Pathologists & Microbiologists</div>
+            </div>
+
+            <div>
+                <div style="font-size: 32px; font-weight: bold;">50 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Million Customers and Counting</div>
+                <div style="font-size: 14px;">Trusted by Every Age Group</div>
+            </div>
+
+            <div>
+                <div style="font-size: 32px; font-weight: bold;">40 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Years of Experience</div>
+                <div style="font-size: 14px;">in Delivering Quality Diagnostic Services</div>
+            </div>
+
+            <div style="border-top: 1px solid white; padding-top: 20px;">
+                <div style="font-size: 32px; font-weight: bold;">140 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Diagnostic Centres and Counting</div>
+                <div style="font-size: 14px;">State-of-the-art Facilities with Best Customer Service</div>
+            </div>
+
+            <div style="border-top: 1px solid white; padding-top: 20px;">
+                <div style="font-size: 32px; font-weight: bold;">20 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Cities Across India</div>
+                <div style="font-size: 14px;">India's Largest Comprehensive Diagnostic Centre</div>
+            </div>
+
+            <div style="border-top: 1px solid white; padding-top: 20px;">
+                <div style="font-size: 32px; font-weight: bold;">250 +</div>
+                <div style="font-size: 18px; font-weight: bold;">Corporate Clients and Counting</div>
+                <div style="font-size: 14px;">Most Preferred Diagnostic Partner</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- chatbot -->
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
+        
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <!-- <button onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background: #000; color: white; border: none; padding: 12px; border-radius: 50%; height: 50px; width: 50px; cursor: pointer; font-size: 24px;">&#x2191;</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script> -->
+
+
+
+     <!-- info -->
+     <div style="text-align: center; background-color: #f0f0f0;">
+        <h2 style="font-weight: bold;">Popular Lab Tests in Hyderabad</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; width: 96%; justify-content: center; margin: auto;">
+            <span style="color: teal;">FASTING PLASMA GLUCOSE</span> |
+            <span style="color: teal;">COMPLETE BLOOD PICTURE (CBP)</span> |
+            <span style="color: teal;">CREATININE</span> |
+            <span style="color: teal;">POST LUNCH GLUCOSE</span> |
+            <span style="color: teal;">GLYCATED HEMOGLOBIN (HbA1c)</span> |
+            <span style="color: teal;">THYROID PROFILE</span> |
+            <span style="color: teal;">LIPID PROFILE</span> |
+            <span style="color: teal;">COMPLETE URINE EXAMINATION (CUE)</span> |
+            <span style="color: teal;">LIVER FUNCTION TEST (LFT-A)</span> |
+            <span style="color: teal;">ECG</span> |
+            <span style="color: teal;">THYROID STIMULATING HORMONE (TSH)- Ultrasensitive</span> |
+            <span style="color: teal;">ERYTHROCYTE SEDIMENTATION RATE (ESR)</span> |
+            <span style="color: teal;">UREA</span> |
+            <span style="color: teal;">X-CHEST PA VIEW</span> |
+            <span style="color: teal;">URIC ACID</span> |
+            <span style="color: teal;">ULTRASOUND-ABDOMEN AND PELVIS</span>
+        </div>
+    
+        <h2 style="margin-top: 30px; font-weight: bold;">Our Presence in Hyderabad</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; width: 96%;justify-content: center; margin: auto;">
+            <span style="color: teal;">A S Rao Nagar</span> |
+            <span style="color: teal;">Aakruthi Township</span> |
+            <span style="color: teal;">Addagutta</span> |
+            <span style="color: teal;">Alwal</span> |
+            <span style="color: teal;">Ameerpet</span> |
+            <span style="color: teal;">Attapur</span> |
+            <span style="color: teal;">BHEL</span> |
+            <span style="color: teal;">BN Reddy Nagar</span> |
+            <span style="color: teal;">Bachupally</span> |
+            <span style="color: teal;">Bandlaguda</span> |
+            <span style="color: teal;">Boduppal</span> |
+            <span style="color: teal;">Botanical Garden</span> |
+            <span style="color: teal;">Budvel</span> |
+            <span style="color: teal;">Chaderghat</span> |
+            <span style="color: teal;">Chandrayangutta</span> |
+            <span style="color: teal;">Chintal</span> |
+            <span style="color: teal;">Dammaiguda</span> |
+            <span style="color: teal;">Deepthi Srinagar</span> |
+            <span style="color: teal;">Dilsukhnagar</span> |
+            <span style="color: teal;">Eshwaripuri</span> |
+            <span style="color: teal;">Film Nagar</span> |
+            <span style="color: teal;">Gachibowli</span> |
+            <span style="color: teal;">Gandhinagar</span> |
+            <span style="color: teal;">Habsiguda</span> |
+            <span style="color: teal;">Himayatnagar</span> |
+            <span style="color: teal;">Hussaini Alam</span> |
+            <span style="color: teal;">Hyderguda-Attapur</span> |
+            <span style="color: teal;">KPHB-Malaysian</span> |
+            <span style="color: teal;">Kapra</span> |
+            <span style="color: teal;">Karmanghat</span> |
+            <span style="color: teal;">Kattedan</span> |
+            <span style="color: teal;">Kavuri Hills</span> |
+            <span style="color: teal;">Kharkhana</span> |
+            <span style="color: teal;">Kismatpur</span> |
+            <span style="color: teal;">Kokapet</span> |
+            <span style="color: teal;">Kompally</span> |
+            <span style="color: teal;">Kondapur HT Line</span> |
+            <span style="color: teal;">Kukatpally</span> |
+            <span style="color: teal;">Kushaiguda</span> |
+            <span style="color: teal;">LB Nagar</span> |
+            <span style="color: teal;">Lothukunta</span> |
+            <span style="color: teal;">Madhapur</span> |
+            <span style="color: teal;">Madhavi Society</span> |
+            <span style="color: teal;">Medipally</span> |
+            <span style="color: teal;">Mehdipatnam</span> |
+            <span style="color: teal;">Moosapet</span> |
+            <span style="color: teal;">Moulali</span> |
+            <span style="color: teal;">Musheerabad</span> |
+            <span style="color: teal;">Nallagandla</span> |
+            <span style="color: teal;">Nallakunta</span> |
+            <span style="color: teal;">Nerdmet</span> |
+            <span style="color: teal;">Nizampet</span> |
+            <span style="color: teal;">Nizampet HT Line</span> |
+            <span style="color: teal;">P G Road</span> |
+            <span style="color: teal;">Panjagutta</span> |
+            <span style="color: teal;">Pragathi Nagar</span> |
+            <span style="color: teal;">Puppalaguda</span> |
+            <span style="color: teal;">Q City</span> |
+            <span style="color: teal;">RL Nagar</span> |
+            <span style="color: teal;">Saifliguda</span> |
+            <span style="color: teal;">Santosh Nagar</span> |
+            <span style="color: teal;">Secunderabad S D Road</span> |
+            <span style="color: teal;">Seethaphalmandi</span> |
+            <span style="color: teal;">Shah-Ali-Banda</span> |
+            <span style="color: teal;">Shaikpet</span> |
+            <span style="color: teal;">Shamshabad-2</span> |
+            <span style="color: teal;">Suchitra</span> |
+            <span style="color: teal;">Sun City</span> |
+            <span style="color: teal;">Tolichowki</span> |
+            <span style="color: teal;">Turkayamjal</span> |
+            <span style="color: teal;">Uppal</span> |
+            <span style="color: teal;">Vaidehi Nagar</span> |
+            <span style="color: teal;">Vanasthalipuram</span> |
+            <span style="color: teal;">Yousufguda</span>
+        </div>
+    
+        <h2 style="font-weight: bold;">Popular Lab Tests in Other Cities</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 96%; margin: auto;">
+            <span style="color: teal;">Lab tests in Gulbarga</span> |
+            <span style="color: teal;">Lab tests in Gurugram</span> |
+            <span style="color: teal;">Lab tests in Hanmakonda</span> |
+            <span style="color: teal;">Lab tests in Hyderabad</span> |
+            <span style="color: teal;">Lab tests in Karimnagar</span> |
+            <span style="color: teal;">Lab tests in Kolkata</span> |
+            <span style="color: teal;">Lab tests in Kurnool</span> |
+            <span style="color: teal;">Lab tests in Mahbubnagar</span> |
+            <span style="color: teal;">Lab tests in Mancherial</span> |
+            <span style="color: teal;">Lab tests in Nandyal</span> |
+            <span style="color: teal;">Lab tests in Nellore</span> |
+            <span style="color: teal;">Lab tests in Nizamabad</span> |
+            <span style="color: teal;">Lab tests in Ongole</span> |
+            <span style="color: teal;">Lab tests in Pune</span> |
+            <span style="color: teal;">Lab tests in Rajahmundry</span> |
+            <span style="color: teal;">Lab tests in Sangareddy</span> |
+            <span style="color: teal;">Lab tests in Shadnagar</span> |
+            <span style="color: teal;">Lab tests in Tirupathi</span> |
+            <span style="color: teal;">Lab tests in Vishakapatnam</span> |
+            <span style="color: teal;">Lab tests in Wanaparthy</span> |
+            <span style="color: teal;">Lab tests in Warangal</span> |
+            <span style="color: teal;">Lab tests in Bhuvanagiri</span>
+        </div>
+    
+        <h2 style="font-weight: bold; margin-top: 30px;">Popular Health Packages in Other Cities</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 96%; margin: auto;">
+            <span style="color: teal;">Health checkups in Gulbarga</span> |
+            <span style="color: teal;">Health checkups in Gurugram</span> |
+            <span style="color: teal;">Health checkups in Hanmakonda</span> |
+            <span style="color: teal;">Health checkups in Hyderabad</span> |
+            <span style="color: teal;">Health checkups in Karimnagar</span> |
+            <span style="color: teal;">Health checkups in Kolkata</span> |
+            <span style="color: teal;">Health checkups in Kurnool</span> |
+            <span style="color: teal;">Health checkups in Mahbubnagar</span> |
+            <span style="color: teal;">Health checkups in Mancherial</span> |
+            <span style="color: teal;">Health checkups in Nandyal</span> |
+            <span style="color: teal;">Health checkups in Nellore</span> |
+            <span style="color: teal;">Health checkups in Nizamabad</span> |
+            <span style="color: teal;">Health checkups in Ongole</span> |
+            <span style="color: teal;">Health checkups in Pune</span> |
+            <span style="color: teal;">Health checkups in Rajahmundry</span> |
+            <span style="color: teal;">Health checkups in Sangareddy</span> |
+            <span style="color: teal;">Health checkups in Shadnagar</span> |
+            <span style="color: teal;">Health checkups in Tirupathi</span> |
+            <span style="color: teal;">Health checkups in Vishakapatnam</span> |
+            <span style="color: teal;">Health checkups in Wanaparthy</span> |
+            <span style="color: teal;">Health checkups in Warangal</span> |
+            <span style="color: teal;">Health checkups in Bhuvanagiri</span>
+        </div>
+    
+        <h2 style="font-weight: bold; margin-top: 30px;">Popular Radiology Service</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 96%; margin: auto;">
+            <span style="color: teal;">CT Scan</span> |
+            <span style="color: teal;">MRI Scan</span> |
+            <span style="color: teal;">ULTRASOUND</span> |
+            <span style="color: teal;">X-RAY</span> |
+            <span style="color: teal;">PET CT</span> |
+            <span style="color: teal;">MRI-3T</span> |
+            <span style="color: teal;">CARDIOLOGY</span>
+        </div>
+
+        <!-- our presence -->
+        <h2 style="font-weight: bold; margin-top: 30px;">Our Presence</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 96%; margin: auto;">
+            <span style="color: teal;">Gulbarga</span> |
+            <span style="color: teal;">Gurugram</span> |
+            <span style="color: teal;">Hanmakonda</span> |
+            <span style="color: teal;">Hyderabad</span> |
+            <span style="color: teal;">Karimnagar</span> |
+            <span style="color: teal;">Kolkata</span> |
+            <span style="color: teal;">Kurnool</span> |
+            <span style="color: teal;">Mahbubnagar</span> |
+            <span style="color: teal;">Mancherial</span> |
+            <span style="color: teal;">Nandyal</span> |
+            <span style="color: teal;">Nellore</span> |
+            <span style="color: teal;">Nizamabad</span> |
+            <span style="color: teal;">Ongole</span> |
+            <span style="color: teal;">Pune</span> |
+            <span style="color: teal;">Rajahmundry</span> |
+            <span style="color: teal;">Sangareddy</span> |
+            <span style="color: teal;">Shadnagar</span> |
+            <span style="color: teal;">Tirupathi</span> |
+            <span style="color: teal;">Vishakapatnam</span> |
+            <span style="color: teal;">Wanaparthy</span> |
+            <span style="color: teal;">Warangal</span> |
+            <span style="color: teal;">Bhuvanagiri</span>
+        </div>
+        
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
