@@ -93,7 +93,7 @@
     <!-- Registraion form -->
     <div style="font-family: Arial, sans-serif; margin: 0; padding: 20px;">
         <h2 style="text-align: center; color: #333;">Doctor Registration Form</h2>
-        <form id="doctorRegistrationForm" action="http://localhost:5000/api/doctors" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <form id="doctorRegistrationForm" action="http://localhost:5000/api/doctors" method="POST"  style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
             <h3>Personal Information</h3>
             <div style="display: flex; gap: 30px;">
                 <div style="width: 50%;">
@@ -194,6 +194,30 @@
         </form>
         
     </div>
+
+    <script>
+        const form = document.getElementById('doctorRegistrationForm');
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+      
+          const data = Object.fromEntries(formData.entries());
+      
+          const res = await fetch('http://localhost:5000/api/doctors', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+      
+          const result = await res.json();
+          alert(result.message);
+          window.location.href = "doctorlogin.html";
+
+        });
+    </script>
+      
     
 
 

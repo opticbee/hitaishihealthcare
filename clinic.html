@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clinic Registration | TejVTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      overflow-y: auto;
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 750px;
+      color: #000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: rgba(0, 123, 255, 0.85);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    button:hover {
+      background: rgba(0, 123, 255, 1);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Clinic Registration</h2>
+    <form id="clinicForm" >
+      <label for="clinicName">Clinic Name</label>
+      <input type="text" id="clinicName" placeholder="Enter clinic name" required>
+
+      <label for="clinicType">Clinic Type</label>
+      <select id="clinicType" required>
+        <option value="">-- Select Type --</option>
+        <option value="General">General</option>
+        <option value="Specialty">Specialty</option>
+        <option value="Diagnostic Lab">Diagnostic Lab</option>
+        <option value="Dental">Dental</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="registrationNumber">Registration Number</label>
+      <input type="text" id="registrationNumber" placeholder="Govt issued ID or License" required>
+
+      <label for="establishedYear">Established Year</label>
+      <input type="number" id="establishedYear" placeholder="YYYY" required>
+
+      <label for="address1">Address Line 1</label>
+      <input type="text" id="address1" placeholder="Street address" required>
+
+      <label for="address2">Address Line 2</label>
+      <input type="text" id="address2" placeholder="(optional)">
+
+      <label for="city">City</label>
+      <input type="text" id="city" required>
+
+      <label for="state">State / Province</label>
+      <input type="text" id="state" required>
+
+      <label for="country">Country</label>
+      <input type="text" id="country" required>
+
+      <label for="pincode">Pincode / ZIP Code</label>
+      <input type="text" id="pincode" required>
+
+      <label for="mapLink">Google Maps Location / Coordinates</label>
+      <input type="url" id="mapLink" placeholder="https://maps.google.com/...">
+
+      <label for="phone1">Primary Phone</label>
+      <input type="tel" id="phone1" required>
+
+      <label for="phone2">Alternate Phone</label>
+      <input type="tel" id="phone2">
+
+      <label for="email">Official Email</label>
+      <input type="email" id="email" required>
+
+      <label for="website">Website</label>
+      <input type="url" id="website">
+
+      <label for="contactPerson">Primary Contact Person</label>
+      <input type="text" id="contactPerson" required>
+
+      <label for="designation">Designation</label>
+      <input type="text" id="designation" placeholder="Admin / Head Doctor" required>
+
+      <label for="contactEmail">Contact Person Email</label>
+      <input type="email" id="contactEmail" required>
+
+      <label for="contactMobile">Contact Mobile</label>
+      <input type="tel" id="contactMobile" required>
+
+      <label for="timings">Clinic Timings</label>
+      <input type="text" id="timings" placeholder="e.g., Mon-Sat: 9am - 7pm" required>
+
+      <label for="emergency">Emergency Services Available?</label>
+      <select id="emergency" required>
+        <option value="">--Select--</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="licenseUpload">Upload Clinic License</label>
+      <input type="file" id="licenseUpload" accept=".jpg,.png,.pdf" required>
+
+      <label for="idProof">Upload ID Proof</label>
+      <input type="file" id="idProof" accept=".jpg,.png,.pdf" required>
+
+      <label for="clinicPhoto">Clinic Photo (optional)</label>
+      <input type="file" id="clinicPhoto" accept=".jpg,.png">
+
+      <label for="gst">GST Number</label>
+      <input type="text" id="gst">
+
+      <label for="username">Create Username / Email</label>
+      <input type="email" id="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" required>
+
+      <button type="submit">Register Clinic</button>
+    </form>
+
+    <script>
+        document.getElementById("clinicForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+      
+          const form = e.target;
+          const formData = new FormData(form);
+      
+          const payload = {};
+          formData.forEach((value, key) => {
+            payload[key] = value;
+          });
+      
+          try {
+            const res = await fetch("/api/clinicregister", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+      
+            const data = await res.json();
+            if (res.ok) {
+              alert("Clinic registered successfully!");
+              form.reset();
+            } else {
+              alert(data.message || "Failed to register clinic.");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("Server error. Please try again later.");
+          }
+        });
+      </script>
+      
+  </div>
+</body>
+</html>

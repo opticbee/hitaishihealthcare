@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctors List</title>
+</head>
+<body style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
+
+  <h2 style="text-align:center;">Doctors Directory</h2>
+
+  <!-- Filter Section -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <input type="text" id="searchInput" placeholder="Search by Name or Specialization" 
+           onkeyup="filterDoctors()" 
+           style="padding: 10px; width: 60%; border-radius: 5px; border: 1px solid #ccc;" />
+  </div>
+
+  <!-- Cards Container -->
+  <div id="doctorsContainer" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Doctor cards will be inserted here -->
+  </div>
+
+  <script>
+    async function fetchDoctors() {
+      try {
+        const res = await fetch('http://localhost:5000/api/getdoctors');
+        const doctors = await res.json();
+        displayDoctors(doctors);
+      } catch (err) {
+        console.error('Failed to fetch doctors:', err);
+      }
+    }
+
+    function displayDoctors(doctors) {
+      const container = document.getElementById('doctorsContainer');
+      container.innerHTML = "";
+
+      doctors.forEach(doc => {
+        const card = document.createElement('div');
+        card.className = 'doctorCard';
+        card.style = `
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          padding: 20px;
+          width: 300px;
+          transition: transform 0.2s;
+        `;
+        card.innerHTML = `
+          <h3 style="color: #2c3e50;">Dr. ${doc.first_name} ${doc.last_name}</h3>
+          <p><strong>Specialization:</strong> ${doc.specialization}</p>
+          <p><strong>Experience:</strong> ${doc.experience} years</p>
+          <p><strong>Clinic:</strong> ${doc.clinic}</p>
+          <p><strong>Availability:</strong> ${doc.availability} (${doc.from_time} - ${doc.to_time})</p>
+          <p><strong>Location:</strong> ${doc.address}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterDoctors() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.doctorCard');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+
+    // Load on page start
+    fetchDoctors();
+  </script>
+
+</body>
+</html>

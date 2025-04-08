@@ -3,6 +3,7 @@ const express = require('express');
 const db = require('../db');  // Import the database connection
 const router = express.Router();
 
+
 // Test Booking API Route
 router.post('/testbooking', (req, res) => {
     console.log("📥 Incoming Request Body:", req.body);  // ✅ Debugging
