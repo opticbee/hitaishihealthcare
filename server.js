@@ -12,12 +12,34 @@ const upload = multer({ dest: "uploads/" });
 
 
 
+
+
+
+// Serve clinic.html from custom folder
+app.get("/clinic", (req, res) => {
+    res.sendFile(path.join(__dirname,  "clinic.html"));
+  });
+
+
+
+  // Your existing API
+app.post("/api/clinicregister", (req, res) => {
+    // Handle form data here
+    res.send({ message: "Clinic registered!" });
+  });
+  
+  // Start the server
+  app.listen(3000, () => {
+    console.log("Server running on http://localhost:3000");
+  });
+
 app.use(cors());
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true })); 
+const clinicRegister = require('./routes/clinicRegister');
 
 
-// Use the testBooking routes
+app.use('/api', clinicRegister);
 app.use("/api", testBookingRoutes);
 app.use("/api", patientRoutes);
 app.use("/api", patientLoginRoutes); 
