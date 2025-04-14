@@ -11,17 +11,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+    
+    
     <!-- Navigation Bar -->
-    <nav style="margin-left: -50px; background-color: #007bff; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+            <div>
+                <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+                <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+            </div>
+        </div>
+        
+        <!-- search input icons -->
+        <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+        <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+            <i class="fas fa-search" style="color: #007bff;"></i>
+    
+        <!-- Buttons -->
+        <div style="display: flex; gap: 15px;">
+            <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Book Appointment
+            </a>
+            <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Find a Doctor
+            </a>
+            <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Clinic
+            </a>
+            <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Eye Care
+            </a>
+        </div>
+    
+        <!-- Social Media Icons -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+    
+            <!-- Display Logged-in User Name -->
+            <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+    
+            <!-- Profile Icon -->
+            <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
         <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
             <!-- Home Link -->
             <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
             </div>
 
-            <!-- Blood Records Dropdown -->
+            <!-- Health Records Dropdown -->
             <div style="position: relative; margin-right: 1rem;">
-                <a href="#blood-records" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">BloodRecords▼</a>
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
                 <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
                     <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
                     <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
@@ -31,17 +123,17 @@
 
             <!-- Diagnostics Dropdown -->
             <div style="position: relative; margin-right: 1rem;">
-                <a href="#diagnostics" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics▼</a>
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
                 <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#x-ray" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                    <a href="#ultrasound" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                    <a href="#mri" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                    <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
                 </div>
             </div>
 
             <!-- Physicians Dropdown -->
             <div style="position: relative; margin-right: 1rem;">
-                <a href="#general-physicians" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians▼</a>
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
                 <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
                     <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
                     <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
@@ -51,49 +143,71 @@
 
             <!-- Fertility Dropdown -->
             <div style="position: relative; margin-right: 1rem;">
-                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility▼</a>
+                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
                 <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#ivf" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
                     <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
                 </div>
             </div>
 
             <!-- AI -->
             <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
             </div>
 
             <!-- Doctors Link -->
             <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
             </div>
 
             <!-- Patients Link -->
             <div style="margin-right: 1rem;">
-                <a href="#patients" onclick="openForm()" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
             </div>
 
 
 
             <!-- Insights Link -->
             <div style="margin-right: 1rem;">
-                <a href="#insights" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Insights</a>
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
             </div>
 
             <!-- Contact Link -->
             <div>
-                <a href="#contact" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
             </div>
             
         </div>
+
+      
     </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
 
     
     <!-- Registraion form -->
-    <div style="font-family: Arial, sans-serif; margin: 0; padding: 20px;">
-        <h2 style="text-align: center; color: #333;">Doctor Registration Form</h2>
+    <div style="font-family: Arial, sans-serif; margin: 0; padding: 20px;background: url('https://img.freepik.com/free-photo/abstract-design-background-smooth-flowing-lines_1048-14640.jpg?semt=ais_country_boost&w=740') no-repeat center center / cover;">
+        <!-- <h2 style="text-align: center; color: #333;">Doctor Registration Form</h2> -->
         <form id="doctorRegistrationForm" action="http://localhost:5000/api/doctors" method="POST"  style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; color: blue;">Doctor Registration Form</h2><br>
             <h3>Personal Information</h3>
             <div style="display: flex; gap: 30px;">
                 <div style="width: 50%;">
@@ -102,7 +216,7 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="last_name" style="font-weight: bold;">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="last_name" name="last_name" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex; gap: 30px;">
@@ -112,31 +226,31 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="mobile" style="font-weight: bold;">mobile Number:</label>
-                    <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}" title="mobile number must be 10 digits" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}" title="mobile number must be 10 digits" style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
             <label for="address" style="font-weight: bold;">Address:</label>
-            <textarea id="address" name="address" required rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            <textarea id="address" name="address" required rows="3" style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
         
             <h3>Educational Background</h3>
             <div style="display: flex; gap: 30px;">
                 <div style="width: 50%;">
                     <label for="degree" style="font-weight: bold;">Degree:</label>
-                    <input type="text" id="degree" name="degree" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="degree" name="degree" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
                 <div style="width: 50%;">
                     <label for="university" style="font-weight: bold;">University:</label>
-                    <input type="text" id="university" name="university" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="university" name="university" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex; gap: 30px;">
                 <div style="width: 50%;">
                     <label for="experience" style="font-weight: bold;">Years of Practice:</label>
-                    <input type="number" id="experience" name="experience" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="number" id="experience" name="experience" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
                 <div style="width: 50%;">
                     <label for="aadhar_card" style="font-weight: bold;">aadhar Card Number:</label>
-                    <input type="text" id="aadhar_card" name="aadhar_card" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="aadhar_card" name="aadhar_card" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
         
@@ -148,7 +262,7 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="specialization" style="font-weight: bold;">Specialization:</label>
-                    <input type="text" id="specialization" name="specialization" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="specialization" name="specialization" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex; gap: 30px;">
@@ -158,7 +272,7 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="availability" style="font-weight: bold;">Available At:</label>
-                    <select id="availability" name="availability" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <select id="availability" name="availability" required style="width: 104%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                         <option value="">Select</option>
                         <option value="Diagnostic Center">Diagnostic Center</option>
                         <option value="Online Only">Online Only</option>
@@ -173,7 +287,7 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="to_time" style="font-weight: bold;">To Time:</label>
-                    <input type="time" id="to_time" name="to_time" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="time" id="to_time" name="to_time" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex; gap: 30px;">
@@ -183,14 +297,43 @@
                 </div>
                 <div style="width: 50%;">
                     <label for="confirm_password" style="font-weight: bold;">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="password" id="confirm_password" name="confirm_password" required style="width: 98%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 </div>
             </div>
         
             <!-- <label for="profile_image" style="font-weight: bold;">Profile Image:</label>
             <input type="file" id="profile_image" name="profile_image" accept="image/*" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
          -->
-            <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Submit</button>
+            <button type="submit" style="width: 100%; background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Register</button>
+              <!-- Social Login Section -->
+      
+              <div style="text-align: center; margin: 20px 0;">
+                <span style="display: inline-block; font-size: 14px; color: #666; margin-bottom: 10px;">OR CONTINUE WITH</span>
+                <div style="margin-top: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+              
+                  <a href="https://accounts.google.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; border: 1px solid #ccc; border-radius: 5px; padding: 8px 16px; background: white;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" style="width: 20px; height: 20px; margin-right: 8px;">
+                    <span style="color: #000; font-weight: bold;">Google</span>
+                  </a>
+              
+                  <a href="https://facebook.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; border: 1px solid #ccc; border-radius: 5px; padding: 8px 16px; background: white;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 20px; height: 20px; margin-right: 8px;">
+                    <span style="color: #1877f2; font-weight: bold;">Facebook</span>
+                  </a>
+              
+                  <a href="https://twitter.com" target="_blank" style="text-decoration: none; display: flex; align-items: center; border: 1px solid #ccc; border-radius: 5px; padding: 8px 16px; background: rgb(255, 255, 255);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 20px; height: 20px; margin-right: 8px;">
+                    <span style="color: #1da1f2; font-weight: bold;">Twitter</span>
+                  </a>
+              
+                </div>
+              </div>
+              
+  
+            <div style="text-align: center; margin-top: 15px;">
+                <p style="font-size: 14px; color: #333;">Already registered? <a href="doctorlogin.html" style="color: #007BFF; text-decoration: none;">Login here</a></p>
+
+              </div>
         </form>
         
     </div>
@@ -284,7 +427,151 @@
 
 
     
+         <!-- chatbot -->
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
         
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+
     
 
 </body>

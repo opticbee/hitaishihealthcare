@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitaishi Healthcare Services - Dental Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  
+<style>
+    :root {
+      --primary: #007bff;
+      --primary-dark: #0056b3;
+      --secondary: #6c757d;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --success: #28a745;
+      --white: #ffffff;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --gray-300: #dee2e6;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--gray-100);
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Header Styles */
+    .top-nav {
+      background: var(--primary);
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Hero Section Styles */
+    .dental-hero {
+      background-image: url('https://blogs.dentalkart.com/wp-content/uploads/2024/11/feature-images_-650x340.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    
+    .dental-hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .dental-hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* Main Dental Section */
+    .dental-section {
+      text-align: center;
+      padding: 80px 20px;
+      background: white;
+    }
+    
+    .section-title {
+      font-size: 36px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: var(--primary);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-subtitle {
+      color: var(--secondary);
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Carousel */
+    .carousel {
+      width: 100%;
+      margin: 0 auto 60px;
+      position: relative;
+    }
+    
+    .carousel img {
+      border-radius: 10px;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .slick-prev, .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 123, 255, 0.7);
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      z-index: 1000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .slick-prev:hover, .slick-next:hover {
+      background-color: var(--primary);
+    }
+    
+    .slick-prev {
+      left: 15px;
+    }
+    
+    .slick-next {
+      right: 15px;
+    }
+    
+    /* Services Section */
+    .dental-services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .service {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service i {
+      font-size: 48px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .service:hover i {
+      transform: scale(1.1);
+    }
+    
+    .service h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+    
+    .service p {
+      color: var(--secondary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Stats Section */
+    .stats-section {
+      background-color: var(--primary);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .stat-item {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+    }
+    
+    .stat-number {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .stat-text {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    
+    /* Why Choose Us Section */
+    .why-choose-section {
+      padding: 80px 20px;
+      background-color: white;
+    }
+    
+    .why-choose-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .why-choose-image {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .why-choose-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .why-choose-content {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .why-choose-item {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .why-choose-icon {
+      background-color: var(--primary);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .why-choose-text h4 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+    
+    .why-choose-text p {
+      color: var(--secondary);
+      font-size: 16px;
+    }
+    
+    /* Team Section */
+    .team-section {
+      padding: 80px 20px;
+      background-color: var(--gray-100);
+    }
+    
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+    
+    .team-member {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+    
+    .team-image {
+      height: 280px;
+      overflow: hidden;
+    }
+    
+    .team-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover .team-image img {
+      transform: scale(1.05);
+    }
+    
+    .team-info {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .team-info h4 {
+      font-size: 20px;
+      color: var(--dark);
+      margin-bottom: 5px;
+    }
+    
+    .team-info p {
+      color: var(--primary);
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .team-social a {
+      color: var(--primary);
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    
+    .team-social a:hover {
+      transform: translateY(-3px);
+      color: var(--primary-dark);
+    }
+    
+    /* Testimonials */
+    .testimonials-section {
+      padding: 80px 20px;
+      background-color: white;
+    }
+    
+    .testimonials-container {
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+    
+    .testimonial-item {
+      background-color: var(--gray-100);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 0 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    
+    .testimonial-text {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--dark);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .testimonial-text:before,
+    .testimonial-text:after {
+      content: '"';
+      font-size: 50px;
+      color: var(--primary);
+      line-height: 0;
+      vertical-align: -20px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+    
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .testimonial-info h5 {
+      font-size: 18px;
+      color: var(--dark);
+      margin-bottom: 5px;
+    }
+    
+    .testimonial-info p {
+      color: var(--secondary);
+      font-size: 14px;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 20px;
+      background-color: var(--gray-100);
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+    
+    .faq-item {
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question i {
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-answer p {
+      color: var(--secondary);
+      padding-bottom: 20px;
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-top: 0;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 100px 20px;
+      background-image: linear-gradient(rgba(255, 0, 0, 0.9), rgba(0, 86, 179, 0.9)), url('../Diagnostic/img/image2.png');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+    }
+    
+    .cta-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .cta-section p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-primary {
+      background-color: white;
+      color: var(--primary);
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-secondary {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    
+    .cta-secondary:hover {
+      background-color: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 50px 10%;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .dental-hero h1 {
+        font-size: 36px;
+      }
+      
+      .section-title {
+        font-size: 30px;
+      }
+      
+      .stat-item {
+        flex: 1 1 calc(50% - 40px);
+      }
+      
+      .why-choose-container {
+        flex-direction: column;
+      }
+      
+      .carousel img {
+        height: 350px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .dental-hero {
+        padding: 80px 20px;
+      }
+      
+      .dental-hero h1 {
+        font-size: 28px;
+      }
+      
+      .section-title {
+        font-size: 24px;
+      }
+      
+      .stat-item {
+        flex: 1 1 100%;
+      }
+      
+      .carousel img {
+        height: 250px;
+      }
+    }
+
+    /* Animation classes */
+    .animate-fade-in {
+      animation: fadeIn 1s;
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 0.8s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="color: #007bff;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+  </nav>
+
+  <!-- Secondary Navigation -->
+  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+        <!-- Home Link -->
+        <div style="margin-right: 1rem;">
+            <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+        </div>
+
+        <!-- Health Records Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+            </div>
+        </div>
+
+        <!-- Diagnostics Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+            </div>
+        </div>
+
+        <!-- Physicians Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+            </div>
+        </div>
+
+        <!-- Fertility Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+            </div>
+        </div>
+
+        <!-- AI -->
+        <div style="margin-right: 1rem;">
+            <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+        </div>
+
+        <!-- Doctors Link -->
+        <div style="margin-right: 1rem;">
+            <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+        </div>
+
+        <!-- Patients Link -->
+        <div style="margin-right: 1rem;">
+            <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+        </div>
+
+        <!-- Insights Link -->
+        <div style="margin-right: 1rem;">
+            <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+        </div>
+        <div style="margin-right: 1rem;">
+            <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">
+<a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+        </div>
+
+        <!-- Contact Link -->
+        <div>
+            <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+        </div>
+        
+    </div>
+  </nav>
+
+  <!-- for dropdowns -->
+  <script>
+      // JavaScript to handle dropdown visibility
+      document.querySelectorAll('nav > div > div').forEach(navItem => {
+          const dropdown = navItem.querySelector('div');
+          if (dropdown) {
+              navItem.addEventListener('mouseenter', () => {
+                  dropdown.style.display = 'block';
+              });
+              navItem.addEventListener('mouseleave', () => {
+                  dropdown.style.display = 'none';
+              });
+          }
+      });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="dental-hero">
+    <div class="container">
+      <h1 class="animate-fade-in">Exceptional Dental Care for Your Entire Family</h1>
+      <p class="animate-slide-up">Experience world-class dental services with state-of-the-art technology and compassionate care.</p>
+      <a href="appointments.html" class="cta-button animate-slide-up">Book Your Appointment Today</a>
+    </div>
+  </section>
+
+  <!-- Main Dental Section -->
+  <section class="dental-section">
+    <div class="container">
+      <h2 class="section-title">Smile With Confidence</h2>
+      <p class="section-subtitle">Discover our comprehensive dental services tailored for your family's oral health.</p>
+
+      <div class="carousel">
+        <div><img src="https://static.vecteezy.com/system/resources/previews/026/940/125/non_2x/white-interior-of-room-with-medical-equipment-in-dental-clinic-stomatology-cabinet-generative-ai-photo.jpg" alt="Modern Dental Clinic"></div>
+        <div><img src="https://thecosmeticdentalgallery.co.uk/wp-content/uploads/2023/08/LUX02586-Enhanced-2.jpg" alt="Dental Professionals"></div>
+        <div><img src="https://www.caspiandentalcenter.com/wp-content/uploads/2024/07/root_canal_img_4.webp" alt="Dental Treatment"></div>
+        <div><img src="https://freerangestock.com/sample/162599/elderly-patient-consulting-with-a-doctor.jpg" alt="Patient Consultation"></div>
+        <div><img src="https://cdn-apbli.nitrocdn.com/UgYvjJWPHaxnVDooYQxboaPAYvYtgsnk/assets/static/optimized/rev-314f70a/wp-content/uploads/2015/09/pediatric_new-1-300x202.jpg" alt="Child Dental Care"></div>
+      </div>
+
+      <div class="dental-services">
+        <div class="service">
+          <i class="fas fa-tooth"></i>
+          <h3>General Dentistry</h3>
+          <p>Regular checkups, cleanings, and preventative care for all ages to maintain oral health.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-teeth"></i>
+          <h3>Cosmetic Dentistry</h3>
+          <p>Whitening, veneers, and smile makeovers to enhance your appearance and confidence.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-toothbrush"></i>
+          <h3>Pediatric Dentistry</h3>
+          <p>Gentle care designed specifically for children and young teens in a friendly environment.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-x-ray"></i>
+          <h3>Digital X-rays</h3>
+          <p>Accurate diagnostics using low-radiation digital imaging for precise treatment planning.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-crown"></i>
+          <h3>Dental Implants</h3>
+          <p>Permanent tooth replacement solutions that look and function like natural teeth.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-teeth-open"></i>
+          <h3>Orthodontics</h3>
+          <p>Braces, aligners, and other options to straighten teeth and correct bite issues.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-user-md"></i>
+          <h3>Oral Surgery</h3>
+          <p>Extractions, wisdom teeth removal, and other surgical procedures performed with care.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Emergency Care</h3>
+          <p>Prompt attention for dental emergencies to relieve pain and prevent complications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">1</span>
+          <span class="stat-text">Years of Excellence</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="25000">1</span>
+          <span class="stat-text">Happy Patients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2142">1</span>
+          <span class="stat-text">Dental Specialists</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="29845">1</span>
+          <span class="stat-text">Patient Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const counters = document.querySelectorAll('.stat-number');
+  
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+  
+        const increment = target / 200; // Change 200 to control speed
+  
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10); // Update every 10ms
+        } else {
+          counter.innerText = target.toLocaleString(); // Format with commas
+        }
+      };
+  
+      updateCount();
+    });
+  </script>
+  
+  
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Dental Care</h2>
+      <p class="section-subtitle">Experience the difference with our patient-focused approach to dental health.</p>
+      
+      <div class="why-choose-container">
+        <div class="why-choose-image">
+          <img src="https://www.just-kfo.de/wp-content/uploads/2024/08/AdobeStock_843628209-e1724312383249.jpeg" alt="Dental Care Excellence">
+        </div>
+        <div class="why-choose-content">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="why-choose-text">
+              <h4>Experienced Professionals</h4>
+              <p>Our team consists of board-certified dentists with extensive training and years of experience in various specialties.</p>
+            </div>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="why-choose-text">
+              <h4>Advanced Technology</h4>
+              <p>We use the latest dental technology for precise diagnostics and comfortable treatments with better outcomes.</p>
+            </div>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="why-choose-text">
+              <h4>Comfortable Environment</h4>
+              <p>Our modern facilities are designed to make your visit relaxing and stress-free with amenities for all ages.</p>
+            </div>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="why-choose-text">
+              <h4>Affordable Care</h4>
+              <p>We offer flexible payment options and work with most insurance plans to make quality dental care accessible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <h2 class="section-title">Meet Our TOP Dental Team</h2>
+      <p class="section-subtitle">Our experienced specialists are dedicated to providing the highest quality of care.</p>
+      
+      <div class="team-container">
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://www.smartlifeco.com/cdn/shop/files/portrait-of-dentist-standing-by-chair-2023-11-27-05-29-57-utc.jpg?v=1724942619&width=200" alt="Dr. Sarah Johnson">
+          </div>
+          <div class="team-info">
+            <h4>Dr. Sarah Johnson</h4>
+            <p>General Dentist</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://smilesbystevensdmd.com/wp-content/uploads/2025/03/Header-Doctor.webp" alt="Dr. Michael Chen">
+          </div>
+          <div class="team-info">
+            <h4>Dr. Michael Chen</h4>
+            <p>Orthodontist</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://thecosmeticdentalgallery.co.uk/wp-content/uploads/2024/03/LUX01284-Enhanced-2048x2044.jpg"  alt="Dr. Lisa Martinez">
+          </div>
+          <div class="team-info">
+            <h4>Dr. Lisa Martinez</h4>
+            <p>Pediatric Dentist</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://previews.123rf.com/images/puhhha/puhhha1510/puhhha151000577/45743843-dentist-doctor-portrait-young-man-at-his-workplace-dental-clinic.jpg" alt="Dr. James Wilson">
+          </div>
+          <div class="team-info">
+            <h4>Dr. James Wilson</h4>
+            <p>Cosmetic Dentist</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://www.coquitlamdental.ca/wp-content/uploads/2020/08/persian-dentist-coquitlam-coquitlam-farsi-dental-clinic-dr-farnaz.jpg" alt="Dr. Emily Davis">
+          </div>
+          <div class="team-info">
+            <h4>Dr. Emily Davis</h4>
+            <p>Oral Surgeon</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="https://www.towsonmddentist.com/wp-content/uploads/2023/08/How-Often-Should-I-See-the-Dentist-scaled.jpeg" alt="Dr. David Brown">
+          </div>
+          <div class="team-info">
+            <h4>Dr. David Brown</h4>
+            <p>Periodontist</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Patient Testimonials</h2>
+      <p class="section-subtitle">Hear what our patients have to say about their experiences.</p>
+      
+      <div class="testimonials-container">
+        <div class="testimonial-item">
+          <div class="testimonial-text">
+            The entire team is professional, friendly, and truly cares about patient comfort. My family has been coming here for years and we've always had excellent care.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="https://live.staticflickr.com/7281/28121767786_53e1a84ab1_b.jpg" alt="John D.">
+            </div>
+            <div class="testimonial-info">
+              <h5>John D.</h5>
+              <p>Patient for 5 years</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-text">
+            I was terrified of dentists until I found this clinic. They took the time to understand my anxiety and made me feel comfortable throughout my treatment.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="https://parkcrestdental.com/wp-content/uploads/2019/11/young-attractive-doctor-dentist-smiling.jpg" alt="Priya S.">
+            </div>
+            <div class="testimonial-info">
+              <h5>Pritham S.</h5>
+              <p>Patient for 3 years</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-text">
+            The cosmetic work they did completely transformed my smile. I can't stop looking in the mirror! Thank you for giving me back my confidence.
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="https://img.freepik.com/premium-photo/friendly-dentist_23-2148105068.jpg" alt="Mark R.">
+            </div>
+            <div class="testimonial-info">
+              <h5>Mark R.</h5>
+              <p>Patient for 2 years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Find answers to common questions about our dental services.</p>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            How often should I visit the dentist? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Most patients should visit the dentist every six months for regular checkups and cleanings. However, some patients with specific dental conditions may need more frequent visits. Your dentist will recommend the appropriate schedule for your needs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What should I do in case of a dental emergency? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>In case of a dental emergency, call our emergency line immediately. For a knocked-out tooth, keep it moist (preferably in milk) and come to our office within 30 minutes if possible. For severe pain or bleeding, don't wait – contact us right away.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you accept dental insurance? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we accept most major dental insurance plans. Our administrative team will help verify your coverage and maximize your benefits. We also offer payment plans for those without insurance or for procedures not fully covered.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            At what age should my child first visit the dentist? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The American Academy of Pediatric Dentistry recommends that children visit the dentist by their first birthday or when their first tooth erupts. Early visits help establish good oral health habits and make dental visits a positive experience.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I improve my smile? <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer numerous cosmetic dentistry options including teeth whitening, veneers, bonding, and Invisalign. During a consultation, our dentist will assess your smile and discuss the best options to achieve your desired results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Technology Section -->
+  <section class="dental-section" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Cutting-Edge Dental Technology</h2>
+      <p class="section-subtitle">We invest in the latest advancements to provide superior dental care.</p>
+      
+      <div class="dental-services">
+        <div class="service">
+          <i class="fas fa-digital-tachograph"></i>
+          <h3>Digital Impressions</h3>
+          <p>No more uncomfortable traditional molds. Our digital scanning technology creates precise 3D models for perfect-fitting restorations.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-laser-pointer"></i>
+          <h3>Laser Dentistry</h3>
+          <p>Less invasive treatments with faster healing using advanced laser technology for various dental procedures.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-smile-beam"></i>
+          <h3>3D Smile Design</h3>
+          <p>Preview your new smile before treatment begins with our advanced digital smile design technology.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-radiation"></i>
+          <h3>Advanced Imaging</h3>
+          <p>Low-radiation CBCT scanning provides detailed 3D images for comprehensive diagnosis and treatment planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance & Payment Section -->
+  <section class="dental-section">
+    <div class="container">
+      <h2 class="section-title">Insurance & Payment Options</h2>
+      <p class="section-subtitle">We believe quality dental care should be accessible to everyone.</p>
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <h3 style="color: #007bff; margin-bottom: 20px; font-size: 24px;">Accepted Insurance Plans</h3>
+          <ul style="list-style-type: none; padding: 0;">
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> Aetna Dental
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> Blue Cross Blue Shield
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> Cigna Dental
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> Delta Dental
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> MetLife
+            </li>
+            <li style="padding: 12px 0;">
+              <i class="fas fa-check-circle" style="color: #007bff; margin-right: 10px;"></i> Many others - please call to verify
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <h3 style="color: #007bff; margin-bottom: 20px; font-size: 24px;">Flexible Payment Options</h3>
+          <ul style="list-style-type: none; padding: 0;">
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-credit-card" style="color: #007bff; margin-right: 10px;"></i> All major credit cards accepted
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-money-bill-wave" style="color: #007bff; margin-right: 10px;"></i> Flexible payment plans
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-percentage" style="color: #007bff; margin-right: 10px;"></i> Interest-free financing options
+            </li>
+            <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef;">
+              <i class="fas fa-piggy-bank" style="color: #007bff; margin-right: 10px;"></i> Healthcare savings account (HSA) accepted
+            </li>
+            <li style="padding: 12px 0;">
+              <i class="fas fa-handshake" style="color: #007bff; margin-right: 10px;"></i> Special discounts for seniors and military
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready for a Healthier, Brighter Smile?</h2>
+      <p>Schedule your appointment today and take the first step towards optimal oral health.</p>
+      
+      <div class="cta-buttons">
+        <a href="appointments.html" class="cta-primary">Book an Appointment</a>
+        <a href="contact.html" class="cta-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+            <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+            <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer;">Subscribe</button>
+        </div>
+        <div style="flex: 1; min-width: 200px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+            <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                <i class="fas fa-envelope"></i>
+                <span>info@hitaishihealth.com</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                <i class="fas fa-phone"></i>
+                <span>8790170525</span>
+            </div>
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+            <div>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+        <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+        <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+        <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+        <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // Carousel initialization
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        arrows: true,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+      });
+      
+      // Testimonials carousel
+      $('.testimonials-container').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true
+      });
+      
+      // FAQ accordions
+      $('.faq-question').click(function(){
+        $(this).parent().toggleClass('active');
+        $(this).parent().siblings().removeClass('active');
+      });
+      
+      // Animation on scroll (simple implementation)
+      $(window).scroll(function() {
+        $('.service, .why-choose-item, .team-member').each(function() {
+          var elementTop = $(this).offset().top;
+          var elementVisible = 150;
+          var windowHeight = $(window).height();
+          var scrollTop = $(window).scrollTop();
+          
+          if (elementTop < (scrollTop + windowHeight - elementVisible)) {
+            $(this).addClass('animate-slide-up');
+          }
+        });
+      });
+      
+      // Trigger scroll once on page load
+      $(window).trigger('scroll');
+    });
+    
+    // User login/logout functions
+    document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+        if (user) {
+            document.getElementById("username").textContent = user; // Show username if logged in
+        }
+    });
+
+    function setUser(name) {
+        localStorage.setItem("loggedInUser", name);
+    }
+
+    function logout() {
+        localStorage.removeItem("loggedInUser");
+        window.location.reload(); // Refresh page after logout
+    }
+  </script>
+</body>
+</html>

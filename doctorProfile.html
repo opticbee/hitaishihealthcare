@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Profile - Hitaishi</title>
+  <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body style="margin: 0; padding: 0; height: 100%; background-color: #f5f7fa; font-family: 'Poppins', sans-serif;">
+
+
+
+<!-- Navigation Bar -->
+<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+  <!-- Logo and Title -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+      <div>
+          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+      </div>
+  </div>
+  
+  <!-- search input icons -->
+  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+      <i class="fas fa-search" style="color: #007bff;"></i>
+
+  <!-- Buttons -->
+  <div style="display: flex; gap: 15px;">
+      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Book Appointment
+      </a>
+      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Find a Doctor
+      </a>
+      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Clinic
+      </a>
+      <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Eye Care
+      </a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      
+
+      <!-- Display Logged-in User Name -->
+      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+      <!-- Profile Icon -->
+      <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+          <i class="fas fa-user-circle"></i>
+      </a>
+  </div>
+
+</nav>
+
+<script>
+  // Simulating getting user data from local storage or API
+  document.addEventListener("DOMContentLoaded", function () {
+      const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+      if (user) {
+          document.getElementById("username").textContent = user; // Show username if logged in
+      }
+  });
+
+  // Example: Store username after login (call this after user logs in)
+  function setUser(name) {
+      localStorage.setItem("loggedInUser", name);
+  }
+
+  // Example: Clear user on logout
+  function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.reload(); // Refresh page after logout
+  }
+</script>
+
+
+<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+  <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+      <!-- Home Link -->
+      <div style="margin-right: 1rem;">
+          <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+      </div>
+
+      <!-- Health Records Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+              <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+              <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+          </div>
+      </div>
+
+      <!-- Diagnostics Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+          </div>
+      </div>
+
+      <!-- Physicians Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+              <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+              <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+          </div>
+      </div>
+
+      <!-- Fertility Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+              <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+              <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+          </div>
+      </div>
+
+      <!-- AI -->
+      <div style="margin-right: 1rem;">
+          <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+      </div>
+
+      <!-- Doctors Link -->
+      <div style="margin-right: 1rem;">
+          <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+      </div>
+
+      <!-- Patients Link -->
+      <div style="margin-right: 1rem;">
+          <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+      </div>
+
+
+
+      <!-- Insights Link -->
+      <div style="margin-right: 1rem;">
+          <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+      </div>
+      <div style="margin-right: 1rem;">
+          <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+      </div>
+
+      <!-- Contact Link -->
+      <div>
+          <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+      </div>
+      
+  </div>
+
+
+</nav>
+
+<!-- for dropdowns -->
+<script>
+  // JavaScript to handle dropdown visibility
+  document.querySelectorAll('nav > div > div').forEach(navItem => {
+      const dropdown = navItem.querySelector('div');
+      if (dropdown) {
+          navItem.addEventListener('mouseenter', () => {
+              dropdown.style.display = 'block';
+          });
+          navItem.addEventListener('mouseleave', () => {
+              dropdown.style.display = 'none';
+          });
+      }
+  });
+    </script>
+
+
+
+
+
+<div style="display: flex; height: 100vh; gap: 10px; padding: 10px;">
+
+    <!-- top date time bar -->
+    <div style="position: fixed; right: 0; top: 0; height: 50px; width: 100%; background: #f1f1f1; display: flex; justify-content: flex-end; align-items: center; padding: 0 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100;">
+        <i class="fas fa-bell" style="font-size: 20px; margin-left: 20px; cursor: pointer; color: #333;"></i>
+        <i class="fas fa-envelope" style="font-size: 20px; margin-left: 20px; cursor: pointer; color: #333;"></i>
+        <span id="dateTime" style="margin-left: 20px; font-size: 14px; color: #555;"></span>
+      </div>
+
+
+  <!-- Sidebar -->
+    <div style="width: 260px; margin-top: 60px; margin-left: 20px; background: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 16px; padding: 20px;  display: flex; flex-direction: column; align-items: center; position: relative;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Doctor" style="width: 100px; border-radius: 50%; margin-bottom: 15px;">
+        <h2 id="doctorName" style="margin: 10px 0; font-size: 20px; color: #333;">Doctor Name</h2>
+        </div>
+        
+        <div style="width: 100%; display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+        
+        <a href="index.html"><button onclick="showSection('welcome')" class="card-button">🏠 Home</button></a>    
+        <button onclick="showSection('appointments')" class="card-button">📅 Appointments</button>
+        <button onclick="showSection('patients')" class="card-button">👨‍⚕️ Patients</button>
+        <button onclick="showSection('history')" class="card-button">📖 History</button>
+        <button onclick="showSection('update')" class="card-button">📝 Update Profile</button>
+        <button onclick="logout()" class="card-button" style="background-color: #ff4d4f;">🚪 Logout</button>
+        </div>
+    </div>
+    
+    <style>
+        .card-button {
+        width: 100%;
+        padding: 12px;
+        text-align: left;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        }
+    
+        .card-button:hover {
+        background-color: #0056b3;
+        }
+    </style>
+  
+  <!-- Main Content -->
+  <div style="width: 75%; padding: 80px 20px 20px; overflow-y: auto; position: relative;">
+
+    
+
+    <div id="welcome" class="section active" style="display: block; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px;">
+      <h1>Welcome Back to Hitaishi Health Care Service</h1>
+    </div>
+
+    <!-- appointments -->
+    <div id="appointments" class="section" style="display: none; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px;">
+      <h2>Appointments</h2>
+      <div id="appointmentList">Loading...</div>
+    </div>
+
+    <div id="patients" class="section" style="display: block; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 0; margin: 20px; height: 600px; overflow: hidden; font-family: 'Segoe UI', sans-serif;">
+        <div style="display: flex; height: 100%;">
+          
+          <!-- Sidebar -->
+          <div style="width: 30%; border-right: 1px solid #ddd; background: #ffffff; display: flex; flex-direction: column; color: black;">
+            <div style="padding: 15px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #ccc; background-image: url('https://via.placeholder.com/300x100/007bff/ffffff'); background-size: cover; background-repeat: no-repeat; color:black;">Chats</div>
+            <input type="text" placeholder="Search or start a new chat" style="margin: 10px; padding: 8px 12px; border-radius: 20px; border: none; background: #f0f2f5; font-size: 14px;">
+            <div id="patientList" style="flex-grow: 1; overflow-y: auto; padding: 10px;"></div>
+          </div>
+      
+          <!-- Chat Box -->
+          <div style="width: 70%; display: flex; flex-direction: column; background: #efeae2;">
+            
+            <!-- Header -->
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #f0f2f5; padding: 10px 15px; border-bottom: 1px solid #ccc;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="" id="chatUserImage" alt="User" style="width: 40px; height: 40px; border-radius: 50%; background: #ccc;">
+                <span id="chatUserName" style="font-weight: bold; font-size: 16px;">Select a patient</span>
+              </div>
+              <div style="display: flex; gap: 15px; align-items: center;">
+                <button style="background: none; border: none; cursor: pointer; font-size: 18px;">
+                  <i class="fa fa-video-camera"></i>
+                </button>
+              </div>
+            </div>
+      
+            <!-- Messages -->
+            <div id="chatBox" style="flex-grow: 1; padding: 20px; overflow-y: auto; background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png'); background-size: contain;">
+              <div id="messagesContainer">
+                <p style="color: gray; text-align: center;">Select a patient to start chatting...</p>
+              </div>
+            </div>
+      
+            <!-- Input -->
+            <div style="display: flex; align-items: center; padding: 10px; background: #f0f2f5; border-top: 1px solid #ccc; gap: 10px;">
+              <!-- File Upload Button -->
+      <!-- Plus Button with Popup -->
+      <div style="position: relative;">
+          <button onclick="toggleFileOptions()" style="background: none; border: none; font-size: 20px; cursor: pointer;">
+            <i class="fa fa-plus"></i>
+          </button>
+        
+          <!-- File Options Menu -->
+          <div id="fileOptions" style="display: none; position: absolute; bottom: 40px; left: 0; background: white; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 100;">
+            <div onclick="uploadFile('image')" style="padding: 10px 15px; cursor: pointer;">📷 Image</div>
+            <div onclick="uploadFile('document')" style="padding: 10px 15px; cursor: pointer;">📄 Document</div>
+            <div onclick="uploadFile('audio')" style="padding: 10px 15px; cursor: pointer;">🎵 Audio</div>
+            <div onclick="uploadFile('video')" style="padding: 10px 15px; cursor: pointer;">🎥 Video</div>
+          </div>
+        
+          <!-- Hidden File Inputs -->
+          <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+          <input type="file" id="documentUpload" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+          <input type="file" id="audioUpload" accept="audio/*" style="display: none;">
+          <input type="file" id="videoUpload" accept="video/*" style="display: none;">
+        </div>
+        
+              
+              <input type="text" placeholder="Type a message" style="flex-grow: 1; padding: 10px 15px; border-radius: 20px; border: none; font-size: 14px;">
+              <button style="background: none; border: none; font-size: 20px; cursor: pointer;">
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Style -->
+      <style>
+        .chat-user.active {
+          background: #dfe6e9;
+          border-radius: 8px;
+        }
+      
+        .message-card {
+          max-width: 70%;
+          background: white;
+          color: black;
+          padding: 10px 15px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          display: inline-block;
+          clear: both;
+        }
+      
+        .sent-message {
+          align-self: flex-end;
+          background: #dcf8c6;
+          float: right;
+        }
+      
+        .received-message {
+          align-self: flex-start;
+          background: #ffffff;
+          float: left;
+        }
+      </style>
+      
+      <!-- Script -->
+      <script>
+          const patients = [
+            { id: 1, name: "John Doe", image: "https://via.placeholder.com/40" },
+            { id: 2, name: "Jane Smith", image: "https://via.placeholder.com/40" },
+            { id: 3, name: "Ravi Kumar", image: "https://via.placeholder.com/40" }
+          ];
+        
+          let chats = {};
+          let selectedPatient = null;
+        
+          const patientList = document.getElementById("patientList");
+          const chatUserImage = document.getElementById("chatUserImage");
+          const chatUserName = document.getElementById("chatUserName");
+          const messagesContainer = document.getElementById("messagesContainer");
+          const messageInput = document.querySelector('#patients input[placeholder="Type a message"]');
+          const sendBtn = document.querySelector('.fa-paper-plane').parentElement;
+          const searchInput = document.querySelector('#patients input[placeholder="Search or start a new chat"]');
+        
+          function loadPatientList(filter = "") {
+            patientList.innerHTML = "";
+        
+            let filteredPatients = patients.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
+            
+            if (filteredPatients.length === 0 && filter.trim() !== "") {
+              const newId = Date.now();
+              const newPatient = { id: newId, name: filter.trim(), image: "https://via.placeholder.com/40" };
+              patients.push(newPatient);
+              filteredPatients = [newPatient];
+            }
+        
+            filteredPatients.forEach((patient) => {
+              const patientDiv = document.createElement("div");
+              patientDiv.className = "chat-user";
+              patientDiv.style.padding = "10px";
+              patientDiv.style.cursor = "pointer";
+              patientDiv.style.display = "flex";
+              patientDiv.style.alignItems = "center";
+              patientDiv.style.gap = "10px";
+        
+              patientDiv.innerHTML = `
+                <img src="${patient.image}" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">
+                <span>${patient.name}</span>
+              `;
+        
+              patientDiv.addEventListener("click", () => selectPatient(patient, patientDiv));
+              patientList.appendChild(patientDiv);
+            });
+          }
+        
+          function selectPatient(patient, element) {
+            selectedPatient = patient;
+            chatUserImage.src = patient.image;
+            chatUserName.textContent = patient.name;
+        
+            document.querySelectorAll(".chat-user").forEach(el => el.classList.remove("active"));
+            if (element) element.classList.add("active");
+        
+            renderMessages(patient.id);
+          }
+        
+          function renderMessages(patientId) {
+            messagesContainer.innerHTML = "";
+        
+            const messages = chats[patientId] || [];
+        
+            if (messages.length === 0) {
+              messagesContainer.innerHTML = <p style="color: gray; text-align: center;">Start a conversation...</p>;
+              return;
+            }
+        
+            messages.forEach(msg => {
+              const messageDiv = document.createElement("div");
+              messageDiv.className =   `message-card ${msg.sender === 'me' ? 'sent-message' : 'received-message'}`;
+              messageDiv.textContent = msg.text;
+              messagesContainer.appendChild(messageDiv);
+            });
+        
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          }
+        
+          function sendMessage() {
+            if (!selectedPatient) {
+              alert("Please select or start a new chat.");
+              return;
+            }
+        
+            const text = messageInput.value.trim();
+            if (text === "") return;
+        
+            const patientId = selectedPatient.id;
+            if (!chats[patientId]) chats[patientId] = [];
+        
+            chats[patientId].push({ sender: 'me', text });
+            messageInput.value = "";
+            renderMessages(patientId);
+        
+            setTimeout(() => {
+              chats[patientId].push({ sender: 'them', text: "Thank you for your message." });
+              renderMessages(patientId);
+            }, 1000);
+          }
+        
+          // Handle Enter in message input
+          messageInput.addEventListener("keydown", function (e) {
+            if (e.key === 'Enter') sendMessage();
+          });
+        
+          sendBtn.addEventListener("click", sendMessage);
+        
+          // Live search or create
+          searchInput.addEventListener("input", function () {
+            loadPatientList(searchInput.value);
+          });
+        
+          searchInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              const name = searchInput.value.trim();
+              if (!name) return;
+        
+              const existing = patients.find(p => p.name.toLowerCase() === name.toLowerCase());
+        
+              if (existing) {
+                const allUsers = document.querySelectorAll(".chat-user");
+                const userDiv = [...allUsers].find(div => div.textContent.trim() === existing.name);
+                selectPatient(existing, userDiv);
+              } else {
+                const newId = Date.now();
+                const newPatient = { id: newId, name: name, image: "https://via.placeholder.com/40" };
+                patients.push(newPatient);
+                loadPatientList();
+                setTimeout(() => {
+                  const allUsers = document.querySelectorAll(".chat-user");
+                  const userDiv = [...allUsers].find(div => div.textContent.trim() === newPatient.name);
+                  selectPatient(newPatient, userDiv);
+                }, 100);
+              }
+        
+              searchInput.value = "";
+            }
+          });
+        
+          // Initial list
+          loadPatientList();
+          const fileInput = document.getElementById("fileUpload");
+      
+        fileInput.addEventListener("change", function () {
+          const file = fileInput.files[0];
+          if (!file || !selectedPatient) return;
+      
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const fileURL = e.target.result;
+      
+            const patientId = selectedPatient.id;
+            if (!chats[patientId]) chats[patientId] = [];
+      
+            // Add file message
+            chats[patientId].push({
+              sender: 'me',
+              text: [File],
+              file: {
+                name: file.name,
+                url: fileURL,
+              }
+            });
+      
+            renderMessages(patientId);
+          };
+          reader.readAsDataURL(file);
+        });
+      
+        // Extend renderMessages to handle file display
+        function renderMessages(patientId) {
+          messagesContainer.innerHTML = "";
+      
+          const messages = chats[patientId] || [];
+      
+          if (messages.length === 0) {
+            messagesContainer.innerHTML = <p style="color: gray; text-align: center;">Start a conversation...</p>;
+            return;
+          }
+      
+          messages.forEach(msg => {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message-card ${msg.sender === 'me' ? 'sent-message' : 'received-message'}`;
+      
+            if (msg.file) {
+              const link = document.createElement("a");
+              link.href = msg.file.url;
+              link.target = "_blank";
+              link.textContent = `📎 ${msg.file.name}`;
+              link.style.textDecoration = "none";
+              link.style.color = "#007bff";
+              messageDiv.appendChild(link);
+            } else {
+              messageDiv.textContent = msg.text;
+            }
+      
+            messagesContainer.appendChild(messageDiv);
+          });
+      
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+      
+      
+        function toggleFileOptions() {
+          const menu = document.getElementById('fileOptions');
+          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+      
+        function uploadFile(type) {
+          document.getElementById('fileOptions').style.display = 'none'; // hide menu
+      
+          switch(type) {
+            case 'image':
+              document.getElementById('imageUpload').click();
+              break;
+            case 'document':
+              document.getElementById('documentUpload').click();
+              break;
+            case 'audio':
+              document.getElementById('audioUpload').click();
+              break;
+            case 'video':
+              document.getElementById('videoUpload').click();
+              break;
+          }
+        }
+      
+        // Event listeners for file inputs
+        document.getElementById('imageUpload').addEventListener('change', handleFileSelect);
+        document.getElementById('documentUpload').addEventListener('change', handleFileSelect);
+        document.getElementById('audioUpload').addEventListener('change', handleFileSelect);
+        document.getElementById('videoUpload').addEventListener('change', handleFileSelect);
+      
+        function handleFileSelect(event) {
+          const file = event.target.files[0];
+          if (file) {
+            alert(`Selected: ${file.name}`);
+            // Add logic here to preview/send file in chat
+          }
+        }
+      
+      
+      </script>
+      
+      
+      
+      
+
+    <!-- history -->
+    <div id="history" class="section" style="display: none; background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px;">
+      <h2>Treatment History</h2>
+      <div id="historyContent">Loading...</div>
+    </div>
+
+    <!-- update profile -->
+    <div id="update" class="section" style="display: none; background: linear-gradient(to bottom, #f7f9fc, #e3eaf2); border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); padding: 40px; margin-bottom: 30px; max-width: 750px; margin-inline: auto; font-family: 'Segoe UI', sans-serif;">
+        <h2 style="text-align: center; color: #0056b3; margin-bottom: 35px; font-size: 28px; font-weight: 600;">Update Profile</h2>
+        <form id="updateForm" style="display: flex; flex-direction: column; gap: 18px;">
+      
+          <input type="text" id="first_name" name="first_name" placeholder="First Name" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="email" id="email" name="email" placeholder="Email" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="mobile" name="mobile" placeholder="Mobile" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <textarea id="address" name="address" placeholder="Address" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; resize: vertical; background: #fff;"></textarea>
+      
+          <input type="text" id="degree" name="degree" placeholder="Degree" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="university" name="university" placeholder="University" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="number" id="experience" name="experience" placeholder="Years of Experience" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="aadhar_card" name="aadhar_card" placeholder="Aadhar Card" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="license_number" name="license_number" placeholder="License Number" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="specialization" name="specialization" placeholder="Specialization" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="text" id="clinic" name="clinic" placeholder="Clinic" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <select id="availability" name="availability" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+            <option value="">-- Availability --</option>
+            <option value="Diagnostic Center">Diagnostic Center</option>
+            <option value="Online Only">Online Only</option>
+            <option value="Both">Both</option>
+          </select>
+      
+          <input type="time" id="from_time" name="from_time" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <input type="time" id="to_time" name="to_time" required 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; background: #fff;">
+      
+          <textarea id="additional_info" name="additional_info" placeholder="Additional Info" 
+            style="padding: 14px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; resize: vertical; background: #fff;"></textarea>
+      
+          <button type="submit" 
+            style="padding: 16px; background: linear-gradient(to right, #007bff, #0056b3); color: white; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; transition: background 0.3s; font-weight: 500;">
+            Update
+          </button>
+        </form>
+    </div>
+      
+
+  </div>
+</div>
+
+<script>
+  const uid = localStorage.getItem('doctor_uid');
+
+  function updateDateTime() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit' };
+    document.getElementById("dateTime").innerText = now.toLocaleDateString(undefined, options);
+  }
+
+  setInterval(updateDateTime, 60000);
+  updateDateTime();
+
+  async function loadDoctorData() {
+    const res = await fetch(`http://localhost:5000/api/gdoctors/${uid}`);
+    const data = await res.json();
+    document.getElementById("doctorName").innerText = data.first_name + " " + data.last_name;
+    Object.keys(data).forEach(key => {
+      const input = document.getElementById(key);
+      if (input) input.value = data[key];
+    });
+  }
+
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    if (id === 'appointments') loadAppointments();
+    if (id === 'history') loadHistory();
+    if (id === 'patients') loadPatients();
+    if (id === 'update') loadDoctorData();
+  }
+
+  function logout() {
+    localStorage.removeItem('doctor_uid');
+    window.location.href = 'doctorlogin.html';
+  }
+
+  async function loadAppointments() {
+    const res = await fetch(`http://localhost:5000/api/appointments/${uid}`);
+    const data = await res.json();
+    const container = document.getElementById("appointmentList");
+    container.innerHTML = data.map(app => `<p><strong>${app.patient_name}</strong> - ${app.date} @ ${app.time}</p>`).join('');
+  }
+
+  async function loadHistory() {
+    const res = await fetch(`http://localhost:5000/api/history/${uid}`);
+    const data = await res.json();
+    const container = document.getElementById("historyContent");
+    container.innerHTML = data.map(h => `<p><strong>${h.patient_name}</strong> - ${h.date} - ${h.disease} - ${h.treatment}</p>`).join('');
+  }
+
+  async function loadPatients() {
+    const list = ['ravi', 'kishore', 'navee', 'ganapathi'];
+    const patientList = document.getElementById("patientList");
+    patientList.innerHTML = list.map(name => `<div style="padding: 10px; border-bottom: 1px solid #ddd; cursor: pointer;" onclick="loadChat('${name}')">${name}</div>`).join('');
+  }
+
+  function loadChat(name) {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML = `<h3>Chat with ${name}</h3><p>[Chat history here]</p><button>Start Video Call</button>`;
+  }
+
+  document.getElementById("updateForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const formData = {};
+    new FormData(this).forEach((value, key) => { formData[key] = value; });
+    const res = await fetch(`http://localhost:5000/api/updatedoctors/${uid}`, {
+      method: "PUT",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    const result = await res.json();
+    alert(result.message || "Profile updated successfully!");
+  });
+
+  window.onload = loadDoctorData;
+</script>
+
+
+
+
+ <!-- chatbot -->
+ <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+    <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+</div>
+    
+<!-- Chatbot Container (initially hidden) -->
+<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+    <!-- Chatbot Header -->
+    <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+        <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+        <!-- Welcome message -->
+        <div>
+            <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+        </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div id="input-area" style="display: flex; align-items: center;">
+        <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+        <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+    </div>
+</div>
+<script>
+  // Show the chatbot when the icon is clicked
+  document.getElementById('chatbot-icon').addEventListener('click', function() {
+      let chatbotContainer = document.getElementById('chatbot-container');
+      chatbotContainer.style.display = 'block';
+      chatbotContainer.style.transform = 'translateY(0)';
+      chatbotContainer.style.opacity = '1';
+      document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+  });
+
+  // Handle sending messages
+  document.getElementById('send-btn').addEventListener('click', function() {
+      sendMessage();
+  });
+
+  // Allow sending messages with Enter key
+  document.getElementById('user-input').addEventListener('keypress', function(event) {
+      if (event.key === "Enter") {
+          sendMessage();
+      }
+  });
+
+  function sendMessage() {
+      var userInput = document.getElementById('user-input').value.trim();
+      if (userInput !== '') {
+          var chatArea = document.getElementById('chat-area');
+
+          // User Message
+          var userMessage = document.createElement('div');
+          userMessage.classList.add('message', 'user-message');
+          styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+          userMessage.textContent = userInput;
+          chatArea.appendChild(userMessage);
+
+          // Scroll to the bottom
+          chatArea.scrollTop = chatArea.scrollHeight;
+
+          // Clear the input field
+          document.getElementById('user-input').value = '';
+
+          // Simulate chatbot response after 1 second
+          setTimeout(function() {
+              var botMessage = document.createElement('div');
+              botMessage.classList.add('message', 'bot-message');
+              styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+              botMessage.textContent = getBotReply(userInput);
+              chatArea.appendChild(botMessage);
+
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+          }, 1000);
+      }
+  }
+
+  function styleMessage(element, bgColor, textColor, align) {
+      element.style.padding = '8px 12px';
+      element.style.borderRadius = '20px';
+      element.style.margin = '5px 0';
+      element.style.maxWidth = '75%';
+      element.style.fontSize = '16px';
+      element.style.backgroundColor = bgColor;
+      element.style.color = textColor;
+      element.style.alignSelf = align;
+  }
+
+  function getBotReply(userMessage) {
+      userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+
+        const responses = {
+            "hi": "Hello, How are you?",
+            "hello": "Hi, How are you?",
+            "how are you": "I'm just a bot, but I'm doing great! How about you?",
+            "good morning": "Good morning! Have a fantastic day ahead!",
+            "good night": "Good night! Sweet dreams!",
+            "thank you": "You're welcome! 😊",
+            "what's your name": "I'm your friendly chatbot!",
+            "who created you": "I was created by Naveen Teja! 😉",
+            "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+            "bye": "Goodbye! Have a great day!",
+            "what can you do": "I can chat with you! Ask me anything. 😊",
+
+            // Health Diagnostic Services
+            "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+            "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+            "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+            "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+            "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+            "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+            "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+            "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+            "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+            "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+            // Fertility-Related Q&A
+            "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+            "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+            "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+            "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+            "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+            "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+            "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+            "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+            "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+            "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+            "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+        };
+
+        
+      return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+  }
+
+  // Close the chatbot
+  document.getElementById('close-chat').addEventListener('click', function() {
+      document.getElementById('chatbot-container').style.display = 'none';
+      document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+  });
+</script>
+</body>
+</html>

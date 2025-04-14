@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Hitaishi Health Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color:#f4f8fb;color:#333;">
+
+    
+    <!-- Navigation Bar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+      <!-- Logo and Title -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+          <div>
+              <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+              <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+          </div>
+      </div>
+      
+      <!-- search input icons -->
+      <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+      <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+          <i class="fas fa-search" style="color: #007bff;"></i>
+  
+      <!-- Buttons -->
+      <div style="display: flex; gap: 15px;">
+          <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Book Appointment
+          </a>
+          <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Find a Doctor
+          </a>
+          <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Clinic
+          </a>
+          <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Eye Care
+          </a>
+      </div>
+  
+      <!-- Social Media Icons -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-whatsapp"></i>
+          </a>
+          
+  
+          <!-- Display Logged-in User Name -->
+          <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+  
+          <!-- Profile Icon -->
+          <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+              <i class="fas fa-user-circle"></i>
+          </a>
+      </div>
+  
+  </nav>
+  
+  <script>
+      // Simulating getting user data from local storage or API
+      document.addEventListener("DOMContentLoaded", function () {
+          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+          if (user) {
+              document.getElementById("username").textContent = user; // Show username if logged in
+          }
+      });
+  
+      // Example: Store username after login (call this after user logs in)
+      function setUser(name) {
+          localStorage.setItem("loggedInUser", name);
+      }
+  
+      // Example: Clear user on logout
+      function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.reload(); // Refresh page after logout
+      }
+  </script>
+  
+  
+  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+          <!-- Home Link -->
+          <div style="margin-right: 1rem;">
+              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+          </div>
+
+          <!-- Health Records Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                  <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                  <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+              </div>
+          </div>
+
+          <!-- Diagnostics Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+              </div>
+          </div>
+
+          <!-- Physicians Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                  <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                  <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+              </div>
+          </div>
+
+          <!-- Fertility Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                  <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+              </div>
+          </div>
+
+          <!-- AI -->
+          <div style="margin-right: 1rem;">
+              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+          </div>
+
+          <!-- Doctors Link -->
+          <div style="margin-right: 1rem;">
+              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+          </div>
+
+          <!-- Patients Link -->
+          <div style="margin-right: 1rem;">
+              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+          </div>
+
+
+
+          <!-- Insights Link -->
+          <div style="margin-right: 1rem;">
+              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+          </div>
+          <div style="margin-right: 1rem;">
+              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+          </div>
+
+          <!-- Contact Link -->
+          <div>
+              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+          </div>
+          
+      </div>
+
+    
+  </nav>
+
+  <!-- for dropdowns -->
+  <script>
+      // JavaScript to handle dropdown visibility
+      document.querySelectorAll('nav > div > div').forEach(navItem => {
+          const dropdown = navItem.querySelector('div');
+          if (dropdown) {
+              navItem.addEventListener('mouseenter', () => {
+                  dropdown.style.display = 'block';
+              });
+              navItem.addEventListener('mouseleave', () => {
+                  dropdown.style.display = 'none';
+              });
+          }
+      });
+    </script>
+
+
+
+  <!-- Hero Section -->
+  <div style="background:#23c0e7cb;color:white;padding:60px 20px;text-align:center;">
+    <h1 style="margin-bottom:10px;font-size:2.5em;">Contact Hitaishi Health Care</h1>
+    <p style="font-size:1.1em;max-width:800px;margin:auto;">
+      Your trusted healthcare guide. We connect you with the right doctors for Eye Care, Dental, ENT, and Diagnostic services.
+    </p>
+  </div>
+
+<!-- Compact Contact Info Section -->
+<div style="max-width:1200px;margin:40px auto;padding:20px;display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#f5fcff;overflow-x: auto; white-space: nowrap; -ms-overflow-style: none; scrollbar-width: none;">
+
+   <!-- Scrollable Wrapper -->
+
+    <div style="display: inline-flex; gap: 20px;">
+  
+      <!-- Eye Care Card -->
+      <div style="flex: 0 0 auto; width: 250px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+        <div style="font-size: 2em; background: linear-gradient(45deg,#0077b6,#00b4d8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">👁</div>
+        <h3 style="color: #004d61; margin: 10px 0 5px;">Eye Care</h3>
+        <p style="font-size: 0.9em;">Need an ophthalmologist? We can help.</p>
+        <p style="color: #004d61; font-size: 0.85em;">📞 +91-98765-43210<br>✉ eye.support@hitaishihealthcare.com</p>
+        <button style="margin-top: 10px; padding: 8px 16px; background: #0077b6; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em;" onmouseover="this.style.background='#005f86'" onmouseout="this.style.background='#0077b6'">Contact Now</button>
+      </div>
+  
+      <!-- Dental Care Card -->
+      <div style="flex: 0 0 auto; width: 250px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+        <div style="font-size: 2em; background: linear-gradient(45deg,#ff6b6b,#ffa502); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🦷</div>
+        <h3 style="color: #004d61; margin: 10px 0 5px;">Dental Care</h3>
+        <p style="font-size: 0.9em;">Looking for trusted dentists?</p>
+        <p style="color: #004d61; font-size: 0.85em;">📞 +91-98765-43220<br>✉ dental.support@hitaishihealthcare.com</p>
+        <button style="margin-top: 10px; padding: 8px 16px; background: #e67e22; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em;" onmouseover="this.style.background='#cf711c'" onmouseout="this.style.background='#e67e22'">Contact Now</button>
+      </div>
+  
+      <!-- ENT Card -->
+      <div style="flex: 0 0 auto; width: 250px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+        <div style="font-size: 2em; background: linear-gradient(45deg,#6a0572,#ab83a1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">👂</div>
+        <h3 style="color: #004d61; margin: 10px 0 5px;">ENT Support</h3>
+        <p style="font-size: 0.9em;">Connect with ENT specialists.</p>
+        <p style="color: #004d61; font-size: 0.85em;">📞 +91-98765-43230<br>✉ ent.support@hitaishihealthcare.com</p>
+        <button style="margin-top: 10px; padding: 8px 16px; background: #8e44ad; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em;" onmouseover="this.style.background='#732d91'" onmouseout="this.style.background='#8e44ad'">Contact Now</button>
+      </div>
+  
+      <!-- Diagnostics Card -->
+      <div style="flex: 0 0 auto; width: 250px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+        <div style="font-size: 2em; background: linear-gradient(45deg,#008000,#00c853); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🧪</div>
+        <h3 style="color: #004d61; margin: 10px 0 5px;">Diagnostics</h3>
+        <p style="font-size: 0.9em;">Need tests or scans? Book easily.</p>
+        <p style="color: #004d61; font-size: 0.85em;">📞 +91-98765-43240<br>✉ diagnostics@hitaishihealthcare.com</p>
+        <button style="margin-top: 10px; padding: 8px 16px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em;" onmouseover="this.style.background='#1e8449'" onmouseout="this.style.background='#27ae60'">Contact Now</button>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Our Vision and Mission Section -->
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; background: linear-gradient(135deg, #e0f7fa, #ffffff); padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
+
+    <!-- Our Vision Card -->
+    <div style="flex: 1 1 400px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/6401/6401373.png" alt="Vision Icon" style="width: 80px; margin-bottom: 20px;" />
+      <h2 style="color: #0077b6; font-size: 1.8em; margin-bottom: 15px;">Our Vision</h2>
+      <p style="color: #333; font-size: 1em; line-height: 1.6;">
+        To become a trusted bridge between patients and healthcare professionals, making quality care accessible, affordable, and seamless for every individual, everywhere.
+      </p>
+    </div>
+  
+    <!-- Our Mission Card -->
+    <div style="flex: 1 1 400px; max-width: 500px; background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Mission Icon" style="width: 60px; margin-bottom: 20px;" />
+      <h2 style="color: #009688; font-size: 1.8em; margin-bottom: 15px;">Our Mission</h2>
+      <p style="color: #333; font-size: 1em; line-height: 1.6;">
+        We aim to empower patients with timely medical support, connect them to experienced doctors and diagnostic centers, and deliver compassionate services through innovation and care.
+      </p>
+    </div>
+  
+  </div>
+  
+  
+  <section style="padding:60px 20px;background:#f4f8fb;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="max-width:1200px;margin:auto;text-align:center;">
+      <h2 style="font-size:2.2em;margin-bottom:10px;color:#004d61;">Insights, Meetings & Collaborations</h2>
+      <p style="font-size:1.1em;color:#444;margin-bottom:40px;">Bridging medical expertise, innovation, and teamwork to deliver better healthcare outcomes.</p>
+  
+      <div style="display:flex;flex-wrap:nowrap;gap:30px;justify-content:space-between;overflow-x:auto;scrollbar-width: none;">
+  
+        <!-- Insights -->
+        <div style="flex:0 0 32%;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.05);text-align:left;">
+          <div style="font-size:2em;margin-bottom:15px;color:#004d61;">📊</div>
+          <h3 style="font-size:1.4em;margin-bottom:10px;">Medical Insights</h3>
+          <p style="color:#555;line-height:1.6;margin-bottom:20px;">Stay updated with the latest trends in ophthalmology, dental research, ENT treatments, and diagnostics through our regularly shared insights and articles.</p>
+          <button onclick="alert('Redirecting to Insights...')" style="background:#004d61;color:white;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;font-size:0.95em;">Read Insights</button>
+        </div>
+  
+        <!-- Meetings -->
+        <div style="flex:0 0 32%;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.05);text-align:left;">
+          <div style="font-size:2em;margin-bottom:15px;color:#004d61;">🤝</div>
+          <h3 style="font-size:1.4em;margin-bottom:10px;">Doctor Meetings</h3>
+          <p style="color:#555;line-height:1.6;margin-bottom:20px;">We facilitate seamless online and offline meetings between patients and expert doctors from various specialties to ensure personalized care.</p>
+          <button onclick="alert('Opening Meeting Scheduler...')" style="background:#004d61;color:white;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;font-size:0.95em;">Schedule Meeting</button>
+        </div>
+  
+        <!-- Collaborations -->
+        <div style="flex:0 0 32%;background:white;padding:30px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.05);text-align:left;">
+          <div style="font-size:2em;margin-bottom:15px;color:#004d61;">🌐</div>
+          <h3 style="font-size:1.4em;margin-bottom:10px;">Global Collaborations</h3>
+          <p style="color:#555;line-height:1.6;margin-bottom:20px;">Partnering with healthcare institutions, diagnostic labs, and research bodies to bring top-tier medical access and innovation to every corner.</p>
+          <button onclick="alert('Loading Collaborations...')" style="background:#004d61;color:white;padding:10px 18px;border:none;border-radius:6px;cursor:pointer;font-size:0.95em;">View Partners</button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+ <!-- Contact Form with Embedded Address -->
+<div style="background:white; padding:30px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); max-width:1000px; margin:40px auto; display:flex; flex-wrap:wrap; gap:30px; font-family:'Segoe UI', sans-serif;">
+    <!-- Right: Address Info -->
+    <div style="flex:1 1 35%; background:white; padding:20px 25px; border-radius:10px; box-shadow:inset 0 0 5px rgba(0,0,0,0.05); min-width:250px;">
+        <h3 style="color:#0077b6; margin-bottom:15px;">📍 Our Address</h3>
+        <p style="font-size:0.95em; color:#333; line-height:1.6;">
+          <strong>Hitaishi Health Care</strong><br>
+          3rd Floor, 985, Pragati Nagar,<br>
+          Kukatpally, Hyderabad, India
+        </p>
+        <p style="margin-top:20px;">
+          <strong>📞 Phone:</strong><br>+91-8790170525
+        </p>
+        <p>
+          <strong>✉ Email:</strong><br>support@hitaishihealthcare.com
+        </p>
+      </div>
+    <!-- Left: Input Fields -->
+    <div style="flex:1 1 55%; min-width:300px;">
+      <h2 style="margin-bottom:10px;color:#004d61;">Need Help? Reach Out to Us</h2>
+      <p style="margin-bottom:20px;">We’ll connect you with the best doctors and services based on your needs.</p>
+      <form>
+        <input type="text" placeholder="Your Name" required style="padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1em; width:100%; margin-bottom:15px;">
+        <input type="email" placeholder="Your Email" required style="padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1em; width:100%; margin-bottom:15px;">
+        <input type="text" placeholder="Subject" required style="padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1em; width:100%; margin-bottom:15px;">
+        <textarea rows="5" placeholder="Your Message" required style="padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1em; width:100%; margin-bottom:15px;"></textarea>
+        <button type="submit" style="background:#004d61; color:white; border:none; padding:12px 20px; border-radius:5px; font-size:1em; cursor:pointer;">Send Message</button>
+      </form>
+      <p style="font-size:0.9em;color:gray;margin-top:20px;">
+        Note: Hitaishi Health Care is a digital platform connecting patients with healthcare professionals. We are not a hospital or clinic.
+      </p>
+    </div>
+  
+
+  
+  </div>
+  
+
+  <!-- Google Map -->
+  <div style="margin:50px 20px;text-align:center;">
+    <h3 style="color:#004d61;margin-bottom:15px;">Our Coordination Center</h3>
+    <iframe src="https://maps.google.com/maps?q=cityname%20hospital&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      style="width:100%;height:300px;border:none;border-radius:10px;" allowfullscreen></iframe>
+  </div>
+
+
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+  
+      fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(response => {
+        document.getElementById('formResponse').textContent = response.message;
+        if (response.status === 'success') this.reset();
+      })
+      .catch(err => {
+        document.getElementById('formResponse').textContent = 'Something went wrong.';
+      });
+    });
+  </script>
+  <!-- footer -->
+  <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+            <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+        </div>
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+            <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+            <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+        </div>
+        <div style="flex: 1; min-width: 200px;">
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+            <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                <i class="fas fa-envelope"></i>
+                <span>info@hitaishihealth.com</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                <i class="fas fa-phone"></i>
+                <span>8790170525</span>
+            </div>
+            <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+            <div>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+        <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+        <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+        <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+        <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+    </div>
+</footer>
+</body>
+</html>

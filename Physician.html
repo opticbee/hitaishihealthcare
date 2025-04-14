@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Physician – Hitaishi Hospital</title>
+  <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+
+
+
+ <!-- Navigation Bar -->
+ <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+  <!-- Logo and Title -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+      <div>
+          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+      </div>
+  </div>
+  
+  <!-- search input icons -->
+  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+      <i class="fas fa-search" style="color: #007bff;"></i>
+
+  <!-- Buttons -->
+  <div style="display: flex; gap: 15px;">
+      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Book Appointment
+      </a>
+      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Find a Doctor
+      </a>
+      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Clinic
+      </a>
+      <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Eye Care
+      </a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      
+
+      <!-- Display Logged-in User Name -->
+      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+      <!-- Profile Icon -->
+      <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+          <i class="fas fa-user-circle"></i>
+      </a>
+  </div>
+
+</nav>
+
+<script>
+  // Simulating getting user data from local storage or API
+  document.addEventListener("DOMContentLoaded", function () {
+      const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+      if (user) {
+          document.getElementById("username").textContent = user; // Show username if logged in
+      }
+  });
+
+  // Example: Store username after login (call this after user logs in)
+  function setUser(name) {
+      localStorage.setItem("loggedInUser", name);
+  }
+
+  // Example: Clear user on logout
+  function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.reload(); // Refresh page after logout
+  }
+</script>
+
+
+<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+  <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+      <!-- Home Link -->
+      <div style="margin-right: 1rem;">
+          <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+      </div>
+
+      <!-- Health Records Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+              <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+              <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+          </div>
+      </div>
+
+      <!-- Diagnostics Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+          </div>
+      </div>
+
+      <!-- Physicians Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+              <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+              <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+          </div>
+      </div>
+
+      <!-- Fertility Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+              <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+              <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+          </div>
+      </div>
+
+      <!-- AI -->
+      <div style="margin-right: 1rem;">
+          <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+      </div>
+
+      <!-- Doctors Link -->
+      <div style="margin-right: 1rem;">
+          <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+      </div>
+
+      <!-- Patients Link -->
+      <div style="margin-right: 1rem;">
+          <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+      </div>
+
+
+
+      <!-- Insights Link -->
+      <div style="margin-right: 1rem;">
+          <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+      </div>
+      <div style="margin-right: 1rem;">
+          <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+      </div>
+
+      <!-- Contact Link -->
+      <div>
+          <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+      </div>
+      
+  </div>
+
+
+</nav>
+
+<!-- for dropdowns -->
+<script>
+  // JavaScript to handle dropdown visibility
+  document.querySelectorAll('nav > div > div').forEach(navItem => {
+      const dropdown = navItem.querySelector('div');
+      if (dropdown) {
+          navItem.addEventListener('mouseenter', () => {
+              dropdown.style.display = 'block';
+          });
+          navItem.addEventListener('mouseleave', () => {
+              dropdown.style.display = 'none';
+          });
+      }
+  });
+    </script>
+
+
+
+
+
+
+  <!-- Header -->
+  <div style="position: relative; background-image: url('https://freerangestock.com/sample/149490/group-of-doctors-and-medical-students-standing-together-relaxed.jpg'); background-size: cover; background-position: center; height: 70vh; color: white;">
+  
+   <!-- Text Content with Full-Width Overlay -->
+   <div style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">
+     <div style="width: 100%; background-color: rgba(0, 0, 0, 0.6); padding: 30px 20px;">
+       <h1 style="margin: 0; font-size: 24px;color: #27ae60;">Hitaishi Haspital<br>Senior Physician, Internal Medicine | Hitaishi Hospital</h1>
+     </div>
+   </div>
+  
+  </div>
+  
+
+
+  <br>
+  <h2 style="color: slateblue; font-size: 30px; margin-bottom: 15px;text-align: center;">About our Physician</h2>
+  <br>
+ 
+   <!-- Right: Text Content -->
+  <!-- Carousel Container -->
+<!-- Carousel Container -->
+<div style="width: 100%; margin: 0 auto; overflow: hidden; border: 2px solid #004080; border-radius: 12px; position: relative;">
+
+  <!-- Carousel Inner -->
+  <div id="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+    
+    <!-- Slide 1 -->
+    <div style="flex-shrink: 0; width: 100%; display: flex; align-items: flex-start; padding: 20px; box-sizing: border-box;">
+      <img src="https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-260nw-2480850611.jpg" alt="Dr. Aryan Sharma" style="width: 600px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <div style="margin-left: 80px;">
+        <h2 style="color: #004080; font-size: 24px; margin-bottom: 6px;">Dr. Aryan Sharma</h2>
+        <p style="font-size: 18px; color: #444;">Internal Medicine Specialist</p>
+        <p style="font-size: 18px; color: #666;">MBBS, MD (Internal Medicine)</p>
+        <p style="margin-top: 10px; font-size: 18px; line-height: 1.5; color: #333;">
+          Over 18 years of experience treating <strong>diabetes, hypertension</strong>, and <strong>cardiac care</strong>.
+        </p>
+        <p style="font-size: 18px; color: #555;">🏥 Department: Internal Medicine<br>🕒 Timings: Mon–Sat, 10:00 AM – 1:30 PM<br>📞 Contact: +91-9876543210</p>
+        <button onclick="openForm(1)" style="margin-top: 12px; background-color: green; color: white; padding: 10px 16px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Book an Appointment</button>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div style="flex-shrink: 0; width: 100%; display: flex; align-items: flex-start; padding: 20px; box-sizing: border-box;">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg" alt="Dr. Neha Verma" style="width: 600px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <div style="margin-left: 80px;">
+        <h2 style="color: #004080; font-size: 24px;">Dr. Neha Verma</h2>
+        <p style="font-size: 18px; color: #444;">Senior Pulmonologist</p>
+        <p style="font-size: 18px; color: #666;">MBBS, MD (Pulmonology)</p>
+        <p style="margin-top: 10px; font-size: 18px; line-height: 1.5; color: #333;">
+          Specializing in <strong>asthma, COPD</strong>, and <strong>sleep disorders</strong>.
+        </p>
+        <p style="font-size: 18px; color: #555;">🏥 Department: Respiratory Medicine<br>🕒 Timings: Mon–Fri, 2:00 PM – 5:00 PM<br>📞 Contact: +91-9876543211</p>
+        <button onclick="openForm(2)" style="margin-top: 12px; background-color: red; color: white; padding: 10px 16px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Book an Appointment</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div style="flex-shrink: 0; width: 100%; display: flex; align-items: flex-start; padding: 20px; box-sizing: border-box;">
+      <img src="https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-grey_651396-974.jpg?semt=ais_hybrid&w=740" alt="Dr. Rohan Mehta" style="width: 600px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <div style="margin-left: 80px;">
+        <h2 style="color: #004080; font-size: 24px;">Dr. Rohan Mehta</h2>
+        <p style="font-size: 18px; color: #444;">Consultant Cardiologist</p>
+        <p style="font-size: 18px; color: #666;">MBBS, MD, DM (Cardiology)</p>
+        <p style="margin-top: 10px; font-size: 18px; line-height: 1.5; color: #333;">
+          Treats <strong>heart failure, arrhythmias</strong>, and <strong>ischemic heart disease</strong>.
+        </p>
+        <p style="font-size: 18px; color: #555;">🏥 Department: Cardiology<br>🕒 Timings: Tue, Thu, Sat – 11:00 AM – 3:00 PM<br>📞 Contact: +91-9876543212</p>
+        <button onclick="openForm(3)" style="margin-top: 12px; background-color: #004080; color: white; padding: 10px 16px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Book an Appointment</button>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div style="flex-shrink: 0; width: 100%; display: flex; align-items: flex-start; padding: 20px; box-sizing: border-box;">
+      <img src="https://t4.ftcdn.net/jpg/02/65/13/75/360_F_265137512_Oh1Bwar4BE4N6nnsvgkIse8SMkYHSn1h.jpg" alt="Dr. Sneha Kapoor" style="width: 600px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <div style="margin-left: 80px;">
+        <h2 style="color: #004080; font-size: 24px;">Dr. Sneha Kapoor</h2>
+        <p style="font-size: 18px; color: #444;">Gynecologist & Infertility Expert</p>
+        <p style="font-size: 18px; color: #666;">MBBS, MS (Obstetrics & Gynecology)</p>
+        <p style="margin-top: 10px; font-size: 18px; line-height: 1.5; color: #333;">
+          Expert in <strong>pregnancy care, PCOS</strong>, and <strong>minimally invasive surgeries</strong>.
+        </p>
+        <p style="font-size: 18px; color: #555;">🏥 Department: OBGYN<br>🕒 Timings: Mon–Sat, 9:30 AM – 12:30 PM<br>📞 Contact: +91-9876543213</p>
+        <button onclick="openForm(4)" style="margin-top: 12px; background-color:goldenrod; color: white; padding: 10px 16px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Book an Appointment</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; padding: 8px 12px; cursor: pointer;">‹</button>
+  <button onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; padding: 8px 12px; cursor: pointer;">›</button>
+</div>
+
+<!-- Popup Form Container -->
+<div id="popup" style="display:none; position: fixed; top: 0; left: 0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+  <div style="background: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; position: relative;">
+    <span onclick="closeForm()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; color: #999; cursor: pointer;">×</span>
+    <h3 style="color: #004080;">Book an Appointment</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="email" placeholder="Email" required style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="date" placeholder="date" required style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="tel" placeholder="Phone Number" required style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <textarea placeholder="Message" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+      <button type="submit" style="margin-top: 12px; background-color: #004080; color: white; padding: 10px 16px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  let currentIndex = 0;
+  const carousel = document.getElementById('carousel');
+  const totalSlides = carousel.children.length;
+
+  function showSlide(index) {
+    if (index >= totalSlides) currentIndex = 0;
+    else if (index < 0) currentIndex = totalSlides - 1;
+    else currentIndex = index;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function openForm(doctorId) {
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closeForm() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  // Auto-slide
+  setInterval(() => {
+    nextSlide();
+  }, 6000);
+</script>
+
+
+  <!-- Specializations -->
+  <div style="padding: 40px; background-color: #f5faff; border-left: 8px solid #004080; border-radius: 8px;text-align: center;">
+   <h2 style="color: sandybrown; font-size: 28px; margin-bottom: 20px;">🌟 Our Specializations</h2>
+   <div style="padding: 20px; margin: 0;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+   
+      <!-- Template Card Start -->
+      <div style="flex: 0 0 25%; background-color: #f5faff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-left: 95px;">
+        <img src="https://emottawablog.com/wp-content/uploads/2021/05/stroketpa.jpeg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #004080;">🩺 Internal Medicine</h3>
+          <p style="font-size: 16px; color: #333;">Comprehensive primary care for adults, managing hypertension, diabetes, and infections with a patient-centered approach.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #fff8f7; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUktMjpIJgqE7YcB1QMzuKd1nf60chaJ7jOg&s" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #c0392b;">❤ Cardiology</h3>
+          <p style="font-size: 16px; color: #333;">Expert heart care including treatment of chest pain, arrhythmias, high blood pressure, and heart failure using modern tech.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #f5fff5; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-right: 50px;">
+        <img src="https://images.pexels.com/photos/4226207/pexels-photo-4226207.jpeg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #16a085;">🫁 Pulmonology</h3>
+          <p style="font-size: 16px; color: #333;">Respiratory care for asthma, bronchitis, COPD, and other lung diseases with focused diagnosis and effective therapies.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #fffdf5; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-left: 95px;">
+        <img src="https://www.shutterstock.com/image-photo/health-insurance-concept-wooden-block-260nw-2407553655.jpg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #d35400;">🍲 Gastroenterology</h3>
+          <p style="font-size: 16px; color: #333;">Care for liver, stomach, and intestinal issues like acidity, IBS, hepatitis, and more to support your digestive well-being.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #f9f5ff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <img src="https://bdmtglobal.com/wp-content/uploads/2022/08/emily-blog-4.jpg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #8e44ad;">🧠 Endocrinology</h3>
+          <p style="font-size: 16px; color: #333;">Advanced care for thyroid issues, diabetes, hormonal imbalances, PCOD, and pituitary disorders using holistic methods.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #f5f9ff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-right: 50px;">
+        <img src="https://cdn12.picryl.com/photo/2016/12/31/bacteria-pathogen-infection-health-medical-1b50c6-1024.jpg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #2980b9;">🧬 Infectious Diseases</h3>
+          <p style="font-size: 16px; color: #333;">Accurate diagnosis and treatment of infections like TB, dengue, malaria, and COVID-19 with compassionate care.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #fff5f5; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-left: 95px;">
+        <img src="https://images.squarespace-cdn.com/content/v1/66cc9c75423d440dd28b504f/1743435503892-ZTJV2Q2NEQVUIEVBS9Q8/unsplash-image-vTknj2OxDVg.jpg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #e74c3c;">🩸 Nephrology</h3>
+          <p style="font-size: 16px; color: #333;">Dedicated kidney care including dialysis counseling, chronic kidney disease, urinary disorders, and blood pressure control.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #eef0f2; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <img src="https://www.dementiahub.sg/wp-content/uploads/2022/09/IMG4.2.4.4-scaled-e1652793323692-1100x563-1.jpg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #2c3e50;">🧓 Geriatrics</h3>
+          <p style="font-size: 16px; color: #333;">Senior-focused services covering memory care, mobility support, nutrition, chronic condition management and daily assistance.</p>
+        </div>
+      </div>
+   
+      <div style="flex: 0 0 25%; background-color: #f0fff7; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.1);margin-right: 50px;">
+        <img src="https://woodbridgephysiotherapy.ca/wp-content/uploads/2024/10/AdobeStock_275568601-scaled.jpeg" style="width: 100%; height: 100px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3 style="color: #27ae60;">🧪 Preventive Check-ups</h3>
+          <p style="font-size: 16px; color: #333;">Health screening packages to catch diseases early, maintain long-term health, and encourage lifestyle-based wellness habits.</p>
+        </div>
+      </div>
+      <!-- Template Card End -->
+   
+    </div>
+   </div>
+   
+ </div>
+ 
+
+  <!-- Call to Action -->
+ <!-- Consultation Banner -->
+<div style="background-color: #004080; color: white; padding: 40px; text-align: center;">
+ <h2>Need Consultation?</h2>
+ <p style="font-size: 16px;">Book an appointment with Dr. Aryan Sharma at Hitaishi Hospital today.</p>
+ <a href="javascript:void(0)" onclick="openPopup()" style="background-color: yellow; color: #004080; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Book Now</a>
+</div>
+
+<!-- Popup Overlay -->
+<div id="popupForm" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;">
+ <div style="background-color: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px; position: relative;">
+   <span onclick="closePopup()" style="position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer; color: #333;">&times;</span>
+   <h3 style="color: #004080; margin-top: 0;">Book an Appointment</h3>
+   <form onsubmit="submitForm(event)">
+     <label for="name" style="display: block; margin-top: 15px;">Full Name:</label>
+     <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;">
+
+     <label for="email" style="display: block; margin-top: 15px;">Email:</label>
+     <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;">
+
+     <label for="date" style="display: block; margin-top: 15px;">Preferred Date:</label>
+     <input type="date" id="date" name="date" required style="width: 100%; padding: 8px;">
+
+     <button type="submit" style="margin-top: 20px; background-color: #004080; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Submit</button>
+   </form>
+ </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+ function openPopup() {
+   document.getElementById('popupForm').style.display = 'flex';
+ }
+
+ function closePopup() {
+   document.getElementById('popupForm').style.display = 'none';
+ }
+
+ function submitForm(event) {
+   event.preventDefault();
+   alert("Appointment submitted successfully!");
+   closePopup();
+   // You can also handle the form data here (send to server etc.)
+ }
+</script>
+<br>
+
+
+
+    <!-- chatbot -->
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
+        
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+
+
+
+  <!-- Footer -->
+  <footer style="background-color: grey; color: white; padding: 30px; text-align: center;">
+    <p>📍 Hitaishi Hospital, 123 Health Road, Delhi, India</p>
+    <p>📞 +91-9876543210 | ✉ contact@hitaishihospital.com</p>
+    <div style="margin-top: 10px;">
+      <a href="#" style="color: white; margin: 0 10px;">Facebook</a> |
+      <a href="#" style="color: white; margin: 0 10px;">Instagram</a> |
+      <a href="#" style="color: white; margin: 0 10px;">Twitter</a> |
+      <a href="#" style="color: white; margin: 0 10px;">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>

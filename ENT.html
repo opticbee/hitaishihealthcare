@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hitaishi Hospital</title>
+  <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7;">
+
+    <!-- Navigation Bar -->
+  <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+      <!-- Logo and Title -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+          <div>
+              <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+              <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+          </div>
+      </div>
+      
+      <!-- search input icons -->
+      <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+      <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+          <i class="fas fa-search" style="color: #007bff;"></i>
+  
+      <!-- Buttons -->
+      <div style="display: flex; gap: 15px;">
+          <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Book Appointment
+          </a>
+          <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Find a Doctor
+          </a>
+          <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Clinic
+          </a>
+          <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+              Eye Care
+          </a>
+      </div>
+  
+      <!-- Social Media Icons -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+              <i class="fab fa-whatsapp"></i>
+          </a>
+          
+  
+          <!-- Display Logged-in User Name -->
+          <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+  
+          <!-- Profile Icon -->
+          <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+              <i class="fas fa-user-circle"></i>
+          </a>
+      </div>
+  
+  </nav>
+  
+  <script>
+      // Simulating getting user data from local storage or API
+      document.addEventListener("DOMContentLoaded", function () {
+          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+          if (user) {
+              document.getElementById("username").textContent = user; // Show username if logged in
+          }
+      });
+  
+      // Example: Store username after login (call this after user logs in)
+      function setUser(name) {
+          localStorage.setItem("loggedInUser", name);
+      }
+  
+      // Example: Clear user on logout
+      function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.reload(); // Refresh page after logout
+      }
+  </script>
+  
+  
+  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+          <!-- Home Link -->
+          <div style="margin-right: 1rem;">
+              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+          </div>
+
+          <!-- Health Records Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                  <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                  <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+              </div>
+          </div>
+
+          <!-- Diagnostics Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                  <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+              </div>
+          </div>
+
+          <!-- Physicians Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                  <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                  <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+              </div>
+          </div>
+
+          <!-- Fertility Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                  <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+              </div>
+          </div>
+
+          <!-- AI -->
+          <div style="margin-right: 1rem;">
+              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+          </div>
+
+          <!-- Doctors Link -->
+          <div style="margin-right: 1rem;">
+              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+          </div>
+
+          <!-- Patients Link -->
+          <div style="margin-right: 1rem;">
+              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+          </div>
+
+
+
+          <!-- Insights Link -->
+          <div style="margin-right: 1rem;">
+              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+          </div>
+          <div style="margin-right: 1rem;">
+              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+          </div>
+
+          <!-- Contact Link -->
+          <div>
+              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+          </div>
+          
+      </div>
+
+    
+  </nav>
+
+  <!-- for dropdowns -->
+  <script>
+      // JavaScript to handle dropdown visibility
+      document.querySelectorAll('nav > div > div').forEach(navItem => {
+          const dropdown = navItem.querySelector('div');
+          if (dropdown) {
+              navItem.addEventListener('mouseenter', () => {
+                  dropdown.style.display = 'block';
+              });
+              navItem.addEventListener('mouseleave', () => {
+                  dropdown.style.display = 'none';
+              });
+          }
+      });
+    </script>
+
+
+
+
+
+
+  <!-- Header with Background Video -->
+  <div style="position: relative; overflow: hidden; height: 600px;">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0;">
+      <source src="https://www.shutterstock.com/shutterstock/videos/3654949639/preview/stock-footage-portrait-of-a-healthcare-team-of-five-diverse-male-and-female-doctors-looking-at-camera-smiling.webm" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- Overlay Content with Background and Styling -->
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+      <div style="background: rgba(0, 0, 0, 0.6); color: white; padding: 40px 20px; text-align: center; width: 100%;">
+        <h1 style="margin: 0 auto 15px; font-size: 45px; line-height: 1.4; max-width: 90%; word-wrap: break-word;">
+          Hitaishi Hospital - Ear, Nose & Throat Care
+        </h1>
+        <p style="font-size: 26px; color: #FFD700; margin: 0;">
+          Expert care for your ear, nose, and throat problems
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <!-- Ear Section -->
+<!-- Ear Section -->
+<div style="padding: 40px; background-color: #ffffff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
+  <img src="https://cdn.stocksnap.io/img-thumbs/960w/ear-exam_TJSLVDWIA9.jpg" alt="Ear" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <div style="max-width: 700px; color: #333;">
+    <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 20px;">Ear Care</h2>
+    <p style="padding-left: 40px;">We diagnose and treat various ear conditions such as:</p>
+    <ul style="padding-left: 50px; margin-top: 10px;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Hearing loss and age-related hearing decline</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Ear infections (acute & chronic otitis media)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Tinnitus (ringing in the ears)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Balance disorders & vertigo (BPPV, Meniere’s disease)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Impacted earwax removal</li>
+    </ul>
+    <p style="padding-left: 40px;">Our audiology department offers:</p>
+    <ul style="padding-left: 50px;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Advanced audiometry and hearing evaluations</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Digital hearing aid fitting & programming</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Custom ear protection for noise and water</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Nose Section -->
+<div style="padding: 40px; background-color: #f2f8ff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; flex-direction: row-reverse;">
+  <!-- Image Right Side -->
+  <img src="https://freerangestock.com/sample/162639/patient-with-doctor-and-nurse-using-computer.jpg" alt="Nose" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+  <!-- Text Left Side - No extra margin/padding on the left -->
+  <div style="flex: 1; color: #333;margin-left: 120px;">
+    <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 15px;">Nose Care</h2>
+    <p>Our ENT specialists provide comprehensive care for conditions like:</p>
+    <ul style="margin: 10px 0 0 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Allergic rhinitis and seasonal allergies</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Acute and chronic sinusitis</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nasal polyps and deviated nasal septum</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nosebleeds (epistaxis) and nasal trauma</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Obstructive breathing and snoring</li>
+    </ul>
+    <p style="margin-top: 20px;">We also offer:</p>
+    <ul style="margin: 10px 0 0 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Endoscopic sinus surgery (FESS)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Image-guided nasal procedures</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nasal endoscopy for diagnosis</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Throat Section -->
+<div style="padding: 40px; background-color: #ffffff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
+  <img src="https://media.istockphoto.com/id/1465572921/photo/doctor-listening-to-senior-woman-patient-heartbeat.jpg?s=612x612&w=0&k=20&c=M_vrtl6bP0BwKMqrFTnYlBf2EeP0t2eThfUMExGt2xI=" alt="Throat" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <div style="max-width: 700px; color: #333;">
+    <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 20px;">Throat Care</h2>
+    <p style="padding-left: 40px;">We offer expert diagnosis and treatment for:</p>
+    <ul style="padding-left: 50px; margin-top: 10px;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Tonsillitis and pharyngitis (sore throat)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Vocal cord nodules, polyps, and hoarseness</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Sleep apnea and chronic snoring</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Swallowing difficulties (dysphagia)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Throat tumors and infections</li>
+    </ul>
+    <p style="padding-left: 40px;">Our services include:</p>
+    <ul style="padding-left: 50px;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Speech therapy for voice rehabilitation</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Polysomnography (sleep studies)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Minimally invasive throat surgeries</li>
+    </ul>
+  </div>
+</div>
+
+
+ 
+  
+<!-- Doctors Filter Section -->
+<div style="padding: 30px; background-color: white;">
+  <h2 style="color: #004080; text-align: center;">Meet Our ENT Specialists</h2>
+
+  <!-- Filter Buttons -->
+  <div style="text-align: center; margin: 20px 0;">
+    <button onclick="filterDoctors('all')" style="margin: 5px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">All</button>
+    <button onclick="filterDoctors('ear')" style="margin: 5px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">Ear</button>
+    <button onclick="filterDoctors('nose')" style="margin: 5px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">Nose</button>
+    <button onclick="filterDoctors('throat')" style="margin: 5px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">Throat</button>
+  </div>
+
+  <!-- Doctor Cards -->
+  <div id="doctorsContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+    <!-- Doctor 1 -->
+    <div class="doctor-card ear" style="background-color: #f2f8ff; padding: 20px; border-radius: 10px; width: 280px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <img src="https://img.freepik.com/premium-photo/doctors-working-team_249974-1266.jpg" alt="Dr. Aryan" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin: 10px 0; color: #004080;">Dr. Aryan Sharma</h3>
+      <p><strong>Specialty:</strong> Ear Surgeon</p>
+      <p>15+ years of experience in advanced microsurgeries and hearing restoration.</p>
+      <button onclick="openForm('Dr. Aryan Sharma')" style="margin-top: 15px; background-color: #004080; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card nose" style="background-color: #f2f8ff; padding: 20px; border-radius: 10px; width: 280px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <img src="https://us.images.westend61.de/0000926401pw/doctor-working-while-sitting-at-table-in-hospital-CAVF47511.jpg" alt="Dr. Meera" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin: 10px 0; color: #004080;">Dr. Meera Kapoor</h3>
+      <p><strong>Specialty:</strong> Nasal & Sinus Specialist</p>
+      <p>Expert in nasal surgeries, endoscopic sinus procedures, and allergy care.</p>
+      <button onclick="openForm('Dr. Meera Kapoor')" style="margin-top: 15px; background-color: #004080; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Book Appointment</button>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card throat" style="background-color: #f2f8ff; padding: 20px; border-radius: 10px; width: 280px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <img src="https://img.freepik.com/free-photo/portrait-doctor-writing-clipboard-clinic_23-2147941738.jpg" alt="Dr. Ravi" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+      <h3 style="margin: 10px 0; color: #004080;">Dr. Ravi Desai</h3>
+      <p><strong>Specialty:</strong> Throat & Voice Disorders</p>
+      <p>Specialist in voice therapy, tonsil surgeries, and sleep apnea treatments.</p>
+      <button onclick="openForm('Dr. Ravi Desai')" style="margin-top: 15px; background-color: #004080; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Book Appointment</button>
+    </div>
+  </div>
+</div>
+
+<!-- Appointment Modal Form -->
+<div id="appointmentModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:999; justify-content:center; align-items:center;">
+  <div style="background:white; padding:30px; border-radius:10px; width:90%; max-width:400px; position:relative;">
+    <span onclick="closeForm()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px; color:#333;">&times;</span>
+    <h2 style="margin-bottom:20px; color:#004080;">Book an Appointment</h2>
+    <form id="appointmentForm">
+      <input type="hidden" id="doctorName" name="doctorName">
+      <label>Full Name:</label>
+      <input type="text" name="name" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <label>Email:</label>
+      <input type="email" name="email" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <label>Department:</label>
+      <select name="department" required style="width:100%; margin-bottom:10px; padding:8px;">
+        <option value="">None</option>
+        <option value="Ear">Ear</option>
+        <option value="Nose">Nose</option>
+        <option value="Throat">Throat</option>
+      </select>
+      <label>Phone:</label>
+      <input type="tel" name="phone" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <label>Preferred Date:</label>
+      <input type="date" name="date" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <label>Message:</label>
+      <textarea name="message" rows="3" style="width:100%; margin-bottom:15px; padding:8px;"></textarea>
+      <button type="submit" style="background-color:#004080; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function openForm(doctorName) {
+    document.getElementById('appointmentModal').style.display = 'flex';
+    document.getElementById('doctorName').value = doctorName;
+  }
+
+  function closeForm() {
+    document.getElementById('appointmentModal').style.display = 'none';
+  }
+
+  document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Appointment request submitted for " + document.getElementById('doctorName').value + "!");
+    closeForm();
+    this.reset();
+  });
+
+  function filterDoctors(department) {
+    const doctors = document.querySelectorAll('.doctor-card');
+    doctors.forEach(card => {
+      if (department === 'all') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = card.classList.contains(department) ? 'block' : 'none';
+      }
+    });
+  }
+</script>
+
+
+<!-- Book an Appointment Section -->
+
+
+</div>
+
+
+
+
+
+<!-- Testimonials Section -->
+<div style="padding: 50px 20px; background-color: #f9f9f9; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #004080; margin-bottom: 40px;">What Our Patients Say</h2>
+
+  <div style="max-width: 900px; margin: auto;">
+
+    <!-- Testimonial 1 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background-color: white;">
+      <button onclick="toggleAnswer('answer1')" style="background: none; border: none; font-size: 18px; color: #004080; cursor: pointer; width: 100%; text-align: left;">
+        I was suffering from chronic sinus issues. Can Hitaishi Hospital help?
+      </button>
+      <div id="answer1" style="display: none; padding-top: 10px; color: #333;">
+        Yes! Our expert ENT specialists use advanced endoscopic techniques to treat sinus problems. Many patients have found relief within weeks of starting treatment.
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background-color: white;">
+      <button onclick="toggleAnswer('answer2')" style="background: none; border: none; font-size: 18px; color: #004080; cursor: pointer; width: 100%; text-align: left;">
+        I was nervous about ear surgery for my child. How was the experience?
+      </button>
+      <div id="answer2" style="display: none; padding-top: 10px; color: #333;">
+        Dr. Aryan and the pediatric ENT team were fantastic. They made us feel safe and informed every step of the way. The surgery was smooth and my child recovered quickly.
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div style="margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background-color: white;">
+      <button onclick="toggleAnswer('answer3')" style="background: none; border: none; font-size: 18px; color: #004080; cursor: pointer; width: 100%; text-align: left;">
+        Does Hitaishi Hospital offer voice therapy for professionals?
+      </button>
+      <div id="answer3" style="display: none; padding-top: 10px; color: #333;">
+        Absolutely! Our throat specialists have worked with singers, teachers, and speakers to restore and strengthen their voices through customized voice therapy sessions.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Toggle Script -->
+<script>
+  function toggleAnswer(id) {
+    const answer = document.getElementById(id);
+    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+
+
+
+
+
+
+<!-- <footer>
+  
+<div>
+ 
+  <div style="background-color: #004080; color: white; text-align: center; padding: 30px 20px;">
+    <p style="margin: 0; font-size: 16px;">&copy; 2025 <strong>ENT Hospital</strong>. All rights reserved.</p>
+    <p style="margin: 5px 0 0; font-size: 14px;">Designed with care for your ear, nose & throat health.</p>
+  </div>
+  </div>
+</footer> -->
+<!-- Footer Section -->
+<div style="background-color: #004080; color: white; padding: 40px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; font-family: Arial, sans-serif;">
+
+  <!-- About Us -->
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin-bottom: 15px;">About Us</h3>
+    <p>Hitaishi Hospital is a leading ENT care center in Delhi, offering advanced diagnosis and treatment for Ear, Nose, and Throat disorders. Our team of skilled ENT surgeons is committed to providing compassionate, patient-centered care.</p>
+  </div>
+
+  <!-- Hitaishi Hospital Info -->
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin-bottom: 15px;">Hitaishi Hospital</h3>
+    <p>✅ Specialized ENT treatments</p>
+    <p>✅ Modern diagnostic facilities</p>
+    <p>✅ Experienced ENT surgeons</p>
+    <p>✅ Emergency care & online appointments</p>
+  </div>
+
+  <!-- Contact Info -->
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin-bottom: 15px;">Contact Us</h3>
+    <p>📍 123 Health Road, Near City Hospital, Delhi, India</p>
+    <p>📞 +91-9876543210</p>
+    <p>✉ contact@hitaishihospital.com</p>
+    <p>⏰ Mon–Sat: 9 AM – 7 PM</p>
+  </div>
+
+  <!-- Social Media -->
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin-bottom: 15px;">Follow Us</h3>
+    <a href="https://www.facebook.com" target="_blank" style="margin-right: 10px; text-decoration: none; color: white;">
+      <img src="https://cdn-icons-png.flaticon.com/24/145/145802.png" alt="Facebook" style="vertical-align: middle;"> Facebook
+    </a><br>
+    <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px; text-decoration: none; color: white;">
+      <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" style="vertical-align: middle;"> Instagram
+    </a><br>
+    <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px; text-decoration: none; color: white;">
+      <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" style="vertical-align: middle;"> Twitter
+    </a><br>
+    <a href="https://www.linkedin.com" target="_blank" style="margin-right: 10px; text-decoration: none; color: white;">
+      <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" style="vertical-align: middle;"> LinkedIn
+    </a>
+  </div>
+
+</div>
+
+
+
+
+ <!-- chatbot -->
+ <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+    <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+</div>
+    
+<!-- Chatbot Container (initially hidden) -->
+<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+    <!-- Chatbot Header -->
+    <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+        <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+        <!-- Welcome message -->
+        <div>
+            <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+        </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div id="input-area" style="display: flex; align-items: center;">
+        <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+        <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+    </div>
+</div>
+<script>
+  // Show the chatbot when the icon is clicked
+  document.getElementById('chatbot-icon').addEventListener('click', function() {
+      let chatbotContainer = document.getElementById('chatbot-container');
+      chatbotContainer.style.display = 'block';
+      chatbotContainer.style.transform = 'translateY(0)';
+      chatbotContainer.style.opacity = '1';
+      document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+  });
+
+  // Handle sending messages
+  document.getElementById('send-btn').addEventListener('click', function() {
+      sendMessage();
+  });
+
+  // Allow sending messages with Enter key
+  document.getElementById('user-input').addEventListener('keypress', function(event) {
+      if (event.key === "Enter") {
+          sendMessage();
+      }
+  });
+
+  function sendMessage() {
+      var userInput = document.getElementById('user-input').value.trim();
+      if (userInput !== '') {
+          var chatArea = document.getElementById('chat-area');
+
+          // User Message
+          var userMessage = document.createElement('div');
+          userMessage.classList.add('message', 'user-message');
+          styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+          userMessage.textContent = userInput;
+          chatArea.appendChild(userMessage);
+
+          // Scroll to the bottom
+          chatArea.scrollTop = chatArea.scrollHeight;
+
+          // Clear the input field
+          document.getElementById('user-input').value = '';
+
+          // Simulate chatbot response after 1 second
+          setTimeout(function() {
+              var botMessage = document.createElement('div');
+              botMessage.classList.add('message', 'bot-message');
+              styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+              botMessage.textContent = getBotReply(userInput);
+              chatArea.appendChild(botMessage);
+
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+          }, 1000);
+      }
+  }
+
+  function styleMessage(element, bgColor, textColor, align) {
+      element.style.padding = '8px 12px';
+      element.style.borderRadius = '20px';
+      element.style.margin = '5px 0';
+      element.style.maxWidth = '75%';
+      element.style.fontSize = '16px';
+      element.style.backgroundColor = bgColor;
+      element.style.color = textColor;
+      element.style.alignSelf = align;
+  }
+
+  function getBotReply(userMessage) {
+      userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+
+        const responses = {
+            "hi": "Hello, How are you?",
+            "hello": "Hi, How are you?",
+            "how are you": "I'm just a bot, but I'm doing great! How about you?",
+            "good morning": "Good morning! Have a fantastic day ahead!",
+            "good night": "Good night! Sweet dreams!",
+            "thank you": "You're welcome! 😊",
+            "what's your name": "I'm your friendly chatbot!",
+            "who created you": "I was created by Naveen Teja! 😉",
+            "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+            "bye": "Goodbye! Have a great day!",
+            "what can you do": "I can chat with you! Ask me anything. 😊",
+
+            // Health Diagnostic Services
+            "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+            "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+            "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+            "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+            "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+            "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+            "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+            "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+            "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+            "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+            // Fertility-Related Q&A
+            "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+            "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+            "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+            "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+            "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+            "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+            "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+            "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+            "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+            "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+            "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+        };
+
+        
+      return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+  }
+
+  // Close the chatbot
+  document.getElementById('close-chat').addEventListener('click', function() {
+      document.getElementById('chatbot-container').style.display = 'none';
+      document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+  });
+</script>
+
+<!-- Footer Bottom -->
+<div style="background-color: #00264d; color: white; text-align: center; padding: 15px; font-size: 14px;">
+  &copy; 2025 Hitaishi Hospital. All rights reserved.
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eye Care Services - Hitaishi Health</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="margin:0;padding:0;font-family:sans-serif;">
+ 
+  
+<!-- Navigation Bar -->
+<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+  <!-- Logo and Title -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+      <div>
+          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+      </div>
+  </div>
+  
+  <!-- search input icons -->
+  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+      <i class="fas fa-search" style="color: #007bff;"></i>
+
+  <!-- Buttons -->
+  <div style="display: flex; gap: 15px;">
+      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Book Appointment
+      </a>
+      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Find a Doctor
+      </a>
+      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Clinic
+      </a>
+      <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Eye Care
+      </a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      
+
+      <!-- Display Logged-in User Name -->
+      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+      <!-- Profile Icon -->
+      <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+          <i class="fas fa-user-circle"></i>
+      </a>
+  </div>
+
+</nav>
+
+<script>
+  // Simulating getting user data from local storage or API
+  document.addEventListener("DOMContentLoaded", function () {
+      const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+      if (user) {
+          document.getElementById("username").textContent = user; // Show username if logged in
+      }
+  });
+
+  // Example: Store username after login (call this after user logs in)
+  function setUser(name) {
+      localStorage.setItem("loggedInUser", name);
+  }
+
+  // Example: Clear user on logout
+  function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.reload(); // Refresh page after logout
+  }
+</script>
+
+
+<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+  <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+      <!-- Home Link -->
+      <div style="margin-right: 1rem;">
+          <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+      </div>
+
+      <!-- Health Records Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+              <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+              <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+          </div>
+      </div>
+
+      <!-- Diagnostics Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+              <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+          </div>
+      </div>
+
+      <!-- Physicians Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+              <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+              <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+          </div>
+      </div>
+
+      <!-- Fertility Dropdown -->
+      <div style="position: relative; margin-right: 1rem;">
+          <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+          <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+              <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+              <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+              <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+          </div>
+      </div>
+
+      <!-- AI -->
+      <div style="margin-right: 1rem;">
+          <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+      </div>
+
+      <!-- Doctors Link -->
+      <div style="margin-right: 1rem;">
+          <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+      </div>
+
+      <!-- Patients Link -->
+      <div style="margin-right: 1rem;">
+          <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+      </div>
+
+
+
+      <!-- Insights Link -->
+      <div style="margin-right: 1rem;">
+          <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+      </div>
+      <div style="margin-right: 1rem;">
+          <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+      </div>
+
+      <!-- Contact Link -->
+      <div>
+          <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+      </div>
+      
+  </div>
+
+
+</nav>
+
+<!-- for dropdowns -->
+<script>
+  // JavaScript to handle dropdown visibility
+  document.querySelectorAll('nav > div > div').forEach(navItem => {
+      const dropdown = navItem.querySelector('div');
+      if (dropdown) {
+          navItem.addEventListener('mouseenter', () => {
+              dropdown.style.display = 'block';
+          });
+          navItem.addEventListener('mouseleave', () => {
+              dropdown.style.display = 'none';
+          });
+      }
+  });
+    </script>
+
+
+
+
+
+  <section style="position:relative;width:100%;min-height:550px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:white;">
+    
+    <!-- Background slideshow images -->
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-2;">
+      <img src="https://res.glassesshop.com/ckeditorImg/6699e23ca5746.jpg"
+           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transform:scale(1.1);transition:opacity 1s ease, transform 10s ease;" />
+      <img src="https://www.lappeneyecare.com/wp-content/uploads/2023/10/man-holding-eye-contact.jpg"
+           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transform:scale(1);transition:opacity 1s ease, transform 10s ease;" />
+      <img src="https://drranimenon.com/wp-content/uploads/2023/09/lasik-treatment-new2.jpg"
+           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transform:scale(1);transition:opacity 1s ease, transform 10s ease;" />
+    </div>
+
+    <!-- Gradient overlay -->
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));z-index:-1;"></div>
+
+    <!-- Content -->
+    <div style="max-width:700px;padding:30px 20px;z-index:1;">
+      <h1 style="font-size:3em;margin-bottom:15px;">Comprehensive Eye Care</h1>
+      <p style="font-size:1.2em;line-height:1.6;margin-bottom:25px;">
+        Welcome to Hitaishi Health Care Services – Eye Care Division. We provide cutting-edge diagnostics, compassionate care, and customized solutions for all your vision needs.
+      </p>
+      <a href="#contact" style="text-decoration:none;">
+        <button style="padding:12px 25px;font-size:1em;background:#00bcd4;border:none;border-radius:5px;color:white;cursor:pointer;transition:background 0.3s ease;">
+          Visit Us
+        </button>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- JavaScript for slideshow -->
+  <script>
+    const slides = document.querySelectorAll('section img');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].style.opacity = '0';
+      slides[currentSlide].style.transform = 'scale(1)';
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].style.opacity = '1';
+      slides[currentSlide].style.transform = 'scale(1.1)';
+    }, 5000);
+  </script>
+<!-- EYE CARE TREATMENTS SECTION -->
+<section style="padding:60px 20px;background:white;text-align:center;">
+  <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">Our Eye Care Treatments</h2>
+  <p style="font-size:1.1em;color:#666;margin-bottom:40px;">We diagnose and treat a wide range of vision problems with precision and care.</p>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:1200px;margin:0 auto;">
+
+    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">👁 Refractive Errors</h3>
+      <p style="color:#555;">Treatments for Myopia, Hyperopia, and Astigmatism including eyeglasses, contact lenses, and laser correction.</p>
+      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+    </div>
+
+    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🧠 Cataract Surgery</h3>
+      <p style="color:#555;">Advanced cataract treatment and lens replacement surgeries with high precision and safety.</p>
+      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+    </div>
+
+    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">💉 Glaucoma Treatment</h3>
+      <p style="color:#555;">Early detection and pressure control through medication, laser therapy, or surgery.</p>
+      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+    </div>
+
+    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔬 Diabetic Retinopathy</h3>
+      <p style="color:#555;">Retinal care for diabetic patients using advanced imaging and laser treatment to prevent vision loss.</p>
+      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+    </div>
+
+    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔍 Regular Eye Checkups</h3>
+      <p style="color:#555;">We recommend periodic exams to maintain eye health, even without symptoms. Prevention is better than cure!</p>
+      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ABOUT SECTION -->
+  <section style="padding:80px 20px;background:linear-gradient(120deg, #f0faff, #e0f7fa);display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:60px;max-width:1200px;margin:auto;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;min-height:90vh;">
+
+    <!-- Left Modern Illustration & Shapes -->
+    <div style="flex:1 1 480px;position:relative;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.08);overflow:hidden;height:auto;">
+      <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" preserveAspectRatio="none" viewBox="0 0 800 800">
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00bcd4"/>
+            <stop offset="100%" stop-color="#0097a7"/>
+          </linearGradient>
+        </defs>
+        <circle cx="400" cy="400" r="300" fill="url(#grad1)" opacity="0.3" />
+        <circle cx="200" cy="200" r="100" fill="#00bcd4" opacity="0.2" />
+        <circle cx="600" cy="600" r="150" fill="#0097a7" opacity="0.2" />
+      </svg>
+      <div style="position:relative;z-index:1;padding:40px;text-align:center;color:#004d61;max-width:400px;">
+        <!-- <img src="https://cdn-icons-png.flaticon.com/512/2989/2989988.png" alt="Modern Eye Icon" style="width:100px;height:auto;margin-bottom:25px;"> -->
+        <h3 style="font-size:2em;margin-bottom:15px;">Total Vision Care</h3>
+        <p style="font-size:1.1em;line-height:1.6;color:#333;">
+          Where technology meets trust. From routine checkups to laser precision surgeries, we keep your vision crystal clear.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Right Content -->
+    <div style="flex:1 1 500px;background:white;padding:40px 30px;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:center;">
+      <h2 style="font-size:2.4em;margin-bottom:20px;color:#004d61;">About Our Eye Care</h2>
+      <p style="font-size:1.15em;line-height:1.8;color:#444;margin-bottom:25px;">
+        At <strong style="color:#00bcd4;">Hitaishi Health Care</strong>, we specialize in comprehensive eye examinations, early detection of eye diseases, and advanced surgical procedures.
+        Our compassionate specialists ensure every patient gets personalized, clear-sighted care.
+      </p>
+      <ul style="list-style:none;padding:0;margin:0 0 30px 0;">
+        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Regular eye check-ups</li>
+        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Cataract & Lasik Surgery</li>
+        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Pediatric Eye Care</li>
+        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Glaucoma & Retina Treatment</li>
+      </ul>
+      <a href="#" style="display:inline-block;padding:14px 32px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;text-decoration:none;font-size:1.05em;border-radius:30px;font-weight:bold;transition:transform 0.3s;align-self:flex-start;">Book Appointment</a>
+    </div>
+  </section><br>
+  
+  
+  
+<!-- COUNTERS SECTION -->
+<section style="padding:60px 20px;background:#f0fbfc;text-align:center; height: 300px;" id="counter-section" >
+    <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">Trusted by Thousands</h2>
+    <p style="font-size:1.1em;color:#666;margin-bottom:40px;">Delivering exceptional eye care with a compassionate touch.</p>
+  
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:0 auto;">
+      <div style="flex:1 1 200px;">
+        <h3 style="font-size:3em;color:#00bcd4;">
+          <span class="counter" data-target="10000">0</span>+
+        </h3>
+        <p style="color:#555;">Patients Treated</p>
+      </div>
+      <div style="flex:1 1 200px;">
+        <h3 style="font-size:3em;color:#00bcd4;">
+          <span class="counter" data-target="2500">0</span>+
+        </h3>
+        <p style="color:#555;">Successful Surgeries</p>
+      </div>
+      <div style="flex:1 1 200px;">
+        <h3 style="font-size:3em;color:#00bcd4;">
+          <span class="counter" data-target="200">0</span>+
+        </h3>
+        <p style="color:#555;">Expert Doctors</p>
+      </div>
+      <div style="flex:1 1 200px;">
+        <h3 style="font-size:3em;color:#00bcd4;">
+          <span class="counter" data-target="8">0</span>+
+        </h3>
+        <p style="color:#555;">Clinics Nationwide</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    const section = document.getElementById('counter-section');
+  
+    const animateCounter = (counter) => {
+      counter.innerText = '0';
+      const target = +counter.getAttribute('data-target');
+      const increment = target / 200;
+  
+      const update = () => {
+        const current = +counter.innerText.replace(/,/g, '');
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment).toLocaleString();
+          setTimeout(update, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+  
+      update();
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          counters.forEach(counter => {
+            animateCounter(counter);
+          });
+        } else {
+          counters.forEach(counter => counter.innerText = '0');
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    observer.observe(section);
+  </script>
+  
+  <!-- TESTIMONIALS SECTION -->
+<section style="padding:60px 20px;text-align:center;">
+  <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">What Our Patients Say</h2>
+  <p style="font-size:1.1em;color:#666;margin-bottom:40px;">Real stories from people whose lives we’ve helped improve.</p>
+
+  <div id="testimonial-container" style="position:relative;max-width:800px;margin:0 auto;height:100px;overflow:hidden;">
+    
+    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:1;transition:opacity 1s ease;">
+      <p style="font-size:1.2em;color:#444;">"I had a fantastic experience with Hitaishi Eye Care. The doctors are highly professional and compassionate."</p>
+      <h4 style="color:#00bcd4;margin-top:15px;">– Ramesh K., Hyderabad</h4>
+    </div>
+
+    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 1s ease;">
+      <p style="font-size:1.2em;color:#444;">"The staff made me feel comfortable throughout my cataract surgery. Highly recommended!"</p>
+      <h4 style="color:#00bcd4;margin-top:15px;">– Meena S., Bangalore</h4>
+    </div>
+
+    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 1s ease;">
+      <p style="font-size:1.2em;color:#444;">"Regular checkups here helped me catch my glaucoma early. Forever grateful!"</p>
+      <h4 style="color:#00bcd4;margin-top:15px;">– Anil J., Pune</h4>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAROUSEL SCRIPT -->
+<script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  let index = 0;
+
+  setInterval(() => {
+    testimonials.forEach((t, i) => {
+      t.style.opacity = (i === index) ? '1' : '0';
+    });
+    index = (index + 1) % testimonials.length;
+  }, 5000); // Change every 5 seconds
+</script>
+<!-- FAQ SECTION -->
+<section style="padding:60px 20px;background:#f8d4f5ad;max-width:900px;margin:auto;border-radius: 10px;">
+    <h2 style="text-align:center;font-size:2.5em;margin-bottom:30px;color:#333;">Frequently Asked Questions</h2>
+  
+    <!-- FAQ Item -->
+    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+        What is the ideal frequency for eye check-ups?
+      </button>
+      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+        Adults should have their eyes checked every 1–2 years. Children and those with conditions may require more frequent visits.
+      </div>
+    </div>
+  
+    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+        Do you offer surgery for cataracts and glaucoma?
+      </button>
+      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+        Yes, we offer advanced cataract surgeries, laser procedures, and glaucoma treatments with expert specialists.
+      </div>
+    </div>
+  
+    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+        Is vision testing available for children?
+      </button>
+      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+        Absolutely! We offer pediatric eye exams tailored for children's comfort and accurate results.
+      </div>
+    </div>
+  
+    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+        How can I book an appointment?
+      </button>
+      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+        You can book online through our website or call our helpline directly. Walk-ins are also welcome.
+      </div>
+    </div>
+  </section><br>
+  
+  <!-- FAQ Toggle Script -->
+  <script>
+    function toggleFAQ(btn) {
+      const panel = btn.nextElementSibling;
+      const allPanels = document.querySelectorAll("section button + div");
+      allPanels.forEach(p => {
+        if (p !== panel) p.style.display = "none";
+      });
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  
+    
+  <!-- CONTACT SECTION -->
+<!-- Footer -->
+<footer style="background:#004d61;color:white;padding:50px 20px;text-align:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <div style="max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;">
+    
+    <!-- About -->
+    <div style="flex:1 1 250px;text-align:left;">
+      <h3 style="margin-bottom:15px;font-size:1.5em;">Hitaishi Health Care</h3>
+      <p style="line-height:1.6;">
+        At Hitaishi Health Care, we specialize in comprehensive eye examinations, advanced diagnostics, and personalized treatments. From cataract surgery to laser vision correction, our goal is to protect and enhance your vision with compassion and innovation.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 200px;text-align:left;margin-left: 60px;">
+      <h4 style="margin-bottom:10px;">Quick Links</h4>
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="#" style="color:white;text-decoration:none;line-height:2;">Home</a></li>
+        <li><a href="#" style="color:white;text-decoration:none;line-height:2;">Treatments</a></li>
+        <li><a href="#" style="color:white;text-decoration:none;line-height:2;">Contact</a></li>
+        <li><a href="#" style="color:white;text-decoration:none;line-height:2;">Book Appointment</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex:1 1 200px;text-align:left;">
+      <h4 style="margin-bottom:10px;">Contact Us</h4>
+      <p style="line-height:1.8;">
+        📍&nbsp;Pragati&nbsp;Nagar,Kukatpally,Hyderbad, Telangana,India<br>
+        📞 +91 87901 70525<br>
+        📧 contact@hitaishihealthcare.com
+      </p>
+    </div>
+
+    <!-- Follow Us -->
+    <div style="flex:1 1 200px;text-align:left;">
+      <!-- Subscribe -->
+    <div style="flex:1 1 100%;margin-top:0px;text-align:center;">
+      <h4 style="margin-bottom:10px;">Subscribe to Our Newsletter</h4>
+      <p style="margin-bottom:15px;">Stay updated on the latest in eye care and special offers.</p>
+      <form style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;">
+        <input type="email" placeholder="Enter your email" style="padding:10px 15px;border:none;border-radius:5px;min-width:100px;">
+        <button type="submit" style="padding:10px 20px;background:#00bcd4;color:white;border:none;border-radius:5px;cursor:pointer;">Subscribe</button>
+      </form>
+      <!-- <h4 style="margin-bottom:0px;">Follow Us :</h4>
+      <div style="gap:15px;">
+        <a href="#" style="color:white;font-size:1.4em;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="color:white;font-size:1.4em;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:white;font-size:1.4em;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="color:white;font-size:1.4em;"><i class="fab fa-linkedin-in"></i></a>
+      </div> -->
+    </div>
+    </div>
+
+    
+
+  </div>
+ <!-- chatbot -->
+ <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+  <i class="fas fa-comments" style="font-size: 30px; color: #1dddb3;"></i>
+</div>
+  
+<!-- Chatbot Container (initially hidden) -->
+<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+  <!-- Chatbot Header -->
+  <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #1dddb3;">Hitaishi AI Chatbot</h3>
+      <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+  </div>
+
+  <!-- Chat Area -->
+  <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+      <!-- Welcome message -->
+      <div>
+          <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #1dddb3; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+      </div>
+  </div>
+
+  <!-- Chat Input -->
+  <div id="input-area" style="display: flex; align-items: center;">
+      <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+      <button id="send-btn" style="width: 20%; background-color:#1dddb3; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+  </div>
+</div>
+<script>
+// Show the chatbot when the icon is clicked
+document.getElementById('chatbot-icon').addEventListener('click', function() {
+    let chatbotContainer = document.getElementById('chatbot-container');
+    chatbotContainer.style.display = 'block';
+    chatbotContainer.style.transform = 'translateY(0)';
+    chatbotContainer.style.opacity = '1';
+    document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+});
+
+// Handle sending messages
+document.getElementById('send-btn').addEventListener('click', function() {
+    sendMessage();
+});
+
+// Allow sending messages with Enter key
+document.getElementById('user-input').addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
+    var userInput = document.getElementById('user-input').value.trim();
+    if (userInput !== '') {
+        var chatArea = document.getElementById('chat-area');
+
+        // User Message
+        var userMessage = document.createElement('div');
+        userMessage.classList.add('message', 'user-message');
+        styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+        userMessage.textContent = userInput;
+        chatArea.appendChild(userMessage);
+
+        // Scroll to the bottom
+        chatArea.scrollTop = chatArea.scrollHeight;
+
+        // Clear the input field
+        document.getElementById('user-input').value = '';
+
+        // Simulate chatbot response after 1 second
+        setTimeout(function() {
+            var botMessage = document.createElement('div');
+            botMessage.classList.add('message', 'bot-message');
+            styleMessage(botMessage, '#1dddb3', 'white', 'flex-start');
+            botMessage.textContent = getBotReply(userInput);
+            chatArea.appendChild(botMessage);
+
+            // Scroll to the bottom
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }, 1000);
+    }
+}
+
+function styleMessage(element, bgColor, textColor, align) {
+    element.style.padding = '8px 12px';
+    element.style.borderRadius = '20px';
+    element.style.margin = '5px 0';
+    element.style.maxWidth = '75%';
+    element.style.fontSize = '16px';
+    element.style.backgroundColor = bgColor;
+    element.style.color = textColor;
+    element.style.alignSelf = align;
+}
+
+function getBotReply(userMessage) {
+    userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+
+      const responses = {
+          "hi": "Hello, How are you?",
+          "hello": "Hi, How are you?",
+          "how are you": "I'm just a bot, but I'm doing great! How about you?",
+          "good morning": "Good morning! Have a fantastic day ahead!",
+          "good night": "Good night! Sweet dreams!",
+          "thank you": "You're welcome! 😊",
+          "what's your name": "I'm your friendly chatbot!",
+          "who created you": "I was created by Naveen Teja! 😉",
+          "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+          "bye": "Goodbye! Have a great day!",
+          "what can you do": "I can chat with you! Ask me anything. 😊",
+
+          // Health Diagnostic Services
+          "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+          "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+          "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+          "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+          "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+          "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+          "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+          "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+          "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+          "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+          // Fertility-Related Q&A
+          "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+          "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+          "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+          "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+          "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+          "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+          "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+          "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+          "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+          "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+          "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+      };
+
+      
+    return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+}
+
+// Close the chatbot
+document.getElementById('close-chat').addEventListener('click', function() {
+    document.getElementById('chatbot-container').style.display = 'none';
+    document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+});
+</script>
+
+  <!-- Copyright -->
+  <div style="margin-top:40px;font-size:0.9em;color:#ccc;">
+    © 2025 Hitaishi Health Care. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>

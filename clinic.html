@@ -71,14 +71,212 @@
   </style>
 </head>
 <body>
+
+
+  <!-- Navigation Bar -->
+  <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="color: #007bff;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+</nav>
+
+<script>
+    // Simulating getting user data from local storage or API
+    document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+        if (user) {
+            document.getElementById("username").textContent = user; // Show username if logged in
+        }
+    });
+
+    // Example: Store username after login (call this after user logs in)
+    function setUser(name) {
+        localStorage.setItem("loggedInUser", name);
+    }
+
+    // Example: Clear user on logout
+    function logout() {
+        localStorage.removeItem("loggedInUser");
+        window.location.reload(); // Refresh page after logout
+    }
+</script>
+
+
+<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+        <!-- Home Link -->
+        <div style="margin-right: 1rem;">
+            <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+        </div>
+
+        <!-- Health Records Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+            </div>
+        </div>
+
+        <!-- Diagnostics Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+            </div>
+        </div>
+
+        <!-- Physicians Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+            </div>
+        </div>
+
+        <!-- Fertility Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+            </div>
+        </div>
+
+        <!-- AI -->
+        <div style="margin-right: 1rem;">
+            <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+        </div>
+
+        <!-- Doctors Link -->
+        <div style="margin-right: 1rem;">
+            <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+        </div>
+
+        <!-- Patients Link -->
+        <div style="margin-right: 1rem;">
+            <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+        </div>
+
+
+
+        <!-- Insights Link -->
+        <div style="margin-right: 1rem;">
+            <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+        </div>
+        <div style="margin-right: 1rem;">
+            <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+        </div>
+
+        <!-- Contact Link -->
+        <div>
+            <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+        </div>
+        
+    </div>
+
+  
+</nav>
+
+<!-- for dropdowns -->
+<script>
+    // JavaScript to handle dropdown visibility
+    document.querySelectorAll('nav > div > div').forEach(navItem => {
+        const dropdown = navItem.querySelector('div');
+        if (dropdown) {
+            navItem.addEventListener('mouseenter', () => {
+                dropdown.style.display = 'block';
+            });
+            navItem.addEventListener('mouseleave', () => {
+                dropdown.style.display = 'none';
+            });
+        }
+    });
+</script>
+
   <div class="form-container">
     <h2>Clinic Registration</h2>
-    <form id="clinicForm" >
+    <form id="clinicForm" enctype="multipart/form-data"  method="POST">
       <label for="clinicName">Clinic Name</label>
-      <input type="text" id="clinicName" placeholder="Enter clinic name" required>
+      <input type="text" name="clinicName"  id="clinicName" placeholder="Enter clinic name" required>
 
-      <label for="clinicType">Clinic Type</label>
-      <select id="clinicType" required>
+      <label for="clinicSpecialization"  >Clinic Specialization</label>
+      <select id="clinicSpecialization" name="clinicSpecialization" required>
+        <option value="">-- Select Type --</option>
+        <option value="government">Government</option>
+        <option value="private">Private</option>
+        <option value="charitable">Charitable</option>
+      </select>
+      <label for="clinicType"  >Clinic Type</label>
+      <select id="clinicType" name="clinicType" required>
         <option value="">-- Select Type --</option>
         <option value="General">General</option>
         <option value="Specialty">Specialty</option>
@@ -88,107 +286,104 @@
       </select>
 
       <label for="registrationNumber">Registration Number</label>
-      <input type="text" id="registrationNumber" placeholder="Govt issued ID or License" required>
+      <input type="text" name="registrationNumber" id="registrationNumber" placeholder="Govt issued ID or License" required>
 
       <label for="establishedYear">Established Year</label>
-      <input type="number" id="establishedYear" placeholder="YYYY" required>
+      <input type="number" name="establishedYear" id="establishedYear" placeholder="YYYY" required>
 
       <label for="address1">Address Line 1</label>
-      <input type="text" id="address1" placeholder="Street address" required>
+      <input type="text" name="address1"  id="address1" placeholder="Street address" required>
 
       <label for="address2">Address Line 2</label>
-      <input type="text" id="address2" placeholder="(optional)">
+      <input type="text" name="address2"  id="address2" placeholder="(optional)">
 
       <label for="city">City</label>
-      <input type="text" id="city" required>
+      <input type="text"  name="city"  name="city"  id="city" required>
 
       <label for="state">State / Province</label>
-      <input type="text" id="state" required>
+      <input type="text"  name="state" id="state" required>
 
       <label for="country">Country</label>
-      <input type="text" id="country" required>
+      <input type="text"  name="country" id="country" required>
 
       <label for="pincode">Pincode / ZIP Code</label>
-      <input type="text" id="pincode" required>
+      <input type="text"  name="pincode"  id="pincode" required>
 
       <label for="mapLink">Google Maps Location / Coordinates</label>
-      <input type="url" id="mapLink" placeholder="https://maps.google.com/...">
+      <input type="url"  name="mapLink"  id="mapLink" placeholder="https://maps.google.com/...">
 
       <label for="phone1">Primary Phone</label>
-      <input type="tel" id="phone1" required>
+      <input type="tel"  name="phone1"  id="phone1" required>
 
       <label for="phone2">Alternate Phone</label>
-      <input type="tel" id="phone2">
+      <input type="tel" name="phone2" id="phone2">
 
       <label for="email">Official Email</label>
-      <input type="email" id="email" required>
+      <input type="email" name="email" id="email" required>
 
       <label for="website">Website</label>
-      <input type="url" id="website">
+      <input type="url" name="website" id="website">
 
       <label for="contactPerson">Primary Contact Person</label>
-      <input type="text" id="contactPerson" required>
+      <input type="text" name="contactPerson" id="contactPerson" required>
 
       <label for="designation">Designation</label>
-      <input type="text" id="designation" placeholder="Admin / Head Doctor" required>
+      <input type="text"  name="designation" id="designation" placeholder="Admin / Head Doctor" required>
 
       <label for="contactEmail">Contact Person Email</label>
-      <input type="email" id="contactEmail" required>
+      <input type="email"  name="contactEmail"  id="contactEmail" required>
 
       <label for="contactMobile">Contact Mobile</label>
-      <input type="tel" id="contactMobile" required>
+      <input type="tel" name="contactMobile" id="contactMobile" required>
 
       <label for="timings">Clinic Timings</label>
-      <input type="text" id="timings" placeholder="e.g., Mon-Sat: 9am - 7pm" required>
+      <input type="text"  name="timings" id="timings" placeholder="e.g., Mon-Sat: 9am - 7pm" required>
 
-      <label for="emergency">Emergency Services Available?</label>
-      <select id="emergency" required>
+      <label for="emergency" >Emergency Services Available?</label>
+      <select id="emergency" name="emergency" required>
         <option value="">--Select--</option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
       </select>
 
       <label for="licenseUpload">Upload Clinic License</label>
-      <input type="file" id="licenseUpload" accept=".jpg,.png,.pdf" required>
+      <input type="file"  name="licenseUpload" id="licenseUpload" accept=".jpg,.png,.pdf" required>
 
       <label for="idProof">Upload ID Proof</label>
-      <input type="file" id="idProof" accept=".jpg,.png,.pdf" required>
+      <input type="file" name="idproof" id="idProof" accept=".jpg,.png,.pdf" required>
 
       <label for="clinicPhoto">Clinic Photo (optional)</label>
-      <input type="file" id="clinicPhoto" accept=".jpg,.png">
+      <input type="file" name="clinicPhoto" id="clinicPhoto" accept=".jpg,.png">
 
       <label for="gst">GST Number</label>
-      <input type="text" id="gst">
+      <input type="text" name="gst" id="gst">
 
       <label for="username">Create Username / Email</label>
-      <input type="email" id="username" required>
+      <input type="email"  name="username" id="username" required>
 
       <label for="password">Password</label>
-      <input type="password" id="password" required>
+      <input type="password" name="password" id="password" required>
 
       <label for="confirmPassword">Confirm Password</label>
-      <input type="password" id="confirmPassword" required>
+      <input type="password" name="confirmPassword" id="confirmPassword" required>
 
       <button type="submit">Register Clinic</button>
     </form>
-
-    <script>
+      <script>
         document.getElementById("clinicForm").addEventListener("submit", async (e) => {
           e.preventDefault();
       
           const form = e.target;
-          const formData = new FormData(form);
-      
-          const payload = {};
-          formData.forEach((value, key) => {
-            payload[key] = value;
-          });
-      
+          const formData = new FormData(form); // Automatically handles files + text
+          // ✅ Convert emergency field ("Yes"/"No") to 1/0 as expected by backend
+          const emergencyValue = formData.get("emergency");
+          formData.set("emergency", emergencyValue === "Yes" ? 1 : 0);
+
+
           try {
-            const res = await fetch("/api/clinicregister", {
+            const res = await fetch("http://localhost:5000/api/clinicregister", {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(payload)
+              body: formData // ✅ DO NOT set headers!
             });
       
             const data = await res.json();
@@ -206,5 +401,8 @@
       </script>
       
   </div>
+
+
+
 </body>
 </html>

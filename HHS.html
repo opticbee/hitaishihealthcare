@@ -4,140 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitaishi Healthcare Services</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- fontawesome CDN for icons -->
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
-    <!-- Navigation Bar -->
-    <nav style="margin-left: -50px; background-color: #007bff; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <!-- Home Link -->
-            <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-            </div>
+    
+    
+<!-- Navigation Bar -->
+<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="color: #007bff;"></i>
 
-            <!-- Blood Records Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="#blood-records" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">BloodRecords▼</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                    <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                    <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-                </div>
-            </div>
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
 
-            <!-- Diagnostics Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="#diagnostics" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics▼</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#x-ray" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                    <a href="#ultrasound" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                    <a href="#mri" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-                </div>
-            </div>
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
 
-            <!-- Physicians Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="#general-physicians" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians▼</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                    <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                    <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-                </div>
-            </div>
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
 
-            <!-- Fertility Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility▼</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="#ivf" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                    <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                    <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-                </div>
-            </div>
+        <!-- Profile Icon -->
+        <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
 
-            <!-- AI -->
-            <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-            </div>
+</nav>
 
-            <!-- Doctors Link -->
-            <div style="margin-right: 1rem;">
-                <a href="file:///D:/SPLTechnologies/Hitaishi_Health_services/doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-            </div>
+<script>
+    // Simulating getting user data from local storage or API
+    document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+        if (user) {
+            document.getElementById("username").textContent = user; // Show username if logged in
+        }
+    });
 
-            <!-- Patients Link -->
-            <div style="margin-right: 1rem;">
-                <a href="#patients" onclick="openForm()" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-            </div>
+    // Example: Store username after login (call this after user logs in)
+    function setUser(name) {
+        localStorage.setItem("loggedInUser", name);
+    }
+
+    // Example: Clear user on logout
+    function logout() {
+        localStorage.removeItem("loggedInUser");
+        window.location.reload(); // Refresh page after logout
+    }
+</script>
 
 
-
-            <!-- Insights Link -->
-            <div style="margin-right: 1rem;">
-                <a href="#insights" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Insights</a>
-            </div>
-
-            <!-- Contact Link -->
-            <div>
-                <a href="#contact" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-            </div>
-            
+<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+        <!-- Home Link -->
+        <div style="margin-right: 1rem;">
+            <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
         </div>
 
-        <!-- overlay -->
-        <div id="overlay" style="display: none; position: fixed; top: 15; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; overflow-y: auto;" onclick="closeForm(event)">
-            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; width: 100%; margin: 20px auto;" onclick="event.stopPropagation()">
-                <button onclick="closeForm()" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; float: right; font-size: 16px; border-radius: 5px;">X</button>
-                <h2 style="text-align: center; color: #333;">Patient Registration Form</h2>
-                <form action="#" method="POST">
-                    <label for="name" style="font-weight: bold;">Full Name:</label>
-                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="aadhar" style="font-weight: bold;">Aadhar Number:</label>
-                    <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}" title="Aadhar must be 12 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="phone" style="font-weight: bold;">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number must be 10 digits" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="email" style="font-weight: bold;">Email:</label>
-                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="address" style="font-weight: bold;">Address:</label>
-                    <textarea id="address" name="address" required rows="3" style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-                    
-                    <label for="disease" style="font-weight: bold;">Disease:</label>
-                    <input type="text" id="disease" name="disease" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="dob" style="font-weight: bold;">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                    
-                    <label for="gender" style="font-weight: bold;">Gender:</label>
-                    <select id="gender" name="gender" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                        <option value="">Select</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    
-                    <button type="submit" style="width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">Submit</button>
-                </form>
+        <!-- Health Records Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
             </div>
+        </div>
+
+        <!-- Diagnostics Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+            </div>
+        </div>
+
+        <!-- Physicians Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+            </div>
+        </div>
+
+        <!-- Fertility Dropdown -->
+        <div style="position: relative; margin-right: 1rem;">
+            <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+            </div>
+        </div>
+
+        <!-- AI -->
+        <div style="margin-right: 1rem;">
+            <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+        </div>
+
+        <!-- Doctors Link -->
+        <div style="margin-right: 1rem;">
+            <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+        </div>
+
+        <!-- Patients Link -->
+        <div style="margin-right: 1rem;">
+            <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+        </div>
+
+
+
+        <!-- Insights Link -->
+        <div style="margin-right: 1rem;">
+            <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+        </div>
+        <div style="margin-right: 1rem;">
+            <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+        </div>
+
+        <!-- Contact Link -->
+        <div>
+            <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
         </div>
         
-        <script>
-            function openForm() {
-                document.getElementById("overlay").style.display = "flex";
-            }
-            function closeForm(event) {
-                if (!event || event.target === document.getElementById("overlay")) {
-                    document.getElementById("overlay").style.display = "none";
-                }
-            }
-        </script>
-    </nav>
+    </div>
+
+  
+</nav>
+
+<!-- for dropdowns -->
+<script>
+    // JavaScript to handle dropdown visibility
+    document.querySelectorAll('nav > div > div').forEach(navItem => {
+        const dropdown = navItem.querySelector('div');
+        if (dropdown) {
+            navItem.addEventListener('mouseenter', () => {
+                dropdown.style.display = 'block';
+            });
+            navItem.addEventListener('mouseleave', () => {
+                dropdown.style.display = 'none';
+            });
+        }
+    });
+    </script>
+
+
 
     <!-- Main Section -->
     <main style="position: relative; padding: 6rem 2rem; max-width: 100%; margin: 0 auto; background-image: url(https://img.freepik.com/premium-photo/futuristic-hospital-radiology-room-with-mri-scanner-xray-machine-robotic-surgical-equipment-concept-medical-technology-radiology-room-futuristic-healthcare-mri-xray-machines_864588-70800.jpg); background-size: cover; background-position: center; color: #fff;">
@@ -147,6 +210,1274 @@
         <!-- Content -->
         <h1 style="position: relative; z-index: 1; color: #ffffff; margin-bottom: 2rem; padding-bottom: 0.5rem; text-align: center; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to Hitaishi Healthcare Services</h1>
     </main>
+    
+
+    <!-- Countries -->
+    <div>
+        <div class="supplier-section">
+            <div class="supplier-header">
+            </div>
+        
+            <div class="supplier-container">
+                <button class="nav-button left">&lt;</button>
+        
+                <div class="supplier-list">
+                  <a href="India.html" class="supplier-link">
+                    <div class="supplier-item">
+                        <img src="img/India.png" alt="India" class="flag-icon">
+                        <span>India</span>
+                    </div>
+                </a>
+      
+                  <a href="Italy.html" class="supplier-link">
+                    <div class="supplier-item">
+                        <img src="img/Italy.png" alt="Italy" class="flag-icon">
+                        <span>Italy</span>
+                    </div>
+                </a>
+                <a href="Afghanistan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Afghanistan.png" alt="Afghanistan" class="flag-icon">
+                      <span>Afghanistan</span>
+                  </div>
+              </a>
+      
+              <a href="Albania.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Albania.jpeg" alt="Albania" class="flag-icon">
+                      <span>Albania</span>
+                  </div>
+              </a>
+      
+              <a href="Algeria.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Algeria.jpeg" alt="Algeria" class="flag-icon">
+                      <span>Algeria</span>
+                  </div>
+              </a>
+      
+              <a href="Andorra.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Andorra.jpeg" alt="Andorra" class="flag-icon">
+                      <span>Andorra</span>
+                  </div>
+              </a>
+      
+              <a href="Angola.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Angola.jpeg" alt="Angola" class="flag-icon">
+                      <span>Angola</span>
+                  </div>
+              </a>
+      
+              <a href="Antigua-and-Barbuda.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Antigua and Barbuda.jpeg" alt="Antigua and Barbuda" class="flag-icon">
+                      <span>Antigua and Barbuda</span>
+                  </div>
+              </a>
+      
+              <a href="Argentina.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Argentina.jpeg" alt="Argentina" class="flag-icon">
+                      <span>Argentina</span>
+                  </div>
+              </a>
+      
+              <a href="Armenia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Armenia.jpeg" alt="Armenia" class="flag-icon">
+                      <span>Armenia</span>
+                  </div>
+              </a>
+      
+              <a href="Australia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Australia.jpeg" alt="Australia" class="flag-icon">
+                      <span>Australia</span>
+                  </div>
+              </a>
+      
+              <a href="Austria.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Austria.jpeg" alt="Austria" class="flag-icon">
+                      <span>Austria</span>
+                  </div>
+              </a>
+      
+              <a href="Azerbaijan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Azerbaijan.jpeg" alt="Azerbaijan" class="flag-icon">
+                      <span>Azerbaijan</span>
+                  </div>
+              </a>
+      
+              <a href="Bahamas.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bahamas.jpeg" alt="Bahamas" class="flag-icon">
+                    <span>Bahamas</span>
+                </div>
+            </a>
+      
+            <a href="Bahrain.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bahrain.jpeg" alt="Bahrain" class="flag-icon">
+                    <span>Bahrain</span>
+                </div>
+            </a>
+      
+            <a href="Bangladesh.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bangladesh.jpeg" alt="Bangladesh" class="flag-icon">
+                    <span>Bangladesh</span>
+                </div>
+            </a>
+      
+            <a href="Barbados.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Barbados.jpeg" alt="Barbados" class="flag-icon">
+                    <span>Barbados</span>
+                </div>
+            </a>
+      
+            <a href="Belarus.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Belarus.jpeg" alt="Belarus" class="flag-icon">
+                    <span>Belarus</span>
+                </div>
+            </a>
+      
+            <a href="Belgium.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Belgium.avif" alt="Belgium" class="flag-icon">
+                    <span>Belgium</span>
+                </div>
+            </a>
+      
+            <a href="Belize.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Belize.jpeg" alt="Belize" class="flag-icon">
+                    <span>Belize</span>
+                </div>
+            </a>
+      
+            <a href="Benin.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Benin.jpeg" alt="Benin" class="flag-icon">
+                    <span>Benin</span>
+                </div>
+            </a>
+      
+            <a href="Bhutan.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bhutan.jpeg" alt="Bhutan" class="flag-icon">
+                    <span>Bhutan</span>
+                </div>
+            </a>
+      
+            <a href="Bolivia.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bolivia.jpeg" alt="Bolivia" class="flag-icon">
+                    <span>Bolivia</span>
+                </div>
+            </a>
+      
+            <a href="Bosnia-and-Herzegovina.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bosnia and Herzegovina.jpeg" alt="Bosnia and Herzegovina" class="flag-icon">
+                    <span>Bosnia and Herzegovina</span>
+                </div>
+            </a>
+      
+            <a href="Botswana.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/botswana.jpeg" alt="Botswana" class="flag-icon">
+                    <span>Botswana</span>
+                </div>
+            </a>
+      
+            <a href="Brazil.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Brazil.jpeg" alt="Brazil" class="flag-icon">
+                    <span>Brazil</span>
+                </div>
+            </a>
+      
+            <a href="Brunei.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Brunei.jpeg" alt="Brunei" class="flag-icon">
+                    <span>Brunei</span>
+                </div>
+            </a>
+      
+            <a href="Bulgaria.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Bulgaria.jpeg" alt="Bulgaria" class="flag-icon">
+                    <span>Bulgaria</span>
+                </div>
+            </a>
+      
+            <a href="Burkina-Faso.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Burkina Faso.jpeg" alt="Burkina Faso" class="flag-icon">
+                    <span>Burkina Faso</span>
+                </div>
+            </a>
+      
+            <a href="Burundi.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Burundi.jpeg" alt="Burundi" class="flag-icon">
+                    <span>Burundi</span>
+                </div>
+            </a>
+      
+            <a href="Cabo-Verde.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Cabo Verde.jpeg" alt="Cabo Verde" class="flag-icon">
+                    <span>Cabo Verde</span>
+                </div>
+            </a>
+      
+            <a href="Cambodia.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Cambodia.jpeg" alt="Cambodia" class="flag-icon">
+                    <span>Cambodia</span>
+                </div>
+            </a>
+      
+            <a href="Cameroon.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Cameroon.jpeg" alt="Cameroon" class="flag-icon">
+                    <span>Cameroon</span>
+                </div>
+            </a>
+      
+            <a href="Canada.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Canada.jpeg" alt="Canada" class="flag-icon">
+                    <span>Canada</span>
+                </div>
+            </a>
+      
+            <a href="Central-African-Republic.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Central African Republic.jpeg" alt="Central African Republic" class="flag-icon">
+                    <span>Central African Republic</span>
+                </div>
+            </a>
+      
+            <a href="Chad.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/chad.jpeg" alt="Chad" class="flag-icon">
+                    <span>Chad</span>
+                </div>
+            </a>
+      
+            <a href="Chile.html" class="supplier-link">
+                <div class="supplier-item">
+                    <img src="img/Chile.jpeg" alt="Chile" class="flag-icon">
+                    <span>Chile</span>
+                </div>
+            </a>
+      
+            <a href="Denmark.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Denmark.jpeg" alt="Denmark" class="flag-icon">
+                  <span>Denmark</span>
+              </div>
+          </a>
+      
+          <a href="Djibouti.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Djibouti.png" alt="Djibouti" class="flag-icon">
+                  <span>Djibouti</span>
+              </div>
+          </a>
+      
+          <a href="Dominica.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Dominica.jpeg" alt="Dominica" class="flag-icon">
+                  <span>Dominica</span>
+              </div>
+          </a>
+      
+          <a href="Dominican-Republic.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Dominican Republic.jpeg" alt="Dominican Republic" class="flag-icon">
+                  <span>Dominican Republic</span>
+              </div>
+          </a>
+      
+          <a href="Ecuador.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Ecuador.jpeg" alt="Ecuador" class="flag-icon">
+                  <span>Ecuador</span>
+              </div>
+          </a>
+      
+          <a href="Egypt.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Egypt.jpeg" alt="Egypt" class="flag-icon">
+                  <span>Egypt</span>
+              </div>
+          </a>
+      
+          <a href="El-Salvador.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/El Salvador.jpeg" alt="El Salvador" class="flag-icon">
+                  <span>El Salvador</span>
+              </div>
+          </a>
+      
+          <a href="Equatorial-Guinea.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Equatorial Guinea.jpeg" alt="Equatorial Guinea" class="flag-icon">
+                  <span>Equatorial Guinea</span>
+              </div>
+          </a>
+      
+          <a href="Eritrea.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Eritrea.jpeg" alt="Eritrea" class="flag-icon">
+                  <span>Eritrea</span>
+              </div>
+          </a>
+      
+          <a href="Estonia.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Estonia.jpeg" alt="Estonia" class="flag-icon">
+                  <span>Estonia</span>
+              </div>
+          </a>
+      
+          <a href="Eswatini.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Eswatini.jpeg" alt="Eswatini" class="flag-icon">
+                  <span>Eswatini</span>
+              </div>
+          </a>
+      
+          <a href="Ethiopia.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Ethiopia.jpeg" alt="Ethiopia" class="flag-icon">
+                  <span>Ethiopia</span>
+              </div>
+          </a>
+      
+          <a href="Fiji.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Fiji.jpeg" alt="Fiji" class="flag-icon">
+                  <span>Fiji</span>
+              </div>
+          </a>
+      
+          <a href="Finland.html" class="supplier-link">
+              <div class="supplier-item">
+                  <img src="img/Finland.jpeg" alt="Finland" class="flag-icon">
+                  <span>Finland</span>
+              </div>
+          </a>
+          <a href="France.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/France.png" alt="France" class="flag-icon">
+                <span>France</span>
+            </div>
+        </a>
+      
+        <a href="Gabon.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Gabon.jpeg" alt="Gabon" class="flag-icon">
+                <span>Gabon</span>
+            </div>
+        </a>
+      
+        <a href="Gambia.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Gambia.jpeg" alt="Gambia" class="flag-icon">
+                <span>Gambia</span>
+            </div>
+        </a>
+      
+        <a href="Georgia.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Georgia.jpeg" alt="Georgia" class="flag-icon">
+                <span>Georgia</span>
+            </div>
+        </a>
+      
+      
+        <a href="Ghana.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Ghana.jpeg" alt="Ghana" class="flag-icon">
+                <span>Ghana</span>
+            </div>
+        </a>
+      
+        <a href="Greece.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Greece.jpeg" alt="Greece" class="flag-icon">
+                <span>Greece</span>
+            </div>
+        </a>
+      
+        <a href="Grenada.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Grenada.jpeg" alt="Grenada" class="flag-icon">
+                <span>Grenada</span>
+            </div>
+        </a>
+      
+        <a href="Guatemala.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Guatemala.jpeg" alt="Guatemala" class="flag-icon">
+                <span>Guatemala</span>
+            </div>
+        </a>
+      
+        <a href="Guinea.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Guinea.jpeg" alt="Guinea" class="flag-icon">
+                <span>Guinea</span>
+            </div>
+        </a>
+      
+        <a href="Guinea-Bissau.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Guinea-Bissau.jpeg" alt="Guinea-Bissau" class="flag-icon">
+                <span>Guinea-Bissau</span>
+            </div>
+        </a>
+      
+        <a href="Guyana.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Guyana.jpeg" alt="Guyana" class="flag-icon">
+                <span>Guyana</span>
+            </div>
+        </a>
+      
+        <a href="Haiti.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Haiti.jpeg" alt="Haiti" class="flag-icon">
+                <span>Haiti</span>
+            </div>
+        </a>
+      
+        <a href="Honduras.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Honduras.jpeg" alt="Honduras" class="flag-icon">
+                <span>Honduras</span>
+            </div>
+        </a>
+      
+        <a href="Hungary.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Hungary.jpeg" alt="Hungary" class="flag-icon">
+                <span>Hungary</span>
+            </div>
+        </a>
+      
+        <a href="Iceland.html" class="supplier-link">
+            <div class="supplier-item">
+                <img src="img/Iceland.jpeg" alt="Iceland" class="flag-icon">
+                <span>Iceland</span>
+            </div>
+        </a>
+      
+                <a href="Türkiye.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Türkiye.jpeg" alt="Turkey" class="flag-icon">
+                      <span>Türkiye</span>
+                  </div>
+              </a>
+              
+              <a href="South-Korea.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/South Korea.png" alt="South Korea" class="flag-icon">
+                      <span>South Korea</span>
+                  </div>
+              </a>
+              
+              <a href="Vietnam.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Vietnam.png" alt="Vietnam" class="flag-icon">
+                      <span>Vietnam</span>
+                  </div>
+              </a>
+              
+              <a href="Russia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Russia.jpeg" alt="Russia" class="flag-icon">
+                      <span>Russia</span>
+                  </div>
+              </a>
+              
+        
+                    <a href="Thailand.html" class="supplier-link">
+                        <div class="supplier-item">
+                            <img src="img/Thailand.png" alt="Thailand" class="flag-icon">
+                            <span>Thailand</span>
+                        </div>
+                    </a>
+        
+                    <a href="USA.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/USA.png" alt="USA" class="flag-icon">
+                          <span>United States</span>
+                      </div>
+                  </a>
+                  
+                  <a href="Germany.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Germany.png" alt="Germany" class="flag-icon">
+                          <span>Germany</span>
+                      </div>
+                  </a>
+                  
+                  <a href="United-Kingdom.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/United Kingdom.png" alt="United Kingdom" class="flag-icon">
+                          <span>United Kingdom</span>
+                      </div>
+                  </a>
+                  
+                  <a href="China.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/China.png" alt="China" class="flag-icon">
+                          <span>China</span>
+                      </div>
+                  </a>
+                  
+                  <a href="France.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/France.png" alt="France" class="flag-icon">
+                          <span>France</span>
+                      </div>
+                  </a>
+                  
+                  <a href="Japan.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Japan.png" alt="Japan" class="flag-icon">
+                          <span>Japan</span>
+                      </div>
+                  </a>
+                  <a href="Indonesia.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Indonesia.jpeg" alt="Indonesia" class="flag-icon">
+                          <span>Indonesia</span>
+                      </div>
+                  </a>
+                  <a href="Iran.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Iran.jpeg" alt="Iran" class="flag-icon">
+                          <span>Iran</span>
+                      </div>
+                  </a>
+                  <a href="Iraq.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Iraq.jpeg" alt="Iraq" class="flag-icon">
+                          <span>Iraq</span>
+                      </div>
+                  </a>
+                  <a href="Ireland.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Ireland.jpeg" alt="Ireland" class="flag-icon">
+                          <span>Ireland</span>
+                      </div>
+                  </a>
+                  <a href="Israel.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Israel.jpeg" alt="Israel" class="flag-icon">
+                          <span>Israel</span>
+                      </div>
+                  </a>
+                  <a href="Jamaica.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Jamaica.jpeg" alt="Jamaica" class="flag-icon">
+                          <span>Jamaica</span>
+                      </div>
+                  </a>
+                  <a href="Jordan.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Jordan.jpeg" alt="Jordan" class="flag-icon">
+                          <span>Jordan</span>
+                      </div>
+                  </a>
+                  <a href="Kazakhstan.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Kazakhstan.jpeg" alt="Kazakhstan" class="flag-icon">
+                          <span>Kazakhstan</span>
+                      </div>
+                  </a>
+                  <a href="Kenya.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Kenya.jpeg" alt="Kenya" class="flag-icon">
+                          <span>Kenya</span>
+                      </div>
+                  </a>
+                  <a href="Korea-North.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Korea North.jpeg" alt="Korea North" class="flag-icon">
+                          <span>Korea (North)</span>
+                      </div>
+                  </a>
+                  <a href="Korea-South.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Korea South.jpeg" alt="Korea South" class="flag-icon">
+                          <span>Korea (South)</span>
+                      </div>
+                  </a>
+                  <a href="Kuwait.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Kuwait.jpeg" alt="Kuwait" class="flag-icon">
+                          <span>Kuwait</span>
+                      </div>
+                  </a>
+                  <a href="Kyrgyzstan.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Kyrgyzstan.jpeg" alt="Kyrgyzstan" class="flag-icon">
+                          <span>Kyrgyzstan</span>
+                      </div>
+                  </a>
+                  <a href="Laos.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Laos.jpeg" alt="Laos" class="flag-icon">
+                          <span>Laos</span>
+                      </div>
+                  </a>
+                  <a href="Latvia.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Latvia.jpeg" alt="Latvia" class="flag-icon">
+                          <span>Latvia</span>
+                      </div>
+                  </a>
+                  <a href="Lebanon.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Lebanon.jpeg" alt="Lebanon" class="flag-icon">
+                          <span>Lebanon</span>
+                      </div>
+                  </a>
+                  <a href="Lesotho.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Lesotho.avif" alt="Lesotho" class="flag-icon">
+                          <span>Lesotho</span>
+                      </div>
+                  </a>
+                  <a href="Liberia.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Liberia.jpeg" alt="Liberia" class="flag-icon">
+                          <span>Liberia</span>
+                      </div>
+                  </a>
+                  <a href="Libya.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Libya.jpeg" alt="Libya" class="flag-icon">
+                          <span>Libya</span>
+                      </div>
+                  </a>
+                  <a href="Liechtenstein.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Liechtenstein.jpeg" alt="Liechtenstein" class="flag-icon">
+                          <span>Liechtenstein</span>
+                      </div>
+                  </a>
+                  <a href="Lithuania.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Lithuania.jpeg" alt="Lithuania" class="flag-icon">
+                          <span>Lithuania</span>
+                      </div>
+                  </a>
+                  <a href="Luxembourg.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Luxembourg.jpeg" alt="Luxembourg" class="flag-icon">
+                          <span>Luxembourg</span>
+                      </div>
+                  </a>
+                  <a href="Madagascar.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Madagascar.jpeg" alt="Madagascar" class="flag-icon">
+                          <span>Madagascar</span>
+                      </div>
+                  </a>
+                  <a href="Malawi.html" class="supplier-link">
+                      <div class="supplier-item">
+                          <img src="img/Malawi.jpeg" alt="Malawi" class="flag-icon">
+                          <span>Malawi</span>
+                      </div>
+                  </a>
+                  <a href="Malaysia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Malaysia.png" alt="Malaysia" class="flag-icon">
+                      <span>Malaysia</span>
+                  </div>
+              </a>
+              <a href="Maldives.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Maldives.jpeg" alt="Maldives" class="flag-icon">
+                      <span>Maldives</span>
+                  </div>
+              </a>
+              <a href="Mali.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Mali.jpeg" alt="Mali" class="flag-icon">
+                      <span>Mali</span>
+                  </div>
+              </a>
+              <a href="Malta.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Malta.jpeg" alt="Malta" class="flag-icon">
+                      <span>Malta</span>
+                  </div>
+              </a>
+              <a href="Marshall_Islands.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Marshall Islands.jpeg" alt="Marshall Islands" class="flag-icon">
+                      <span>Marshall Islands</span>
+                  </div>
+              </a>
+              <a href="Mauritania.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Mauritania.jpeg" alt="Mauritania" class="flag-icon">
+                      <span>Mauritania</span>
+                  </div>
+              </a>
+              <a href="Mauritius.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Mauritius.jpeg" alt="Mauritius" class="flag-icon">
+                      <span>Mauritius</span>
+                  </div>
+              </a>
+              <a href="Mexico.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Mexico.jpeg" alt="Mexico" class="flag-icon">
+                      <span>Mexico</span>
+                  </div>
+              </a>
+              <a href="Micronesia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Micronesia.jpeg" alt="Micronesia" class="flag-icon">
+                      <span>Micronesia</span>
+                  </div>
+              </a>
+              <a href="Moldova.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Moldova.jpeg" alt="Moldova" class="flag-icon">
+                      <span>Moldova</span>
+                  </div>
+              </a>
+              <a href="Monaco.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Monaco.jpeg" alt="Monaco" class="flag-icon">
+                      <span>Monaco</span>
+                  </div>
+              </a>
+              <a href="Namibia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Namibia.jpeg" alt="Namibia" class="flag-icon">
+                      <span>Namibia</span>
+                  </div>
+              </a>
+              <a href="Nauru.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Nauru.jpeg" alt="Nauru" class="flag-icon">
+                      <span>Nauru</span>
+                  </div>
+              </a>
+              <a href="Nepal.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Nepal.jpeg" alt="Nepal" class="flag-icon">
+                      <span>Nepal</span>
+                  </div>
+              </a>
+              <a href="Netherlands.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Netherlands.jpeg" alt="Netherlands" class="flag-icon">
+                      <span>Netherlands</span>
+                  </div>
+              </a>
+              <a href="New_Zealand.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/New Zealand.jpeg" alt="New Zealand" class="flag-icon">
+                      <span>New Zealand</span>
+                  </div>
+              </a>
+              <a href="Nicaragua.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Nicaragua.jpeg" alt="Nicaragua" class="flag-icon">
+                      <span>Nicaragua</span>
+                  </div>
+              </a>
+              <a href="Niger.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Niger.jpeg" alt="Niger" class="flag-icon">
+                      <span>Niger</span>
+                  </div>
+              </a>
+              <a href="Nigeria.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Nigeria.jpeg" alt="Nigeria" class="flag-icon">
+                      <span>Nigeria</span>
+                  </div>
+              </a>
+              <a href="North_Macedonia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/North Macedonia.jpeg" alt="North Macedonia" class="flag-icon">
+                      <span>North Macedonia</span>
+                  </div>
+              </a>
+              <a href="Norway.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Norway.jpeg" alt="Norway" class="flag-icon">
+                      <span>Norway</span>
+                  </div>
+              </a>
+              <a href="Oman.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Oman.jpeg" alt="Oman" class="flag-icon">
+                      <span>Oman</span>
+                  </div>
+              </a>
+              <a href="Pakistan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Pakistan.jpeg" alt="Pakistan" class="flag-icon">
+                      <span>Pakistan</span>
+                  </div>
+              </a>
+              <a href="Palau.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Palau.jpeg" alt="Palau" class="flag-icon">
+                      <span>Palau</span>
+                  </div>
+              </a>
+              <a href="Panama.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Panama.jpeg" alt="Panama" class="flag-icon">
+                      <span>Panama</span>
+                  </div>
+              </a>
+              <a href="Papua_New_Guinea.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Papua New Guinea.jpeg" alt="Papua New Guinea" class="flag-icon">
+                      <span>Papua New Guinea</span>
+                  </div>
+              </a>
+              <a href="Paraguay.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Paraguay.jpeg" alt="Paraguay" class="flag-icon">
+                      <span>Paraguay</span>
+                  </div>
+              </a>
+              <a href="Peru.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Peru.jpeg" alt="Peru" class="flag-icon">
+                      <span>Peru</span>
+                  </div>
+              </a>
+              <a href="Philippines.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Philippines.jpeg" alt="Philippines" class="flag-icon">
+                      <span>Philippines</span>
+                  </div>
+              </a>
+              <a href="Poland.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Poland.jpeg" alt="Poland" class="flag-icon">
+                      <span>Poland</span>
+                  </div>
+              </a>
+              <a href="Portugal.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Portugal.jpeg" alt="Portugal" class="flag-icon">
+                      <span>Portugal</span>
+                  </div>
+              </a>
+              <a href="Qatar.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Qatar.jpeg" alt="Qatar" class="flag-icon">
+                      <span>Qatar</span>
+                  </div>
+              </a>
+              <a href="Romania.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Romania.jpeg" alt="Romania" class="flag-icon">
+                      <span>Romania</span>
+                  </div>
+              </a>
+              
+              <a href="Rwanda.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Rwanda.jpeg" alt="Rwanda" class="flag-icon">
+                      <span>Rwanda</span>
+                  </div>
+              </a>
+              <a href="Saint_Kitts_and_Nevis.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Saint Kitts and Nevis.jpeg" alt="Saint Kitts and Nevis" class="flag-icon">
+                      <span>Saint Kitts and Nevis</span>
+                  </div>
+              </a>
+              <a href="Saint_Lucia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Saint Lucia.jpeg" alt="Saint Lucia" class="flag-icon">
+                      <span>Saint Lucia</span>
+                  </div>
+              </a>
+              <a href="Saint_Vincent_and_the_Grenadines.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Saint Vincent and the Grenadines.jpeg" alt="Saint Vincent and the Grenadines" class="flag-icon">
+                      <span>Saint Vincent and the Grenadines</span>
+                  </div>
+              </a>
+              <a href="Samoa.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Samoa.jpeg" alt="Samoa" class="flag-icon">
+                      <span>Samoa</span>
+                  </div>
+              </a>
+              <a href="San_Marino.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/San Marino.jpeg" alt="San Marino" class="flag-icon">
+                      <span>San Marino</span>
+                  </div>
+              </a>
+              <a href="Sao_Tome_and_Principe.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/São Tomé and Príncipe.jpeg" alt="São Tomé and Príncipe" class="flag-icon">
+                      <span>São Tomé and Príncipe</span>
+                  </div>
+              </a>
+              <a href="Saudi_Arabia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Saudi Arabia.jpeg" alt="Saudi Arabia" class="flag-icon">
+                      <span>Saudi Arabia</span>
+                  </div>
+              </a>
+              <a href="Senegal.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Senegal.jpeg" alt="Senegal" class="flag-icon">
+                      <span>Senegal</span>
+                  </div>
+              </a>
+              <a href="Serbia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Serbia.jpeg" alt="Serbia" class="flag-icon">
+                      <span>Serbia</span>
+                  </div>
+              </a>
+              <a href="Seychelles.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Seychelles.jpeg" alt="Seychelles" class="flag-icon">
+                      <span>Seychelles</span>
+                  </div>
+              </a>
+              <a href="Sierra_Leone.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Sierra Leone.jpeg" alt="Sierra Leone" class="flag-icon">
+                      <span>Sierra Leone</span>
+                  </div>
+              </a>
+              <a href="Singapore.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Singapore.jpeg" alt="Singapore" class="flag-icon">
+                      <span>Singapore</span>
+                  </div>
+              </a>
+              <a href="Slovakia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Slovakia.jpeg" alt="Slovakia" class="flag-icon">
+                      <span>Slovakia</span>
+                  </div>
+              </a>
+              <a href="Slovenia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Slovenia.jpeg" alt="Slovenia" class="flag-icon">
+                      <span>Slovenia</span>
+                  </div>
+              </a>
+              <a href="Solomon_Islands.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Solomon Islands.jpeg" alt="Solomon Islands" class="flag-icon">
+                      <span>Solomon Islands</span>
+                  </div>
+              </a>
+              <a href="Taiwan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Taiwan.jpeg" alt="Taiwan" class="flag-icon">
+                      <span>Taiwan</span>
+                  </div>
+              </a>
+              <a href="Tajikistan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Tajikistan.jpeg" alt="Tajikistan" class="flag-icon">
+                      <span>Tajikistan</span>
+                  </div>
+              </a>
+              <a href="Tanzania.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Tanzania.jpeg" alt="Tanzania" class="flag-icon">
+                      <span>Tanzania</span>
+                  </div>
+              </a>
+              <a href="Timor-Leste.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Timor-Leste.jpeg" alt="Timor-Leste" class="flag-icon">
+                      <span>Timor-Leste</span>
+                  </div>
+              </a>
+              <a href="Togo.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Togo.jpeg" alt="Togo" class="flag-icon">
+                      <span>Togo</span>
+                  </div>
+              </a>
+              <a href="Tonga.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Tonga.jpeg" alt="Tonga" class="flag-icon">
+                      <span>Tonga</span>
+                  </div>
+              </a>
+              <a href="Trinidad_and_Tobago.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Trinidad and Tobago.webp" alt="Trinidad and Tobago" class="flag-icon">
+                      <span>Trinidad and Tobago</span>
+                  </div>
+              </a>
+              <a href="Tunisia.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Tunisia.jpeg" alt="Tunisia" class="flag-icon">
+                      <span>Tunisia</span>
+                  </div>
+              </a>
+              <a href="Turkmenistan.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Turkmenistan.jpeg" alt="Turkmenistan" class="flag-icon">
+                      <span>Turkmenistan</span>
+                  </div>
+              </a>
+              <a href="Tuvalu.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Tuvalu.jpeg" alt="Tuvalu" class="flag-icon">
+                      <span>Tuvalu</span>
+                  </div>
+              </a>
+              <a href="Vanuatu.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Vanuatu.jpeg" alt="Vanuatu" class="flag-icon">
+                      <span>Vanuatu</span>
+                  </div>
+              </a>
+              <a href="Vatican_City.html" class="supplier-link">
+                  <div class="supplier-item">
+                      <img src="img/Vatican City.jpeg" alt="Vatican City" class="flag-icon">
+                      <span>Vatican City</span>
+                  </div>
+              </a>
+                </div>
+        
+                <button class="nav-button right">&gt;</button>
+            </div>
+        </div>
+
+        <!-- css -->
+            <style>
+                /* Supplier Section */
+    .supplier-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f8f9fa;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    .supplier-header {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+    .supplier-header h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    }
+
+    /* Supplier Container */
+    .supplier-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    gap: 10px;
+    }
+
+    /* Navigation Buttons */
+    .nav-button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    }
+
+    .nav-button.left {
+    left: -30px;
+    }
+
+    .nav-button.right {
+    right: -30px;
+    }
+
+    .nav-button:hover {
+    background-color: #003d80;
+    }
+
+    /* Supplier List */
+    .supplier-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 15px 0;
+    gap: 10px;
+    white-space: nowrap;
+    max-width: 90%;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+
+    .supplier-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome & Safari */
+    }
+
+    /* Supplier Item */
+    .supplier-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 130px;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .supplier-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Flag Icon */
+    .flag-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Country Name */
+    .supplier-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0056b3;
+    }
+            </style>
+
+        <!-- js -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const supplierList = document.querySelector(".supplier-list");
+    const leftButton = document.querySelector(".nav-button.left");
+    const rightButton = document.querySelector(".nav-button.right");
+
+    // Scroll Left Button
+    leftButton.addEventListener("click", function () {
+        supplierList.scrollBy({ left: -200, behavior: "smooth" });
+    });
+
+    // Scroll Right Button
+    rightButton.addEventListener("click", function () {
+        supplierList.scrollBy({ left: 200, behavior: "smooth" });
+    });
+});
+        </script>
+    </div>
+    
+
+
+    <!-- search clinic -->
+    <div style="font-family: Arial, sans-serif; text-align: center;">
+
+        <!-- Search Section -->
+        <div style="width: 80%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #b71c33;">Find Nearby Clinics</h2>
+            
+            <input type="text" id="city" placeholder="Enter City" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" id="area" placeholder="Enter Area" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" id="pincode" placeholder="Enter Pincode" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
+            
+            <button onclick="searchClinics()" style="padding: 10px 20px; margin-top: 10px; background: #b71c33; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Search
+            </button>
+        </div>
+    
+        <!-- Clinics Section (Hidden Initially) -->
+        <div id="clinicSection" style="display: none; margin-top: 20px;">
+            <h2 style="color: #b71c33;">Nearby Clinics</h2>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    
+                <!-- Clinic 1 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 1" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">City Health Clinic</h3>
+                    <p style="color: #555;">Best healthcare services in your area.</p>
+                </div>
+    
+                <!-- Clinic 2 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 2" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">Wellness Center</h3>
+                    <p style="color: #555;">Affordable and quality healthcare.</p>
+                </div>
+    
+                <!-- Clinic 3 -->
+                <div style="width: 250px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                    <img src="https://via.placeholder.com/200" alt="Clinic 3" style="width: 100%; border-radius: 8px;">
+                    <h3 style="color: #333;">Sunrise Hospital</h3>
+                    <p style="color: #555;">Experienced doctors and modern facilities.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function searchClinics() {
+                var city = document.getElementById("city").value;
+                var area = document.getElementById("area").value;
+                var pincode = document.getElementById("pincode").value;
+    
+                if (city && area && pincode) {
+                    document.getElementById("clinicSection").style.display = "block";
+                } else {
+                    alert("Please enter all fields before searching!");
+                }
+            }
+        </script>
+    
+    </div>
 
     <!-- test's -->
     <div style="font-family: Arial, sans-serif; text-align: center; background-color: #fff; margin: 0; padding: 0;">
@@ -239,20 +1570,7 @@
     
     </div>
 
-    <script>
-        // JavaScript to handle dropdown visibility
-        document.querySelectorAll('nav > div > div').forEach(navItem => {
-            const dropdown = navItem.querySelector('div');
-            if (dropdown) {
-                navItem.addEventListener('mouseenter', () => {
-                    dropdown.style.display = 'block';
-                });
-                navItem.addEventListener('mouseleave', () => {
-                    dropdown.style.display = 'none';
-                });
-            }
-        });
-    </script>
+   
 
 
 <!-- asdfg -->
@@ -380,55 +1698,65 @@
         <div id="test-prices-grid" style="margin-left: 15px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; justify-content: center; max-width: 1200px; margin: auto;">
             <!-- Test items will be dynamically populated here -->
         </div>
+        <!-- Booking Form Modal -->
+        <div id="booking-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; align-items: center; justify-content: center; display: flex; display: none;">
+            <div id="booking-modal" style="position: relative; background: #fff; width: 400px; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); animation: fadeIn 0.5s ease-out;">
+                <h2 style="text-align: center;">Book Test</h2>
+                <!-- Booking Form -->
+                <form id="booking-form" onsubmit="submitForm(event)" style="max-height: 400px; overflow-y: auto;">
+                    <label for="test-name" style="font-weight: bold; display: block; margin-bottom: 5px;">Test Name:</label>
+                    <input type="text" id="test-name" name="test-name" readonly style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="name" style="font-weight: bold; display: block; margin-bottom: 5px;">Your Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="phone" style="font-weight: bold; display: block; margin-bottom: 5px;">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="email" style="font-weight: bold; display: block; margin-bottom: 5px;">E-Mail Address:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <!-- Address Fields -->
+                    <label for="floor" style="font-weight: bold; display: block; margin-bottom: 5px;">Floor:</label>
+                    <input type="text" id="floor" name="floor" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="house-number" style="font-weight: bold; display: block; margin-bottom: 5px;">House Number:</label>
+                    <input type="text" id="house-number" name="house-number" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="area" style="font-weight: bold; display: block; margin-bottom: 5px;">Area:</label>
+                    <input type="text" id="area" name="area" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="mandal" style="font-weight: bold; display: block; margin-bottom: 5px;">Mandal:</label>
+                    <input type="text" id="mandal" name="mandal" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="district" style="font-weight: bold; display: block; margin-bottom: 5px;">District:</label>
+                    <input type="text" id="district" name="district" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <label for="pincode" style="font-weight: bold; display: block; margin-bottom: 5px;">Pincode:</label>
+                    <input type="text" id="pincode" name="pincode" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                
+                    <!-- Submit and Cancel Buttons -->
+                    <div style="text-align: center;">
+                        <button type="submit" style="background: #28a745; color: #fff; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Confirm Booking</button>
+                        <button type="button" onclick="closeModal()" style="background: #dc3545; color: #fff; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-left: 10px;">Cancel</button>
+                    </div>
+                </form>
+
+                <style>
+                    #booking-form {
+                        max-height: 400px;
+                        overflow-y: auto;
+                        padding: 15px;
+                    }
+                </style>
+            </div>
+        </div>
+
+
     
         <script>
             // Sample data for tests
-            const tests = [
-                { name: "FASTING PLASMA GLUCOSE", price: 120, rating: 4.5 },
-                { name: "COMPLETE BLOOD PICTURE (CBP)", price: 390, rating: 4.2 },
-                { name: "CREATININE", price: 260, rating: 4.0 },
-                { name: "POST LUNCH GLUCOSE", price: 120, rating: 3.8 },
-                { name: "GLYCATED HEMOGLOBIN (HbA1c)", price: 580, rating: 4.7 },
-                { name: "THYROID PROFILE", price: 650, rating: 4.6 },
-                { name: "LIPID PROFILE", price: 750, rating: 4.4 },
-                { name: "COMPLETE URINE EXAMINATION (CUE)", price: 150, rating: 3.9 },
-                { name: "LIVER FUNCTION TEST (LFT-A)", price: 450, rating: 4.1 },
-                { name: "ELECTROCARDIOGRAM (ECG)", price: 250, rating: 4.3 },
-                { name: "THYROID STIMULATING HORMONE (TSH)- Ultrasensitive", price: 250, rating: 4.0 },
-                { name: "ERYTHROCYTE SEDIMENTATION RATE (ESR)", price: 290, rating: 3.7 },
-                { name: "UREA", price: 150, rating: 3.5 },
-                { name: "X-CHEST PA VIEW", price: 250, rating: 4.2 },
-                { name: "URIC ACID", price: 180, rating: 3.8 },
-                { name: "ULTRASOUND-ABDOMEN AND PELVIS", price: 1200, rating: 4.8 },
-                { name: "RANDOM PLASMA GLUCOSE", price: 120, rating: 3.9 },
-                { name: "C-REACTIVE PROTEIN (CRP)", price: 250, rating: 4.1 },
-                { name: "VITAMIN B12", price: 250, rating: 4.0 },
-                { name: "ELECTROLYTES", price: 250, rating: 3.6 },
-                { name: "CALCIUM", price: 250, rating: 3.7 },
-            ];
-    
-            // Function to render test items
-            function renderTests(filteredTests) {
-                const grid = document.getElementById("test-prices-grid");
-                grid.innerHTML = ""; // Clear the grid
-    
-                filteredTests.forEach(test => {
-                    const item = document.createElement("div");
-                    item.className = "test-price-item";
-                    item.innerHTML = `
-                        <div>${test.name}</div>
-                        <div class="price">₹ ${test.price}</div>
-                        <a href="#">
-                            BOOK <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="cart">
-                        </a>
-                    `;
-                    grid.appendChild(item);
-                });
-            }
-    
-            // Initial render
-            renderTests(tests);
-    
+            
             // Search functionality
             const searchBox = document.getElementById("search-box");
             searchBox.addEventListener("input", () => {
@@ -514,14 +1842,159 @@
     </div>
 
 
+    <!-- chatbot -->
+    <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+        <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+    </div>
+        
+    <!-- Chatbot Container (initially hidden) -->
+    <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+        <!-- Chatbot Header -->
+        <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+            <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+        </div>
+  
+        <!-- Chat Area -->
+        <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+            <!-- Welcome message -->
+            <div>
+                <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+            </div>
+        </div>
+  
+        <!-- Chat Input -->
+        <div id="input-area" style="display: flex; align-items: center;">
+            <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+            <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+        </div>
+    </div>
+    <script>
+      // Show the chatbot when the icon is clicked
+      document.getElementById('chatbot-icon').addEventListener('click', function() {
+          let chatbotContainer = document.getElementById('chatbot-container');
+          chatbotContainer.style.display = 'block';
+          chatbotContainer.style.transform = 'translateY(0)';
+          chatbotContainer.style.opacity = '1';
+          document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+      });
+  
+      // Handle sending messages
+      document.getElementById('send-btn').addEventListener('click', function() {
+          sendMessage();
+      });
+  
+      // Allow sending messages with Enter key
+      document.getElementById('user-input').addEventListener('keypress', function(event) {
+          if (event.key === "Enter") {
+              sendMessage();
+          }
+      });
+  
+      function sendMessage() {
+          var userInput = document.getElementById('user-input').value.trim();
+          if (userInput !== '') {
+              var chatArea = document.getElementById('chat-area');
+  
+              // User Message
+              var userMessage = document.createElement('div');
+              userMessage.classList.add('message', 'user-message');
+              styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+              userMessage.textContent = userInput;
+              chatArea.appendChild(userMessage);
+  
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Simulate chatbot response after 1 second
+              setTimeout(function() {
+                  var botMessage = document.createElement('div');
+                  botMessage.classList.add('message', 'bot-message');
+                  styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+                  botMessage.textContent = getBotReply(userInput);
+                  chatArea.appendChild(botMessage);
+  
+                  // Scroll to the bottom
+                  chatArea.scrollTop = chatArea.scrollHeight;
+              }, 1000);
+          }
+      }
+  
+      function styleMessage(element, bgColor, textColor, align) {
+          element.style.padding = '8px 12px';
+          element.style.borderRadius = '20px';
+          element.style.margin = '5px 0';
+          element.style.maxWidth = '75%';
+          element.style.fontSize = '16px';
+          element.style.backgroundColor = bgColor;
+          element.style.color = textColor;
+          element.style.alignSelf = align;
+      }
+  
+      function getBotReply(userMessage) {
+          userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+  
+            const responses = {
+                "hi": "Hello, How are you?",
+                "hello": "Hi, How are you?",
+                "how are you": "I'm just a bot, but I'm doing great! How about you?",
+                "good morning": "Good morning! Have a fantastic day ahead!",
+                "good night": "Good night! Sweet dreams!",
+                "thank you": "You're welcome! 😊",
+                "what's your name": "I'm your friendly chatbot!",
+                "who created you": "I was created by Naveen Teja! 😉",
+                "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+                "bye": "Goodbye! Have a great day!",
+                "what can you do": "I can chat with you! Ask me anything. 😊",
+
+                // Health Diagnostic Services
+                "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+                "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+                "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+                "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+                "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+                "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+                "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+                "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+                "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+                "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+                // Fertility-Related Q&A
+                "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+                "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+                "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+                "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+                "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+                "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+                "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+                "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+                "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+                "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+                "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+            };
+
+            
+          return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+      }
+  
+      // Close the chatbot
+      document.getElementById('close-chat').addEventListener('click', function() {
+          document.getElementById('chatbot-container').style.display = 'none';
+          document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+      });
+    </script>
+
     <!-- Scroll to Top Button -->
-    <button onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background: #000; color: white; border: none; padding: 12px; border-radius: 50%; height: 50px; width: 50px; cursor: pointer; font-size: 24px;">&#x2191;</button>
+    <!-- <button onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background: #000; color: white; border: none; padding: 12px; border-radius: 50%; height: 50px; width: 50px; cursor: pointer; font-size: 24px;">&#x2191;</button>
 
     <script>
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script>
+    </script> -->
 
 
 
@@ -782,5 +2255,104 @@
     </footer>
 
 
+<!-- test booking online forms and all -->
+
+
+ <script>
+    // Function to open the booking form with the selected test name
+    function openBookingForm(testName) {
+        document.getElementById("test-name").value = testName;
+        document.getElementById("booking-modal-overlay").style.display = "flex"; // Show overlay
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        alert("Booking canceled!");
+        document.getElementById("booking-form").reset();
+        document.getElementById("booking-modal-overlay").style.display = "none"; // Hide overlay
+    }
+
+    // Sample data for tests
+    const tests = [
+        { name: "FASTING PLASMA GLUCOSE", price: 120, rating: 4.5 },
+        { name: "COMPLETE BLOOD PICTURE (CBP)", price: 390, rating: 4.2 },
+        { name: "CREATININE", price: 260, rating: 4.0 },
+        { name: "POST LUNCH GLUCOSE", price: 120, rating: 3.8 },
+        { name: "GLYCATED HEMOGLOBIN (HbA1c)", price: 580, rating: 4.7 },
+        { name: "THYROID PROFILE", price: 650, rating: 4.6 },
+        { name: "LIPID PROFILE", price: 750, rating: 4.4 },
+        { name: "COMPLETE URINE EXAMINATION (CUE)", price: 150, rating: 3.9 },
+        { name: "LIVER FUNCTION TEST (LFT-A)", price: 450, rating: 4.1 },
+        { name: "ELECTROCARDIOGRAM (ECG)", price: 250, rating: 4.3 },
+        { name: "THYROID STIMULATING HORMONE (TSH)- Ultrasensitive", price: 250, rating: 4.0 },
+        { name: "ERYTHROCYTE SEDIMENTATION RATE (ESR)", price: 290, rating: 3.7 },
+        { name: "UREA", price: 150, rating: 3.5 },
+        { name: "X-CHEST PA VIEW", price: 250, rating: 4.2 },
+        { name: "URIC ACID", price: 180, rating: 3.8 },
+        { name: "ULTRASOUND-ABDOMEN AND PELVIS", price: 1200, rating: 4.8 },
+        { name: "RANDOM PLASMA GLUCOSE", price: 120, rating: 3.9 },
+        { name: "C-REACTIVE PROTEIN (CRP)", price: 250, rating: 4.1 },
+        { name: "VITAMIN B12", price: 250, rating: 4.0 },
+        { name: "ELECTROLYTES", price: 250, rating: 3.6 },
+        { name: "CALCIUM", price: 250, rating: 3.7 }
+    ];
+
+    // Function to render test items
+    function renderTests(filteredTests) {
+        const grid = document.getElementById("test-prices-grid");
+        grid.innerHTML = ""; // Clear the grid
+
+        filteredTests.forEach(test => {
+            const item = document.createElement("div");
+            item.className = "test-price-item";
+            item.innerHTML = `
+                <div>${test.name}</div>
+                <div class="price">₹ ${test.price}</div>
+                <a href="#" onclick="openBookingForm('${test.name}')">
+                    BOOK <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="cart">
+                </a>
+            `;
+            grid.appendChild(item);
+        });
+    }
+
+    // Initial render
+    renderTests(tests);
+
+    function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let name = document.getElementById('name').value.trim();
+        let phone = document.getElementById('phone').value.trim();
+        let email = document.getElementById('email').value.trim();
+
+        // Validate required fields
+        if (name === '' || phone === '' || email === '') {
+            alert('Please fill in all required fields (Name, Phone, Email).');
+            return;
+        }
+
+        const formData = {
+            testName: document.getElementById('test-name').value,
+            name: name,
+            phone: phone,
+            email: email,
+            floor: document.getElementById('floor').value.trim(),
+            houseNumber: document.getElementById('house-number').value.trim(),
+            area: document.getElementById('area').value.trim(),
+            mandal: document.getElementById('mandal').value.trim(),
+            district: document.getElementById('district').value.trim(),
+            pincode: document.getElementById('pincode').value.trim()
+        };
+
+        console.log('Form Data:', formData);
+
+        alert('Booking confirmed!');
+        document.getElementById("booking-form").reset();
+        closeModal();
+    }
+</script>
+
+    
 </body>
 </html>
