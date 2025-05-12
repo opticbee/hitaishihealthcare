@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ 
+    
+    <!-- <script>
+       
+      
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    const apiKey = 'pk.f580ccdb9f053fc7d597fdfe09b7aac9';
+                    const url = `https://us1.locationiq.com/v1/reverse?key=${apiKey}&lat=${latitude}&lon=${longitude}&format=json`;
+
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("LocationIQ Response:", data); // Debug line
+                            if (data && data.display_name) {
+                                document.getElementById('locationInput').value = data.display_name;
+                            } else if (data.address) {
+                                const address = data.address;
+                                const readableAddress = `${address.road || ''}, ${address.city || address.town || address.village || ''}, ${address.state || ''}, ${address.country || ''}`;
+                                document.getElementById('locationInput').value = readableAddress;
+                            } else {
+                                document.getElementById('locationInput').value = `Lat: ${latitude}, Lon: ${longitude} (No detailed address)`;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching geocoding data:', error);
+                            document.getElementById('locationInput').value = `Lat: ${latitude}, Lon: ${longitude} (Geocoding failed)`;
+                        });
+                }, function(error) {
+                    alert('Unable to retrieve your location.');
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        }
+
+
+    </script> -->
+
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6;">
+    
+
+ <!-- Navigation Bar -->
+ <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            ❤️ Blood Donation
+        </a>
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+      
+    </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+    
+   
+
+
+
+    <!-- Hero Section -->
+    <section style="background-image: url('images/blood_donation.png'); background-size: cover; background-position: center; text-align: center; padding: 8rem 1rem; color: white; height: 40vh;">
+        <div style="background-color: rgba(0, 0, 0, 0.5); padding: 2rem;">
+        <h1 style="font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Be a Hero. Donate Blood. Save Lives.</h1>
+        <p style="font-size: 1.25rem; font-weight: 500; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);">Your blood can give someone another chance at life.</p>
+        </div>
+    </section>
+  
+    <section class="blog-container" id="blogSection" style="max-width: 1200px; margin: 2rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <h2 style="color: #cc0000; text-align: center; margin-bottom: 1rem;">Latest Blogs</h2>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-1" style="height: 200px; overflow: hidden; background-image: url('https://live.staticflickr.com/6013/5933930482_4d69170dbb_b.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">The Lifesaving Journey of Your Blood Donation</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 28, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">From your arm to someone in need, discover the incredible process and impact of your blood donation. Every drop counts!</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-2" style="height: 200px; overflow: hidden; background-image: url('https://images.pexels.com/photos/12193090/pexels-photo-12193090.jpeg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">More Than Just Red: The Different Components of Blood and Who They Help</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 20, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Did you know your single donation can be separated to help multiple patients? Learn how red cells, plasma, and platelets make a difference.</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-3" style="height: 200px; overflow: hidden; background-image: url('https://blog.bonsecours.com/wp-content/uploads/2022/02/Blood-Donation_1200x628-1-1200x610.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">Busting Common Fears: What It's Really Like to Donate Blood</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 15, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Worried about donating blood? We address common concerns and show you how quick, easy, and safe the process truly is.</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-4" style="height: 200px; overflow: hidden; background-image: url('https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/06/GettyImages-465489053_header-1024x575.jpg?w=1155&h=1528'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">Am I Eligible? Simple Guidelines for Becoming a Blood Donor</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 10, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Think you can't donate? Check out these basic eligibility requirements – you might be surprised!</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-5" style="height: 200px; overflow: hidden; background-image: url('https://liveyourlifept.com/blog/wp-content/uploads/2017/01/Give-blood-save-life.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">The Feel-Good Factor: Unexpected Benefits for Blood Donors</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 5, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Giving blood helps others, but did you know it can benefit your own health and well-being too? Discover the perks of being a donor.</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container image-6" style="height: 200px; overflow: hidden; background-image: url('https://www.upmcmyhealthmatters.com/wp-content/uploads/2020/01/19ISD1142590-MHM-December-Blogs_PrepareDonateBlood.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">Beyond the Donation Chair: How Your Blood Saves Lives in Our Community</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Nov 1, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Your generous act of donating blood has a direct and vital impact on local hospitals and patients facing emergencies, surgeries, and illnesses.</p>
+            </div>
+        </div>
+
+        <div class="blog-card" style="background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease-in-out;">
+            <div class="blog-image-container" style="height: 200px; overflow: hidden; background-image: url('https://www.cinejosh.com/telugu/newsimg/everyone-donate-blood-megastar-chiranjeevi-request-to-fans_b_1904200958.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="blog-content" style="padding: 15px;">
+                <h3 class="blog-title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #cc0000;">Donate at Chiranjeevi Blood Bank: A Legacy of Lifesaving</h3>
+                <p class="blog-meta" style="font-size: 0.8rem; color: #777; margin-bottom: 5px;">Apr 24, 2025</p>
+                <p class="blog-excerpt" style="font-size: 0.9rem; color: #333; line-height: 1.4;">Support the noble cause of Chiranjeevi Blood Bank in Hyderabad. Your contribution can continue their remarkable journey of providing essential blood supplies to those in need.</p>
+            </div>
+        </div>
+
+        </section>
+  
+  <!-- Combined Card Section -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 2rem; background-color: #fff5f5; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center; color: #cc0000;">Blood Donation Portal</h2>
+  
+        <!-- Toggle Buttons -->
+        <div style="display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0;">
+        <button onclick="toggleCardContent('donate')" style="background-color: #cc0000; color: white; padding: 0.75rem 2rem; border: none; border-radius: 5px; cursor: pointer;">Donate</button>
+        <button onclick="toggleCardContent('donors')" style="background-color: #555; color: white; padding: 0.75rem 2rem; border: none; border-radius: 5px; cursor: pointer;">Donors</button>
+        </div>
+  
+    <!-- Card Content Container -->
+    <div id="cardContent">
+  
+        <!-- Donation Registration Form -->
+        <div id="donateContent">
+            <form id="registrationForm">
+                <div style="margin-bottom: 1rem;">
+                    <label><strong>Full Name:</strong></label>
+                    <input type="text" id="fullName" required style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label><strong>Blood Type:</strong></label>
+                    <select id="bloodType" required style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">
+                    <option value="">Select</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                    <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label><strong>Location:</strong></label>
+                    <input type="text" id="locationInput" required placeholder="Enter location or use GPS" style="width: 100%; padding: 0.8rem;">
+                    <button type="button" onclick="getLocation()" style="margin-top: 0.5rem;">Use GPS</button>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label><strong>Contact Number:</strong></label>
+                    <input type="tel" id="contactNumber" required style="width: 100%; padding: 0.8rem;">
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" style="background-color: #cc0000; color: white; padding: 0.75rem 2rem; border: none; border-radius: 5px;">Register</button>
+                </div>
+            </form>
+            <script>
+                
+               
+                function getLocation() {
+                    fetch("https://ipapi.co/json/")
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data); // check all fields
+                            const location = `${data.city}, ${data.region}, ${data.country_name}`;
+                            document.getElementById("locationInput").value = location;
+                        })
+                        .catch(error => {
+                            console.error("Error fetching location info:", error);
+                            document.getElementById("locationInput").value = "Unable to retrieve address";
+                        });
+                }
+
+
+
+    
+                // Handle Form Submission and Send Data to Backend API
+                document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                    event.preventDefault();  // Prevent default form submission
+    
+                    // Get form data
+                    const fullName = document.getElementById('fullName').value;
+                    const bloodType = document.getElementById('bloodType').value;
+                    const location = document.getElementById('locationInput').value;
+                    const contactNumber = document.getElementById('contactNumber').value;
+    
+                    // Prepare data to send
+                    const formData = {
+                        fullName: fullName,
+                        bloodType: bloodType,
+                        location: location,
+                        contactNumber: contactNumber
+                    };
+    
+                    // Send data to backend API (Assuming your API is hosted at a URL like '/api/register')
+                    fetch('http://localhost:5000/api/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Registration successful!');
+                            document.getElementById('registrationForm').reset();  // Reset form after submission
+                        } else {
+                            alert('Registration failed. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred. Please try again later.');
+                    });
+                });
+            </script>
+        </div>
+  
+      <!-- Donor List -->
+      <div id="donorsContent" style="display: none;">
+        <div id="donorCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <!-- Donor cards injected via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Script -->
+  <script>
+    function toggleCardContent(type) {
+      document.getElementById('donateContent').style.display = type === 'donate' ? 'block' : 'none';
+      document.getElementById('donorsContent').style.display = type === 'donors' ? 'block' : 'none';
+  
+      if (type === 'donors') fetchDonors();
+    }
+  
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          document.getElementById('locationInput').value = `Lat: ${position.coords.latitude}, Lon: ${position.coords.longitude}`;
+        });
+      } else {
+        alert('Geolocation is not supported by this browser.');
+      }
+    }
+  
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        bloodType: document.getElementById('bloodType').value,
+        location: document.getElementById('locationInput').value,
+        contactNumber: document.getElementById('contactNumber').value
+      };
+      fetch('https://hitashihealthcare.com/api/register', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.success ? 'Registration successful!' : 'Registration failed.');
+        if (data.success) document.getElementById('registrationForm').reset();
+      }).catch(err => alert('Error submitting form.'));
+    });
+  
+    async function fetchDonors() {
+      try {
+        const res = await fetch('http://localhost:5000/api/donors');
+        const donors = await res.json();
+        const container = document.getElementById('donorCardsContainer');
+        container.innerHTML = '';
+        donors.forEach(donor => {
+          const card = document.createElement('div');
+          card.style = 'background:#fff; padding:1rem; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);';
+          card.innerHTML = `<h4 style="color:#cc0000;">${donor.bloodType}</h4><p><strong>${donor.name}</strong></p><p>${donor.location}</p><p>${donor.contact}</p>`;
+          container.appendChild(card);
+        });
+      } catch (err) {
+        console.error('Error fetching donors:', err);
+      }
+    }
+  </script>
+  
+
+
+
+   <!-- Pediatric Blood Requirement Section -->
+    <section style="max-width: 1200px; margin: 3rem auto; padding: 3rem 2rem; background: linear-gradient(to right, #ffe6f0, #fff0f5); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h2 style="text-align: center; color: #cc0055; font-size: 2.5rem; margin-bottom: 2rem; font-family: 'Segoe UI', sans-serif;">Pediatric Blood Needs</h2>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+            
+            <!-- Card 1 -->
+            <div style="flex: 1 1 260px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+                
+                <h3 style="color: #cc0055; margin-bottom: 0.5rem;">Neonatal Transfusion</h3>
+                <p>Newborns with anemia or blood disorders often need urgent transfusions to stabilize their condition and improve survival rates.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="flex: 1 1 260px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+                
+                <h3 style="color: #cc0055; margin-bottom: 0.5rem;">Leukemia Treatment</h3>
+                <p>Children undergoing leukemia treatment often require repeated transfusions due to chemotherapy-induced anemia.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div style="flex: 1 1 260px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+               
+                <h3 style="color: #cc0055; margin-bottom: 0.5rem;">Pediatric Surgeries</h3>
+                <p>Children undergoing surgeries often need blood due to small blood volumes and risk of rapid blood loss during operations.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div style="flex: 1 1 260px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+    
+                <h3 style="color: #cc0055; margin-bottom: 0.5rem;">Hemophilia Management</h3>
+                <p>
+                    Children with hemophilia need clotting factor transfusions to prevent or control internal bleeding episodes. 
+                    Early diagnosis and timely treatment are crucial to ensure a healthy and active childhood.
+                </p>
+            </div>
+            
+
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section with Toggle Functionality -->
+<section id="blood-donation-faq" style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: #fff7f7; border-radius: 10px;">
+    <h2 style="color: #cc0000; text-align: center; margin-bottom: 2rem; font-size: 2.2rem;">
+        Frequently Asked Questions About Blood Donation
+    </h2>
+
+    <!-- FAQ Item -->
+    <div class="faq-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer;">
+        <h3 style="color: #cc0000; margin-bottom: 0.8rem; font-size: 1.2rem;">
+            Who can donate blood in India?
+        </h3>
+        <div class="faq-answer" style="display: none; color: #444; line-height: 1.6;">
+            <p>
+                To donate blood in India, you must be between 18-65 years old, weigh at least 45kg, and have hemoglobin levels above 12.5g/dL.
+                There should be at least 56 days gap between donations. Certain medical conditions or recent surgeries may defer eligibility.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer;">
+        <h3 style="color: #cc0000; margin-bottom: 0.8rem; font-size: 1.2rem;">
+            How often can I donate blood?
+        </h3>
+        <div class="faq-answer" style="display: none; color: #444; line-height: 1.6;">
+            <p>
+                Male donors can donate every 3 months, females every 4 months. This recovery time helps maintain safe hemoglobin and health levels.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item" style="margin-bottom: 1.5rem; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer;">
+        <h3 style="color: #cc0000; margin-bottom: 0.8rem; font-size: 1.2rem;">
+            Is blood donation safe?
+        </h3>
+        <div class="faq-answer" style="display: none; color: #444; line-height: 1.6;">
+            <p>
+                Yes, it is safe when done at certified centers using sterilized, single-use equipment. Donors are screened and guided by professionals.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Add toggle functionality to FAQ
+    document.querySelectorAll(".faq-item").forEach(item => {
+        item.addEventListener("click", () => {
+            const answer = item.querySelector(".faq-answer");
+            const isOpen = answer.style.display === "block";
+            // Close all answers first
+            document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
+            // Toggle current one
+            answer.style.display = isOpen ? "none" : "block";
+        });
+    });
+</script>
+
+
+
+    <!-- footer -->
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+
+
+
+
+<!-- chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
+    <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+</div>
+    
+<!-- Chatbot Container (initially hidden) -->
+<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
+    <!-- Chatbot Header -->
+    <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
+        <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
+        <!-- Welcome message -->
+        <div>
+            <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+        </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div id="input-area" style="display: flex; align-items: center;">
+        <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
+        <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
+    </div>
+</div>
+<script>
+  // Show the chatbot when the icon is clicked
+  document.getElementById('chatbot-icon').addEventListener('click', function() {
+      let chatbotContainer = document.getElementById('chatbot-container');
+      chatbotContainer.style.display = 'block';
+      chatbotContainer.style.transform = 'translateY(0)';
+      chatbotContainer.style.opacity = '1';
+      document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
+  });
+
+  // Handle sending messages
+  document.getElementById('send-btn').addEventListener('click', function() {
+      sendMessage();
+  });
+
+  // Allow sending messages with Enter key
+  document.getElementById('user-input').addEventListener('keypress', function(event) {
+      if (event.key === "Enter") {
+          sendMessage();
+      }
+  });
+
+  function sendMessage() {
+      var userInput = document.getElementById('user-input').value.trim();
+      if (userInput !== '') {
+          var chatArea = document.getElementById('chat-area');
+
+          // User Message
+          var userMessage = document.createElement('div');
+          userMessage.classList.add('message', 'user-message');
+          styleMessage(userMessage, '#3498db', 'white', 'flex-end');
+          userMessage.textContent = userInput;
+          chatArea.appendChild(userMessage);
+
+          // Scroll to the bottom
+          chatArea.scrollTop = chatArea.scrollHeight;
+
+          // Clear the input field
+          document.getElementById('user-input').value = '';
+
+          // Simulate chatbot response after 1 second
+          setTimeout(function() {
+              var botMessage = document.createElement('div');
+              botMessage.classList.add('message', 'bot-message');
+              styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
+              botMessage.textContent = getBotReply(userInput);
+              chatArea.appendChild(botMessage);
+
+              // Scroll to the bottom
+              chatArea.scrollTop = chatArea.scrollHeight;
+          }, 1000);
+      }
+  }
+
+  function styleMessage(element, bgColor, textColor, align) {
+      element.style.padding = '8px 12px';
+      element.style.borderRadius = '20px';
+      element.style.margin = '5px 0';
+      element.style.maxWidth = '75%';
+      element.style.fontSize = '16px';
+      element.style.backgroundColor = bgColor;
+      element.style.color = textColor;
+      element.style.alignSelf = align;
+  }
+
+  function getBotReply(userMessage) {
+      userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+
+        const responses = {
+            "hi": "Hello, How are you?",
+            "hello": "Hi, How are you?",
+            "how are you": "I'm just a bot, but I'm doing great! How about you?",
+            "good morning": "Good morning! Have a fantastic day ahead!",
+            "good night": "Good night! Sweet dreams!",
+            "thank you": "You're welcome! 😊",
+            "what's your name": "I'm your friendly chatbot!",
+            "who created you": "I was created by Naveen Teja! 😉",
+            "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
+            "bye": "Goodbye! Have a great day!",
+            "what can you do": "I can chat with you! Ask me anything. 😊",
+
+            // Health Diagnostic Services
+            "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
+            "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
+            "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
+            "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
+            "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
+            "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
+            "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
+            "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
+            "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
+            "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
+            // Fertility-Related Q&A
+            "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
+            "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
+            "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
+            "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
+            "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
+            "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
+            "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
+            "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
+            "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
+            "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
+            "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
+        };
+
+        
+      return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
+  }
+
+  // Close the chatbot
+  document.getElementById('close-chat').addEventListener('click', function() {
+      document.getElementById('chatbot-container').style.display = 'none';
+      document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+  });
+</script>
+
+
+</body>
+</html>

@@ -7,11 +7,10 @@ const patientLoginRoutes = require("./routes/patientlogin"); // Import the patie
 const patientRoutes = require("./routes/patient");
 const doctorRoutes = require("./routes/doctor"); 
 const clinicRoutes = require("./routes/clinicRegister"); // Import the clinic routes
+const bloodRpoutes = require("./routes/blood"); // Import the blood routes
 const app = express();
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
-
-
 
 const path = require("path");
 app.use(express.static(path.join(__dirname))); // serve static files like clinics.html
@@ -32,9 +31,8 @@ app.use("/api", testBookingRoutes);
 app.use("/api", patientRoutes);
 app.use("/api", patientLoginRoutes); 
 app.use("/api", doctorRoutes);
+app.use("/api", bloodRpoutes); // Use the blood routes
 
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`✅ Server running on port ${PORT}`);
+app.listen(5000, '0.0.0.0', () => {
+  console.log('✅ Server is running...');
 });

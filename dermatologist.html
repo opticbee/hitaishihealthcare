@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Land & Development Sites</title>
+</head>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; overflow-x:hidden;">
+
+
+<!-- Navigation Bar -->
+<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+  <!-- Logo and Title -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+      <div>
+          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+      </div>
+  </div>
+  
+  <!-- search input icons -->
+  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+      <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+
+  <!-- Buttons -->
+  <div style="display: flex; gap: 15px;">
+      <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          ❤️ Blood Donation
+      </a>
+      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Book Appointment
+      </a>
+      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Find a Doctor
+      </a>
+      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Clinic
+      </a>
+      <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+          Eye Care
+      </a>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      
+
+      <!-- Display Logged-in User Name -->
+      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+      <!-- Profile Icon -->
+      <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+          <i class="fas fa-user-circle"></i>
+      </a>
+  </div>
+
+  </nav>
+  
+  <script>
+      // Simulating getting user data from local storage or API
+      document.addEventListener("DOMContentLoaded", function () {
+          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+          if (user) {
+              document.getElementById("username").textContent = user; // Show username if logged in
+          }
+      });
+  
+      // Example: Store username after login (call this after user logs in)
+      function setUser(name) {
+          localStorage.setItem("loggedInUser", name);
+      }
+  
+      // Example: Clear user on logout
+      function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.reload(); // Refresh page after logout
+      }
+  </script>
+  
+  
+  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+          <!-- Home Link -->
+          <div style="margin-right: 1rem;">
+              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+          </div>
+
+          <!-- Health Records Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                  <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                  <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+              </div>
+          </div>
+
+          <!-- Diagnostics Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                  <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                  <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+              </div>
+          </div>
+
+          <!-- Physicians Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                  <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                  <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+              </div>
+          </div>
+
+          <!-- Fertility Dropdown -->
+          <div style="position: relative; margin-right: 1rem;">
+              <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                  <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+              </div>
+          </div>
+
+          <!-- AI -->
+          <div style="margin-right: 1rem;">
+              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+          </div>
+
+          <!-- Doctors Link -->
+          <div style="margin-right: 1rem;">
+              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+          </div>
+
+          <!-- Patients Link -->
+          <div style="margin-right: 1rem;">
+              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+          </div>
+
+
+
+          <!-- Insights Link -->
+          <div style="margin-right: 1rem;">
+              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+          </div>
+          <div style="margin-right: 1rem;">
+              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+          </div>
+
+          <!-- Contact Link -->
+          <div>
+              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+          </div>
+          
+      </div>
+
+    
+  </nav>
+
+  <!-- for dropdowns -->
+  <script>
+      // JavaScript to handle dropdown visibility
+      document.querySelectorAll('nav > div > div').forEach(navItem => {
+          const dropdown = navItem.querySelector('div');
+          if (dropdown) {
+              navItem.addEventListener('mouseenter', () => {
+                  dropdown.style.display = 'block';
+              });
+              navItem.addEventListener('mouseleave', () => {
+                  dropdown.style.display = 'none';
+              });
+          }
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- Full Screen Hero Section -->
+    <section id="hero" style="position:relative; height:100vh; min-height:800px; color:white; text-align:center; overflow:hidden;">
+        <!-- Animated Background Slides -->
+        <div style="position:absolute; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; animation:fadeInZoom1 12s infinite; background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/background\ image1.png')"></div>
+        <div style="position:absolute; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; animation:fadeInZoom2 12s infinite; background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/background\ image2.png')"></div>
+        <div style="position:absolute; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; animation:fadeInZoom3 12s infinite; background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/background\ image3.png')"></div>
+       
+        <!-- Hero Content -->
+        <div style="position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; padding:20px;">
+            <div style="max-width:1200px; padding:40px; background-color:rgba(0,0,0,0.5); border-radius:10px;">
+                <h1 style="font-size:clamp(2.5rem, 5vw, 4rem); margin-bottom:25px; font-weight:700; text-shadow:2px 2px 8px rgba(0,0,0,0.5);">
+                  Advanced Dermatology Care
+                </h1>
+                <p style="font-size:clamp(1.1rem, 2vw, 1.5rem); max-width:800px; margin:0 auto 40px; line-height:1.6; text-shadow:1px 1px 4px rgba(0,0,0,0.5);">
+                  State-of-the-art skin treatments in premium medical facilities
+                </p>
+                <a href="doctors.html" style="display:inline-block; background:#fff; color:#4a6cf7; padding:16px 40px; border-radius:50px; text-decoration:none; font-weight:600; font-size:1.1rem; transition:all 0.3s ease;">
+                  Book Consultation
+              </a>
+        </div>
+       
+        <!-- Scroll Indicator -->
+        <div style="position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:2;">
+            <div style="width:30px; height:50px; border:2px solid white; border-radius:15px; position:relative;">
+                <div id="scroll-anim" style="width:4px; height:10px; background:white; border-radius:2px; position:absolute; top:10px; left:50%; transform:translateX(-50%);"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        @keyframes fadeInZoom1 {
+            0% { opacity:0; transform:scale(1.1); }
+            15% { opacity:1; transform:scale(1); }
+            33% { opacity:1; transform:scale(1); }
+            45% { opacity:0; transform:scale(1.1); }
+            100% { opacity:0; }
+        }
+        @keyframes fadeInZoom2 {
+            0% { opacity:0; transform:scale(1.1); }
+            33% { opacity:0; transform:scale(1.1); }
+            48% { opacity:1; transform:scale(1); }
+            66% { opacity:1; transform:scale(1); }
+            80% { opacity:0; transform:scale(1.1); }
+            100% { opacity:0; }
+        }
+        @keyframes fadeInZoom3 {
+            0% { opacity:0; transform:scale(1.1); }
+            66% { opacity:0; transform:scale(1.1); }
+            81% { opacity:1; transform:scale(1); }
+            92% { opacity:1; transform:scale(1); }
+            100% { opacity:0; transform:scale(1.1); }
+        }
+        @keyframes scrollPulse {
+            0% { top:10px; opacity:1; }
+            100% { top:25px; opacity:0; }
+        }
+    </style>
+
+
+    <script>
+        // Add scroll animation
+        document.getElementById('scroll-anim').style.animation = 'scrollPulse 2s infinite';
+       
+        // Button hover effect
+        const button = document.querySelector('a[href="#contact"]');
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        });
+       
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+       
+        // Image fallback handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const fallbackColors = ['#2c3e50', '#34495e', '#7f8c8d'];
+            const slides = document.querySelectorAll('#hero > div:not([style*="z-index"])');
+           
+            slides.forEach((slide, index) => {
+                const img = new Image();
+                img.src = slide.style.backgroundImage.match(/url\(['"]?(.*?)['"]?\)/)[1];
+                img.onerror = function() {
+                    slide.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))';
+                    slide.style.backgroundColor = fallbackColors[index];
+                };
+            });
+        });
+    </script>
+
+
+    <!-- Services Overview -->
+    <section id="services-overview" style="margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:30px;text-align:center;position:relative;padding-bottom:15px">
+        <span style="display:inline-block">Our Dermatology Services</span>
+        <span style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:4px;background:linear-gradient(90deg,#6e8efb,#a777e3)"></span>
+      </h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:transform 0.3s ease;border-top:4px solid #6e8efb">
+          <h3 style="color:#6e8efb;font-size:1.5rem;margin-bottom:15px">Medical Dermatology</h3>
+          <p style="color:#666">Comprehensive diagnosis and treatment for acne, eczema, psoriasis, rosacea, and all skin conditions.</p>
+        </div>
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:transform 0.3s ease;border-top:4px solid #a777e3">
+          <h3 style="color:#a777e3;font-size:1.5rem;margin-bottom:15px">Cosmetic Procedures</h3>
+          <p style="color:#666">Botox, fillers, laser treatments, chemical peels, and anti-aging solutions for radiant skin.</p>
+        </div>
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:transform 0.3s ease;border-top:4px solid #4facfe">
+          <h3 style="color:#4facfe;font-size:1.5rem;margin-bottom:15px">Skin Cancer Screening</h3>
+          <p style="color:#666">Early detection and treatment of skin cancers using advanced diagnostic technologies.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" style="background:#f0f4ff;padding:60px 30px;border-radius:10px;margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:40px;text-align:center">Why Choose Our Dermatology Center</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px">
+        <div style="text-align:center">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px">Board-Certified Specialists</h3>
+          <p style="color:#555">Our dermatologists are fellowship-trained and certified by the American Board of Dermatology.</p>
+        </div>
+        <div style="text-align:center">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px">Patient-Centered Care</h3>
+          <p style="color:#555">Personalized treatment plans tailored to your unique skin needs and goals.</p>
+        </div>
+        <div style="text-align:center">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px">Premium Facilities</h3>
+          <p style="color:#555">Modern, comfortable spaces designed for exceptional patient experiences.</p>
+        </div>
+        <div style="text-align:center">
+          <div style="width:80px;height:80px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px">Advanced Technology</h3>
+          <p style="color:#555">Cutting-edge equipment for precise diagnosis and effective treatments.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermatology Conditions</title>
+    <style>
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-Screen Conditions Section -->
+    <section id="fullscreen-conditions" style="min-height:100vh;padding:40px 20px;background:linear-gradient(135deg,#f5f7fa,#e4e8f0);display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box">
+       
+        <!-- Section Header -->
+        <div style="text-align:center;margin-bottom:40px;max-width:800px">
+            <h2 style="font-size:2.8rem;color:#2c3e50;margin-bottom:15px;font-weight:700">Conditions We Treat</h2>
+            <p style="font-size:1.2rem;color:#7f8c8d;margin:0">Comprehensive dermatological care for all skin conditions</p>
+        </div>
+       
+        <!-- Conditions Grid -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;width:100%;max-width:1200px;margin:0 auto">
+           
+            <!-- Condition 1 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.1s;transition:all 0.3s ease;border-top:5px solid #6e8efb">
+                <h3 style="color:#6e8efb;font-size:1.3rem;margin-top:0;margin-bottom:15px">Acne & Rosacea</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Customized treatment plans for clear, healthy skin using the latest dermatological advancements.</p>
+            </div>
+           
+            <!-- Condition 2 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.2s;transition:all 0.3s ease;border-top:5px solid #a777e3">
+                <h3 style="color:#a777e3;font-size:1.3rem;margin-top:0;margin-bottom:15px">Eczema & Psoriasis</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Advanced therapies to manage and treat chronic inflammatory skin conditions effectively.</p>
+            </div>
+           
+            <!-- Condition 3 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.3s;transition:all 0.3s ease;border-top:5px solid #4facfe">
+                <h3 style="color:#4facfe;font-size:1.3rem;margin-top:0;margin-bottom:15px">Skin Cancer</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Comprehensive screening, diagnosis, and treatment options for all types of skin cancer.</p>
+            </div>
+           
+            <!-- Condition 4 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.4s;transition:all 0.3s ease;border-top:5px solid #00d2b4">
+                <h3 style="color:#00d2b4;font-size:1.3rem;margin-top:0;margin-bottom:15px">Aging Skin</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Innovative solutions for wrinkles, sun damage, and volume loss to rejuvenate your skin.</p>
+            </div>
+           
+            <!-- Condition 5 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.5s;transition:all 0.3s ease;border-top:5px solid #ff6b6b">
+                <h3 style="color:#ff6b6b;font-size:1.3rem;margin-top:0;margin-bottom:15px">Hair Loss</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Personalized diagnosis and treatment plans for hair thinning and alopecia conditions.</p>
+            </div>
+           
+            <!-- Condition 6 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.6s;transition:all 0.3s ease;border-top:5px solid #feca57">
+                <h3 style="color:#feca57;font-size:1.3rem;margin-top:0;margin-bottom:15px">Nail Disorders</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Specialized care for fungal infections and other nail conditions affecting health and appearance.</p>
+            </div>
+           
+            <!-- Condition 7 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.7s;transition:all 0.3s ease;border-top:5px solid #9c88ff">
+                <h3 style="color:#9c88ff;font-size:1.3rem;margin-top:0;margin-bottom:15px">Hyperpigmentation</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Advanced treatments for dark spots and uneven skin tone to achieve balanced complexion.</p>
+            </div>
+           
+            <!-- Condition 8 -->
+            <div style="background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transform:translateY(20px);opacity:0;animation:fadeInUp 0.6s ease forwards 0.8s;transition:all 0.3s ease;border-top:5px solid #00cec9">
+                <h3 style="color:#00cec9;font-size:1.3rem;margin-top:0;margin-bottom:15px">Scar Reduction</h3>
+                <p style="color:#666;line-height:1.6;margin:0">Cutting-edge techniques to minimize scar appearance from injuries or surgeries.</p>
+            </div>
+           
+    </section>
+
+
+    <script>
+        // Add hover effects to condition cards
+        document.querySelectorAll('#fullscreen-conditions > div > div').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 15px 35px rgba(0,0,0,0.1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            });
+        });
+    </script>
+
+
+
+
+<style>
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes continuousPulse {
+    0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+    50% { transform: translateY(-5px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+  }
+  #common-conditions div:hover {
+    animation: continuousPulse 2s ease infinite;
+    cursor: pointer;
+  }
+</style>
+
+
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+
+      @keyframes continuousPulse {
+        0%, 100% {
+          transform: translateY(0) scale(1);
+          box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        50% {
+          transform: translateY(-5px) scale(1.02);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+      }
+
+
+      #common-conditions div[style*="border-left"] {
+        transition: all 0.3s ease;
+      }
+
+
+      #common-conditions div[style*="border-left"]:hover {
+        animation: continuousPulse 2s ease infinite;
+      }
+    </style>
+
+
+    <!-- Cosmetic Procedures -->
+    <section id="cosmetic-procedures" style="background:linear-gradient(135deg,#f5f7fa,#c3cfe2);padding:60px 30px;border-radius:10px;margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:40px;text-align:center">Cosmetic Dermatology</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px">
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/injectable\ treatments.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">Injectable Treatments</h3>
+            <p style="color:#666;margin-bottom:20px">Botox, Dysport, and dermal fillers to smooth wrinkles and restore facial volume.</p>
+            <ul style="color:#666;padding-left:20px;margin-bottom:20px">
+              <li style="margin-bottom:8px">Juvederm, Restylane, Voluma</li>
+              <li style="margin-bottom:8px">Natural-looking results</li>
+              <li style="margin-bottom:8px">Minimal downtime</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/laser\ treatments.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">Laser Treatments</h3>
+            <p style="color:#666;margin-bottom:20px">Advanced laser technology for skin rejuvenation and problem correction.</p>
+            <ul style="color:#666;padding-left:20px;margin-bottom:20px">
+              <li style="margin-bottom:8px">Fractional CO2 resurfacing</li>
+              <li style="margin-bottom:8px">IPL photofacials</li>
+              <li style="margin-bottom:8px">Laser hair removal</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/body\ countering.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">Body Contouring</h3>
+            <p style="color:#666;margin-bottom:20px">Non-surgical fat reduction and skin tightening treatments.</p>
+            <ul style="color:#666;padding-left:20px;margin-bottom:20px">
+              <li style="margin-bottom:8px">CoolSculpting</li>
+              <li style="margin-bottom:8px">SculpSure</li>
+              <li style="margin-bottom:8px">Ultherapy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Technology -->
+    <section id="technology" style="margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:30px;text-align:center">Advanced Dermatology Technology</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:center">
+          <div style="width:100px;height:100px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">Confocal Microscopy</h3>
+          <p style="color:#666">Non-invasive imaging that allows cellular-level examination of skin lesions without biopsy.</p>
+        </div>
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:center">
+          <div style="width:100px;height:100px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5 3.7 3.5 3.5 0 0 1-.8-2.2 3.2 3.2 0 0 1 .1-1.4 3.9 3.9 0 0 1 2.3-2.5 3.7 3.7 0 0 1 2.4-.4A10 10 0 0 0 12 2z"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">RF Microneedling</h3>
+          <p style="color:#666">Combines microneedling with radiofrequency for collagen induction and skin tightening.</p>
+        </div>
+        <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);text-align:center">
+          <div style="width:100px;height:100px;background:linear-gradient(135deg,#6e8efb,#a777e3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;color:#444;margin-bottom:15px">AI-Assisted Diagnosis</h3>
+          <p style="color:#666">Artificial intelligence supports our dermatologists in early and accurate skin cancer detection.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Skin Cancer -->
+    <section id="skin-cancer" style="background:linear-gradient(135deg,#ff758c,#ff7eb3);color:white;padding:40px 20px;border-radius:10px;margin-bottom:30px">
+      <div style="max-width:800px;margin:0 auto;text-align:center">
+        <h2 style="font-size:2rem;margin-bottom:15px">Skin Cancer Awareness</h2>
+        <p style="font-size:1.1rem;margin-bottom:20px;max-width:700px;margin-left:auto;margin-right:auto">Early detection saves lives. Know your ABCDEs of melanoma.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;margin-bottom:25px">
+          <div>
+            <div style="background:rgba(255,255,255,0.2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.5rem;font-weight:700;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">A</div>
+            <p style="font-weight:600;font-size:0.9rem">Asymmetry</p>
+          </div>
+          <div>
+            <div style="background:rgba(255,255,255,0.2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.5rem;font-weight:700;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">B</div>
+            <p style="font-weight:600;font-size:0.9rem">Border</p>
+          </div>
+          <div>
+            <div style="background:rgba(255,255,255,0.2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.5rem;font-weight:700;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">C</div>
+            <p style="font-weight:600;font-size:0.9rem">Color</p>
+          </div>
+          <div>
+            <div style="background:rgba(255,255,255,0.2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.5rem;font-weight:700;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">D</div>
+            <p style="font-weight:600;font-size:0.9rem">Diameter</p>
+          </div>
+          <div>
+            <div style="background:rgba(255,255,255,0.2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:1.5rem;font-weight:700;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">E</div>
+            <p style="font-weight:600;font-size:0.9rem">Evolving</p>
+          </div>
+        </div>
+        <a href="#appointment" style="display:inline-block;background:#fff;color:#ff758c;padding:12px 25px;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;transition:all 0.3s ease;box-shadow:0 3px 10px rgba(0,0,0,0.1)">Schedule Screening</a>
+      </div>
+    </section>
+
+
+    <!-- Blog Preview -->
+    <section id="blog-preview" style="margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:30px;text-align:center">Dermatology Insights</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/skin\ care.png') center/cover"></div>
+          <div style="padding:25px">
+            <span style="display:inline-block;background:#f0f4ff;color:#6e8efb;padding:5px 10px;border-radius:5px;font-size:0.8rem;margin-bottom:15px">Skin Care</span>
+            <h3 style="font-size:1.3rem;color:#444;margin-bottom:15px">Daily Routines for Healthy Skin</h3>
+            <p style="color:#666;margin-bottom:20px">Learn the essential steps for maintaining radiant skin at any age with dermatologist-recommended practices.</p>
+            <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">Read More</a>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/acne.png') center/cover"></div>
+          <div style="padding:25px">
+            <span style="display:inline-block;background:#fff0f6;color:#ff6b6b;padding:5px 10px;border-radius:5px;font-size:0.8rem;margin-bottom:15px">Acne</span>
+            <h3 style="font-size:1.3rem;color:#444;margin-bottom:15px">Adult Acne: Causes & Solutions</h3>
+            <p style="color:#666;margin-bottom:20px">Why acne isn't just for teenagers and the latest treatment approaches for clear skin.</p>
+            <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">Read More</a>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1)">
+          <div style="height:200px;background:url('images/anti-aging.png') center/cover"></div>
+          <div style="padding:25px">
+            <span style="display:inline-block;background:#f0fff4;color:#48bb78;padding:5px 10px;border-radius:5px;font-size:0.8rem;margin-bottom:15px">Anti-Aging</span>
+            <h3 style="font-size:1.3rem;color:#444;margin-bottom:15px">Collagen Boosters That Work</h3>
+            <p style="color:#666;margin-bottom:20px">Evidence-based treatments to stimulate collagen production for youthful skin.</p>
+            <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Health Tips -->
+    <section id="health-tips" style="margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:30px;text-align:center">Skin Health Tips</h2>
+      <div style="background:#fff;border-radius:10px;padding:40px;box-shadow:0 5px 15px rgba(0,0,0,0.05)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px">
+          <div>
+            <h3 style="color:#6e8efb;font-size:1.3rem;margin-bottom:15px;display:flex;align-items:center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6e8efb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Daily Protection
+            </h3>
+            <p style="color:#666">Apply broad-spectrum SPF 30+ sunscreen every morning, even on cloudy days. Reapply every 2 hours when outdoors.</p>
+          </div>
+          <div>
+            <h3 style="color:#6e8efb;font-size:1.3rem;margin-bottom:15px;display:flex;align-items:center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6e8efb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Gentle Cleansing
+            </h3>
+            <p style="color:#666">Use lukewarm water and mild, fragrance-free cleansers. Avoid harsh scrubbing that can damage your skin barrier.</p>
+          </div>
+          <div>
+            <h3 style="color:#6e8efb;font-size:1.3rem;margin-bottom:15px;display:flex;align-items:center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6e8efb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Hydration
+            </h3>
+            <p style="color:#666">Drink at least 8 glasses of water daily and use moisturizers appropriate for your skin type immediately after bathing.</p>
+          </div>
+          <div>
+            <h3 style="color:#6e8efb;font-size:1.3rem;margin-bottom:15px;display:flex;align-items:center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6e8efb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Self-Exams
+            </h3>
+            <p style="color:#666">Perform monthly skin checks using mirrors to inspect all areas. Look for new or changing moles or spots.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <!-- Meet Specialists -->
+    <section id="meet-specialists" style="margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:40px;text-align:center">Meet Our Dermatology Specialists</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center">
+          <div style="height:300px;background:url('images/sarah\ johnson.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:5px">Dr. Sarah Johnson</h3>
+            <p style="color:#6e8efb;font-weight:600;margin-bottom:15px">Medical & Cosmetic Dermatologist</p>
+            <p style="color:#666;margin-bottom:20px">Board-certified dermatologist with 15 years experience in medical and cosmetic dermatology.</p>
+            <div style="display:flex;justify-content:center;gap:15px">
+              <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">View Profile</a>
+              <a href="#appointment" style="color:#a777e3;text-decoration:none;font-weight:600">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center">
+          <div style="height:300px;background:url('images/michael\ chen.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:5px">Dr. Michael Chen</h3>
+            <p style="color:#6e8efb;font-weight:600;margin-bottom:15px">Dermatologic Surgeon</p>
+            <p style="color:#666;margin-bottom:20px">Specializes in Mohs surgery and complex skin cancer reconstructions.</p>
+            <div style="display:flex;justify-content:center;gap:15px">
+              <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">View Profile</a>
+              <a href="#appointment" style="color:#a777e3;text-decoration:none;font-weight:600">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center">
+          <div style="height:300px;background:url('images/emelia\ roddreguiez.png') center/cover"></div>
+          <div style="padding:25px">
+            <h3 style="font-size:1.5rem;color:#444;margin-bottom:5px">Dr. Emily Rodriguez</h3>
+            <p style="color:#6e8efb;font-weight:600;margin-bottom:15px">Pediatric Dermatologist</p>
+            <p style="color:#666;margin-bottom:20px">Expert in childhood skin conditions and genetic skin disorders.</p>
+            <div style="display:flex;justify-content:center;gap:15px">
+              <a href="#" style="color:#6e8efb;text-decoration:none;font-weight:600">View Profile</a>
+              <a href="#appointment" style="color:#a777e3;text-decoration:none;font-weight:600">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Patient Testimonials -->
+    <section id="patient-testimonials" style="background:#f8f9fa;padding:60px 30px;border-radius:10px;margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:40px;text-align:center">Patient Experiences</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+        <div style="background:#fff;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative">
+          <div style="display:flex;align-items:center;margin-bottom:20px">
+            <div style="width:60px;height:60px;border-radius:50%;background:url('https://randomuser.me/api/portraits/women/43.jpg') center/cover;margin-right:15px"></div>
+            <div>
+              <h4 style="margin:0;color:#444">Jennifer K.</h4>
+              <div style="color:#ffc107;font-size:1.1rem">★★★★★</div>
+            </div>
+          </div>
+          <p style="color:#666;font-style:italic">"The acne treatment plan completely transformed my skin. The dermatologist took time to explain everything and made me feel comfortable throughout the process."</p>
+        </div>
+        <div style="background:#fff;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative">
+          <div style="display:flex;align-items:center;margin-bottom:20px">
+            <div style="width:60px;height:60px;border-radius:50%;background:url('https://randomuser.me/api/portraits/men/32.jpg') center/cover;margin-right:15px"></div>
+            <div>
+              <h4 style="margin:0;color:#444">Robert T.</h4>
+              <div style="color:#ffc107;font-size:1.1rem">★★★★★</div>
+            </div>
+          </div>
+          <p style="color:#666;font-style:italic">"Early skin cancer detection saved my life. The Mohs surgery was performed with such precision - barely any scar remains. Forever grateful."</p>
+        </div>
+        <div style="background:#fff;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative">
+          <div style="display:flex;align-items:center;margin-bottom:20px">
+            <div style="width:60px;height:60px;border-radius:50%;background:url('https://randomuser.me/api/portraits/women/65.jpg') center/cover;margin-right:15px"></div>
+            <div>
+              <h4 style="margin:0;color:#444">Amanda S.</h4>
+              <div style="color:#ffc107;font-size:1.1rem">★★★★★</div>
+            </div>
+          </div>
+          <p style="color:#666;font-style:italic">"The cosmetic treatments gave me natural-looking results that took years off my appearance. The staff makes you feel like family."</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" style="background:#f8f9fa;padding:60px 30px;border-radius:10px;margin-bottom:50px">
+      <h2 style="font-size:2.2rem;color:#444;margin-bottom:40px;text-align:center">Frequently Asked Questions</h2>
+      <div style="max-width:800px;margin:0 auto">
+        <details style="background:#fff;padding:20px 25px;border-radius:8px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,0.05)">
+          <summary style="font-size:1.2rem;color:#444;font-weight:600;cursor:pointer;outline:none">How often should I see a dermatologist?</summary>
+          <p style="color:#666;margin-top:15px">Most adults should have an annual skin check for cancer screening. Those with a history of skin cancer may need more frequent visits (every 3-6 months). For cosmetic or medical skin conditions, your dermatologist will recommend an appropriate schedule based on your treatment plan.</p>
+        </details>
+        <details style="background:#fff;padding:20px 25px;border-radius:8px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,0.05)">
+          <summary style="font-size:1.2rem;color:#444;font-weight:600;cursor:pointer;outline:none">What's the difference between medical and cosmetic dermatology?</summary>
+          <p style="color:#666;margin-top:15px">Medical dermatology focuses on diagnosing and treating skin diseases (acne, eczema, skin cancer, etc.). Cosmetic dermatology enhances appearance through procedures like Botox, fillers, lasers, and chemical peels. Many dermatologists practice both, as healthy skin is the foundation of beauty.</p>
+        </details>
+        <details style="background:#fff;padding:20px 25px;border-radius:8px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,0.05)">
+          <summary style="font-size:1.2rem;color:#444;font-weight:600;cursor:pointer;outline:none">Are cosmetic procedures covered by insurance?</summary>
+          <p style="color:#666;margin-top:15px">Most cosmetic procedures are considered elective and not covered by insurance. However, some treatments for medically necessary conditions (like laser for rosacea or removal of precancerous lesions) may be covered. Our staff can help verify your benefits for specific services.</p>
+        </details>
+        <details style="background:#fff;padding:20px 25px;border-radius:8px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,0.05)">
+          <summary style="font-size:1.2rem;color:#444;font-weight:600;cursor:pointer;outline:none">How do I prepare for my first dermatology appointment?</summary>
+          <p style="color:#666;margin-top:15px">Come with clean skin (no makeup or nail polish), a list of current medications/skincare products, and photos if you're tracking changes in a mole or rash. For medical concerns, note when symptoms began and what makes them better/worse. For cosmetic consultations, bring inspiration photos.</p>
+        </details>
+      </div>
+    </section>
+
+
+    <!-- Compact Appointment Section -->
+    <section id="appointment" style="background:linear-gradient(135deg,#6e8efb,#a777e3);padding:40px 20px;border-radius:10px;margin-bottom:30px;color:white">
+      <div style="max-width:800px;margin:0 auto;text-align:center">
+        <h2 style="font-size:2rem;margin-bottom:15px">Schedule Your Consultation</h2>
+        <p style="font-size:1rem;margin-bottom:20px">Begin your journey to healthier skin today. Our team will contact you within 24 hours to confirm your appointment.</p>
+        <form style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;text-align:left">
+          <div>
+            <label style="display:block;margin-bottom:5px;font-weight:600">Full Name</label>
+            <input type="text" style="width:100%;padding:10px 12px;border-radius:6px;border:none;font-family:inherit" placeholder="Your Name">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:5px;font-weight:600">Email</label>
+            <input type="email" style="width:100%;padding:10px 12px;border-radius:6px;border:none;font-family:inherit" placeholder="your@email.com">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:5px;font-weight:600">Phone</label>
+            <input type="tel" style="width:100%;padding:10px 12px;border-radius:6px;border:none;font-family:inherit" placeholder="(555) 123-4567">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:5px;font-weight:600">Service Interest</label>
+            <select style="width:100%;padding:10px 12px;border-radius:6px;border:none;font-family:inherit;color:#666">
+              <option>General Dermatology</option>
+              <option>Cosmetic Consultation</option>
+              <option>Skin Cancer Screening</option>
+              <option>Acne Treatment</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1">
+            <label style="display:block;margin-bottom:5px;font-weight:600">Message (Optional)</label>
+            <textarea style="width:100%;padding:10px 12px;border-radius:6px;border:none;font-family:inherit;min-height:80px" placeholder="Any specific concerns or requests"></textarea>
+          </div>
+          <button type="submit" style="grid-column:1/-1;background:#fff;color:#6e8efb;padding:12px 25px;border-radius:50px;border:none;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s ease;margin:0 auto;width:fit-content">Request Appointment</button>
+        </form>
+      </div>
+    </section>
+</body>
+</html>
+ 
+
+
+

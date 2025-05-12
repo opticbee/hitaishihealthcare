@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced MRI Technology</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; overflow-x: hidden;">
+
+
+
+
+
+    <!-- Navigation Bar -->
+   <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            ❤️ Blood Donation
+        </a>
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+      
+    </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+<section style=" height: 70vh; background: linear-gradient(135deg, #0a0e2e 0%, #1a1d4e 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden;">
+    <div style="position: relative; z-index: 3; max-width: 900px; padding: 0 20px;">
+        <h1 style="font-size: 5rem; margin: 0; line-height: 1.1; text-shadow: 0 5px 25px rgba(0,0,0,0.5); font-weight: 800; letter-spacing: -2px;">
+            Revolutionizing <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">MRI</span> Diagnostics
+        </h1>
+        <p style="font-size: 1.8rem; margin: 25px 0 50px; line-height: 1.6; max-width: 700px; color: rgba(255,255,255,0.9);">
+            Ultrasound lets us see the unseen and hear the silent stories of the human body.
+        </p>
+        <div style="display: flex; gap: 25px; justify-content: center;">
+            <button style="padding: 18px 40px; background: linear-gradient(135deg, #00b4ff 0%, #00fff2 100%); border: none; border-radius: 50px; font-weight: 600; cursor: pointer; color: #0a0e2e; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0, 180, 255, 0.3); position: relative; overflow: hidden;"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0, 180, 255, 0.4)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 180, 255, 0.3)'">
+                Explore Technology
+            </button>
+            <button style="padding: 18px 40px; background: transparent; border: 2px solid rgba(255,255,255,0.3); border-radius: 50px; font-weight: 600; cursor: pointer; color: white; font-size: 1.1rem; backdrop-filter: blur(5px); position: relative; overflow: hidden;"
+                    onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(255,255,255,0.5)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'"
+                    onmouseout="this.style.backgroundColor='transparent'; this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.3)'; this.style.boxShadow='none'">
+                View Case Studies
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: #f8f9fa; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 60px; color: #0a0e2e; position: relative;">
+            <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Advanced</span> MRI Technology
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
+            <div style="background: white; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); transition: all 0.4s; position: relative; overflow: hidden; z-index: 1;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0, 180, 255, 0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.05)'">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">3T Field Strength</h3>
+                <p style="color: #666; line-height: 1.6;">Our high-field 3T MRI systems deliver superior signal-to-noise ratio for exceptional image quality and diagnostic confidence.</p>
+            </div>
+           
+            <div style="background: white; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); transition: all 0.4s; position: relative; overflow: hidden; z-index: 1;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0, 180, 255, 0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.05)'">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Patient Comfort</h3>
+                <p style="color: #666; line-height: 1.6;">Wider bore design and reduced noise levels create a more comfortable experience for all patients.</p>
+            </div>
+           
+            <div style="background: white; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); transition: all 0.4s; position: relative; overflow: hidden; z-index: 1;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 50px rgba(0, 180, 255, 0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.05)'">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 20px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">AI Integration</h3>
+                <p style="color: #666; line-height: 1.6;">Artificial intelligence assists radiologists with faster scans, auto-positioning, and preliminary findings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div style="position: relative;">
+            <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #f0f7ff, #e0f0ff); border-radius: 20px; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 60%; background: linear-gradient(90deg, #d6e7ff, #ebf4ff); border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+                    <div style="width: 60%; height: 80%; background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=500&auto=format&fit=crop') center/cover; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
+                </div>
+                <div style="position: absolute; top: 20%; left: 10%; width: 80%; height: 20px; background: rgba(0, 180, 255, 0.1); border-radius: 10px;"></div>
+            </div>
+            <div style="position: absolute; bottom: -30px; left: 50px; width: 80%; height: 20px; background: rgba(0, 180, 255, 0.05); border-radius: 10px; filter: blur(10px);"></div>
+        </div>
+       
+        <div>
+            <h2 style="font-size: 2.8rem; margin-bottom: 25px; color: #0a0e2e;">
+                Next-Generation <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">MRI Scanners</span>
+            </h2>
+            <p style="color: #666; line-height: 1.7; margin-bottom: 30px; font-size: 1.1rem;">
+                Our MRI systems combine cutting-edge hardware with intelligent software to deliver faster, more accurate diagnostics. With reduced scan times and enhanced image quality, we're setting new standards in medical imaging.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 40px;">
+                <div style="padding: 10px 20px; background: rgba(0, 180, 255, 0.1); border-radius: 50px; color: #00b4ff; font-weight: 500;">70% Faster Scans</div>
+                <div style="padding: 10px 20px; background: rgba(0, 180, 255, 0.1); border-radius: 50px; color: #00b4ff; font-weight: 500;">40% Less Noise</div>
+                <div style="padding: 10px 20px; background: rgba(0, 180, 255, 0.1); border-radius: 50px; color: #00b4ff; font-weight: 500;">3T Field Strength</div>
+            </div>
+            <button style="padding: 15px 35px; background: linear-gradient(135deg, #00b4ff, #00fff2); border: none; border-radius: 50px; font-weight: 600; cursor: pointer; color: white; font-size: 1rem; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);"
+                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 30px rgba(0, 180, 255, 0.4)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 180, 255, 0.3)'">
+                Learn About Our Technology
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: linear-gradient(135deg, #0a0e2e 0%, #1a1d4e 100%); color: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; position: relative;">
+            Clinical <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Applications</span>
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center;">
+                    <span style="width: 30px; height: 30px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </span>
+                    Neurology
+                </h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">Advanced neuroimaging for stroke, tumors, multiple sclerosis, and neurodegenerative diseases with superior soft tissue contrast.</p>
+            </div>
+           
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center;">
+                    <span style="width: 30px; height: 30px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </span>
+                    Cardiology
+                </h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">Comprehensive cardiac MRI for structural heart disease, myocardial viability, and congenital heart defects without radiation.</p>
+            </div>
+           
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center;">
+                    <span style="width: 30px; height: 30px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </span>
+                    Oncology
+                </h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">Precision tumor characterization, staging, and treatment monitoring with multiparametric MRI techniques.</p>
+            </div>
+           
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center;">
+                    <span style="width: 30px; height: 30px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </span>
+                    Musculoskeletal
+                </h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">Detailed evaluation of joints, tendons, ligaments, and bone marrow pathology with high-resolution imaging.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; color: #0a0e2e; position: relative;">
+            The MRI <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Experience</span>
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: flex; flex-direction: column; gap: 40px; position: relative;">
+           
+            <div style="position: absolute; left: 30px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #00b4ff, #00fff2); border-radius: 2px; z-index: 1;"></div>
+         
+            <div style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);">
+                    <span style="color: white; font-weight: 700; font-size: 1.3rem;">1</span>
+                </div>
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 30px; flex-grow: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Preparation</h3>
+                    <p style="color: #666; line-height: 1.6;">Our team will guide you through the preparation process, which may include changing into comfortable clothing and removing metal objects. For certain exams, contrast material may be administered.</p>
+                </div>
+            </div>
+           
+            <div style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);">
+                    <span style="color: white; font-weight: 700; font-size: 1.3rem;">2</span>
+                </div>
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 30px; flex-grow: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Positioning</h3>
+                    <p style="color: #666; line-height: 1.6;">You'll be comfortably positioned on the scanning table, with specialized coils placed around the area being examined. Our wide-bore design ensures a more open, less confined experience.</p>
+                </div>
+            </div>
+           
+            <div style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);">
+                    <span style="color: white; font-weight: 700; font-size: 1.3rem;">3</span>
+                </div>
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 30px; flex-grow: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Scanning</h3>
+                    <p style="color: #666; line-height: 1.6;">The table will move into the magnet, and the scan will begin. You'll hear rhythmic knocking sounds as images are acquired. Our noise-reduction technology makes the experience quieter than traditional MRI systems.</p>
+                </div>
+            </div>
+           
+            <div style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);">
+                    <span style="color: white; font-weight: 700; font-size: 1.3rem;">4</span>
+                </div>
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 30px; flex-grow: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Results</h3>
+                    <p style="color: #666; line-height: 1.6;">Our radiologists will analyze the images, often with AI assistance, and provide a detailed report to your physician. Many results are available within 24 hours through our secure patient portal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: linear-gradient(135deg, #f0f7ff 0%, #e0f0ff 100%); position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div>
+            <h2 style="font-size: 2.8rem; margin-bottom: 25px; color: #0a0e2e;">
+                <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">AI-Powered</span> Diagnostics
+            </h2>
+            <p style="color: #666; line-height: 1.7; margin-bottom: 30px; font-size: 1.1rem;">
+                Our MRI systems integrate advanced artificial intelligence to enhance every step of the imaging process. From automated scan planning to intelligent image reconstruction and preliminary findings, AI helps deliver faster, more consistent results.
+            </p>
+           
+            <div style="background: white; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin: 0; color: #0a0e2e;">Automated Scan Planning</h4>
+                </div>
+                <p style="color: #666; line-height: 1.6; margin: 0; font-size: 0.95rem;">AI algorithms automatically determine optimal scan parameters based on patient anatomy and clinical indication.</p>
+            </div>
+           
+            <div style="background: white; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin: 0; color: #0a0e2e;">Intelligent Reconstruction</h4>
+                </div>
+                <p style="color: #666; line-height: 1.6; margin: 0; font-size: 0.95rem;">Deep learning enhances image quality even from accelerated acquisitions, reducing scan times without compromising diagnostic quality.</p>
+            </div>
+           
+            <button style="padding: 15px 35px; background: linear-gradient(135deg, #00b4ff, #00fff2); border: none; border-radius: 50px; font-weight: 600; cursor: pointer; color: white; font-size: 1rem; box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);"
+                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 30px rgba(0, 180, 255, 0.4)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 180, 255, 0.3)'">
+                Discover AI Capabilities
+            </button>
+        </div>
+       
+        <div style="position: relative;">
+            <div style="width: 100%; height: 500px; background: white; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1579684453423-f84349ef60b0?q=80&w=500&auto=format&fit=crop') center/cover;"></div>
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); display: flex; justify-content: center; align-items: center;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h4 style="color: white; margin: 0; font-size: 1.2rem;">AI-Assisted Brain MRI Analysis</h4>
+                </div>
+            </div>
+            <div style="position: absolute; top: 20px; right: 20px; width: 100px; height: 100px; background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); border-radius: 50%; border: 2px dashed rgba(255,255,255,0.5); display: flex; justify-content: center; align-items: center;">
+                <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.3); border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; color: #0a0e2e; position: relative;">
+            MRI <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Safety</span>
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 15px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">No Ionizing Radiation</h3>
+                <p style="color: #666; line-height: 1.6;">MRI uses powerful magnets and radio waves instead of x-rays, eliminating exposure to ionizing radiation.</p>
+            </div>
+           
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 15px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Patient Monitoring</h3>
+                <p style="color: #666; line-height: 1.6;">Continuous monitoring systems ensure patient safety throughout the examination with immediate staff access.</p>
+            </div>
+           
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 15px; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0a0e2e;">Metal Detection</h3>
+                <p style="color: #666; line-height: 1.6;">Advanced screening protocols and metal detection systems ensure safety for patients with implants.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: linear-gradient(135deg, #f0f7ff 0%, #e0f0ff 100%); position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; color: #0a0e2e; position: relative;">
+            Technology <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Comparison</span>
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="background: white; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, #00b4ff, #00fff2); color: white;">
+                        <th style="padding: 20px; text-align: left; font-weight: 600;">Feature</th>
+                        <th style="padding: 20px; text-align: center; font-weight: 600;">Standard MRI</th>
+                        <th style="padding: 20px; text-align: center; font-weight: 600;">Our Technology</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 20px; font-weight: 500;">Field Strength</td>
+                        <td style="padding: 20px; text-align: center;">1.5T</td>
+                        <td style="padding: 20px; text-align: center; color: #00b4ff; font-weight: 600;">3T</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 20px; font-weight: 500;">Scan Time</td>
+                        <td style="padding: 20px; text-align: center;">45-60 min</td>
+                        <td style="padding: 20px; text-align: center; color: #00b4ff; font-weight: 600;">15-30 min</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 20px; font-weight: 500;">Bore Diameter</td>
+                        <td style="padding: 20px; text-align: center;">60cm</td>
+                        <td style="padding: 20px; text-align: center; color: #00b4ff; font-weight: 600;">70cm</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 20px; font-weight: 500;">Noise Level</td>
+                        <td style="padding: 20px; text-align: center;">110dB</td>
+                        <td style="padding: 20px; text-align: center; color: #00b4ff; font-weight: 600;">85dB</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px; font-weight: 500;">AI Integration</td>
+                        <td style="padding: 20px; text-align: center;">Limited</td>
+                        <td style="padding: 20px; text-align: center; color: #00b4ff; font-weight: 600;">Full Suite</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; color: #0a0e2e; position: relative;">
+            What <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Experts</span> Say
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <p style="color: #666; line-height: 1.7; font-style: italic; margin-bottom: 25px;">"The image quality and speed of these MRI systems have transformed our diagnostic capabilities. We're detecting subtle pathologies we previously might have missed."</p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px; overflow: hidden;">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #0a0e2e;">Dr. Sarah Johnson</h4>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">Chief Radiologist, Metro Health</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <p style="color: #666; line-height: 1.7; font-style: italic; margin-bottom: 25px;">"Our patient satisfaction scores have improved dramatically since implementing this MRI technology. The wider bore and reduced noise make a significant difference."</p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px; overflow: hidden;">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #0a0e2e;">Dr. Michael Chen</h4>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">Director of Imaging, City Hospital</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); position: relative;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00b4ff, #00fff2); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 25px;">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <p style="color: #666; line-height: 1.7; font-style: italic; margin-bottom: 25px;">"The AI integration has reduced our interpretation time by 30% while improving accuracy. It's like having an expert second opinion on every case."</p>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px; overflow: hidden;">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #0a0e2e;">Dr. Emily Rodriguez</h4>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">Neuroradiology Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 100px 20px; background: linear-gradient(135deg, #0a0e2e 0%, #1a1d4e 100%); color: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 80px; position: relative;">
+            Research & <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Innovation</span>
+            <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, #00b4ff, #00fff2); border-radius: 2px;"></div>
+        </h2>
+       
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: white;">7T MRI Development</h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 25px;">Pioneering ultra-high-field MRI systems for research applications with unprecedented spatial resolution.</p>
+                <div style="display: flex; align-items: center; color: #00b4ff; font-weight: 500;">
+                    <span>Learn More</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+           
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: white;">Quantitative MRI</h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 25px;">Developing advanced quantitative techniques for objective tissue characterization beyond qualitative imaging.</p>
+                <div style="display: flex; align-items: center; color: #00b4ff; font-weight: 500;">
+                    <span>Learn More</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+           
+            <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 40px; transition: all 0.4s; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(0, 180, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: white;">AI-Driven Protocols</h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 25px;">Researching adaptive MRI protocols that automatically optimize based on patient anatomy and clinical question.</p>
+                <div style="display: flex; align-items: center; color: #00b4ff; font-weight: 500;">
+                    <span>Learn More</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="padding: 120px 20px; background: white; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2.8rem; margin-bottom: 30px; color: #0a0e2e;">
+            Ready to <span style="background: linear-gradient(90deg, #00b4ff, #00fff2); -webkit-background-clip: text; background-clip: text; color: transparent;">Transform</span> Your Imaging?
+        </h2>
+        <p style="color: #666; line-height: 1.7; margin-bottom: 50px; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Contact our team to learn how our advanced MRI technology can enhance your diagnostic capabilities and improve patient outcomes.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <button style="padding: 18px 40px; background: linear-gradient(135deg, #00b4ff, #00fff2); border: none; border-radius: 50px; font-weight: 600; cursor: pointer; color: white; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0, 180, 255, 0.3);"
+                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0, 180, 255, 0.4)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 180, 255, 0.3)'">
+                Schedule a Demo
+            </button>
+            <button style="padding: 18px 40px; background: white; border: 2px solid #00b4ff; border-radius: 50px; font-weight: 600; cursor: pointer; color: #00b4ff; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05);"
+                    onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0, 180, 255, 0.2)'"
+                    onmouseout="this.style.backgroundColor='white'; this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                Contact Sales
+            </button>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+

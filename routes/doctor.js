@@ -5,6 +5,50 @@ const multer = require("multer");
 const crypto = require("crypto");
 const upload = multer(); // handles form-data without files
 
+
+
+// Create the doctors table if it doesn't exist
+const createDoctorsTable = `
+  CREATE TABLE IF NOT EXISTS doctors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    uid VARCHAR(10) UNIQUE,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(100),
+    mobile VARCHAR(20),
+    address TEXT,
+    clinic VARCHAR(255),
+    license_number VARCHAR(100),
+    aadhar_card VARCHAR(20) UNIQUE,
+    experience VARCHAR(50),
+    degree VARCHAR(100),
+    university VARCHAR(100),
+    specialization VARCHAR(100),
+    availability VARCHAR(50),
+    from_time VARCHAR(20),
+    to_time VARCHAR(20),
+    additional_info TEXT,
+    password VARCHAR(255)
+  )
+`;
+
+db.query(createDoctorsTable, (err) => {
+  if (err) {
+    console.error("Failed to create doctors table:", err);
+  } else {
+    console.log("✅ Doctors table ready (or already exists).");
+  }
+});
+
+
+
+
+
+
+
+
+
+
 // Register Doctor
 router.post("/doctors", upload.none(), async (req, res) => {
     const {

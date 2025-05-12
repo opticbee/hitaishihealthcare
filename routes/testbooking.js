@@ -4,6 +4,39 @@ const db = require('../db');  // Import the database connection
 const router = express.Router();
 
 
+
+
+
+// Create bookings table if it doesn't exist
+const createBookingsTable = `
+  CREATE TABLE IF NOT EXISTS bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    test_name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    floor VARCHAR(50),
+    house_number VARCHAR(50),
+    area VARCHAR(100),
+    mandal VARCHAR(100),
+    district VARCHAR(100),
+    pincode VARCHAR(20)
+  )
+`;
+
+db.query(createBookingsTable, (err) => {
+  if (err) {
+    console.error("❌ Failed to create bookings table:", err);
+  } else {
+    console.log("✅ Bookings table is ready (or already exists).");
+  }
+});
+
+
+
+
+
+
 // Test Booking API Route
 router.post('/testbooking', (req, res) => {
     console.log("📥 Incoming Request Body:", req.body);  // ✅ Debugging

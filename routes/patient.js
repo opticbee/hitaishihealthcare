@@ -1,6 +1,42 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db'); // Import the database connection
+const cors = require('cors');
+const app =  express();
+app.use(cors());
+
+
+
+// Create the patients table if it doesn't exist
+const createPatientsTable = `
+  CREATE TABLE IF NOT EXISTS patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    blood_group VARCHAR(10) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    dob DATE NOT NULL,
+    disease VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    confirm_password VARCHAR(255) NOT NULL
+  )
+`;
+
+db.query(createPatientsTable, (err) => {
+  if (err) {
+    console.error("❌ Failed to create patients table:", err);
+  } else {
+    console.log("✅ Patients table is ready (or already exists).");
+  }
+});
+
+
+
+
+
 
 // POST route to add a new patient
 router.post('/patients', (req, res) => {

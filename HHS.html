@@ -9,10 +9,10 @@
 
 </head>
 <body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
     
-    
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+   <!-- Navigation Bar -->
+   <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
     
     <!-- Logo and Title -->
     <div style="display: flex; align-items: center; gap: 15px;">
@@ -26,10 +26,13 @@
     <!-- search input icons -->
     <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
     <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-        <i class="fas fa-search" style="color: #007bff;"></i>
+        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
 
     <!-- Buttons -->
     <div style="display: flex; gap: 15px;">
+        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            ❤️ Blood Donation
+        </a>
         <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
             Book Appointment
         </a>
@@ -39,26 +42,26 @@
         <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
             Clinic
         </a>
-        <a href="#" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
             Eye Care
         </a>
     </div>
 
     <!-- Social Media Icons -->
     <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="https://www.facebook.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
             <i class="fab fa-facebook"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
             <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.instagram.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
             <i class="fab fa-instagram"></i>
         </a>
         <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
             <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.youtube.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
             <i class="fab fa-youtube"></i>
         </a>
         <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
@@ -73,135 +76,135 @@
         <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
 
         <!-- Profile Icon -->
-        <a href="profile.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
             <i class="fas fa-user-circle"></i>
         </a>
     </div>
 
-</nav>
-
-<script>
-    // Simulating getting user data from local storage or API
-    document.addEventListener("DOMContentLoaded", function () {
-        const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-        if (user) {
-            document.getElementById("username").textContent = user; // Show username if logged in
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
         }
-    });
-
-    // Example: Store username after login (call this after user logs in)
-    function setUser(name) {
-        localStorage.setItem("loggedInUser", name);
-    }
-
-    // Example: Clear user on logout
-    function logout() {
-        localStorage.removeItem("loggedInUser");
-        window.location.reload(); // Refresh page after logout
-    }
-</script>
-
-
-<nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-    <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-        <!-- Home Link -->
-        <div style="margin-right: 1rem;">
-            <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-        </div>
-
-        <!-- Health Records Dropdown -->
-        <div style="position: relative; margin-right: 1rem;">
-            <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                <a href="#blood-tests" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                <a href="#donations" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                <a href="#inventory" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-            </div>
-        </div>
-
-        <!-- Diagnostics Dropdown -->
-        <div style="position: relative; margin-right: 1rem;">
-            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                <a href="Diagnostics.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-            </div>
-        </div>
-
-        <!-- Physicians Dropdown -->
-        <div style="position: relative; margin-right: 1rem;">
-            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                <a href="#cardiologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                <a href="#neurologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                <a href="#dermatologist" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-            </div>
-        </div>
-
-        <!-- Fertility Dropdown -->
-        <div style="position: relative; margin-right: 1rem;">
-            <a href="#fertility" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-            <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                <a href="#iui" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-            </div>
-        </div>
-
-        <!-- AI -->
-        <div style="margin-right: 1rem;">
-            <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-        </div>
-
-        <!-- Doctors Link -->
-        <div style="margin-right: 1rem;">
-            <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-        </div>
-
-        <!-- Patients Link -->
-        <div style="margin-right: 1rem;">
-            <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-        </div>
-
-
-
-        <!-- Insights Link -->
-        <div style="margin-right: 1rem;">
-            <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-        </div>
-        <div style="margin-right: 1rem;">
-            <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-        </div>
-
-        <!-- Contact Link -->
-        <div>
-            <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-        </div>
-        
-    </div>
-
-  
-</nav>
-
-<!-- for dropdowns -->
-<script>
-    // JavaScript to handle dropdown visibility
-    document.querySelectorAll('nav > div > div').forEach(navItem => {
-        const dropdown = navItem.querySelector('div');
-        if (dropdown) {
-            navItem.addEventListener('mouseenter', () => {
-                dropdown.style.display = 'block';
-            });
-            navItem.addEventListener('mouseleave', () => {
-                dropdown.style.display = 'none';
-            });
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
         }
-    });
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+      
+    </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
     </script>
 
 
-
+    
     <!-- Main Section -->
     <main style="position: relative; padding: 6rem 2rem; max-width: 100%; margin: 0 auto; background-image: url(https://img.freepik.com/premium-photo/futuristic-hospital-radiology-room-with-mri-scanner-xray-machine-robotic-surgical-equipment-concept-medical-technology-radiology-room-futuristic-healthcare-mri-xray-machines_864588-70800.jpg); background-size: cover; background-position: center; color: #fff;">
         <!-- Overlay -->
@@ -211,6 +214,7 @@
         <h1 style="position: relative; z-index: 1; color: #ffffff; margin-bottom: 2rem; padding-bottom: 0.5rem; text-align: center; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to Hitaishi Healthcare Services</h1>
     </main>
     
+
 
     <!-- Countries -->
     <div>
@@ -1487,83 +1491,83 @@
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; margin: auto;">
             <!-- Lab Test Items -->
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_diabetes_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/diabets.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Diabetes</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_pregnancy_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/pregnancy.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Pregnancy</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_thyroid_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/thyroid.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Thyroid</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_liver_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/liver.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Liver</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_covid_disease_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/covid.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>COVID</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_prostate_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/prostate.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Prostate</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_fertility_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/fertility.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Fertility</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_bones_joints_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/bone.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Bone</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_gastro_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/gastro.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Gastro</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_cervix_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/cervix.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Cervix</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_heart_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/heart.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Heart</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_kidney_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/kidney.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Kidney</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_cancer_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/cancer.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Cancer</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_breast_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/breast.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Breast</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_vitamins_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/vitamins.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Vitamins</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_tuberculosis_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/tb.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Tuberculosis (TB)</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_anemia_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/anemia.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Anemia</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_lungs_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/lungs.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Lungs</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_fever_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/fever.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Fever</span>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
-                <img src="https://www.vijayadiagnostic.com/_next/image?url=https%3A%2F%2Fimages.vijayadiagnostic.com%2Fother%2Ffilter%2Fic_allergy_disorders_hdpi.webp&w=256&q=75" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
+                <img src="images/allergy.png" style="width: 80px; height: 80px; border-radius: 50%; background-color: #fff; padding: 10px;">
                 <span>Allergy</span>
             </div>
         </div>

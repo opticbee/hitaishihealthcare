@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare - Inventory Management</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f7fa; color: #333;">
+
+
+
+
+
+
+
+
+<!-- Navigation Bar -->
+<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            ❤️ Blood Donation
+        </a>
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+      
+    </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section style="background: url('https://cdn2.picryl.com/photo/2020/06/02/medical-laboratory-technicians-in-the-united-states-e60d2a-1024.jpg') no-repeat center center; background-size: cover; padding: 100px 20px; text-align: center; color: white; position: relative;">
+        <div style="background-color: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+            <h1 style="margin: 0; font-size: 3em;">Welcome to Hitaishi Healthcare</h1>
+            <p style="font-size: 1.5em; margin: 10px 0;">Your trusted partner for medical supplies and equipment</p>
+            <!-- Contact Us Button -->
+<a href="javascript:void(0)" onclick="document.getElementById('popupForm').style.display='flex'"
+style="background-color: #00c4b4; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 1.2em; display: inline-block; margin-top: 20px;">
+Contact Us
+</a>
+
+
+<!-- Popup Form -->
+<div id="popupForm" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center;">
+
+
+<div style="background-color: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px;
+    position: relative; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+   
+ <h2 style="margin-top: 0; color: #00c4b4; text-align: center;">Order Medicine</h2>
+ 
+ <form>
+   <input type="text" placeholder="Your Name" required
+          style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+         
+   <input type="tel" placeholder="Phone Number" required
+          style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+   
+   <input type="text" placeholder="Medicine Name" required
+          style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+   
+   <input type="number" placeholder="Quantity" min="1" required
+          style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+   
+   <button type="submit"
+           style="background-color: #00c4b4; color: white; padding: 12px 20px; border: none;
+           border-radius: 5px; font-size: 1em; cursor: pointer; width: 100%;">
+     Submit Order
+   </button>
+ </form>
+
+
+ <a href="javascript:void(0)" onclick="document.getElementById('popupForm').style.display='none'"
+    style="position: absolute; top: 10px; right: 15px; font-size: 20px; color: #999; text-decoration: none;">&times;</a>
+</div>
+</div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Header -->
+    <!-- <header style="background: linear-gradient(90deg, #007bff, #00c4b4); padding: 20px; text-align: center; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        <h1 style="margin: 0; font-size: 2.5em;">Hitaishi Healthcare</h1>
+        <p style="margin: 5px 0; font-size: 1.2em;">Empowering Healthcare Excellence</p>
+    </header> -->
+
+
+    <!-- Navigation -->
+    <!-- <nav style="background-color: #343a40; padding: 15px; text-align: center;">
+        <a href="#overview" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Overview</a>
+        <a href="#mission" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Mission & Vision</a>
+        <a href="#categories" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Categories</a>
+        <a href="#team" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Our Team</a>
+        <a href="#partnerships" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Partnerships</a>
+        <a href="#sustainability" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Sustainability</a>
+        <a href="#testimonials" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Testimonials</a>
+        <a href="#faq" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">FAQ</a>
+         <a href="#contact" style="color: white; text-decoration: none; margin: 0 20px; font-size: 1.1em;">Contact</a>
+    </nav> -->
+
+
+    <!-- Main Content -->
+    <main style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+        <!-- <section id="overview" style="margin-bottom: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+         <div style="flex: 1; min-width: 300px;">
+             <img src="https://pix4free.org/assets/library/2021-10-13/originals/healthcare-professional.jpg" alt="Healthcare Inventory" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         </div>
+         <div style="flex: 1; min-width: 300px;">
+             <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px; margin-bottom: 15px;">About Hitaishi Healthcare</h2>
+             <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;">
+                 Established in 2010, Hitaishi Healthcare is a trusted leader in medical supplies and equipment across India. Our goal is to improve patient care by providing healthcare professionals with top-quality, dependable products. With an efficient supply chain and a focus on innovation, we cater to hospitals, clinics, and wellness centers nationwide, optimizing operations through our advanced inventory management system.
+             </p>
+             <p style="font-size: 1.1em; line-height: 1.6;">
+                 We are dedicated to a customer-first philosophy, delivering customized solutions to meet diverse needs. Our extensive product range, from cutting-edge medical devices to essential supplies, undergoes strict quality assurance and is supported by our responsive customer service team.
+             </p>
+         </div>
+     </section> -->
+
+
+     <div style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: #ffffff; padding: 60px 20px; font-family: Arial, sans-serif; text-align: center;">
+        <h1 style="font-size: 42px; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);color: #007bff;">Efficient Medicine Inventory & Shipping System</h1>
+        <p style="font-size: 18px; max-width: 1000px; margin: 0 auto 30px auto; line-height: 1.8; text-align: justify;">
+          At Hitaishi Healthcare, our state-of-the-art inventory management system ensures that every medicine is tracked, stored, and shipped with the highest standards of precision and safety. Our logistics infrastructure is designed to support real-time stock monitoring, automated restocking alerts, and expiry tracking to guarantee that our customers receive only the most effective and safe medications.
+        </p>
+        <p style="font-size: 18px; max-width: 1000px; margin: 0 auto 30px auto; line-height: 1.8; text-align: justify;">
+          We operate a temperature-controlled supply chain for sensitive pharmaceuticals, preserving the efficacy of life-saving drugs throughout the journey — from our warehouse to your doorstep. With smart tagging, geo-tracking, and verified handling protocols, our system minimizes human error, enhances delivery speed, and maintains complete transparency at every touchpoint.
+        </p>
+        <p style="font-size: 18px; max-width: 1000px; margin: 0 auto 40px auto; line-height: 1.8; text-align: justify;">
+          Whether you are a hospital, pharmacy, or individual, you can count on Hitaishi’s medicine shipping and inventory service for timely fulfillment, safe packaging, and detailed delivery updates. Our mission is to bridge the gap between healthcare providers and those in need—reliably, efficiently, and affordably.
+        </p>
+        <!-- <a href="#inventory-details" style="padding: 14px 28px; background-color: #f39c12; color: #000; text-decoration: none; font-size: 18px; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: background 0.3s;">Explore Inventory Services</a> -->
+      </div>
+      <br>
+      <br>
+     
+
+
+        <!-- Mission and Vision Section -->
+        <!-- <section id="mission" style="margin-bottom: 40px;">
+         <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Our Mission & Vision</h2>
+         <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+             <div style="flex: 1; min-width: 300px; background-color: #e8f9f0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                 <h3 style="color: #0d3b2e; font-size: 1.5em; margin-top: 0; text-align: center;">Mission</h3>
+                 <p style="font-size: 1em; color: #333; line-height: 1.6;">
+                     To empower healthcare providers with reliable, high-quality medical supplies and innovative solutions, ensuring exceptional patient care and operational efficiency.
+                 </p>
+             </div>
+             <div style="flex: 1; min-width: 300px; background-color: #f3f0ff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                 <h3 style="color: #2f1c5e; font-size: 1.5em; margin-top: 0; text-align: center;">Vision</h3>
+                 <p style="font-size: 1em; color: #333; line-height: 1.6;">
+                     To be the most trusted healthcare supply partner globally, driving advancements in medical care through sustainability, innovation, and collaboration.
+                 </p>
+             </div>
+         </div>
+     </section> -->
+
+
+
+
+     <div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: #ffffff; padding: 50px 20px; font-family: Verdana, sans-serif; text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);color: #00c4b4;">Reliable Medical Logistics</h2>
+        <p style="font-size: 17px; max-width: 900px; margin: 0 auto 25px auto; line-height: 1.7; text-align: justify;">
+          Hitaishi Healthcare ensures safe, on-time medicine delivery with GPS tracking, automated warehousing, and temperature-controlled vehicles. We protect sensitive drugs like vaccines and insulin throughout the journey, meeting global standards.
+        </p>
+        <p style="font-size: 17px; max-width: 900px; margin: 0 auto 35px auto; line-height: 1.7; text-align: justify;">
+          Real-time alerts, responsive support, and doorstep service make us a trusted partner in healthcare logistics.
+        </p>
+        <!-- <a href="#logistics-info" style="padding: 12px 26px; background-color: #27ae60; color: #fff; text-decoration: none; font-size: 17px; border-radius: 5px; box-shadow: 0 3px 6px rgba(0,0,0,0.2);">View Logistics</a> -->
+      </div>
+     
+     
+
+
+        <!-- Inventory Categories Section -->
+        <section id="categories" style="margin-bottom: 40px; overflow-x: auto;">
+         <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Inventory Categories</h2>
+         <div style="display: flex; flex-wrap: nowrap; gap: 20px;">
+             <div style="flex: 0 0 25%; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                 <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvaXMxNzM3MS1pbWFnZS1rd3Z3dG9xei5qcGc.jpg" alt="Medical Equipment" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px;">
+                 <h3 style="color: #343a40; margin: 15px 0;">Medical Equipment</h3>
+                 <p style="font-size: 1em; color: #666;">Advanced diagnostic tools, monitors, and surgical instruments for precision care.</p>
+             </div>
+             <div style="flex: 0 0 25%; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                 <img src="https://medqsupplies.co.za/wp-content/uploads/2022/01/medical-1-702x336-2.jpg" alt="Medical Supplies" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px;">
+                 <h3 style="color: #343a40; margin: 15px 0;">Medical Supplies</h3>
+                 <p style="font-size: 1em; color: #666;">Essential items like bandages, syringes, and gloves for daily operations.</p>
+             </div>
+             <div style="flex: 0 0 25%; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                 <img src=https://plus.unsplash.com/premium_photo-1673953509975-576678fa6710?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRofGVufDB8fDB8fHww" alt="Wellness Products" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px;">
+                 <h3 style="color: #343a40; margin: 15px 0;">Wellness Products</h3>
+                 <p style="font-size: 1em; color: #666;">Vitamins, supplements, and health aids to support patient well-being.</p>
+             </div>
+             <div style="flex: 0 0 25%; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                 <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg1NjY1NjQtaW1hZ2Uta3d2eG0yZHMuanBn.jpg" alt="Pharmaceuticals" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px;">
+                 <h3 style="color: #343a40; margin: 15px 0;">Pharmaceuticals</h3>
+                 <p style="font-size: 1em; color: #666;">Medications and vaccines for treatment and prevention.</p>
+             </div>
+         </div>
+     </section>
+     
+
+
+        <!-- Team Section -->
+        <section id="team" style="margin-bottom: 40px;">
+            <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Meet Our Team</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+                <div style="flex: 1; min-width: 250px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Team Member" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+                    <h3 style="color: #343a40; margin: 0;">Dr. Vikram Singh</h3>
+                    <p style="font-size: 1em; color: #666;">Chief Medical Officer</p>
+                    <p style="font-size: 0.9em; color: #666;">Leading our quality assurance with 20+ years of medical expertise.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Team Member" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+                    <h3 style="color: #343a40; margin: 0;">Neha Gupta</h3>
+                    <p style="font-size: 1em; color: #666;">Operations Director</p>
+                    <p style="font-size: 0.9em; color: #666;">Overseeing our supply chain for seamless delivery.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Team Member" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px;">
+                    <h3 style="color: #343a40; margin: 0;">Arjun Patel</h3>
+                    <p style="font-size: 1em; color: #666;">Customer Relations Manager</p>
+                    <p style="font-size: 0.9em; color: #666;">Ensuring our partners receive top-tier support.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Partnerships Section -->
+        <section id="partnerships" style="margin-bottom: 40px;">
+            <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Our Partnerships</h2>
+            <p style="font-size: 1.1em; line-height: 1.6;">
+                Hitaishi Healthcare collaborates with leading hospitals, clinics, and research institutions to advance healthcare delivery. Our partnerships enable us to tailor our inventory to meet diverse needs, from rural clinics to urban medical centers.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div style="flex: 1; min-width: 200px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <h3 style="color: #343a40; margin: 0;">City Hospital Network</h3>
+                    <p style="font-size: 1em; color: #666;">Providing critical equipment for emergency care.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <h3 style="color: #343a40; margin: 0;">Wellness India</h3>
+                    <p style="font-size: 1em; color: #666;">Supplying wellness products for community health programs.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                    <h3 style="color: #343a40; margin: 0;">MediResearch Institute</h3>
+                    <p style="font-size: 1em; color: #666;">Supporting cutting-edge medical research.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sustainability Initiatives Section -->
+       <!-- Sustainability Initiatives Section -->
+<section style="margin-bottom: 40px;">
+ <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">
+     Sustainability Initiatives at Hitaishi Healthcare
+ </h2>
+ 
+ <!-- Sustainability Initiative Boxes Only - Single Row -->
+ <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 20px; padding: 20px 0;">
+     <div style="flex: 0 0 300px; background-color: #e0f7fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <h3 style="color: #006064; font-size: 1.3em;">Eco-Friendly Packaging</h3>
+         <p style="font-size: 1em; color: #444;">
+             All our shipments use biodegradable and recyclable materials. This reduces plastic waste and aligns with our commitment to green logistics.
+         </p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #f1f8e9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <h3 style="color: #33691e; font-size: 1.3em;">Green Supply Chain</h3>
+         <p style="font-size: 1em; color: #444;">
+             We work with partners who prioritize eco-conscious manufacturing, creating a cleaner, greener supply chain.
+         </p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #fff3e0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <h3 style="color: #e65100; font-size: 1.3em;">Waste Reduction</h3>
+         <p style="font-size: 1em; color: #444;">
+             Through advanced recycling and minimal packaging, our warehouses contribute to environmental conservation.
+         </p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #fce4ec; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <h3 style="color: #ad1457; font-size: 1.3em;">Carbon Footprint Monitoring</h3>
+         <p style="font-size: 1em; color: #444;">
+             We monitor and reduce emissions using digital tools to stay accountable in our sustainability goals.
+         </p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #ede7f6; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <h3 style="color: #4527a0; font-size: 1.3em;">Employee Awareness</h3>
+         <p style="font-size: 1em; color: #444;">
+             Our workforce is trained regularly to stay informed about our eco-principles and to act sustainably.
+         </p>
+     </div>
+ </div>
+</section>
+
+
+
+
+        <!-- Statistics Section -->
+        <section id="statistics" style="margin-bottom: 40px;">
+         <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px; text-align: left;">Our Impact</h2>
+         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+             <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+                 <h3 style="color: #00c4b4; font-size: 2.5em; margin: 0;">5000+</h3>
+                 <p style="color: #666; font-size: 1em;">Items in Stock</p>
+             </div>
+             <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+                 <h3 style="color: #00c4b4; font-size: 2.5em; margin: 0;">100+</h3>
+                 <p style="color: #666; font-size: 1em;">Healthcare Partners</p>
+             </div>
+             <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+                 <h3 style="color: #00c4b4; font-size: 2.5em; margin: 0;">99%</h3>
+                 <p style="color: #666; font-size: 1em;">Order Accuracy</p>
+             </div>
+             <div style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+                 <h3 style="color: #00c4b4; font-size: 2.5em; margin: 0;">15+</h3>
+                 <p style="color: #666; font-size: 1em;">Years in Service</p>
+             </div>
+         </div>
+     </section>
+       
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" style="margin-bottom: 40px; overflow-x: auto;">
+ <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">What Our Partners Say</h2>
+ <div style="display: flex; flex-wrap: nowrap; gap: 20px;">
+     <div style="flex: 0 0 300px; background-color: #fef4e8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"Hitaishi Healthcare's reliable supply chain ensures we never run out of critical supplies."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Dr. Anjali Sharma, City Hospital</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #e8f7ff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"The variety and quality of their wellness products have greatly improved our patient care programs."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Priya Patel, Wellness Clinic</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #e8fce8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"Their team is responsive and their inventory is always up-to-date, making our operations seamless."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Rajesh Kumar, Medical Center</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #f3e8ff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"We appreciate their commitment to quality and timely deliveries. Truly dependable."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Dr. Sandeep Mehra, Lifeline Hospital</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #fff8e8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"Partnering with Hitaishi Healthcare has streamlined our medical inventory processes."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Neha Rathi, CarePlus Clinic</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #e8fff4; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"Exceptional service and a great range of pharmaceuticals at competitive prices."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Dr. Kiran Joshi, Nova Health</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #ffe8ef; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"A trustworthy partner who understands healthcare needs deeply."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Dr. Ramesh Gupta, HealthBridge</p>
+     </div>
+     <div style="flex: 0 0 300px; background-color: #f0f0ff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+         <p style="font-style: italic; color: #666;">"From medical supplies to wellness products, they deliver excellence every time."</p>
+         <p style="font-weight: bold; color: #343a40; margin-top: 10px;">- Sneha Agarwal, VitalCare</p>
+     </div>
+ </div>
+</section>
+
+
+
+
+        <!-- FAQ Section -->
+        <section id="faq" style="margin-bottom: 40px;">
+         <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Frequently Asked Questions</h2>
+         <div style="background-color: #f8f9fa; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+             
+             <div style="margin-bottom: 20px; background-color: #ffffff; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                 <h3 style="color: #343a40; font-size: 1.3em; margin: 0;">How does Hitaishi ensure product quality?</h3>
+                 <p style="color: #666; font-size: 1em; margin-top: 8px;">We conduct rigorous quality checks and source products from certified manufacturers.</p>
+             </div>
+     
+             <div style="margin-bottom: 20px; background-color: #e9f7f6; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                 <h3 style="color: #343a40; font-size: 1.3em; margin: 0;">Can I place bulk orders?</h3>
+                 <p style="color: #666; font-size: 1em; margin-top: 8px;">Yes, we support bulk orders. Contact our team for customized quotes.</p>
+             </div>
+     
+             <div style="margin-bottom: 20px; background-color: #ffffff; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                 <h3 style="color: #343a40; font-size: 1.3em; margin: 0;">What is your return policy?</h3>
+                 <p style="color: #666; font-size: 1em; margin-top: 8px;">We accept returns within 30 days for unused items in original packaging.</p>
+             </div>
+     
+             <div style="background-color: #e9f7f6; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                 <h3 style="color: #343a40; font-size: 1.3em; margin: 0;">Do you offer training for equipment?</h3>
+                 <p style="color: #666; font-size: 1em; margin-top: 8px;">Yes, we provide training sessions for complex medical equipment upon request.</p>
+             </div>
+     
+         </div>
+     </section>
+     
+
+
+        <!-- Contact Section
+        <section id="contact" style="margin-bottom: 40px;">
+            <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Contact Us</h2>
+            <p style="font-size: 1.1em; line-height: 1.6;">For inquiries about our services or to partner with us, please fill out the form below.</p>
+            <form style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <label for="name" style="display: block; margin-bottom: 10px; font-weight: bold;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+               
+                <label for="email" style="display: block; margin-bottom: 10px; font-weight: bold;">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+               
+                <label for="message" style="display: block; margin-bottom: 10px; font-weight: bold;">Message:</label>
+                <textarea id="message" name="message" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; min-height: 100px;"></textarea>
+               
+                <button type="submit" style="background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer;">Submit</button>
+            </form>
+        </section> -->
+
+
+        <!-- Newsletter Signup Section -->
+        <section id="newsletter" style="margin-bottom: 40px; text-align: center;">
+            <h2 style="color: #007bff; font-size: 2em; border-bottom: 2px solid #00c4b4; padding-bottom: 10px;">Stay Updated</h2>
+            <p style="font-size: 1.1em; color: #666;">Subscribe to our newsletter for the latest updates and offers.</p>
+            <form style="display: inline-block; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <input type="email" placeholder="Enter your email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; width: 250px; margin-right: 10px;">
+                <button type="submit" style="background-color: #00c4b4; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer;">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer style="background-color: #343a40; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p style="margin: 0; font-size: 1em;">© 2025 Hitaishi Healthcare. All rights reserved.</p>
+        <p style="margin: 5px 0; font-size: 0.9em;">Contact: info@hitaishihealthcare.com | Phone: +91-123-456-7890</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color: #00c4b4; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+            <a href="#" style="color: #00c4b4; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

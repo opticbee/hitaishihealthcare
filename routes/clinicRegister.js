@@ -22,6 +22,52 @@ const upload = multer({ storage });
 
 
 
+// Create the clinics table if not exists
+const createClinicsTable = `
+  CREATE TABLE IF NOT EXISTS clinics (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    clinicName VARCHAR(255),
+    clinicSpecialization VARCHAR(255),
+    clinicType VARCHAR(100),
+    registrationNumber VARCHAR(100),
+    establishedYear INT,
+    address1 TEXT,
+    address2 TEXT,
+    city VARCHAR(100),
+    state VARCHAR(100),
+    country VARCHAR(100),
+    pincode VARCHAR(20),
+    mapLink TEXT,
+    phone1 VARCHAR(20),
+    phone2 VARCHAR(20),
+    email VARCHAR(100),
+    website VARCHAR(255),
+    contactPerson VARCHAR(100),
+    designation VARCHAR(100),
+    contactEmail VARCHAR(100),
+    contactMobile VARCHAR(20),
+    timings TEXT,
+    emergency BOOLEAN,
+    licensePath VARCHAR(255),
+    idProofPath VARCHAR(255),
+    clinicPhotoPath VARCHAR(255),
+    gst VARCHAR(50),
+    username VARCHAR(100),
+    password VARCHAR(255)
+  )
+`;
+
+db.query(createClinicsTable, (err) => {
+  if (err) {
+    console.error("Failed to create clinics table:", err);
+  } else {
+    console.log("✅ Clinics table ready (or already exists).");
+  }
+});
+
+
+
+
 
 router.post(
   "/clinicregister",

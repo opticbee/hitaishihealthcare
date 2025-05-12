@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+  <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+    <!-- Logo and Title -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+        <div>
+            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- search input icons -->
+    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 15px;">
+        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            ❤️ Blood Donation
+        </a>
+        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Book Appointment
+        </a>
+        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Find a Doctor
+        </a>
+        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Clinic
+        </a>
+        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+
+        <!-- Display Logged-in User Name -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                document.getElementById("username").textContent = user; // Show username if logged in
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    
+    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Home Link -->
+            <div style="margin-right: 1rem;">
+                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div style="position: relative; margin-right: 1rem;">
+                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-right: 1rem;">
+                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div style="margin-right: 1rem;">
+                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div style="margin-right: 1rem;">
+                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+            </div>
+
+
+
+            <!-- Insights Link -->
+            <div style="margin-right: 1rem;">
+                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+            </div>
+            <div style="margin-right: 1rem;">
+                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div>
+                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+            </div>
+            
+        </div>
+
+      
+    </nav>
+
+    <!-- for dropdowns -->
+    <script>
+        // JavaScript to handle dropdown visibility
+        document.querySelectorAll('nav > div > div').forEach(navItem => {
+            const dropdown = navItem.querySelector('div');
+            if (dropdown) {
+                navItem.addEventListener('mouseenter', () => {
+                    dropdown.style.display = 'block';
+                });
+                navItem.addEventListener('mouseleave', () => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+  <section style="position: relative; height: 70vh; background: linear-gradient(to right, #ffffff39, #ffffff26),url('https://images.pexels.com/photos/13176358/pexels-photo-13176358.jpeg') center/cover no-repeat; overflow: hidden; display: flex; justify-content: center; align-items: center; text-align: center; color: #170552; padding: 0 20px;">
+    <div style="animation: pulse 5s infinite; max-width: 800px;">
+      <h1 style="font-size: 3.5em; margin: 0;">"The beauty of X-rays is that they capture truth in shadows."</h1>
+      <p style="font-size: 1.5em; margin-top: 10px;">Behind every diagnosis lies the silent power of an X-ray.</p>
+    </div>
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+    </style>
+  </section>
+ 
+<section style="padding: 60px 20px; background: linear-gradient(to right, #ebf9fb, #fef5f5); font-family: 'Segoe UI', sans-serif;">
+  <h2 style="font-size: 2.5em; margin-bottom: 40px; text-align: center; color: #000000;">What is an X-Ray?</h2>
+ 
+  <div style="display: flex; align-items: stretch; justify-content: center; flex-wrap: nowrap; max-width: 1200px; margin: auto; gap: 40px;">
+    <div style="flex: 1; display: flex; justify-content: center;">
+      <img src="https://zahnarzt-wallstadt.de/wp-content/uploads/2019/11/Praxis-Galerie9-1.jpg" alt="X-Ray Scan"
+        style="width: 100%; max-width: 500px; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; padding: 20px;">
+      <div style="color: #004d40;">
+        <p style="font-size: 22px; line-height: 1.7; color: #333;">
+          An X-ray is a type of imaging technique that uses electromagnetic radiation to view the inside of the body.
+          It is commonly used in medical settings to detect fractures, infections, and abnormalities in bones and soft tissues.
+          X-rays are quick, non-invasive, and an essential tool in diagnostics and treatment planning.
+        </p>
+        <p style="font-size: 18px; line-height: 1.7; color: #333; margin-top: 15px;">
+          Invented by Wilhelm Röntgen in 1895, X-rays marked the birth of modern medical imaging and continue to evolve with advanced digital technology.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section style="padding: 60px 20px; background: linear-gradient(to right, #f9f9f9, #ffffff); font-family: 'Segoe UI', sans-serif;">
+  <h2 style="font-size: 2.5em; margin-bottom: 40px; text-align: center; color: #070605;">History of X-Rays</h2>
+
+
+  <div style="display: flex; align-items: stretch; justify-content: center; flex-wrap: nowrap; max-width: 1200px; margin: auto; gap: 40px;">
+    <div style="flex: 1; display: flex; align-items: center; padding: 20px;">
+      <div style="color: #4e342e;">
+        <p style="font-size: 18px; line-height: 1.7; color: #3e2723;">
+          The history of X-rays began in 1895 when German physicist <strong>Wilhelm Conrad Röntgen</strong> discovered a new type of ray while experimenting with cathode rays. He noticed that a fluorescent screen in his lab glowed even when shielded, indicating the presence of invisible radiation.
+        </p>
+        <p style="font-size: 18px; line-height: 1.7; color: #3e2723; margin-top: 15px;">
+          He named them "X-rays" to signify their unknown nature. The first X-ray image he captured was of his wife’s hand, showing her bones and wedding ring. This revolutionary discovery won him the first Nobel Prize in Physics in 1901 and laid the foundation for modern medical imaging.
+        </p>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; height:500px;">
+      <img src="https://cdn.britannica.com/20/130320-004-82A65353.jpg" alt="Wilhelm Röntgen"
+        style="width: 100%; max-width: 450px; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+    </div>
+
+
+  </div>
+</section>
+
+
+<section style="padding: 80px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <h2 style="text-align: center; font-size: 2.5em; color: #2c3e50; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px;">
+      How Do X-Rays Work?
+    </h2>
+   
+    <p style="text-align: center; font-size: 1.2em; color: #4a5568; max-width: 800px; margin: 0 auto 40px; line-height: 1.6;">
+      X-rays are a powerful form of electromagnetic radiation that can penetrate through soft tissues while being absorbed by denser materials, allowing us to see inside objects and the human body without surgery.
+    </p>
+   
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+   
+      <div onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.08)'" style="flex: 1; min-width: 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: #3498db; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: white; font-weight: bold; font-size: 1.5em;">1</div>
+        <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px;">Generation</h3>
+        <p style="color: #4a5568; line-height: 1.6;">
+          X-rays are produced when high-speed electrons collide with a metal target (usually tungsten) in an X-ray tube. This creates two types of radiation: bremsstrahlung and characteristic X-rays.
+        </p>
+      </div>
+      <div onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.08)'" style="flex: 1; min-width: 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: #e74c3c; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: white; font-weight: bold; font-size: 1.5em;">2</div>
+        <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px;">Penetration</h3>
+        <p style="color: #4a5568; line-height: 1.6;">
+          As X-rays pass through the body, denser materials like bones absorb more radiation, while softer tissues allow more X-rays to pass through. This creates varying levels of exposure on the detector.
+        </p>
+      </div>
+      <div onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.08)'" style="flex: 1; min-width: 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: #2ecc71; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: white; font-weight: bold; font-size: 1.5em;">3</div>
+        <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 15px;">Detection</h3>
+        <p style="color: #4a5568; line-height: 1.6;">
+          The X-rays that pass through are captured by a digital detector or film. Areas with more exposure appear darker, while absorbed areas (like bones) appear white, creating a detailed internal image.
+        </p>
+      </div>
+    </div>
+    <div onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.08)'" style="flex: 1; min-width: 300px; background: white; border-radius: 12px; padding: 30px;margin-top: 50px; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+     
+      <h3 style="font-size: 1.5em; margin-bottom: 20px; text-align: center;">Safety & Modern Applications</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1; min-width: 250px;">
+          <h4 style="font-size: 1.2em; margin-bottom: 10px; color: #3498db;">Radiation Safety</h4>
+          <p style="line-height: 1.6;">
+            Modern X-ray systems use the lowest possible dose while maintaining image quality. Lead shielding and protective gear minimize exposure for patients and technicians.
+          </p>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <h4 style="font-size: 1.2em; margin-bottom: 10px; color: #e74c3c;">Medical Uses</h4>
+          <p style="line-height: 1.6;">
+            Beyond detecting fractures, X-rays help diagnose pneumonia, tumors, dental issues, and guide surgical procedures. Digital systems provide instant results with enhanced detail.
+          </p>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <h4 style="font-size: 1.2em; margin-bottom: 10px; color: #2ecc71;">Other Applications</h4>
+          <p style="line-height: 1.6;">
+            X-rays are used in airport security, industrial quality control, art authentication, and even space exploration to study celestial objects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 80px 20px; background: #f8f9fa;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 2.8rem; color: #212529; margin-bottom: 15px; font-weight: 600;">X-Ray Applications</h2>
+      <p style="font-size: 1.2rem; color: #495057; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+        X-ray technology enables breakthroughs across multiple industries, from life-saving medical diagnostics to cutting-edge material science.
+      </p>
+    </div>
+
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <div style="background: #4e79a7; padding: 25px; color: white;">
+          <h3 style="font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="8" y1="8" x2="8" y2="16"></line>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+            </svg>
+            Medical Diagnostics
+          </h3>
+        </div>
+        <div style="padding: 25px;">
+          <ul style="margin: 0; padding-left: 20px; color: #495057; line-height: 1.8;">
+            <li style="margin-bottom: 10px;">Fracture and injury assessment</li>
+            <li style="margin-bottom: 10px;">Dental caries and root canal imaging</li>
+            <li style="margin-bottom: 10px;">Lung condition detection (pneumonia, TB)</li>
+            <li style="margin-bottom: 10px;">Mammography for breast cancer screening</li>
+            <li style="margin-bottom: 0;">Orthopedic implant monitoring</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <div style="background: #e15759; padding: 25px; color: white;">
+          <h3 style="font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+            Therapeutic Uses
+          </h3>
+        </div>
+        <div style="padding: 25px;">
+          <ul style="margin: 0; padding-left: 20px; color: #495057; line-height: 1.8;">
+            <li style="margin-bottom: 10px;">Radiation oncology treatments</li>
+            <li style="margin-bottom: 10px;">Bone density measurements (DEXA scans)</li>
+            <li style="margin-bottom: 10px;">Image-guided surgical navigation</li>
+            <li style="margin-bottom: 10px;">Pain management for bone metastases</li>
+            <li style="margin-bottom: 0;">Medical equipment sterilization</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <div style="background: #76b7b2; padding: 25px; color: white;">
+          <h3 style="font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Industrial & Security
+          </h3>
+        </div>
+        <div style="padding: 25px;">
+          <ul style="margin: 0; padding-left: 20px; color: #495057; line-height: 1.8;">
+            <li style="margin-bottom: 10px;">Airport security screening systems</li>
+            <li style="margin-bottom: 10px;">Manufacturing defect detection</li>
+            <li style="margin-bottom: 10px;">Art and cultural artifact analysis</li>
+            <li style="margin-bottom: 10px;">Pipeline integrity inspections</li>
+            <li style="margin-bottom: 0;">Aerospace component testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="margin-top: 60px; background: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+          <h3 style="font-size: 1.5rem; color: #212529; margin-bottom: 15px;">Technological Advancements</h3>
+          <p style="color: #495057; line-height: 1.7; margin-bottom: 15px;">
+            Modern digital radiography systems provide superior image quality with significantly lower radiation exposure compared to traditional film-based X-rays.
+          </p>
+          <ul style="color: #495057; line-height: 1.7; padding-left: 20px;">
+            <li>Cone-beam CT for 3D imaging</li>
+            <li>AI-assisted image analysis</li>
+            <li>Portable digital detectors</li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px; background: #f1f3f5; border-radius: 6px; padding: 20px;">
+          <h4 style="font-size: 1.2rem; color: #212529; margin-bottom: 15px;">Safety Considerations</h4>
+          <ul style="color: #495057; line-height: 1.7; padding-left: 20px;">
+            <li>ALARA principle (As Low As Reasonably Achievable)</li>
+            <li>Lead shielding and protective gear</li>
+            <li>Dose monitoring systems</li>
+            <li>Pregnancy precautions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+</section>
+
+
+<section style="padding: 3rem 1rem; background: linear-gradient(135deg, #f8f4ff 0%, #f0f9ff 100%);">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2rem; color: #2b2d42; margin-bottom: 1.5rem; position: relative; display: inline-block;">
+      Key Benefits of X-Ray Technology
+      <span style="position: absolute; bottom: -6px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #4361ee, #7209b7);"></span>
+    </h2>
+   
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <div style="color: #4361ee; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">✓ Fast Diagnosis</div>
+        <p style="color: #4a4e69; margin: 0; line-height: 1.5;">Immediate imaging results for quick medical decisions</p>
+      </div>
+     
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <div style="color: #7209b7; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">✓ Non-Invasive</div>
+        <p style="color: #4a4e69; margin: 0; line-height: 1.5;">No incisions or surgery required</p>
+      </div>
+     
+      <div style="flex: 1; min-width: 200px; max-width: 300px;">
+        <div style="color: #3a0ca3; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">✓ Cost-Effective</div>
+        <p style="color: #4a4e69; margin: 0; line-height: 1.5;">More affordable than alternatives</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 80px 20px; background: linear-gradient(to right, #f8f9fa, #e9ecef);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 2.5rem; color: #212529; margin-bottom: 15px; position: relative; display: inline-block;">
+        Advanced Imaging Technology
+        <span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #3a86ff, #8338ec);"></span>
+      </h2>
+      <p style="font-size: 1.2rem; color: #495057; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        Our state-of-the-art digital X-ray systems deliver superior image quality with reduced radiation exposure.
+      </p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; max-width: 500px;">
+        <img src="https://images.pexels.com/photos/11288661/pexels-photo-11288661.jpeg"
+             style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.02)'"
+             onmouseout="this.style.transform='scale(1)'"
+             alt="Modern X-ray equipment">
+      </div>
+      <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: left;">
+        <h3 style="font-size: 1.8rem; color: #212529; margin-bottom: 20px;">Key Features:</h3>
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+            <span style="background: #3a86ff; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">1</span>
+            <span style="font-size: 1.1rem; color: #343a40;">High-resolution digital detectors for clearer images</span>
+          </li>
+          <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+            <span style="background: #8338ec; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">2</span>
+            <span style="font-size: 1.1rem; color: #343a40;">Low-dose radiation technology for patient safety</span>
+          </li>
+          <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+            <span style="background: #ff006e; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">3</span>
+            <span style="font-size: 1.1rem; color: #343a40;">Rapid processing for immediate results</span>
+          </li>
+          <li style="display: flex; align-items: flex-start;">
+            <span style="background: #fb5607; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; flex-shrink: 0;">4</span>
+            <span style="font-size: 1.1rem; color: #343a40;">Ergonomic design for patient comfort</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 80px 20px; background: linear-gradient(135deg, #eef4f7 0%, #ffffff 100%); font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px;">
+      X-Ray vs. Other Imaging
+    </h2>
+    <p style="max-width: 800px; margin: 0 auto 40px; font-size: 18px; color: #34495e; line-height: 1.6;">
+      Unlike MRIs and CT scans, X-rays are faster and more affordable for basic diagnostics. They provide a quick snapshot of bones and internal structures, making them ideal for emergency situations and initial screenings.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 50px;">
+      <div style="flex: 1; background: #82b2d1; padding: 30px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+        <h3 style="color: white; font-size: 1.8em; margin-bottom: 20px;">X-Ray</h3>
+        <p style="color: white; font-size: 16px; line-height: 1.7;">X-rays are a cost-effective, quick, and non-invasive diagnostic tool. They are commonly used for detecting fractures, infections, and abnormalities in bones and soft tissues.</p>
+      </div>
+      <div style="flex: 1; background: #9961b1; padding: 30px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+        <h3 style="color: white; font-size: 1.8em; margin-bottom: 20px;">MRI</h3>
+        <p style="color: white; font-size: 16px; line-height: 1.7;">MRIs use strong magnetic fields and radio waves to produce detailed images of internal organs and soft tissues. They are ideal for imaging the brain, spine, and muscles.</p>
+      </div>
+      <div style="flex: 1; background: #f6bb5d; padding: 30px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+        <h3 style="color: white; font-size: 1.8em; margin-bottom: 20px;">CT Scan</h3>
+        <p style="color: white; font-size: 16px; line-height: 1.7;">CT scans combine X-ray images taken from different angles and use computer processing to create cross-sectional images of bones, blood vessels, and soft tissues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="padding: 3.75rem 1.25rem; background: #f3e6ff; text-align: center;">
+  <h2 style="font-size: 2em; margin-bottom: 0.5rem;">The Future of X-Ray Tech</h2>
+  <p style="max-width: 50rem; margin: 0 auto; font-size: 1.125rem;">
+    Digital and 3D imaging, AI-assisted diagnostics, and portable devices are shaping the next generation of X-ray technology.
+  </p>
+</section>
+
+
+</body>
+</html>
+
+
+

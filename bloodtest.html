@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional blood test services with fast results. Book CBC, Lipid Profile, Thyroid Tests, Diabetes Screening & 200+ tests. Free home collection available. Get reports in 24-48 hours.">
+    <meta name="keywords" content="blood test, health checkup, medical lab, diagnostic services, blood test near me, fasting blood test, home collection">
+    <meta name="author" content="HealthCare Diagnostics">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "HealthCare Diagnostics",
+        "image": "https://example.com/logo.jpg",
+        "priceRange": "₹₹",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Medical Street",
+            "addressLocality": "Health City",
+            "addressRegion": "HC",
+            "postalCode": "123456",
+            "addressCountry": "India"
+        },
+        "telephone": "+1-800-123-4567",
+        "sameAs": [
+            "https://facebook.com/healthcarelab",
+            "https://twitter.com/healthcarelab"
+        ]
+    }
+    </script>
+    <title>Blood Test Services | Fast & Accurate Lab Reports | HealthCare Diagnostics</title>
+</head>
+<body style="margin: 0; font-family: 'Arial', sans-serif; background-color: #f5f5f5;">
+
+   <!-- Header Section -->
+
+    <!-- Navigation Bar -->
+    <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
+    
+        <!-- Logo and Title -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
+            <div>
+                <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
+                <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
+            </div>
+        </div>
+        
+        <!-- search input icons -->
+        <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
+        <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
+            <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+    
+        <!-- Buttons -->
+        <div style="display: flex; gap: 15px;">
+            <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                ❤️ Blood Donation
+            </a>
+            <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Book Appointment
+            </a>
+            <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Find a Doctor
+            </a>
+            <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Clinic
+            </a>
+            <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
+                Eye Care
+            </a>
+        </div>
+    
+        <!-- Social Media Icons -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+    
+            <!-- Display Logged-in User Name -->
+            <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+    
+            <!-- Profile Icon -->
+            <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    
+        </nav>
+        
+        <script>
+            // Simulating getting user data from local storage or API
+            document.addEventListener("DOMContentLoaded", function () {
+                const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+                if (user) {
+                    document.getElementById("username").textContent = user; // Show username if logged in
+                }
+            });
+        
+            // Example: Store username after login (call this after user logs in)
+            function setUser(name) {
+                localStorage.setItem("loggedInUser", name);
+            }
+        
+            // Example: Clear user on logout
+            function logout() {
+                localStorage.removeItem("loggedInUser");
+                window.location.reload(); // Refresh page after logout
+            }
+        </script>
+        
+        
+        <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+            <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <!-- Home Link -->
+                <div style="margin-right: 1rem;">
+                    <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+                </div>
+    
+                <!-- Health Records Dropdown -->
+                <div style="position: relative; margin-right: 1rem;">
+                    <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
+                    <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                        <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
+                        <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
+                        <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
+                    </div>
+                </div>
+    
+                <!-- Diagnostics Dropdown -->
+                <div style="position: relative; margin-right: 1rem;">
+                    <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
+                    <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                        <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
+                        <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
+                        <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
+                    </div>
+                </div>
+    
+                <!-- Physicians Dropdown -->
+                <div style="position: relative; margin-right: 1rem;">
+                    <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
+                    <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                        <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
+                        <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
+                        <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
+                    </div>
+                </div>
+    
+                <!-- Fertility Dropdown -->
+                <div style="position: relative; margin-right: 1rem;">
+                    <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
+                    <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
+                        <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
+                        <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
+                        <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
+                    </div>
+                </div>
+    
+                <!-- AI -->
+                <div style="margin-right: 1rem;">
+                    <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
+                </div>
+    
+                <!-- Doctors Link -->
+                <div style="margin-right: 1rem;">
+                    <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
+                </div>
+    
+                <!-- Patients Link -->
+                <div style="margin-right: 1rem;">
+                    <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
+                </div>
+    
+    
+    
+                <!-- Insights Link -->
+                <div style="margin-right: 1rem;">
+                    <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
+                </div>
+                <div style="margin-right: 1rem;">
+                    <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
+                </div>
+    
+                <!-- Contact Link -->
+                <div>
+                    <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
+                </div>
+                
+            </div>
+    
+          
+        </nav>
+    
+        <!-- for dropdowns -->
+        <script>
+            // JavaScript to handle dropdown visibility
+            document.querySelectorAll('nav > div > div').forEach(navItem => {
+                const dropdown = navItem.querySelector('div');
+                if (dropdown) {
+                    navItem.addEventListener('mouseenter', () => {
+                        dropdown.style.display = 'block';
+                    });
+                    navItem.addEventListener('mouseleave', () => {
+                        dropdown.style.display = 'none';
+                    });
+                }
+            });
+        </script>
+    
+    
+        
+        
+
+
+<!-- Header Section -->
+<header style="height: 70vh; background: url('https://centersurgentcare.net/wp-content/uploads/2024/09/blood-test-meaning.png') center/cover no-repeat; color: white; position: relative;">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.6); padding: 30px 20px; text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="margin: 0; font-size: 2em; letter-spacing: 2px;">Professional Blood Testing Services</h1>
+        <p style="margin: 15px 0 20px; font-size: 1.3em; color: #ffcccc;">Accurate Results Within 24 Hours • NABL Accredited Lab</p>
+        <button onclick="document.getElementById('popupForm').style.display='block'" style="padding: 10px 20px; font-size: 1em; background-color: #ff4d4d; color: white; border: none; cursor: pointer; border-radius: 5px;">Test Your Blood Now</button>
+      </div>
+    </div>
+  </header>
+ 
+ 
+ <!-- Popup Form -->
+ <div id="popupForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; padding-top:60px;">
+     <div style="background:white; margin:auto; padding:30px; border-radius:10px; width:90%; max-width:500px; position:relative;">
+         <span onclick="document.getElementById('popupForm').style.display='none'" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#555;">&times;</span>
+         <h2 style="margin-top:0; color:#ff4d4d;">Book an Appointment</h2>
+         <form style="display:flex; flex-direction:column; gap:15px;">
+             <input type="text" placeholder="Full Name" style="padding:10px; border:1px solid #ccc; border-radius:5px;" required>
+             <input type="email" placeholder="Email Address" style="padding:10px; border:1px solid #ccc; border-radius:5px;" required>
+             <input type="tel" placeholder="Phone Number" style="padding:10px; border:1px solid #ccc; border-radius:5px;" required>
+             <input type="date" style="padding:10px; border:1px solid #ccc; border-radius:5px;" required>
+             <button type="submit" style="padding:10px; background-color:#ff4d4d; color:white; border:none; border-radius:5px; cursor:pointer;">Confirm Booking</button>
+         </form>
+     </div>
+ </div>
+ <br><br>
+ 
+    <!-- Navigation -->
+    <!-- <nav style="background-color: #333; padding: 15px;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <a href="#tests" style="color: white; text-decoration: none; margin: 0 15px; padding: 5px 10px;">Test Packages</a>
+            <a href="#preparation" style="color: white; text-decoration: none; margin: 0 15px; padding: 5px 10px;">Preparation</a>
+            <a href="#why-us" style="color: white; text-decoration: none; margin: 0 15px; padding: 5px 10px;">Why Us</a>
+            <a href="#faq" style="color: white; text-decoration: none; margin: 0 15px; padding: 5px 10px;">FAQ</a>
+        </div>
+    </nav> -->
+
+
+    <!-- Main Content Container -->
+  <!-- -->
+
+
+ 
+        <div style="width: 100%; text-align: center; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                <span style="flex: 1; height: 2px; background-color: #2c3e50; margin: 0 15px;"></span>
+                <h1 style="font-size: 32px; color: #2c3e50; margin: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+                  Blood Test Basics
+                </h1>
+                <span style="flex: 1; height: 2px; background-color: #2c3e50; margin: 0 15px;"></span>
+              </div>
+             
+     </div>
+     <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 20px;">
+         <div style="width: 250px; background: linear-gradient(135deg, #ff6b6b, #ff8e53); border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: #fff; text-align: center;">
+             <h2 style="font-size: 20px; margin: 0 0 10px;">Why Blood Tests?</h2>
+             <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                 Blood tests check your health, diagnose diseases, and monitor organs like the heart and kidneys.
+             </p>
+         </div>
+         <div style="width: 250px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: #fff; text-align: center;">
+             <h2 style="font-size: 20px; margin: 0 0 10px;">Common Tests</h2>
+             <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                 CBC, Lipid Panel, BMP, and Thyroid Tests assess blood, cholesterol, metabolism, and more.
+             </p>
+         </div>
+         <div style="width: 250px; background: linear-gradient(135deg, #2ecc71, #27ae60); border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: #fff; text-align: center;">
+             <h2 style="font-size: 20px; margin: 0 0 10px;">Benefits</h2>
+             <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                 Early detection, better treatment, and tracking health changes with minimal risks.
+             </p>
+         </div>
+     </div>
+
+
+
+
+       <!-- Key Services Section -->
+    <section style="padding:50px 20px; background:#f9f9f9;">
+        <div style="max-width:1200px; margin:0 auto;">
+            <h2 style="text-align:center; color:#2c3e50; font-size:2.2em; margin-bottom:40px;">Our Comprehensive Services</h2>
+           
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
+                <div style="background:#fff; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color:#e74c3c; margin-top:0;">Routine Checkups</h3>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Complete Blood Count (CBC)</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Lipid Profile</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Liver Function Test</li>
+                        <li style="padding:8px 0;">Thyroid Profile</li>
+                    </ul>
+                </div>
+
+
+                <div style="background:#fff; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color:#e74c3c; margin-top:0;">Specialized Tests</h3>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Vitamin D & B12</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Cancer Markers</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Hormonal Panels</li>
+                        <li style="padding:8px 0;">Genetic Testing</li>
+                    </ul>
+                </div>
+
+
+                <div style="background:#fff; padding:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color:#e74c3c; margin-top:0;">Health Packages</h3>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Basic Health Checkup</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Executive Health Screen</li>
+                        <li style="padding:8px 0; border-bottom:1px solid #eee;">Women's Wellness</li>
+                        <li style="padding:8px 0;">Senior Citizen Package</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" style="margin: 40px 0; display: flex; gap: 30px; align-items: center;">
+            <img src="https://www.shutterstock.com/image-photo/doctor-working-blood-samples-laboratory-260nw-1687153201.jpg" alt="Advanced blood testing laboratory equipment"
+                 style="flex: 1; border-radius: 10px; max-width: 50%; height: 300px; object-fit: cover;">
+            <div style="flex: 1;">
+                <h2 style="color: #cc0000; margin-top: 0;">Why Choose Our Blood Test Services?</h2>
+                <ul style="color: #444; line-height: 1.7; list-style-type: circle;">
+                    <li>200+ Pathological Tests Available</li>
+                    <li>Digital Reports with Doctor Consultation</li>
+                    <li>Same Day Sample Collection</li>
+                    <!-- <li>ISO Certified Diagnostic Center</li>
+                    <li>Insurance & Corporate Health Plans</li> -->
+                    <li>Emergency Testing Services</li>
+                </ul>
+                <div style="margin-top: 20px; background: #fff3f3; padding: 15px; border-radius: 8px;">
+                    <h3 style="color: #333; margin: 0 0 10px;">Health Packages Include:</h3>
+                    <p style="color: #666; margin: 5px 0;">✔ Senior Citizen Discounts<br>
+                    ✔ Corporate Wellness Programs<br>
+                    ✔ Annual Health Checkups<br>
+                    ✔ Pregnancy Care Packages</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Test Comparison Table -->
+        <section style="background: white; padding: 30px; border-radius: 8px; margin: 30px 0;">
+            <h2 style="color: #cc0000; margin-top: 0;">Common Blood Tests & Their Importance</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead style="background: #f8f8f8;">
+                    <tr>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Test Name</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Purpose</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Complete Blood Count (CBC)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Detect anemia, infection, blood disorders</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Annual checkup</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Lipid Profile</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Cholesterol & heart health</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Every 6 months</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">HbA1c</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Diabetes monitoring</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Quarterly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- Existing sections... -->
+
+
+        <!-- Health Tips Section -->
+                <!-- Preparation Guidelines -->
+                <!-- <section id="preparation" style="background-color: #fff3f3; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+                 <h2 style="color: #cc0000; margin-top: 0; text-align: center;">Test Preparation Guide</h2>
+                 <div style="display: flex; gap: 30px; align-items: center; margin-top: 20px;">
+                     <div style="flex: 1;">
+                         <img src="https://www.shutterstock.com/image-photo/nurse-taking-real-blood-samples-260nw-564775549.jpg" alt="Blood Sample"
+                              style="width: 100%; border-radius: 8px; height: 300px; object-fit: cover;">
+                     </div>
+                     <div style="flex: 1;">
+                         <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                             <h3 style="color: #333; margin: 0 0 10px;">Before Testing</h3>
+                             <ul style="color: #666; line-height: 1.6; margin: 0;">
+                                 <li>8-12 hours fasting required</li>
+                                 <li>Stay hydrated with water</li>
+                                 <li>Avoid strenuous exercise</li>
+                             </ul>
+                         </div>
+                         <div style="background-color: white; padding: 20px; border-radius: 8px;">
+                             <h3 style="color: #333; margin: 0 0 10px;">After Testing</h3>
+                             <ul style="color: #666; line-height: 1.6; margin: 0;">
+                                 <li>Apply pressure to puncture site</li>
+                                 <li>Avoid heavy lifting</li>
+                                 <li>Consume light snacks</li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+ -->
+
+
+                <!-- Test Preparation Guide -->
+    <section style="padding:50px 20px; background:#f5f5f5;">
+        <div style="max-width:1200px; margin:0 auto;">
+            <h2 style="color:#2c3e50; font-size:2em; text-align:center; margin-bottom:40px;">Test Preparation Guidelines</h2>
+           
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;">
+                <div>
+                    <img src="https://www.shutterstock.com/image-photo/nurse-taking-real-blood-samples-260nw-564775549.jpg" alt="Blood Sample" style="width:100%; border-radius:10px;">
+                </div>
+               
+                <div>
+                    <h3 style="color:#e74c3c;">Before Your Test</h3>
+                    <ul style="list-style-type:square; padding-left:20px;">
+                        <li>Fasting 8-12 hours for most tests</li>
+                        <li>Continue regular medications unless advised</li>
+                        <li>Avoid alcohol 24 hours before test</li>
+                        <li>Inform about existing medical conditions</li>
+                    </ul>
+
+
+                    <h3 style="color:#e74c3c; margin-top:30px;">Understanding Results</h3>
+                    <ul style="list-style-type:square; padding-left:20px;">
+                        <li>Receive reports within 24-48 hours</li>
+                        <li>Digital access through patient portal</li>
+                        <li>Detailed explanation from our experts</li>
+                        <li>Compare with previous reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding: 60px 20px; background: #fff8f8;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #2c3e50; font-size: 2.5em; margin-bottom: 50px; position: relative;">
+                Why Regular Blood Testing Matters
+                <div style="width: 60px; height: 4px; background: #e74c3c; margin: 15px auto 0;"></div>
+            </h2>
+   
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <!-- Benefit 1 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">🩺</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Early Disease Detection</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Identify potential health issues like diabetes, cholesterol problems, and thyroid disorders before symptoms appear.
+                    </p>
+                </div>
+   
+                <!-- Benefit 2 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">📈</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Health Monitoring</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Track vital parameters like blood sugar levels, kidney function, and liver health over time for better management.
+                    </p>
+                </div>
+   
+                <!-- Benefit 3 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">💊</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Medication Management</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Ensure proper dosage and effectiveness of treatments through regular therapeutic drug monitoring.
+                    </p>
+                </div>
+   
+                <!-- Benefit 4 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">🛡</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Preventive Care</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Detect nutritional deficiencies (vitamins, minerals) and hormonal imbalances early for timely intervention.
+                    </p>
+                </div>
+   
+                <!-- Benefit 5 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">❤</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Heart Health</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Monitor cholesterol levels, triglycerides, and CRP to assess cardiovascular risk and prevent heart disease.
+                    </p>
+                </div>
+   
+                <!-- Benefit 6 -->
+                <div style="background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 5px 15px rgba(231,76,60,0.1);">
+                    <div style="width: 70px; height: 70px; background: #ffecec; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 32px; color: #e74c3c;">🔍</span>
+                    </div>
+                    <h3 style="color: #2c3e50; margin: 0 0 15px; font-size: 1.4em;">Comprehensive Analysis</h3>
+                    <p style="color: #666; line-height: 1.6; margin: 0;">
+                        Get insights into immune system function, infection detection, and cancer screening through specialized tests.
+                    </p>
+                </div>
+            </div>
+     
+     
+
+
+
+
+
+
+            <!-- Health Insights Section -->
+<section style="padding: 60px 20px; background: #f5f7fa;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #2c3e50; font-size: 2.4em; margin-bottom: 50px;">
+            <span style="border-bottom: 4px solid #e74c3c; padding-bottom: 8px;">Health Insights Hub</span>
+        </h2>
+
+
+        <!-- Interactive Comparison Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 50px;">
+            <div style="background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 50px; height: 50px; background: #e74c3c; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff; font-size: 24px;">📅</span>
+                    </div>
+                    <h3 style="margin: 0; color: #2c3e50; font-size: 1.3em;">Test Frequency Guide</h3>
+                </div>
+                <div style="display: grid; gap: 15px;">
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: #fff5f5; border-radius: 8px;">
+                        <span style="color: #666;">Basic Metabolic Panel</span>
+                        <span style="color: #e74c3c; font-weight: bold;">Annual</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: #f5faff; border-radius: 8px;">
+                        <span style="color: #666;">Vitamin Levels</span>
+                        <span style="color: #2e86de; font-weight: bold;">Biannual</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: #f0fff4; border-radius: 8px;">
+                        <span style="color: #666;">Hormonal Panels</span>
+                        <span style="color: #27ae60; font-weight: bold;">Quarterly</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 50px; height: 50px; background: #2e86de; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff; font-size: 24px;">📊</span>
+                    </div>
+                    <h3 style="margin: 0; color: #2c3e50; font-size: 1.3em;">Health Analytics</h3>
+                </div>
+                <div style="display: grid; gap: 15px;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: #666;">Average Report Time</span>
+                            <span style="color: #2c3e50; font-weight: bold;">22 Hours</span>
+                        </div>
+                        <div style="height: 4px; background: #eee; border-radius: 2px;">
+                            <div style="width: 85%; height: 100%; background: #e74c3c; border-radius: 2px;"></div>
+                        </div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: #666;">Patient Satisfaction</span>
+                            <span style="color: #2c3e50; font-weight: bold;">98%</span>
+                        </div>
+                        <div style="height: 4px; background: #eee; border-radius: 2px;">
+                            <div style="width: 98%; height: 100%; background: #27ae60; border-radius: 2px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Diagnostic Journey Timeline -->
+        <div style="background: #fff; border-radius: 15px; padding: 40px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+            <h3 style="color: #2c3e50; margin: 0 0 30px; font-size: 1.5em; text-align: center;">Your Blood test Journey</h3>
+            <div style="display: flex; justify-content: space-between; position: relative; margin: 0 auto; max-width: 800px;">
+                <div style="width: 20%; text-align: center; position: relative; z-index: 1;">
+                    <div style="width: 40px; height: 40px; background: #e74c3c; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff;">1</span>
+                    </div>
+                    <p style="margin: 0; color: #666;">Online Booking</p>
+                </div>
+                <div style="width: 20%; text-align: center; position: relative; z-index: 1;">
+                    <div style="width: 40px; height: 40px; background: #e74c3c; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff;">2</span>
+                    </div>
+                    <p style="margin: 0; color: #666;">Sample Collection</p>
+                </div>
+                <div style="width: 20%; text-align: center; position: relative; z-index: 1;">
+                    <div style="width: 40px; height: 40px; background: #e74c3c; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff;">3</span>
+                    </div>
+                    <p style="margin: 0; color: #666;">Lab Analysis</p>
+                </div>
+                <div style="width: 20%; text-align: center; position: relative; z-index: 1;">
+                    <div style="width: 40px; height: 40px; background: #e74c3c; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #fff;">4</span>
+                    </div>
+                    <p style="margin: 0; color: #666;">Expert Review</p>
+                </div>
+                <div style="position: absolute; width: 80%; height: 2px; background: #eee; top: 20px; left: 10%; z-index: 0;"></div>
+            </div>
+        </div>
+
+
+        <!-- Interactive CTA -->
+        <!-- <div style="text-align: center; margin-top: 50px;">
+            <p style="color: #666; font-size: 1.2em; margin-bottom: 25px;">Ready to Begin Your Health Journey?</p>
+            <button style="background: #e74c3c; color: #fff; border: none; padding: 16px 45px; font-size: 1.1em; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                    onmouseover="this.style.boxShadow='0 8px 25px rgba(231,76,60,0.4)'"
+                    onmouseout="this.style.boxShadow='none'">
+                Start Now
+                <span style="position: absolute; background: rgba(255,255,255,0.2); width: 50px; height: 100%; left: -75px; top: 0; transform: skewX(-15deg); transition: left 0.3s ease;"></span>
+            </button>
+        </div> -->
+    </div>
+</section>
+        <!-- Enhanced FAQ with Schema -->
+        <section id="faq" style="background-color: white; padding: 30px; border-radius: 10px; margin: 30px 0;">
+         <h2 style="color: #cc0000; margin-top: 0; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px;">Frequently Asked Questions</h2>
+         
+         <div style="margin-top: 20px;">
+             <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                 <h3 style="color: #333; margin: 0;">How long should I fast before a blood test?</h3>
+                 <p style="color: #666; margin: 8px 0 0; line-height: 1.5;">
+                     Most fasting blood tests require 8-12 hours of fasting. You can drink water during this period. Avoid coffee, tea, and smoking.
+                 </p>
+             </div>
+
+
+             <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                 <h3 style="color: #333; margin: 0;">When will I receive my test results?</h3>
+                 <p style="color: #666; margin: 8px 0 0; line-height: 1.5;">
+                     Routine tests typically take 24-48 hours. Specialized tests may take 3-5 business days. You'll receive results via email or our patient portal.
+                 </p>
+             </div>
+
+
+             <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                 <h3 style="color: #333; margin: 0;">Do I need a doctor's prescription?</h3>
+                 <p style="color: #666; margin: 8px 0 0; line-height: 1.5;">
+                     No prescription needed for standard tests. However, some insurance providers may require a referral for coverage.
+                 </p>
+             </div>
+
+
+             <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                 <h3 style="color: #333; margin: 0;">Can I drink water before a fasting blood test?</h3>
+                 <p style="color: #666; margin: 8px 0 0; line-height: 1.5;">
+                     Yes, you can and should drink water to stay hydrated. Avoid other beverages like tea, coffee, or juice.
+                 </p>
+             </div>
+
+
+             <div style="padding: 15px 0;">
+                 <h3 style="color: #333; margin: 0;">Do you offer home sample collection?</h3>
+                 <p style="color: #666; margin: 8px 0 0; line-height: 1.5;">
+                     Yes, we provide free home collection service for all tests above ₹999. Book a slot through our website or mobile app.
+                 </p>
+             </div>
+         </div>
+     </section>
+ </div>
+
+
+    </div>
+
+
+    <!-- Enhanced Footer -->
+    <footer style="background-color: #222; color: white; padding: 40px 20px; margin-top: 50px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; flex-wrap: wrap;">
+          <!-- Contact Info -->
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #cc0000;">Contact Us</h3>
+            <p>📞 24/7 Support: 1800-123-4567</p>
+            <p>📧 Email: contact@healthcarelab.com</p>
+            <p>🏢 Address: 123 Medical Street, Health City, HC 123456</p>
+            <p>⏲ Timing: Mon-Sat 6AM-9PM | Sun 7AM-2PM</p>
+          </div>
+     
+          <!-- Quick Links -->
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #cc0000;">Quick Links</h3>
+            <p><a href="#tests" style="color: white; text-decoration: none;">Test Prices</a></p>
+            <p><a href="#preparation" style="color: white; text-decoration: none;">Test Preparation</a></p>
+            <p><a href="#why-us" style="color: white; text-decoration: none;">Our Services</a></p>
+            <p><a href="#faq" style="color: white; text-decoration: none;">FAQ</a></p>
+          </div>
+     
+          <!-- About and App Links -->
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #cc0000;">About Hitaishi</h3>
+            <p>We are committed to delivering top-quality diagnostic and lab services, making healthcare accessible and affordable for all.</p>
+            <div style="margin-top: 20px;">
+              <p>📱 Download Our App:</p>
+              <a href="#">
+                <img src="https://media.licdn.com/dms/image/v2/D5612AQEjgyzsUU2B_w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1672741349054?e=2147483647&v=beta&t=WEd7O5plYQ8l0CDi3JvMLYY6DdhQfi_QCaBaDWUdkDQ"
+                     alt="Play Store"
+                     style="height: 40px; margin-right: 10px; vertical-align: middle;">
+              </a>
+              <a href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                     alt="App Store"
+                     style="height: 40px; vertical-align: middle;">
+              </a>
+             
+            </div>
+          </div>
+        </div>
+     
+        <!-- Bottom Footer -->
+        <div style="text-align: center; margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
+          <p style="margin-bottom: 10px;">Follow Us:
+            <a href="#" style="color: #cc0000; text-decoration: none; margin: 0 10px;">Facebook</a> |
+            <a href="#" style="color: #cc0000; text-decoration: none; margin: 0 10px;">Instagram</a> |
+            <a href="#" style="color: #cc0000; text-decoration: none; margin: 0 10px;">Twitter</a>
+          </p>
+          <p>© 2025 Hitaishi Healthcare Diagnostics. All Rights Reserved. |
+            <a href="#" style="color: #cc0000; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: #cc0000; text-decoration: none;">Terms of Service</a>
+          </p>
+        </div>
+      </footer>
+     
+</body>
+</html>
+
