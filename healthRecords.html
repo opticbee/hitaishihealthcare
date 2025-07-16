@@ -1,210 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Health Records | Hitaishi Health Care</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
-<body style="font-family: Arial, sans-serif; background: #f2f7ff; margin: 0; padding: 0;">
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
 
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
-    
-  <!-- Logo and Title -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-      <div>
-          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-      </div>
-  </div>
-  
-  <!-- search input icons -->
-  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-      <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
 
-  <!-- Buttons -->
-  <div style="display: flex; gap: 15px;">
-      <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          ❤️ Blood Donation
-      </a>
-      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Book Appointment
-      </a>
-      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Find a Doctor
-      </a>
-      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Clinic
-      </a>
-      <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Eye Care
-      </a>
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
   </div>
 
-  <!-- Social Media Icons -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-whatsapp"></i>
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
+
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
+
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+
+<!-- Hero Section with Animated Background -->
+<section style="background:linear-gradient(135deg,rgba(0,86,210,0.9),rgba(0,51,102,0.9)),url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');background-size:cover;background-position:center;color:white;padding:80px 5%;text-align:center;position:relative;overflow:hidden;">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2;">
+    <h1 style="font-size:48px;font-weight:700;margin-bottom:20px;line-height:1.2;text-shadow:0 2px 4px rgba(0,0,0,0.2);">Secure Health Records Management</h1>
+    <p style="font-size:20px;max-width:800px;margin:0 auto 30px;opacity:0.9;">Your medical history, securely stored and easily accessible whenever you need it</p>
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+      <a href="#upload" style="background:white;color:#0056d2;padding:15px 30px;border-radius:50px;font-weight:600;text-decoration:none;font-size:16px;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+        Upload Records <i class="fas fa-arrow-up" style="margin-left:8px;"></i>
       </a>
       
-
-      <!-- Display Logged-in User Name -->
-      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
-
-      <!-- Profile Icon -->
-      <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-          <i class="fas fa-user-circle"></i>
-      </a>
+    </div>
   </div>
-
-  </nav>
-  
-  <script>
-      // Simulating getting user data from local storage or API
-      document.addEventListener("DOMContentLoaded", function () {
-          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-          if (user) {
-              document.getElementById("username").textContent = user; // Show username if logged in
-          }
-      });
-  
-      // Example: Store username after login (call this after user logs in)
-      function setUser(name) {
-          localStorage.setItem("loggedInUser", name);
-      }
-  
-      // Example: Clear user on logout
-      function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.reload(); // Refresh page after logout
-      }
-  </script>
-  
-  
-  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-          <!-- Home Link -->
-          <div style="margin-right: 1rem;">
-              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-          </div>
-
-          <!-- Health Records Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                  <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                  <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-              </div>
-          </div>
-
-          <!-- Diagnostics Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                  <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                  <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-              </div>
-          </div>
-
-          <!-- Physicians Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                  <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                  <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-              </div>
-          </div>
-
-          <!-- Fertility Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                  <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-              </div>
-          </div>
-
-          <!-- AI -->
-          <div style="margin-right: 1rem;">
-              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-          </div>
-
-          <!-- Doctors Link -->
-          <div style="margin-right: 1rem;">
-              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-          </div>
-
-          <!-- Patients Link -->
-          <div style="margin-right: 1rem;">
-              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-          </div>
+  <div style="position:absolute;bottom:0;left:0;width:100%;height:100px;background:linear-gradient(transparent,#f8f9fa);z-index:1;"></div>
+</section>
 
 
-
-          <!-- Insights Link -->
-          <div style="margin-right: 1rem;">
-              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-          </div>
-          <div style="margin-right: 1rem;">
-              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-          </div>
-
-          <!-- Contact Link -->
-          <div>
-              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-          </div>
-          
-      </div>
-
-    
-  </nav>
-
-  <!-- for dropdowns -->
-  <script>
-      // JavaScript to handle dropdown visibility
-      document.querySelectorAll('nav > div > div').forEach(navItem => {
-          const dropdown = navItem.querySelector('div');
-          if (dropdown) {
-              navItem.addEventListener('mouseenter', () => {
-                  dropdown.style.display = 'block';
-              });
-              navItem.addEventListener('mouseleave', () => {
-                  dropdown.style.display = 'none';
-              });
-          }
-      });
-    </script>
-
-
-
-
-  <!-- hero section-------------------------------------- -->
-  <section style="display: flex; align-items: center; justify-content: space-between; padding: 60px; background-color: #fff;">
+<!--section-2 Why Choose Us Section -->
+ <section style="display: flex; align-items: center; justify-content: space-between; padding: 60px; background-color: #fff;">
     <div style="flex: 1; padding-right: 40px;">
       <h2 style="font-size: 32px; font-weight: 700; color: #333;">Securely upload and manage your health records.</h2>
       <p style="font-size: 16px; line-height: 1.7; color: #555;">
@@ -212,860 +242,1420 @@
         <br><br>
         From lab tests and imaging to online consultations and follow-up care, our healthcare solutions are tailored to individual needs. We combine the latest technology with compassionate service to improve health outcomes for all.
       </p>
-      <a href="#contact" style="display: inline-block; margin-top: 30px; background-color: #1e56fc; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px;">Learn more</a>
+      <!-- <a href="#contact" style="display: inline-block; margin-top: 30px; background-color: #1e56fc; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px;">Learn more</a> -->
     </div>
     <div style="flex: 1; text-align: right;">
-      <img src="https://healthcare.utah.edu/sites/g/files/zrelqx136/files/media/images/2023/ehr-1476525_1920.png" alt="Hitaishi Health Services Dashboard" style="max-width: 100%; height: auto; border-radius: 10px;">
+      <img src="images/hr_dashboard.png" alt="Hitaishi Health Services Dashboard" style="max-width: 100%; height: auto; border-radius: 10px;">
     </div>
   </section>
-  <!-- Benifits ------------------------- -->
-  <section style="padding: 70px 20px; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to right, #e6f8f4, #f0fff9);">
-    <h2 style="text-align: center; font-size: 38px; font-weight: 800; background: linear-gradient(to right, #1e56fc, #11caa4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 50px; letter-spacing: 1px;">
-      Why Choose Our System?
-    </h2>
-  
-    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-      <div onclick="switchTab('care')" id="care" style="flex: 1; max-width: 300px; padding: 35px 25px; background-color: #1e56fc; color: white; border-radius: 16px; text-align: center; cursor: pointer; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(30,86,252,0.3);">
-        <div style="font-size: 40px; margin-bottom: 15px;">💙</div>
-        <strong style="font-size: 20px;">Improved Care Quality</strong>
-        <div id="arrow-care" style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 15px solid #1e56fc;"></div>
-      </div>
-  
-      <div onclick="switchTab('admin')" id="admin" style="flex: 1; max-width: 300px; padding: 35px 25px; background-color: #ffffff; color: #333; border-radius: 16px; text-align: center; cursor: pointer; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
-        <div style="font-size: 40px; margin-bottom: 15px;">💰</div>
-        <strong style="font-size: 20px;">Simpler Administrative Process</strong>
-        <div id="arrow-admin" style="display: none; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 15px solid #1e56fc;"></div>
-      </div>
-  
-      <div onclick="switchTab('integrity')" id="integrity" style="flex: 1; max-width: 300px; padding: 35px 25px; background-color: #ffffff; color: #333; border-radius: 16px; text-align: center; cursor: pointer; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
-        <div style="font-size: 40px; margin-bottom: 15px;">🛡️</div>
-        <strong style="font-size: 20px;">Data Integrity</strong>
-        <div id="arrow-integrity" style="display: none; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 15px solid #1e56fc;"></div>
-      </div>
-    </div>
-  
-    <div id="tab-content" style="margin-top: 60px; padding: 35px; background-color: #ffffff; border: 2px solid #1e56fc; border-radius: 14px; max-width: 960px; margin-left: auto; margin-right: auto; font-size: 18px; line-height: 1.8; color: #333; box-shadow: 0 15px 35px rgba(0,0,0,0.06); transition: all 0.3s ease;">
-      A medical record management system enables physicians to access patients' medical information. This contains details like treatment history, immunizations, allergies, previous medications, pre-existing conditions, etc. This is vital for doctors who need to prescribe tests, scans, or medications for patients. A person’s health history can impact how he or she responds to certain treatments, so health records are important for making informed decisions.
-    </div>
-  
-    <script>
-      function switchTab(tabKey) {
-        const content = {
-          care: "A medical record management system enables physicians to access patients' medical information. This contains details like treatment history, immunizations, allergies, previous medications, pre-existing conditions, etc. This is vital for doctors who need to prescribe tests, scans, or medications for patients. A person’s health history can impact how he or she responds to certain treatments, so health records are important for making informed decisions.",
-          admin: "Administrative tasks are simplified through electronic health records, saving time and reducing paperwork. By automating scheduling, billing, and documentation, healthcare facilities can operate more efficiently and focus on patient care. It also helps in minimizing human error in administrative tasks.",
-          integrity: "Data integrity ensures that patient information remains consistent, accurate, and secure throughout its lifecycle. Health records are encrypted and protected against unauthorized access, helping healthcare organizations meet compliance standards and maintain patient trust."
-        };
-  
-        ['care', 'admin', 'integrity'].forEach(id => {
-          const tab = document.getElementById(id);
-          tab.style.backgroundColor = '#ffffff';
-          tab.style.color = '#333';
-          tab.style.boxShadow = '0 10px 25px rgba(0,0,0,0.06)';
-          const arrow = document.getElementById('arrow-' + id);
-          if (arrow) arrow.style.display = 'none';
-        });
-  
-        const activeTab = document.getElementById(tabKey);
-        activeTab.style.backgroundColor = '#1e56fc';
-        activeTab.style.color = 'white';
-        activeTab.style.boxShadow = '0 10px 25px rgba(30,86,252,0.3)';
-  
-        const arrow = document.getElementById('arrow-' + tabKey);
-        if (arrow) arrow.style.display = 'block';
-  
-        document.getElementById('tab-content').textContent = content[tabKey];
-      }
-    </script>
-  </section>
-  
 
-  <!--Tabs section ------------------------------------------------------------  -->
-<!-- Explore Heading -->
-<div style="text-align: center; margin-top: 60px; margin-bottom: 20px;">
-  <h2 style="font-size: 36px; color: #007BFF; font-family: 'Segoe UI', sans-serif; font-weight: 700;">
-    🔍 Explore Medical Records Management
-  </h2>
-  <p style="font-size: 16px; color: #555; font-family: 'Segoe UI', sans-serif;">
-    Discover powerful tools for managing, accessing, and analyzing patient data.
-  </p>
-</div>
-
-<!-- Tabs and Content Layout -->
-<div style="display: flex; font-family: 'Segoe UI', sans-serif; margin: auto; max-width: 1200px; padding: 40px; background: #ffffff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-
-  <!-- Left Tabs -->
-  <div style="width: 30%; border-right: 1px solid #ddd; padding-right: 20px; display: flex; flex-direction: column;">
-    <div class="tab active" onclick="showContent('centralized', this)" style="padding: 15px; cursor: pointer; background: #007bff; color: #fff; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; font-weight: bold;">
-      <span style="font-size: 20px; margin-right: 10px;">🏥</span> Centralized Platform
-    </div>
-    <div class="tab" onclick="showContent('remote', this)" style="padding: 15px; cursor: pointer; background: #fff; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; color: #333; font-weight: bold;">
-      <span style="font-size: 20px; margin-right: 10px;">🌍</span> Remote Monitoring
-    </div>
-    <div class="tab" onclick="showContent('ehr', this)" style="padding: 15px; cursor: pointer; background: #fff; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; color: #333; font-weight: bold;">
-      <span style="font-size: 20px; margin-right: 10px;">📑</span> EHR/EMR Integration
-    </div>
-    <div class="tab" onclick="showContent('analytics', this)" style="padding: 15px; cursor: pointer; background: #fff; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; color: #333; font-weight: bold;">
-      <span style="font-size: 20px; margin-right: 10px;">📊</span> Healthcare Analytics
-    </div>
-    <div class="tab" onclick="showContent('practice', this)" style="padding: 15px; cursor: pointer; background: #fff; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; color: #333; font-weight: bold;">
-      <span style="font-size: 20px; margin-right: 10px;">⚙️</span> Practice Management
+<!--section-3 Explore Section with Colorful Tabs -->
+<section style="padding:60px 5%;background:#f9f9f9;">
+  <div style="max-width:1200px;margin:0 auto;text-align:center;">
+    <h2 style="font-size:36px;color:#0056d2;margin-bottom:15px;position:relative;display:inline-block;">🔍 Explore Medical Records Management</h2>
+    <p style="font-size:16px;color:#666;max-width:700px;margin:0 auto 40px;">Discover powerful tools for managing, accessing, and analyzing patient data.</p>
+    
+    <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;">
+      <div style="flex:1;min-width:250px;max-width:350px;background:white;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.05);padding:0;overflow:hidden;">
+        <div id="tabButtons" style="display:flex;flex-direction:column;">
+          <button onclick="showTabContent('centralized')" style="padding:15px 20px;border:none;background:#e3f2fd;text-align:left;cursor:pointer;transition:all 0.3s;font-weight:600;color:#0056d2;border-left:4px solid #0056d2;" onmouseover="this.style.background='#bbdefb'">🏥 Centralized Platform</button>
+          <button onclick="showTabContent('remote')" style="padding:15px 20px;border:none;background:#fff;text-align:left;cursor:pointer;transition:all 0.3s;font-weight:500;color:#555;" onmouseover="this.style.background='#f5f5f5'">🌍 Remote Monitoring</button>
+          <button onclick="showTabContent('ehr')" style="padding:15px 20px;border:none;background:#fff;text-align:left;cursor:pointer;transition:all 0.3s;font-weight:500;color:#555;" onmouseover="this.style.background='#f5f5f5'">📑 EHR/EMR Integration</button>
+          <button onclick="showTabContent('analytics')" style="padding:15px 20px;border:none;background:#fff;text-align:left;cursor:pointer;transition:all 0.3s;font-weight:500;color:#555;" onmouseover="this.style.background='#f5f5f5'">📊 Healthcare Analytics</button>
+          <button onclick="showTabContent('practice')" style="padding:15px 20px;border:none;background:#fff;text-align:left;cursor:pointer;transition:all 0.3s;font-weight:500;color:#555;" onmouseover="this.style.background='#f5f5f5'">⚙️ Practice Management</button>
+        </div>
+      </div>
+      
+      <div id="tabContent" style="flex:2;min-width:300px;background:white;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.05);padding:30px;position:relative;overflow:hidden;">
+        <div id="centralized" class="tab-content" style="display:block;">
+          <h3 style="font-size:24px;color:#0056d2;margin-top:0;">Centralized Platform 🏥</h3>
+          <p style="line-height:1.8;color:#555;">The <strong>Centralized Platform</strong> allows healthcare providers to access patient records from a single, unified location. Whether it's a hospital, clinic, or laboratory, medical professionals can view patient information quickly and securely. This reduces administrative overhead, eliminates data silos, and promotes better patient outcomes.</p>
+          <ul style="padding-left:20px;color:#555;">
+            <li style="margin-bottom:8px;">📁 Centralized access to all patient records</li>
+            <li style="margin-bottom:8px;">🔒 Enhanced security with role-based access</li>
+            <li style="margin-bottom:8px;">💡 Improved efficiency and productivity in healthcare delivery</li>
+            <li style="margin-bottom:8px;">📅 Streamlined communication across departments</li>
+          </ul>
+          <div style="position:absolute;top:0;right:0;width:100px;height:100px;background:#e3f2fd;border-radius:50%;z-index:-1;transform:translate(50px,-50px);"></div>
+        </div>
+        
+        <div id="remote" class="tab-content" style="display:none;">
+          <h3 style="font-size:24px;color:#28a745;margin-top:0;">Remote Monitoring 🌍</h3>
+          <p style="line-height:1.8;color:#555;">Remote monitoring enables healthcare providers to keep track of their patients' vital signs and health status from any location using IoT-enabled devices. This technology allows for timely interventions, reducing hospital visits, and improving patient management.</p>
+          <ul style="padding-left:20px;color:#555;">
+            <li style="margin-bottom:8px;">📱 Monitor patient vitals remotely in real-time</li>
+            <li style="margin-bottom:8px;">🏥 Reduces hospital readmissions and emergency visits</li>
+            <li style="margin-bottom:8px;">⚡ Faster response times to changes in patient health</li>
+            <li style="margin-bottom:8px;">🔍 Continuous data collection for improved diagnosis</li>
+          </ul>
+          <div style="position:absolute;bottom:0;left:0;width:150px;height:150px;background:#e6ffed;border-radius:50%;z-index:-1;transform:translate(-50px,50px);"></div>
+        </div>
+        
+        <div id="ehr" class="tab-content" style="display:none;">
+          <h3 style="font-size:24px;color:#d63384;margin-top:0;">EHR/EMR Integration 📑</h3>
+          <p style="line-height:1.8;color:#555;">The <strong>EHR/EMR Integration</strong> solution allows seamless interaction between a healthcare facility's digital records and various other hospital systems. By improving data consistency, the platform enhances decision-making and patient outcomes.</p>
+          <ul style="padding-left:20px;color:#555;">
+            <li style="margin-bottom:8px;">🔗 Seamless integration with hospital information systems</li>
+            <li style="margin-bottom:8px;">📊 Enhanced data consistency and accuracy</li>
+            <li style="margin-bottom:8px;">🩺 Streamlined patient care coordination between providers</li>
+            <li style="margin-bottom:8px;">💻 User-friendly interfaces for medical staff</li>
+          </ul>
+          <div style="position:absolute;top:50%;right:0;width:120px;height:120px;background:#ffebee;border-radius:50%;z-index:-1;transform:translate(60px,-50%);"></div>
+        </div>
+        
+        <div id="analytics" class="tab-content" style="display:none;">
+          <h3 style="font-size:24px;color:#6f42c1;margin-top:0;">Healthcare Analytics 📊</h3>
+          <p style="line-height:1.8;color:#555;">Healthcare analytics tools provide deep insights into patient data, hospital performance, and treatment outcomes. By analyzing these trends, healthcare providers can make data-driven decisions that improve care quality and operational efficiency.</p>
+          <ul style="padding-left:20px;color:#555;">
+            <li style="margin-bottom:8px;">📈 Analyze patient trends and outcomes</li>
+            <li style="margin-bottom:8px;">🔍 Identify areas for improvement in hospital operations</li>
+            <li style="margin-bottom:8px;">🧠 Data-driven decision making for better care delivery</li>
+            <li style="margin-bottom:8px;">💹 Cost optimization through performance analysis</li>
+          </ul>
+          <div style="position:absolute;bottom:20px;right:20px;width:80px;height:80px;background:#f3e8ff;border-radius:50%;z-index:-1;"></div>
+        </div>
+        
+        <div id="practice" class="tab-content" style="display:none;">
+          <h3 style="font-size:24px;color:#fd7e14;margin-top:0;">Practice Management ⚙️</h3>
+          <p style="line-height:1.8;color:#555;">The <strong>Practice Management</strong> system is designed to help healthcare providers manage day-to-day operations like appointments, billing, and patient engagement. With easy-to-use interfaces and comprehensive features, it improves the overall patient experience and reduces administrative burden.</p>
+          <ul style="padding-left:20px;color:#555;">
+            <li style="margin-bottom:8px;">📅 Simplify scheduling and patient appointments</li>
+            <li style="margin-bottom:8px;">💳 Efficient billing and claims processing</li>
+            <li style="margin-bottom:8px;">📲 Patient engagement tools for better communication</li>
+            <li style="margin-bottom:8px;">📊 Operational insights to improve practice performance</li>
+          </ul>
+          <div style="position:absolute;top:20px;left:20px;width:60px;height:60px;background:#fff3e0;border-radius:50%;z-index:-1;"></div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Right Content -->
-  <div id="tabContent" style="width: 70%; padding-left: 30px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-      <h3 style="margin-bottom: 10px; font-size: 28px; color: #007bff; font-weight: 600;">Centralized Platform 🏥</h3>
-      <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-        The <strong>Centralized Platform</strong> allows healthcare providers to access patient records from a single, unified location. Whether it's a hospital, clinic, or laboratory, medical professionals can view patient information quickly and securely. This reduces administrative overhead, eliminates data silos, and promotes better patient outcomes.
-        <br><br>
-        <strong>Key Benefits:</strong>
-        <ul style="margin-top: 10px; padding-left: 20px; color: #444;">
-          <li>📁 Centralized access to all patient records</li>
-          <li>🔒 Enhanced security with role-based access</li>
-          <li>💡 Improved efficiency and productivity in healthcare delivery</li>
-          <li>📅 Streamlined communication across departments</li>
+<script>
+  function showTabContent(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.style.display = 'none';
+    });
+    
+    // Show selected tab content
+    document.getElementById(tabId).style.display = 'block';
+    
+    // Update tab buttons styling
+    const buttons = document.querySelectorAll('#tabButtons button');
+    buttons.forEach(button => {
+      button.style.background = '#fff';
+      button.style.fontWeight = '500';
+      button.style.color = '#555';
+      button.style.borderLeft = 'none';
+    });
+    
+    // Highlight active button
+    const activeButton = document.querySelector(`#tabButtons button[onclick="showTabContent('${tabId}')"]`);
+    activeButton.style.background = '#e3f2fd';
+    activeButton.style.fontWeight = '600';
+    activeButton.style.color = '#0056d2';
+    activeButton.style.borderLeft = '4px solid #0056d2';
+  }
+</script>
+
+<!--section-4 Clean Solutions Section -->
+<section style="padding:80px 5%; background:#f8f9fa;">
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <h2 style="font-size:36px; color:#0056d2; margin-bottom:15px; position:relative; display:inline-block;">🚀 SOLUTIONS WE OFFER</h2>
+    <p style="font-size:16px; color:#666; max-width:700px; margin:0 auto 50px;">Innovative healthcare solutions tailored to meet your needs</p>
+    
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;">
+      
+      <!-- Card Template Start -->
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_remote_monitoring.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#0056d2;">Remote Monitoring</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Monitor patients in real-time from anywhere, ensuring timely care with IoT-based vitals tracking.</p>
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_healthcare_integration.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#d63384;">Healthcare Integration</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Connect disparate systems securely, ensuring seamless data flow and communication.</p>
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_costom_ehr_emr.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#28a745;">Custom EHR/EMR</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Tailored solutions for managing patient records securely and efficiently.</p>
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_practice_management.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#fd7e14;">Practice Management</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Automate scheduling, billing, and patient communication to streamline operations.</p>
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_health_solutions.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#6f42c1;">mHealth Solutions</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Mobile-first tools for remote care, virtual visits, and patient engagement.</p>
+        </div>
+      </div>
+
+      <div style="background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:all 0.3s ease; position:relative;" 
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.1)'" 
+           onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)'">
+        <div style="height:200px; background:url('images/hr_healthcare_analytics.png') center/cover;"></div>
+        <div style="padding:25px;">
+          <h3 style="margin:0 0 15px; font-size:20px; color:#17a2b8;">Healthcare Analytics</h3>
+          <p style="margin:0; color:#666; line-height:1.6;">Uncover trends, optimize workflows, and improve outcomes through smart data.</p>
+        </div>
+      </div>
+      <!-- Card Template End -->
+      
+    </div>
+  </div>
+</section>
+
+
+<!--section-5 Blood Test Booking Section -->
+<section style="padding:80px 5%;background:#fff;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="font-size:32px;color:#d62828;margin-bottom:40px;text-align:center;">🩸 Blood Test Booking</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:start;">
+      <!-- Info Section -->
+      <div style="background:#f8f9fa;border:1px solid #ddd;border-radius:10px;padding:30px;">
+        <h3 style="font-size:24px;margin-bottom:20px;color:#343a40;">Why Choose Our Blood Test?</h3>
+        <ul style="padding-left:20px;line-height:1.8;font-size:16px;color:#555;">
+          <li>Accurate and fast results from NABL certified labs</li>
+          <li>Home sample collection at your convenience</li>
+          <li>Wide range of tests including CBC, Lipid, Thyroid & more</li>
+          <li>Affordable pricing with detailed reports</li>
         </ul>
-      </p>
+      </div>
+
+      <!-- Form Section -->
+      <div style="background:#fefefe;border:1px solid #ccc;border-radius:10px;padding:30px;">
+        <h3 style="font-size:24px;margin-bottom:20px;color:#343a40;">📋 Book a Blood Test</h3>
+       
+    
+
+  <form id="bloodTestForm" style="max-width:600px;margin:40px auto;padding:30px;border:1px solid #ccc;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);font-family:sans-serif;background:#fff;">
+    <div style="margin-bottom:15px;">
+      <label style="display:block;margin-bottom:5px;font-weight:600;color:#444;">Full Name</label>
+      <input type="text" id="fullName" required placeholder="Enter your name" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
     </div>
-  </div>
-</div>
-  
-  <script>
-    function showContent(tab, element) {
-      let content = {
-        centralized: `
-          <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-            <h3 style="margin-bottom: 10px; font-size: 28px; color: #007bff; font-weight: 600;">Centralized Platform 🏥</h3>
-            <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-              The <strong>Centralized Platform</strong> allows healthcare providers to access patient records from a single, unified location. Whether it's a hospital, clinic, or laboratory, medical professionals can view patient information quickly and securely. This reduces administrative overhead, eliminates data silos, and promotes better patient outcomes.
-              <br><br>
-              Key Benefits:
-              <ul>
-                <li>📁 Centralized access to all patient records</li>
-                <li>🔒 Enhanced security with role-based access</li>
-                <li>💡 Improved efficiency and productivity in healthcare delivery</li>
-                <li>📅 Streamlined communication across departments</li>
-              </ul>
-            </p>
-          </div>
-        `,
-        remote: `
-          <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-            <h3 style="margin-bottom: 20px; font-size: 28px; color: #007bff; font-weight: 600;">Remote Monitoring 🌍</h3>
-            <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-              Remote monitoring enables healthcare providers to keep track of their patients’ vital signs and health status from any location using IoT-enabled devices. This technology allows for timely interventions, reducing hospital visits, and improving patient management.
-              <br><br>
-              Key Benefits:
-              <ul>
-                <li>📱 Monitor patient vitals remotely in real-time</li>
-                <li>🏥 Reduces hospital readmissions and emergency visits</li>
-                <li>⚡ Faster response times to changes in patient health</li>
-                <li>🔍 Continuous data collection for improved diagnosis</li>
-              </ul>
-            </p>
-          </div>
-        `,
-        ehr: `
-          <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-            <h3 style="margin-bottom: 20px; font-size: 28px; color: #007bff; font-weight: 600;">EHR/EMR Integration 📑</h3>
-            <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-              The <strong>EHR/EMR Integration</strong> solution allows seamless interaction between a healthcare facility's digital records and various other hospital systems. By improving data consistency, the platform enhances decision-making and patient outcomes.
-              <br><br>
-              Key Benefits:
-              <ul>
-                <li>🔗 Seamless integration with hospital information systems</li>
-                <li>📊 Enhanced data consistency and accuracy</li>
-                <li>🩺 Streamlined patient care coordination between providers</li>
-                <li>💻 User-friendly interfaces for medical staff</li>
-              </ul>
-            </p>
-          </div>
-        `,
-        analytics: `
-          <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-            <h3 style="margin-bottom: 20px; font-size: 28px; color: #007bff; font-weight: 600;">Healthcare Analytics 📊</h3>
-            <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-              Healthcare analytics tools provide deep insights into patient data, hospital performance, and treatment outcomes. By analyzing these trends, healthcare providers can make data-driven decisions that improve care quality and operational efficiency.
-              <br><br>
-              Key Benefits:
-              <ul>
-                <li>📈 Analyze patient trends and outcomes</li>
-                <li>🔍 Identify areas for improvement in hospital operations</li>
-                <li>🧠 Data-driven decision making for better care delivery</li>
-                <li>💹 Cost optimization through performance analysis</li>
-              </ul>
-            </p>
-          </div>
-        `,
-        practice: `
-          <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
-            <h3 style="margin-bottom: 20px; font-size: 28px; color: #007bff; font-weight: 600;">Practice Management ⚙️</h3>
-            <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; padding-right: 20px; width: 90%;">
-              The <strong>Practice Management</strong> system is designed to help healthcare providers manage day-to-day operations like appointments, billing, and patient engagement. With easy-to-use interfaces and comprehensive features, it improves the overall patient experience and reduces administrative burden.
-              <br><br>
-              Key Benefits:
-              <ul>
-                <li>📅 Simplify scheduling and patient appointments</li>
-                <li>💳 Efficient billing and claims processing</li>
-                <li>📲 Patient engagement tools for better communication</li>
-                <li>📊 Operational insights to improve practice performance</li>
-              </ul>
-            </p>
-          </div>
-        `
-      };
-  
-      // Change content
-      document.getElementById("tabContent").innerHTML = content[tab];
-  
-      // Reset styles for all tabs
-      const tabs = document.querySelectorAll(".tab");
-      tabs.forEach(tab => {
-        tab.style.background = "#fff";
-        tab.style.color = "#333"; // Reset text color
-      });
-  
-      // Add active background to clicked tab
-      element.style.background = "#007bff";
-      element.style.color = "#fff"; // Change text color to white for active tab
-    }
-  </script>
-  
-  
-  <!-- Solutions we offer ---------------------------------------------------- -->
-  
-  <div style="padding: 60px 20px; text-align: center; background: #e6f7f7;">
-    <h2 style="font-size: 30px; font-weight: bold; margin-bottom: 40px; color: #222;">🚀 SOLUTIONS WE OFFER</h2>
-  
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: auto;">
-  
-      <!-- Remote Monitoring -->
-      <a href="remote-monitoring.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/3782/3782341.png" alt="Remote Monitoring" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">📡 Remote Monitoring</div>
-          <p style="font-size: 14px; margin-top: 10px;">Monitor patients in real-time from anywhere, ensuring timely care with IoT-based vitals tracking. 🩺</p>
-        </div>
-      </a>
-  
-      <!-- Healthcare Integration -->
-      <a href="healthcare-integration.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/9241/9241392.png" alt="Healthcare Integration" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">🔗 Healthcare Integration</div>
-          <p style="font-size: 14px; margin-top: 10px;">Connect disparate systems securely, ensuring seamless data flow and communication. 🧠</p>
-        </div>
-      </a>
-  
-      <!-- Custom EHR/EMR -->
-      <a href="custom-ehr.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/753/753318.png" alt="Custom EHR" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">🗂️ Custom EHR/EMR</div>
-          <p style="font-size: 14px; margin-top: 10px;">Tailored solutions for managing patient records securely and efficiently. 📋</p>
-        </div>
-      </a>
-  
-      <!-- Practice Management -->
-      <a href="practice-management.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/3105/3105924.png" alt="Practice Management" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">🛠️ Practice Management</div>
-          <p style="font-size: 14px; margin-top: 10px;">Automate scheduling, billing, and patient communication to streamline operations. 🧾</p>
-        </div>
-      </a>
-  
-      <!-- mHealth -->
-      <a href="mhealth.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/3782/3782135.png" alt="MHealth" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">📱 mHealth Solutions</div>
-          <p style="font-size: 14px; margin-top: 10px;">Mobile-first tools for remote care, virtual visits, and patient engagement. 🤳</p>
-        </div>
-      </a>
-  
-      <!-- Healthcare Analytics -->
-      <a href="healthcare-analytics.html" style="width: 300px; background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: #000; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)'">
-        <div style="text-align: center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/4149/4149643.png" alt="Healthcare Analytics" style="width: 60px; margin-bottom: 15px;">
-          <div style="font-weight: bold; font-size: 17px;">📊 Healthcare Analytics</div>
-          <p style="font-size: 14px; margin-top: 10px;">Uncover trends, optimize workflows, and improve outcomes through smart data. 📈</p>
-        </div>
-      </a>
-  
+    <div style="margin-bottom:15px;">
+      <label style="display:block;margin-bottom:5px;font-weight:600;color:#444;">Mobile Number</label>
+      <input type="tel" id="mobile" required placeholder="Enter mobile number" pattern="[0-9]{10}" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
     </div>
-  </div>
-  
-<!-- Uploading the Health Records -->
-<div style="max-width: 1000px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
-
-  <!-- Form Heading -->
-  <h2 style="color: #007BFF; margin-bottom: 25px;">📤 Upload New Health Record</h2>
-
-  <!-- Upload Form -->
-  <form id="recordForm" style="margin-bottom: 35px;">
-    <!-- Aadhaar Card -->
-    <label for="aadhaar" style="font-weight: bold;">Aadhaar Number:</label><br>
-    <input type="text" id="aadhaar" required maxlength="12" pattern="\d{12}"
-           placeholder="Enter 12-digit Aadhaar Number"
-           style="width: 100%; padding: 12px; margin: 10px 0 20px; border: 1px solid #ccc; border-radius: 6px;"><br>
-
-    <!-- Description -->
-    <label for="description" style="font-weight: bold;">Description:</label><br>
-    <input type="text" id="description" required placeholder="e.g., Blood Test Report"
-           style="width: 100%; padding: 12px; margin: 10px 0 20px; border: 1px solid #ccc; border-radius: 6px;"><br>
-
-    <!-- File -->
-    <label for="file" style="font-weight: bold;">Select File:</label><br>
-    <input type="file" id="file" required
-           style="padding: 10px; margin-bottom: 25px;"><br>
-
-    <!-- Submit -->
-    <button type="submit"
-            style="background-color: #28a745; color: white; padding: 12px 24px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer;">
-      Upload Record
-    </button>
+    <div style="margin-bottom:15px;">
+      <label style="display:block;margin-bottom:5px;font-weight:600;color:#444;">Email Address</label>
+      <input type="email" id="email" required placeholder="Enter your email" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    </div>
+    <div style="margin-bottom:15px;">
+      <label style="display:block;margin-bottom:5px;font-weight:600;color:#444;">Preferred Test Date</label>
+      <input type="date" id="testDate" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+    </div>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;margin-bottom:5px;font-weight:600;color:#444;">Test Type</label>
+      <select id="testType" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+        <option value="">Select a Test</option>
+        <option value="CBC">CBC (Complete Blood Count)</option>
+        <option value="Thyroid">Thyroid Profile</option>
+        <option value="Lipid">Lipid Profile</option>
+        <option value="Sugar">Blood Sugar Test</option>
+        <option value="Vitamin">Vitamin D & B12</option>
+      </select>
+    </div>
+    <button type="submit" id="submitButton" style="width:100%;padding:12px;background:#d62828;color:#fff;font-weight:bold;border:none;border-radius:6px;cursor:pointer;">✅ Submit Request</button>
   </form>
 
-  <!-- Search Bar -->
-  <input type="text" id="search" placeholder="🔍 Search by description..."
-         style="width: 100%; padding: 12px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 6px;">
+  <script>
+    document.getElementById('bloodTestForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
 
-  <!-- Records Table -->
-  <div style="overflow-x: auto;">
-    <table style="width: 100%; border-collapse: collapse;">
-      <thead>
-        <tr style="background-color: #007BFF; color: white;">
-          <th style="padding: 12px;">Aadhaar</th>
-          <th style="padding: 12px;">Description</th>
-          <th style="padding: 12px;">File</th>
-          <th style="padding: 12px;">Date</th>
-        </tr>
-      </thead>
-      <tbody id="recordTable"></tbody>
-    </table>
+      const submitButton = document.getElementById('submitButton');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+
+      const data = {
+        fullName: document.getElementById('fullName').value.trim(),
+        mobile: document.getElementById('mobile').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        testDate: document.getElementById('testDate').value,
+        testType: document.getElementById('testType').value
+      };
+
+      if (!data.fullName || !data.mobile || !data.email || !data.testDate || !data.testType) {
+        alert('⚠️ Please fill all fields.');
+        submitButton.disabled = false;
+        submitButton.textContent = '✅ Submit Request';
+        return;
+      }
+
+      try {
+        const res = await fetch('http://localhost:5000/api/bloodtest', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const result = await res.json();
+        alert('✅ Submitted successfully!');
+        document.getElementById('bloodTestForm').reset();
+      } catch (err) {
+        console.error(err);
+        alert('❌ Submission failed!');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = '✅ Submit Request';
+      }
+    });
+  </script>
+
+
+
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Script -->
+<!-- Script to handle form (optional for now) -->
 <script>
-  const recordForm = document.getElementById('recordForm');
-  const recordTable = document.getElementById('recordTable');
-  const searchInput = document.getElementById('search');
-  let records = [];
+  function submitBloodTest(e) {
+    e.preventDefault();
+    const name = document.getElementById("fullName").value;
+    alert("Thank you, " + name + "! Your blood test request has been submitted.");
+    document.getElementById("bloodTestForm").reset();
+  }
+</script>
 
-  recordForm.addEventListener('submit', function (e) {
+
+<!--section-5 Compact Telemedicine Section -->
+<section style="padding:60px 5%;background:linear-gradient(135deg,#0056d2,#003366);color:white;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('https://images.unsplash.com/photo-1581094794329-c811e2588d9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;opacity:0.1;"></div>
+  
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:40px;">
+    <div style="flex:1;min-width:300px;">
+      <h2 style="font-size:32px;font-weight:700;margin-bottom:15px;line-height:1.3;">Virtual Healthcare <span style="display:inline-block;position:relative;">When You Need It<span style="position:absolute;bottom:3px;left:0;width:100%;height:6px;background:rgba(255,255,255,0.3);z-index:-1;"></span></span></h2>
+      <p style="font-size:16px;opacity:0.9;margin-bottom:20px;line-height:1.6;">Connect with our board-certified physicians from the comfort of your home through our secure telemedicine platform.</p>
+      
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;">
+        <div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:12px;border-radius:8px;flex:1;min-width:120px;">
+          <div style="font-size:20px;margin-bottom:8px;"><i class="fas fa-user-md"></i></div>
+          <h3 style="margin:0 0 5px;font-size:14px;">100+ Specialists</h3>
+          <p style="margin:0;font-size:12px;opacity:0.8;">15+ specialties</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:12px;border-radius:8px;flex:1;min-width:120px;">
+          <div style="font-size:20px;margin-bottom:8px;"><i class="fas fa-clock"></i></div>
+          <h3 style="margin:0 0 5px;font-size:14px;">24/7 Availability</h3>
+          <p style="margin:0;font-size:12px;opacity:0.8;">Always here</p>
+        </div>
+      </div>
+      
+      <button style="padding:12px 25px;background:white;color:#0056d2;border:none;border-radius:25px;cursor:pointer;font-weight:600;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;font-size:14px;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <i class="fas fa-video"></i> Start Virtual Visit
+      </button>
+    </div>
+    
+    <div style="flex:1;min-width:300px;position:relative;">
+      <div style="background:white;border-radius:15px;overflow:hidden;box-shadow:0 15px 30px rgba(0,0,0,0.15);transform:perspective(1000px) rotateY(-10deg);transition:all 0.5s;" onmouseover="this.style.transform='perspective(1000px) rotateY(0deg)'" onmouseout="this.style.transform='perspective(1000px) rotateY(-10deg)'">
+        <img src="images/hr_telemedicine.png" alt="Telemedicine" style="width:100%;height:200px;object-fit:cover;display:block;">
+        <div style="padding:15px;background:#f8f9fa;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:40px;height:40px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div>
+              <h3 style="margin:0 0 3px;color:#333;font-size:16px;">Dr. Priya Sharma</h3>
+              <p style="margin:0;color:#666;font-size:12px;">Cardiologist | 12+ years</p>
+            </div>
+          </div>
+          <div style="background:white;border-radius:8px;padding:10px;box-shadow:0 3px 10px rgba(0,0,0,0.05);">
+            <p style="margin:0 0 8px;color:#333;font-size:12px;">"Same quality care remotely as in-person."</p>
+            <div style="display:flex;gap:3px;">
+              <i class="fas fa-star" style="color:#ffc107;font-size:12px;"></i>
+              <i class="fas fa-star" style="color:#ffc107;font-size:12px;"></i>
+              <i class="fas fa-star" style="color:#ffc107;font-size:12px;"></i>
+              <i class="fas fa-star" style="color:#ffc107;font-size:12px;"></i>
+              <i class="fas fa-star" style="color:#ffc107;font-size:12px;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--section-6 AI-Powered Diagnostics with 6 Cards -->
+<section style="padding:80px 5%;background:white;position:relative;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <h2 style="font-size:36px;font-weight:700;color:#0056d2;margin-bottom:15px;">🤖 AI-Powered Diagnostics</h2>
+      <p style="font-size:16px;color:#666;max-width:700px;margin:0 auto;">Harnessing artificial intelligence for faster, more accurate diagnoses and personalized treatment plans</p>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;justify-content:center;">
+      <!-- Card 1 - Blue -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#f0f7ff';this.style.borderColor='#0056d2';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Predictive Analytics</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">Our AI analyzes health data to predict potential risks before symptoms appear.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Early disease detection
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Personalized risk assessment
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Card 2 - Pink -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#fff0f6';this.style.borderColor='#d63384';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Medical Imaging</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">AI assists radiologists in detecting abnormalities with 98% accuracy.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Faster diagnosis
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Reduced human error
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Card 3 - Green -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#f0fff4';this.style.borderColor='#28a745';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-dna"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Genomic Analysis</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">AI-powered genomic sequencing for personalized medicine approaches.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Drug response prediction
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Disease risk profiling
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Card 4 - Orange -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#fff8e6';this.style.borderColor='#fd7e14';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#fd7e14;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Remote Monitoring</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">AI analyzes wearable data for real-time health insights.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#fd7e14;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Continuous tracking
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#fd7e14;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Alert system
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Card 5 - Purple -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#f8f0ff';this.style.borderColor='#6f42c1';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#6f42c1;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Pathology Analysis</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">AI-enhanced pathology for faster and more accurate tissue analysis.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#6f42c1;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Digital slide scanning
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#6f42c1;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Cancer detection
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Card 6 - Teal -->
+      <div style="background:#f8f9fa;border-radius:15px;padding:30px;position:relative;overflow:hidden;transition:all 0.5s;border:1px solid #eee;" 
+           onmouseover="this.style.background='#e6fcf5';this.style.borderColor='#20c997';this.style.transform='translateY(-8px)'" 
+           onmouseout="this.style.background='#f8f9fa';this.style.borderColor='#eee';this.style.transform='none'">
+        <div style="width:60px;height:60px;background:#20c997;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:white;font-size:24px;">
+          <i class="fas fa-procedures"></i>
+        </div>
+        <h3 style="font-size:20px;color:#333;margin-bottom:15px;">Surgical Planning</h3>
+        <p style="color:#666;line-height:1.6;margin-bottom:15px;font-size:14px;">3D modeling and simulation for precision surgical interventions.</p>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#20c997;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Pre-operative planning
+          </li>
+          <li style="margin-bottom:8px;position:relative;padding-left:25px;color:#555;font-size:14px;">
+            <div style="position:absolute;left:0;top:2px;width:18px;height:18px;background:#20c997;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+              <i class="fas fa-check"></i>
+            </div>
+            Risk minimization
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--section-7 Health Packages Section -->
+<section style="padding:80px 5%;background:linear-gradient(135deg,#f8f9fa,#e9ecef);position:relative;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="font-size:32px;color:#0056d2;margin-bottom:40px;text-align:center;">🩺 Health Packages</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;">
+      <!-- Blood Test Packages -->
+      <div style="background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="background:#d63384;padding:20px;text-align:center;color:white;">
+          <h3 style="margin:0;font-size:20px;">🧪 Blood Test Packages</h3>
+        </div>
+        <div style="padding:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eee;" onclick="togglePackageDetail('cbc')">
+            <div style="font-weight:600;color:#333;">Complete Blood Count (CBC)</div>
+            <div style="color:#d63384;font-weight:600;">₹400</div>
+          </div>
+          <div id="cbc" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            Includes Red Blood Cells, White Blood Cells, Hemoglobin, Hematocrit, Platelet Count.
+            <button onclick="openPopup('Complete Blood Count (CBC)', '400')" style="display:block;margin-top:10px;padding:8px 15px;background:#d63384;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#b52b7a'" onmouseout="this.style.background='#d63384'">Book Now</button>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eee;" onclick="togglePackageDetail('sugar')">
+            <div style="font-weight:600;color:#333;">Fasting Blood Sugar (FBS)</div>
+            <div style="color:#d63384;font-weight:600;">₹250</div>
+          </div>
+          <div id="sugar" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            Helps diagnose diabetes and monitor glucose levels.
+            <button onclick="openPopup('Fasting Blood Sugar (FBS)', '250')" style="display:block;margin-top:10px;padding:8px 15px;background:#d63384;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#b52b7a'" onmouseout="this.style.background='#d63384'">Book Now</button>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eee;" onclick="togglePackageDetail('lipid')">
+            <div style="font-weight:600;color:#333;">Lipid Profile</div>
+            <div style="color:#d63384;font-weight:600;">₹700</div>
+          </div>
+          <div id="lipid" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            Measures total cholesterol, LDL, HDL, triglycerides for heart risk assessment.
+            <button onclick="openPopup('Lipid Profile', '700')" style="display:block;margin-top:10px;padding:8px 15px;background:#d63384;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#b52b7a'" onmouseout="this.style.background='#d63384'">Book Now</button>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;" onclick="togglePackageDetail('thyroid')">
+            <div style="font-weight:600;color:#333;">Thyroid Panel (T3, T4, TSH)</div>
+            <div style="color:#d63384;font-weight:600;">₹550</div>
+          </div>
+          <div id="thyroid" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            Evaluates thyroid function, detects hypothyroidism or hyperthyroidism.
+            <button onclick="openPopup('Thyroid Panel (T3, T4, TSH)', '550')" style="display:block;margin-top:10px;padding:8px 15px;background:#d63384;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#b52b7a'" onmouseout="this.style.background='#d63384'">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health Checkup Packages -->
+      <div style="background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="background:#28a745;padding:20px;text-align:center;color:white;">
+          <h3 style="margin:0;font-size:20px;">🩺 Health Checkup Packages</h3>
+        </div>
+        <div style="padding:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eee;" onclick="togglePackageDetail('basic')">
+            <div style="font-weight:600;color:#333;">Basic Health Package</div>
+            <div style="color:#28a745;font-weight:600;">₹999</div>
+          </div>
+          <div id="basic" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            <ul style="margin:0 0 10px 20px;padding:0;">
+              <li style="margin-bottom:5px;">Complete Blood Count (CBC)</li>
+              <li style="margin-bottom:5px;">Blood Sugar (Fasting)</li>
+              <li style="margin-bottom:5px;">Urine Routine</li>
+            </ul>
+            <button onclick="openPopup('Basic Health Package', '999')" style="display:block;margin-top:10px;padding:8px 15px;background:#28a745;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#218838'" onmouseout="this.style.background='#28a745'">Book Package</button>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #eee;" onclick="togglePackageDetail('advanced')">
+            <div style="font-weight:600;color:#333;">Advanced Health Package</div>
+            <div style="color:#28a745;font-weight:600;">₹1999</div>
+          </div>
+          <div id="advanced" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            <ul style="margin:0 0 10px 20px;padding:0;">
+              <li style="margin-bottom:5px;">CBC + Lipid Profile</li>
+              <li style="margin-bottom:5px;">Liver & Kidney Function Test</li>
+              <li style="margin-bottom:5px;">Thyroid Panel (T3, T4, TSH)</li>
+            </ul>
+            <button onclick="openPopup('Advanced Health Package', '1999')" style="display:block;margin-top:10px;padding:8px 15px;background:#28a745;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#218838'" onmouseout="this.style.background='#28a745'">Book Package</button>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:15px 0;" onclick="togglePackageDetail('executive')">
+            <div style="font-weight:600;color:#333;">Executive Full Body Check</div>
+            <div style="color:#28a745;font-weight:600;">₹3499</div>
+          </div>
+          <div id="executive" style="display:none;padding:15px 0;color:#666;line-height:1.6;">
+            <ul style="margin:0 0 10px 20px;padding:0;">
+              <li style="margin-bottom:5px;">All tests in Advanced Package</li>
+              <li style="margin-bottom:5px;">ECG + Chest X-Ray</li>
+              <li style="margin-bottom:5px;">Vitamin D & B12</li>
+            </ul>
+            <button onclick="openPopup('Executive Full Body Check', '3499')" style="display:block;margin-top:10px;padding:8px 15px;background:#28a745;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#218838'" onmouseout="this.style.background='#28a745'">Book Package</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Form (corrected to only show when triggered) -->
+  <div id="bookingPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:1000;">
+    <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:5px;padding-bottom:30px;height:100%;">
+      <div style="background:white;border-radius:15px;width:90%;max-width:400px;padding:20px 25px;box-shadow:0 5px 30px rgba(0,0,0,0.2);position:relative;margin-top:20px;">
+        <button onclick="closePopup()" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:22px;cursor:pointer;color:#666;">&times;</button>
+        <h3 style="margin-top:0;margin-bottom:15px;color:#0056d2;font-size:20px;">Book <span id="packageName"></span></h3>
+        <div style="background:#f8f9fa;padding:12px;border-radius:6px;margin:12px 0;text-align:center;">
+          <div style="font-size:15px;color:#555;">Package Price</div>
+          <div style="font-size:18px;font-weight:700;color:#28a745;">₹<span id="packagePrice">0</span></div>
+        </div>
+<!-- <form id="bookingForm" style="margin-top:15px;" onsubmit="handleSubmit(event)">
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Full Name</label>
+    <input type="text" name="name" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Email</label>
+    <input type="email" name="email" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Phone Number</label>
+    <input type="tel" name="phone" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Preferred Date</label>
+    <input type="date" name="date" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:18px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Preferred Time</label>
+    <select name="time" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+      <option value="">Select a time slot</option>
+      <option value="morning">Morning (8AM - 11AM)</option>
+      <option value="afternoon">Afternoon (2PM - 4PM)</option>
+      <option value="evening">Evening (5PM - 7PM)</option>
+    </select>
+  </div>
+  <button type="submit" style="width:100%;padding:11px;background:#0056d2;color:white;border:none;border-radius:5px;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#0040a1'" onmouseout="this.style.background='#0056d2'">Confirm Booking</button>
+</form>
+
+<script>
+  function handleSubmit(e) {
     e.preventDefault();
 
-    const aadhaar = document.getElementById('aadhaar').value.trim();
-    const description = document.getElementById('description').value.trim();
-    const fileInput = document.getElementById('file');
-    const file = fileInput.files[0];
-    const date = new Date().toLocaleString();
+    const form = e.target;
+    const fullName = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const date = form.date.value;
+    const time = form.time.value;
 
-    // Aadhaar validation
-    if (!/^\d{12}$/.test(aadhaar)) {
-      alert("Please enter a valid 12-digit Aadhaar number.");
+    const packageName = document.getElementById('packageName').textContent;
+    const packagePrice = document.getElementById('packagePrice').textContent;
+
+    const formData = {
+      fullName,
+      email,
+      phone,
+      preferredDate: date,
+      preferredTime: time,
+      packageName,
+      packagePrice
+    };
+
+    fetch("http://localhost:3000/api/hr_packages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error("Network error");
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById('confirmedPackage').textContent = packageName;
+      document.getElementById('confirmedPrice').textContent = packagePrice;
+      document.getElementById('bookingPopup').style.display = 'none';
+      document.getElementById('confirmationMessage').style.display = 'flex';
+      document.body.style.overflow = 'auto';
+      form.reset();
+    })
+    .catch(err => {
+      alert("❌ Booking failed. Try again.");
+      console.error(err);
+    });
+  }
+</script>
+ -->
+
+
+ <form id="bookingForm" style="margin-top:15px;" onsubmit="handleSubmit(event)">
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Full Name</label>
+    <input type="text" name="name" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Email</label>
+    <input type="email" name="email" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Phone Number</label>
+    <input type="tel" name="phone" id="phoneInput" required pattern="[6-9]{1}[0-9]{9}" title="Phone number must start with 6-9 and be exactly 10 digits" maxlength="10" style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:12px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Preferred Date</label>
+    <input type="date" name="date" id="preferredDate" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+  </div>
+  <div style="margin-bottom:18px;">
+    <label style="display:block;margin-bottom:4px;font-weight:600;color:#555;">Preferred Time</label>
+    <select name="time" required style="width:100%;padding:9px;border:1px solid #ddd;border-radius:5px;font-size:15px;">
+      <option value="">Select a time slot</option>
+      <option value="morning">Morning (8AM - 11AM)</option>
+      <option value="afternoon">Afternoon (2PM - 4PM)</option>
+      <option value="evening">Evening (5PM - 7PM)</option>
+    </select>
+  </div>
+  <button type="submit" style="width:100%;padding:11px;background:#0056d2;color:white;border:none;border-radius:5px;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#0040a1'" onmouseout="this.style.background='#0056d2'">Confirm Booking</button>
+</form>
+
+<script>
+  // Disable past dates in the date input
+  const dateInput = document.getElementById('preferredDate');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const date = form.date.value;
+    const time = form.time.value;
+
+    // Validate phone using regex again in JS
+    const phoneRegex = /^[6-9]{1}[0-9]{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("❌ Phone number must start with 6, 7, 8, or 9 and be exactly 10 digits.");
       return;
     }
 
-    if (!file) return;
+    const packageName = document.getElementById('packageName')?.textContent || '';
+    const packagePrice = document.getElementById('packagePrice')?.textContent || '';
 
-    // Store record
-    records.push({
-      aadhaar,
-      description,
-      fileName: file.name,
-      date
-    });
+    const formData = {
+      fullName,
+      email,
+      phone,
+      preferredDate: date,
+      preferredTime: time,
+      packageName,
+      packagePrice
+    };
 
-    // Reset form
-    fileInput.value = '';
-    document.getElementById('description').value = '';
-    document.getElementById('aadhaar').value = '';
-
-    renderTable(records);
-  });
-
-  function renderTable(data) {
-    recordTable.innerHTML = '';
-    data.forEach(record => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td style="padding: 12px; border-bottom: 1px solid #ccc;">${record.aadhaar}</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ccc;">${record.description}</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ccc;">${record.fileName}</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ccc;">${record.date}</td>
-      `;
-      recordTable.appendChild(row);
+    fetch("http://localhost:5000/api/hr_packages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error("Network error");
+      return response.json();
+    })
+    .then(data => {
+      if (document.getElementById('confirmedPackage')) {
+        document.getElementById('confirmedPackage').textContent = packageName;
+        document.getElementById('confirmedPrice').textContent = packagePrice;
+      }
+      if (document.getElementById('bookingPopup')) document.getElementById('bookingPopup').style.display = 'none';
+      if (document.getElementById('confirmationMessage')) document.getElementById('confirmationMessage').style.display = 'flex';
+      document.body.style.overflow = 'auto';
+      form.reset();
+    })
+    .catch(err => {
+      alert("❌ Booking failed. Try again.");
+      console.error(err);
     });
   }
+</script>
 
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    const filtered = records.filter(r =>
-      r.description.toLowerCase().includes(query) ||
-      r.aadhaar.includes(query)
-    );
-    renderTable(filtered);
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div id="confirmationMessage" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
+    <div style="background:white;border-radius:15px;width:90%;max-width:400px;padding:30px;text-align:center;box-shadow:0 5px 30px rgba(0,0,0,0.2);">
+      <div style="font-size:60px;color:#28a745;margin-bottom:20px;">✓</div>
+      <h3 style="margin-top:0;color:#0056d2;font-size:22px;">Booking Confirmed!</h3>
+      <p style="color:#666;margin-bottom:15px;">Thank you for booking <span id="confirmedPackage"></span>.</p>
+      <p style="color:#666;margin-bottom:25px;font-weight:600;">Amount: ₹<span id="confirmedPrice">0</span></p>
+      <button onclick="closeConfirmation()" style="padding:10px 25px;background:#0056d2;color:white;border:none;border-radius:5px;font-size:16px;font-weight:600;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#0040a1'" onmouseout="this.style.background='#0056d2'">Close</button>
+    </div>
+  </div>
+
+  <script>
+  function togglePackageDetail(id) {
+    const element = document.getElementById(id);
+    if (element.style.display === 'none') {
+      element.style.display = 'block';
+    } else {
+      element.style.display = 'none';
+    }
+  }
+
+  function openPopup(packageName, packagePrice) {
+    document.getElementById('packageName').textContent = packageName;
+    document.getElementById('packagePrice').textContent = packagePrice;
+    document.getElementById('bookingPopup').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    document.getElementById('bookingPopup').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  function closeConfirmation() {
+    document.getElementById('confirmationMessage').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const packageName = document.getElementById('packageName').textContent;
+    const packagePrice = document.getElementById('packagePrice').textContent;
+    document.getElementById('confirmedPackage').textContent = packageName;
+    document.getElementById('confirmedPrice').textContent = packagePrice;
+    document.getElementById('bookingPopup').style.display = 'none';
+    document.getElementById('confirmationMessage').style.display = 'flex';
+    this.reset();
+  });
+</script>
+</section>
+
+
+<!--section-8 Donation Section -->
+
+<section style="padding:80px 5%;background:white;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="font-size:32px;color:#0056d2;margin-bottom:40px;text-align:center;">❤️ Make a Difference</h2>
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:30px;margin-bottom:50px;">
+      
+      <!-- Blood Donation -->
+      <div style="position:relative;background:#fff5f5;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(214,51,132,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:150px;background:url('images/hr_blood_test.png') center/cover;position:relative;">
+          <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(214,51,132,0.7),rgba(214,51,132,0.9));"></div>
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:22px;">Blood Donation</h3>
+        </div>
+        <div style="padding:20px;">
+          <p style="color:#666;line-height:1.6;margin-bottom:20px;">Donate blood and help save lives in emergency and surgical cases.</p>
+          <button onclick="openDonationPopup('Blood Donation')" style="width:100%;padding:12px;background:#d63384;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;font-weight:600;" onmouseover="this.style.background='#b52b7a'" onmouseout="this.style.background='#d63384'">Register as Donor</button>
+        </div>
+      </div>
+
+      <!-- Organ Donation -->
+      <div style="position:relative;background:#e6ffed;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(40,167,69,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:150px;background:url('images/hr_organ_donor.png') center/cover;position:relative;">
+          <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(40,167,69,0.7),rgba(40,167,69,0.9));"></div>
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:22px;">Organ Donation</h3>
+        </div>
+        <div style="padding:20px;">
+          <p style="color:#666;line-height:1.6;margin-bottom:20px;">Become an organ donor and give someone the gift of life after life.</p>
+          <button onclick="openDonationPopup('Organ Donation')" style="width:100%;padding:12px;background:#28a745;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;font-weight:600;" onmouseover="this.style.background='#218838'" onmouseout="this.style.background='#28a745'">Pledge Now</button>
+        </div>
+      </div>
+
+      <!-- Hair Donation -->
+      <div style="position:relative;background:#fff8e6;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(253,126,20,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:150px;background:url('images/hr_hair-donar.png') center/cover;position:relative;">
+          <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(253,126,20,0.7),rgba(253,126,20,0.9));"></div>
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:22px;">Hair Donation</h3>
+        </div>
+        <div style="padding:20px;">
+          <p style="color:#666;line-height:1.6;margin-bottom:20px;">Donate your hair to create wigs for children & adults fighting cancer.</p>
+          <button onclick="openDonationPopup('Hair Donation')" style="width:100%;padding:12px;background:#fd7e14;color:white;border:none;border-radius:30px;cursor:pointer;transition:all 0.3s;font-weight:600;" onmouseover="this.style.background='#e06d10'" onmouseout="this.style.background='#fd7e14'">Donate Hair</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Popup Donation Form -->
+<div id="donationPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:white;padding:30px;border-radius:10px;max-width:500px;width:90%;position:relative;">
+    <button onclick="closeDonationPopup()" style="position:absolute;top:10px;right:15px;font-size:20px;background:none;border:none;cursor:pointer;">&times;</button>
+    <h2 style="margin-bottom:20px;color:#0056d2;text-align:center;">Donation Form</h2>
+    <form onsubmit="submitDonationForm(event)">
+      <input type="hidden" id="donationType" name="donationType">
+      <div style="margin-bottom:15px;">
+        <label style="font-weight:600;">Full Name</label>
+        <input type="text" id="donorName" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+      </div>
+      <div style="margin-bottom:15px;">
+        <label style="font-weight:600;">Mobile Number</label>
+        <input type="tel" id="donorMobile" required pattern="[6-9]{1}[0-9]{9}" maxlength="10" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+      </div>
+      <div style="margin-bottom:15px;">
+        <label style="font-weight:600;">Email Address</label>
+        <input type="email" id="donorEmail" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;">
+      </div>
+      <div style="margin-bottom:20px;">
+        <label style="font-weight:600;">Message / Comments</label>
+        <textarea id="donorMessage" rows="3" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;"></textarea>
+      </div>
+      <button type="submit" style="width:100%;padding:12px;background:#0056d2;color:white;border:none;border-radius:6px;font-size:16px;font-weight:600;cursor:pointer;">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Script for Popup and API -->
+<script>
+  function openDonationPopup(type) {
+    document.getElementById('donationType').value = type;
+    document.getElementById('donationPopup').style.display = 'flex';
+  }
+
+  function closeDonationPopup() {
+    document.getElementById('donationPopup').style.display = 'none';
+  }
+
+  async function submitDonationForm(event) {
+    event.preventDefault();
+    const data = {
+      name: document.getElementById('donorName').value.trim(),
+      mobile: document.getElementById('donorMobile').value.trim(),
+      email: document.getElementById('donorEmail').value.trim(),
+      message: document.getElementById('donorMessage').value.trim(),
+      donationType: document.getElementById('donationType').value
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/hr_donations", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) throw new Error("Failed to submit donation.");
+      alert("✅ Donation submitted successfully!");
+      closeDonationPopup();
+      event.target.reset();
+    } catch (err) {
+      alert("❌ " + err.message);
+      console.error(err);
+    }
+  }
+</script>
+
+
+<!--section-9 Benefits Section -->
+<section id="benefits" style="padding:4rem 2rem;background:#f1f5f9;width:100%;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:2.5rem;margin-bottom:3rem;position:relative;display:inline-block;left:50%;transform:translateX(-50%);">
+      Transformative <span style="color:#e74c3c;">Benefits</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;">
+      
+      <div style="background:white;padding:2rem;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#e74c3c,#3498db);"></div>
+        <h3 style="margin-top:0;color:#2c3e50;">For Patients</h3>
+        <ul style="padding-left:1.2rem;">
+          <li style="margin-bottom:0.8rem;">Complete medical history at your fingertips</li>
+          <li style="margin-bottom:0.8rem;">Reduce duplicate tests and medical errors</li>
+          <li style="margin-bottom:0.8rem;">Better prepared for doctor visits</li>
+          <li style="margin-bottom:0.8rem;">Track medications and allergies</li>
+          <li style="margin-bottom:0.8rem;">Share records securely with providers</li>
+        </ul>
+      </div>
+
+      <div style="background:white;padding:2rem;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#3498db,#2ecc71);"></div>
+        <h3 style="margin-top:0;color:#2c3e50;">For Healthcare Providers</h3>
+        <ul style="padding-left:1.2rem;">
+          <li style="margin-bottom:0.8rem;">Comprehensive patient history</li>
+          <li style="margin-bottom:0.8rem;">Reduced administrative work</li>
+          <li style="margin-bottom:0.8rem;">Improved diagnosis accuracy</li>
+          <li style="margin-bottom:0.8rem;">Streamlined prescription process</li>
+          <li style="margin-bottom:0.8rem;">Better coordinated care</li>
+        </ul>
+      </div>
+
+      <div style="background:white;padding:2rem;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#2ecc71,#f39c12);"></div>
+        <h3 style="margin-top:0;color:#2c3e50;">For Families</h3>
+        <ul style="padding-left:1.2rem;">
+          <li style="margin-bottom:0.8rem;">Manage children's health records</li>
+          <li style="margin-bottom:0.8rem;">Care for aging parents</li>
+          <li style="margin-bottom:0.8rem;">Track family health history</li>
+          <li style="margin-bottom:0.8rem;">Shared access for caregivers</li>
+          <li style="margin-bottom:0.8rem;">Emergency preparedness</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- New Section 10: Corporate Wellness Programs -->
+<section style="padding:100px 5%;background:linear-gradient(135deg,#f8f9fa,#e9ecef);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;opacity:0.03;"></div>
+
+  <div style="width:100%;margin:0 auto;position:relative;z-index:1;">
+    <div style="text-align:center;margin-bottom:60px;">
+      <h2 style="font-size:42px;font-weight:700;color:#0056d2;margin-bottom:15px;">💼 Corporate Wellness Programs</h2>
+      <p style="font-size:18px;color:#666;max-width:700px;margin:0 auto;">Comprehensive workplace health solutions to boost productivity, reduce absenteeism, and improve employee satisfaction</p>
+    </div>
+
+    <div style="display:flex;width:100%;justify-content:space-between;gap:30px;">
+      <div style="flex:1;background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.5s;position:relative;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:200px;background:url('images/hr_healthrist_assisment.png') center/cover;position:relative;">
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:24px;text-shadow:1px 1px 4px rgba(0,0,0,0.4);">Health Risk Assessments</h3>
+        </div>
+        <div style="padding:30px;">
+          <p style="color:#666;line-height:1.7;margin-bottom:25px;">Comprehensive biometric screenings and health questionnaires to identify risk factors and create personalized wellness plans.</p>
+          <ul style="margin:0 0 25px 0;padding:0;list-style:none;">
+            <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+              <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                <i class="fas fa-check"></i></div>On-site health screenings</li><li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+                  <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                    <i class="fas fa-check"></i></div>Comprehensive health reports</li>
+                    <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+                      <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                        <i class="fas fa-check"></i></div>Personalized recommendations</li>
+                      </ul>
+                    </div>
+                  </div>
+
+      <div style="flex:1;background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.5s;position:relative;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:200px;background:url('images/hr_mentalhealth_support.png') center/cover;position:relative;">
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:24px;text-shadow:1px 1px 4px rgba(0,0,0,0.4);">Mental Health Support</h3>
+        </div>
+        <div style="padding:30px;">
+          <p style="color:#666;line-height:1.7;margin-bottom:25px;">Confidential counseling services, stress management workshops, and mental health resources to support employee wellbeing.</p>
+          <ul style="margin:0 0 25px 0;padding:0;list-style:none;">
+            <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+              <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                <i class="fas fa-check"></i>
+              </div>Licensed therapists</li>
+              <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+                <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                  <i class="fas fa-check"></i></div>Stress reduction programs</li>
+                  <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;"><div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#d63384;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                    <i class="fas fa-check"></i>
+                  </div>24/7 crisis support</li>
+                </ul>
+              </div>
+            </div>
+
+      <div style="flex:1;background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:all 0.5s;position:relative;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+        <div style="height:200px;background:url('images/hr_fitness_nutrition.png') center/cover;position:relative;">
+          <h3 style="position:absolute;bottom:20px;left:20px;margin:0;color:white;font-size:24px;text-shadow:1px 1px 4px rgba(0,0,0,0.4);">Fitness & Nutrition</h3>
+        </div>
+        <div style="padding:30px;">
+          <p style="color:#666;line-height:1.7;margin-bottom:25px;">On-site fitness classes, nutritional counseling, and wellness challenges to promote healthy lifestyles among employees.</p><ul style="margin:0 0 25px 0;padding:0;list-style:none;">
+            <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+              <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                <i class="fas fa-check"></i>
+              </div>Customized fitness plans</li>
+              <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+                <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                  <i class="fas fa-check"></i>
+                </div>Dietitian consultations</li>
+                <li style="margin-bottom:10px;position:relative;padding-left:30px;color:#555;">
+                  <div style="position:absolute;left:0;top:2px;width:20px;height:20px;background:#28a745;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px;">
+                    <i class="fas fa-check"></i>
+                  </div>Wellness incentive programs</li>
+                </ul>
+              </div>
+            </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upload Records Section -->
+
+<section id="upload" style="padding:80px 0;background:white;">
+  <div style="width:80%;margin:0 auto;background:#f0f4f8;border-radius:15px;padding:40px;box-shadow:0 10px 25px rgba(0,0,0,0.06);position:relative;overflow:hidden;">
+    <!-- Decorative Circles -->
+    <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:#e1f5fe;border-radius:50%;z-index:0;"></div>
+    <div style="position:absolute;bottom:-30px;left:-30px;width:150px;height:150px;background:#ffebee;border-radius:50%;z-index:0;"></div>
+
+    <div style="position:relative;z-index:1;">
+      <h2 style="font-size:34px;color:#007bff;margin-bottom:30px;text-align:center;">📤 Upload Health Records</h2>
+<form id="recordForm" enctype="multipart/form-data" style="max-width:800px;margin:0 auto 40px;padding:30px;border:1px solid #e2e8f0;border-radius:10px;background:#f8fafc;box-shadow:0 2px 10px rgba(0,0,0,0.05);font-family:'Segoe UI',sans-serif;">
+  <!-- Aadhaar -->
+  <div style="margin-bottom:20px;">
+    <label for="aadhaar" style="display:block;margin-bottom:8px;font-weight:600;color:#2d3748;">Aadhaar Number</label>
+    <input type="text" id="aadhaar" name="aadhaar" required pattern="\d{12}" maxlength="12" placeholder="Enter 12-digit Aadhaar Number" style="width:100%;padding:12px;border:1px solid #cbd5e0;border-radius:6px;font-size:16px;">
+  </div>
+
+  <!-- Mobile -->
+  <div style="margin-bottom:20px;">
+    <label for="mobile" style="display:block;margin-bottom:8px;font-weight:600;color:#2d3748;">Mobile Number</label>
+    <input type="tel" id="mobile" name="mobile" required pattern="[6-9]\d{9}" maxlength="10" placeholder="Enter 10-digit Mobile Number" style="width:100%;padding:12px;border:1px solid #cbd5e0;border-radius:6px;font-size:16px;">
+  </div>
+
+  <!-- Email -->
+  <div style="margin-bottom:20px;">
+    <label for="email" style="display:block;margin-bottom:8px;font-weight:600;color:#2d3748;">Email Address</label>
+    <input type="email" id="email" name="email" required placeholder="Enter Email ID" style="width:100%;padding:12px;border:1px solid #cbd5e0;border-radius:6px;font-size:16px;">
+  </div>
+
+  <!-- Description -->
+  <div style="margin-bottom:20px;">
+    <label for="description" style="display:block;margin-bottom:8px;font-weight:600;color:#2d3748;">Description</label>
+    <input type="text" id="description" name="description" required placeholder="e.g., Blood Test Report" style="width:100%;padding:12px;border:1px solid #cbd5e0;border-radius:6px;font-size:16px;">
+  </div>
+
+  <!-- File Upload -->
+  <div style="margin-bottom:25px;">
+    <label for="file" style="display:block;margin-bottom:8px;font-weight:600;color:#2d3748;">Select File</label>
+    <input type="file" id="file" name="file" required style="width:100%;padding:12px;border:1px solid #cbd5e0;border-radius:6px;font-size:16px;background:white;">
+  </div>
+
+  <!-- Buttons -->
+  <div style="display:flex;gap:15px;">
+    <button type="submit" style="flex:1;padding:15px;background:#3182ce;color:white;font-size:16px;border:none;border-radius:8px;cursor:pointer;">Upload</button>
+    <button type="button" onclick="document.getElementById('recordForm').reset()" style="flex:1;padding:15px;background:#e53e3e;color:white;font-size:16px;border:none;border-radius:8px;cursor:pointer;">Cancel</button>
+  </div>
+</form>
+
+<!-- JavaScript to Submit Form -->
+<script>
+document.getElementById("recordForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = document.getElementById("recordForm");
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("http://localhost:5000/api/upload_record", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      alert("Record uploaded successfully!");
+      form.reset();
+    } else {
+      const errorText = await response.text();
+      alert("Error uploading record: " + errorText);
+    }
+  } catch (error) {
+    console.error("Upload error:", error);
+    alert("Something went wrong. Please try again.");
+  }
+});
+</script>
+
+
+
+
+      <!-- Records Table -->
+      <div style="overflow-x:auto;border-radius:8px;border:1px solid #ccc;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="background:#007bff;color:white;">
+              <th style="padding:12px;text-align:left;">Aadhaar</th>
+              <th style="padding:12px;text-align:left;">Mobile</th>
+              <th style="padding:12px;text-align:left;">Email</th>
+              <th style="padding:12px;text-align:left;">Description</th>
+              <th style="padding:12px;text-align:left;">File</th>
+              <th style="padding:12px;text-align:left;">Date</th>
+            </tr>
+          </thead>
+          <tbody id="recordTable" style="background:white;"></tbody>
+        </table>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+<!-- Chatbot -->
+<div id="chatbotIcon" style="position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 5px 20px rgba(0,0,0,0.2);z-index:1000;transition:all 0.3s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 5px 20px rgba(0,0,0,0.2)'">
+  <i class="fas fa-comment-dots" style="font-size:24px;color:white;"></i>
+</div>
+
+<div id="chatbotContainer" style="position:fixed;bottom:100px;right:30px;width:350px;background:white;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:1000;display:none;overflow:hidden;transform:translateY(20px);opacity:0;transition:all 0.3s;">
+  <div style="background:#0056d2;color:white;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <h3 style="margin:0;font-size:18px;">Hitaishi Health Assistant</h3>
+    <button id="closeChatbot" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">×</button>
+  </div>
+  
+  <div id="chatbotMessages" style="height:300px;overflow-y:auto;padding:20px;background:#f9f9f9;">
+    <div style="display:flex;margin-bottom:15px;">
+      <div style="width:30px;height:30px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;flex-shrink:0;">
+        <i class="fas fa-robot" style="color:white;font-size:14px;"></i>
+      </div>
+      <div style="background:white;padding:10px 15px;border-radius:0 15px 15px 15px;max-width:80%;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <p style="margin:0;color:#333;">Hello! How can I help you today?</p>
+      </div>
+    </div>
+  </div>
+  
+  <div style="padding:15px;border-top:1px solid #eee;display:flex;">
+    <input type="text" id="chatbotInput" placeholder="Type your message..." style="flex:1;padding:10px 15px;border:1px solid #ddd;border-radius:30px;outline:none;">
+    <button id="sendChatbotMessage" style="margin-left:10px;width:40px;height:40px;background:#0056d2;color:white;border:none;border-radius:50%;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='#0046b2'" onmouseout="this.style.background='#0056d2'">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Chatbot functionality
+  const chatbotIcon = document.getElementById('chatbotIcon');
+  const chatbotContainer = document.getElementById('chatbotContainer');
+  const closeChatbot = document.getElementById('closeChatbot');
+  const chatbotMessages = document.getElementById('chatbotMessages');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const sendChatbotMessage = document.getElementById('sendChatbotMessage');
+  
+  chatbotIcon.addEventListener('click', () => {
+    chatbotContainer.style.display = 'block';
+    setTimeout(() => {
+      chatbotContainer.style.transform = 'translateY(0)';
+      chatbotContainer.style.opacity = '1';
+    }, 10);
+  });
+  
+  closeChatbot.addEventListener('click', () => {
+    chatbotContainer.style.transform = 'translateY(20px)';
+    chatbotContainer.style.opacity = '0';
+    setTimeout(() => {
+      chatbotContainer.style.display = 'none';
+    }, 300);
+  });
+  
+  function addMessage(sender, message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.style.display = 'flex';
+    messageDiv.style.marginBottom = '15px';
+    
+    if (sender === 'user') {
+      messageDiv.style.justifyContent = 'flex-end';
+      messageDiv.innerHTML = `
+        <div style="background:#0056d2;color:white;padding:10px 15px;border-radius:15px 0 15px 15px;max-width:80%;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+          <p style="margin:0;">${message}</p>
+        </div>
+        <div style="width:30px;height:30px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-left:10px;flex-shrink:0;">
+          <i class="fas fa-user" style="color:#666;font-size:14px;"></i>
+        </div>
+      `;
+    } else {
+      messageDiv.style.justifyContent = 'flex-start';
+      messageDiv.innerHTML = `
+        <div style="width:30px;height:30px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;flex-shrink:0;">
+          <i class="fas fa-robot" style="color:white;font-size:14px;"></i>
+        </div>
+        <div style="background:white;padding:10px 15px;border-radius:0 15px 15px 15px;max-width:80%;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+          <p style="margin:0;color:#333;">${message}</p>
+        </div>
+      `;
+    }
+    
+    chatbotMessages.appendChild(messageDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }
+  
+  function sendMessage() {
+    const message = chatbotInput.value.trim();
+    if (message) {
+      addMessage('user', message);
+      chatbotInput.value = '';
+      
+      // Simulate bot response after a short delay
+      setTimeout(() => {
+        const responses = [
+          "I can help you with health record management, appointment booking, and general health information.",
+          "Our health records system provides secure storage and easy access to your medical history.",
+          "You can upload your health records through our secure portal for easy access by authorized healthcare providers.",
+          "Would you like me to guide you through our services or help you find specific information?",
+          "For emergency assistance, please contact our 24/7 helpline at +91 9876543210."
+        ];
+        
+        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+        addMessage('bot', randomResponse);
+      }, 1000);
+    }
+  }
+  
+  sendChatbotMessage.addEventListener('click', sendMessage);
+  chatbotInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
   });
 </script>
 
- <div style="display: flex; flex-wrap: wrap; background: #f8f9fa; padding: 40px 20px; gap: 20px; justify-content: center;">
-  
-    <!-- Blood Test Packages - Left -->
-    <section style="flex: 1 1 450px; background: #fff5f5; padding: 20px; border-radius: 10px;">
-      <div>
-        <h2 style="color: #d63384; text-align: center; margin-bottom: 30px;">🧪 Blood Test Packages</h2>
-  
-        <!-- Test List -->
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="toggleDetails('cbc')" style="margin: 0; cursor: pointer;">✔️ Complete Blood Count (CBC)</h3>
-          <div id="cbc" style="display: none; margin-top: 10px; color: #555;">
-            <p>Includes Red Blood Cells, White Blood Cells, Hemoglobin, Hematocrit, Platelet Count.</p>
-            <p><strong>Price:</strong> ₹400</p>
-            <button style="padding: 8px 15px; background: #28a745; color: white; border: none; border-radius: 5px;">Book Now</button>
-          </div>
-        </div>
-  
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="toggleDetails('sugar')" style="margin: 0; cursor: pointer;">✔️ Fasting Blood Sugar (FBS)</h3>
-          <div id="sugar" style="display: none; margin-top: 10px; color: #555;">
-            <p>Helps diagnose diabetes and monitor glucose levels.</p>
-            <p><strong>Price:</strong> ₹250</p>
-            <button style="padding: 8px 15px; background: #28a745; color: white; border: none; border-radius: 5px;">Book Now</button>
-          </div>
-        </div>
-  
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="toggleDetails('lipid')" style="margin: 0; cursor: pointer;">✔️ Lipid Profile</h3>
-          <div id="lipid" style="display: none; margin-top: 10px; color: #555;">
-            <p>Measures total cholesterol, LDL, HDL, triglycerides for heart risk assessment.</p>
-            <p><strong>Price:</strong> ₹700</p>
-            <button style="padding: 8px 15px; background: #28a745; color: white; border: none; border-radius: 5px;">Book Now</button>
-          </div>
-        </div>
-  
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="toggleDetails('thyroid')" style="margin: 0; cursor: pointer;">✔️ Thyroid Panel (T3, T4, TSH)</h3>
-          <div id="thyroid" style="display: none; margin-top: 10px; color: #555;">
-            <p>Evaluates thyroid function, detects hypothyroidism or hyperthyroidism.</p>
-            <p><strong>Price:</strong> ₹550</p>
-            <button style="padding: 8px 15px; background: #28a745; color: white; border: none; border-radius: 5px;">Book Now</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Health Checkup Packages - Right -->
-    <section style="flex: 1 1 450px; background: #e8f9f1; padding: 20px; border-radius: 10px;">
-      <div>
-        <h2 style="color: #20c997; text-align: center; margin-bottom: 30px;">🩺 Health Checkup Packages</h2>
-  
-        <!-- Basic -->
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="togglePackage('basic')" style="margin: 0; cursor: pointer;">🌿 Basic Health Package</h3>
-          <div id="basic" style="display: none; margin-top: 10px; color: #555;">
-            <ul style="margin: 0 0 10px 20px;">
-              <li>Complete Blood Count (CBC)</li>
-              <li>Blood Sugar (Fasting)</li>
-              <li>Urine Routine</li>
-            </ul>
-            <p><strong>Price:</strong> ₹999</p>
-            <button style="padding: 8px 15px; background: #20c997; color: white; border: none; border-radius: 5px;">Book Package</button>
-          </div>
-        </div>
-  
-        <!-- Advanced -->
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="togglePackage('advanced')" style="margin: 0; cursor: pointer;">🌟 Advanced Health Package</h3>
-          <div id="advanced" style="display: none; margin-top: 10px; color: #555;">
-            <ul style="margin: 0 0 10px 20px;">
-              <li>CBC + Lipid Profile</li>
-              <li>Liver & Kidney Function Test</li>
-              <li>Thyroid Panel (T3, T4, TSH)</li>
-            </ul>
-            <p><strong>Price:</strong> ₹1999</p>
-            <button style="padding: 8px 15px; background: #20c997; color: white; border: none; border-radius: 5px;">Book Package</button>
-          </div>
-        </div>
-  
-        <!-- Executive -->
-        <div style="border: 1px solid #ccc; border-radius: 10px; background: white; padding: 20px; margin-bottom: 15px;">
-          <h3 onclick="togglePackage('executive')" style="margin: 0; cursor: pointer;">💼 Executive Full Body Check</h3>
-          <div id="executive" style="display: none; margin-top: 10px; color: #555;">
-            <ul style="margin: 0 0 10px 20px;">
-              <li>All tests in Advanced Package</li>
-              <li>ECG + Chest X-Ray</li>
-              <li>Vitamin D & B12</li>
-            </ul>
-            <p><strong>Price:</strong> ₹3499</p>
-            <button style="padding: 8px 15px; background: #20c997; color: white; border: none; border-radius: 5px;">Book Package</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <!-- Toggle Scripts -->
-  <script>
-    function toggleDetails(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    }
-  
-    function togglePackage(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
-
-  <!-- Special Donation Section -->
-<div style="max-width: 1200px; margin: 50px auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
-
-    <h2 style="text-align:center; color: #0d6efd;">💉 Special Donations</h2>
-    <p style="text-align:center; margin-bottom: 30px;">Support others with life-changing contributions</p>
-  
-    <!-- Cards Layout -->
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  
-      <!-- Blood Donation -->
-      <div style="flex: 1 1 250px; background: #f8d7da; padding: 20px; border-radius: 10px;">
-        <h3 style="color: #c82333;">❤️ Blood Donation</h3>
-        <p>Donate blood and help save lives in emergency and surgical cases.</p>
-        <button onclick="alert('Thank you for your interest! Our team will contact you shortly.')" style="background: #c82333; color: white; padding: 10px 15px; border: none; border-radius: 5px;">Register</button>
-      </div>
-  
-      <!-- Organ Donation -->
-      <div style="flex: 1 1 250px; background: #d1ecf1; padding: 20px; border-radius: 10px;">
-        <h3 style="color: #0c5460;">🫀 Organ Donation</h3>
-        <p>Become an organ donor and give someone the gift of life after life.</p>
-        <button onclick="alert('Thank you for pledging! We will reach out with more details.')" style="background: #0c5460; color: white; padding: 10px 15px; border: none; border-radius: 5px;">Pledge Now</button>
-      </div>
-  
-      <!-- Hair Donation -->
-      <div style="flex: 1 1 250px; background: #e2e3e5; padding: 20px; border-radius: 10px;">
-        <h3 style="color: #6c757d;">💇‍♀️ Hair Donation</h3>
-        <p>Donate your hair to create wigs for children & adults fighting cancer.</p>
-        <button onclick="alert('Thanks for your kind gesture! We’ll send you the collection guidelines.')" style="background: #6c757d; color: white; padding: 10px 15px; border: none; border-radius: 5px;">Donate Hair</button>
-      </div>
-  
-    </div>
-  </div>
-  
-<!-- Main Donation Section -->
-<div style="max-width: 1200px; background: white; padding: 30px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-    <h2 style="text-align: center; color: #d63384;">💖 Donate to Hitaishi Health Care</h2>
-    <p style="text-align: center;">Support affordable diagnostics, health camps & patient care initiatives.</p>
-  
-    <!-- Donation Form -->
-    <label style="font-weight:bold;">Name:</label>
-    <input type="text" id="donorName" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-  
-    <label style="font-weight:bold;">Email:</label>
-    <input type="email" id="donorEmail" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-  
-    <label style="font-weight:bold;">Donation Type:</label>
-    <select id="donationType" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-      <option>Medical Aid</option>
-      <option>Diagnostics Support</option>
-      <option>Free Health Camps</option>
-      <option>Emergency Fund</option>
-    </select>
-  
-    <label style="font-weight:bold;">Amount:</label>
-    <div style="display: flex; gap: 10px; margin: 10px 0;">
-      <button onclick="selectAmount(500)">₹500</button>
-      <button onclick="selectAmount(1000)">₹1000</button>
-      <button onclick="selectAmount(2500)">₹2500</button>
-      <button onclick="selectAmount(5000)">₹5000</button>
-    </div>
-    <input type="number" id="donationAmount" placeholder="Enter custom amount" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;">
-  
-    <button onclick="submitDonation()" style="width: 100%; padding: 12px; background: #d63384; color: white; font-size: 16px; border: none; border-radius: 5px;">Donate Now</button>
-  
-    <p id="donationMessage" style="text-align: center; color: green; font-weight: bold; display: none; margin-top: 20px;"></p>
-  </div>
-  
-  <!-- Donor Wall -->
-  <div style="max-width: 700px; margin: 40px auto 20px; background: #f8f9fa; padding: 20px; border-radius: 10px;">
-    <h3 style="text-align: center; color: #198754;">🌟 Recent Donors</h3>
-    <ul id="donorWall" style="list-style: none; padding: 0; text-align: center; color: #333;"></ul>
-  </div>
-  
-  <!-- Scripts -->
-  <script>
-    function selectAmount(amount) {
-      document.getElementById("donationAmount").value = amount;
-    }
-  
-    function submitDonation() {
-      const name = document.getElementById("donorName").value;
-      const email = document.getElementById("donorEmail").value;
-      const type = document.getElementById("donationType").value;
-      const amount = parseInt(document.getElementById("donationAmount").value) * 100;
-  
-      if (!name || !email || !amount) {
-        alert("Please fill all fields and enter a valid amount.");
-        return;
-      }
-  
-      const options = {
-        key: "YOUR_RAZORPAY_KEY", // Replace with your actual Razorpay key
-        amount: amount,
-        currency: "INR",
-        name: "Hitaishi Health Care",
-        description: type,
-        handler: function (response) {
-          // 1. Confetti Celebration
-          confetti({ particleCount: 100, spread: 60, origin: { y: 0.6 } });
-  
-          // 2. Thank you message
-          document.getElementById("donationMessage").innerText =
-            "Thank you, " + name + "! Your donation was successful. Payment ID: " + response.razorpay_payment_id;
-          document.getElementById("donationMessage").style.display = "block";
-  
-          // 3. Add to Donor Wall
-          const donorWall = document.getElementById("donorWall");
-          const entry = document.createElement("li");
-          entry.innerHTML = `🙏 <strong>${name}</strong> donated ₹${amount / 100} for <em>${type}</em>`;
-          donorWall.prepend(entry);
-  
-          // 4. Send WhatsApp Alert to Admin
-          sendWhatsAppNotification(name, email, type, amount / 100, response.razorpay_payment_id);
-  
-          // 5. Email Confirmation (placeholder)
-          // triggerEmail(name, email, amount, response.razorpay_payment_id); <-- Add backend email trigger here
-  
-          // 6. PDF Receipt Generation (placeholder)
-          // generatePDF(name, amount); <-- Add backend or jsPDF here
-        },
-        prefill: {
-          name: name,
-          email: email,
-        },
-        theme: { color: "#d63384" }
-      };
-  
-      const rzp = new Razorpay(options);
-      rzp.open();
-    }
-  
-    function sendWhatsAppNotification(name, email, type, amount, paymentId) {
-      const message = `New Donation Received!\n\nName: ${name}\nEmail: ${email}\nType: ${type}\nAmount: ₹${amount}\nPayment ID: ${paymentId}`;
-      const adminNumber = "91XXXXXXXXXX"; // Replace with your number
-      const encoded = encodeURIComponent(message);
-      const whatsappURL = `https://wa.me/${adminNumber}?text=${encoded}`;
-      window.open(whatsappURL, "_blank");
-    }
-  </script>
- <!-- footer -->
- <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
-      </div>
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
-      </div>
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
-          <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
-      </div>
-      <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
-          <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
-          <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
-      </div>
-      <div style="flex: 1; min-width: 200px;">
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
-          <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
-              <i class="fas fa-envelope"></i>
-              <span>info@hitaishihealth.com</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
-              <i class="fas fa-phone"></i>
-              <span>8790170525</span>
-          </div>
-          <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
-          <div>
-              <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
-              <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
-              <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
-              <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
-          </div>
-      </div>
-  </div>
-  <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
-      <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
-      <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
-      <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
-      <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
-  </div>
-</footer>
-<!-- chatbot -->
-<div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
-  <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
+<!-- Back to Top Button -->
+<div id="backToTop" style="position:fixed;bottom:30px;left:30px;width:50px;height:50px;background:#0056d2;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 5px 20px rgba(0,0,0,0.2);z-index:999;opacity:0;visibility:hidden;transition:all 0.3s;" onmouseover="this.style.background='#0046b2';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='#0056d2';this.style.transform='none'">
+  <i class="fas fa-arrow-up" style="color:white;font-size:20px;"></i>
 </div>
-  
-<!-- Chatbot Container (initially hidden) -->
-<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
-  <!-- Chatbot Header -->
-  <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-      <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
-      <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
-  </div>
 
-  <!-- Chat Area -->
-  <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
-      <!-- Welcome message -->
-      <div>
-          <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
-      </div>
-  </div>
-
-  <!-- Chat Input -->
-  <div id="input-area" style="display: flex; align-items: center;">
-      <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
-      <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
-  </div>
-</div>
 <script>
-// Show the chatbot when the icon is clicked
-document.getElementById('chatbot-icon').addEventListener('click', function() {
-    let chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.style.display = 'block';
-    chatbotContainer.style.transform = 'translateY(0)';
-    chatbotContainer.style.opacity = '1';
-    document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
-});
-
-// Handle sending messages
-document.getElementById('send-btn').addEventListener('click', function() {
-    sendMessage();
-});
-
-// Allow sending messages with Enter key
-document.getElementById('user-input').addEventListener('keypress', function(event) {
-    if (event.key === "Enter") {
-        sendMessage();
+  // Back to top button
+  const backToTop = document.getElementById('backToTop');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTop.style.opacity = '1';
+      backToTop.style.visibility = 'visible';
+    } else {
+      backToTop.style.opacity = '0';
+      backToTop.style.visibility = 'hidden';
     }
-});
-
-function sendMessage() {
-    var userInput = document.getElementById('user-input').value.trim();
-    if (userInput !== '') {
-        var chatArea = document.getElementById('chat-area');
-
-        // User Message
-        var userMessage = document.createElement('div');
-        userMessage.classList.add('message', 'user-message');
-        styleMessage(userMessage, '#3498db', 'white', 'flex-end');
-        userMessage.textContent = userInput;
-        chatArea.appendChild(userMessage);
-
-        // Scroll to the bottom
-        chatArea.scrollTop = chatArea.scrollHeight;
-
-        // Clear the input field
-        document.getElementById('user-input').value = '';
-
-        // Simulate chatbot response after 1 second
-        setTimeout(function() {
-            var botMessage = document.createElement('div');
-            botMessage.classList.add('message', 'bot-message');
-            styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
-            botMessage.textContent = getBotReply(userInput);
-            chatArea.appendChild(botMessage);
-
-            // Scroll to the bottom
-            chatArea.scrollTop = chatArea.scrollHeight;
-        }, 1000);
-    }
-}
-
-function styleMessage(element, bgColor, textColor, align) {
-    element.style.padding = '8px 12px';
-    element.style.borderRadius = '20px';
-    element.style.margin = '5px 0';
-    element.style.maxWidth = '75%';
-    element.style.fontSize = '16px';
-    element.style.backgroundColor = bgColor;
-    element.style.color = textColor;
-    element.style.alignSelf = align;
-}
-
-function getBotReply(userMessage) {
-    userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
-
-      const responses = {
-          "hi": "Hello, How are you?",
-          "hello": "Hi, How are you?",
-          "how are you": "I'm just a bot, but I'm doing great! How about you?",
-          "good morning": "Good morning! Have a fantastic day ahead!",
-          "good night": "Good night! Sweet dreams!",
-          "thank you": "You're welcome! 😊",
-          "what's your name": "I'm your friendly chatbot!",
-          "who created you": "I was created by Naveen Teja! 😉",
-          "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
-          "bye": "Goodbye! Have a great day!",
-          "what can you do": "I can chat with you! Ask me anything. 😊",
-
-          // Health Diagnostic Services
-          "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
-          "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
-          "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
-          "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
-          "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
-          "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
-          "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
-          "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
-          "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
-          "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
-
-          // Fertility-Related Q&A
-          "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
-          "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
-          "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
-          "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
-          "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
-          "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
-          "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
-          "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
-          "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
-          "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
-          "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
-      };
-
-      
-    return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
-}
-
-// Close the chatbot
-document.getElementById('close-chat').addEventListener('click', function() {
-    document.getElementById('chatbot-container').style.display = 'none';
-    document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
-});
+  });
+  
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 </script>
-          
-</body>
-</html>
 
+</body>
+
+</html>
 

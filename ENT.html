@@ -9,198 +9,209 @@
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7;">
 
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
-    
-  <!-- Logo and Title -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-      <div>
-          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-      </div>
-  </div>
-  
-  <!-- search input icons -->
-  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-      <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
 
-  <!-- Buttons -->
-  <div style="display: flex; gap: 15px;">
-      <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          ❤️ Blood Donation
-      </a>
-      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Book Appointment
-      </a>
-      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Find a Doctor
-      </a>
-      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Clinic
-      </a>
-      <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Eye Care
-      </a>
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
   </div>
 
-  <!-- Social Media Icons -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-whatsapp"></i>
-      </a>
-      
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
 
-      <!-- Display Logged-in User Name -->
-      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
-
-      <!-- Profile Icon -->
-      <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-          <i class="fas fa-user-circle"></i>
-      </a>
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
   </div>
 
-  </nav>
-  
-  <script>
-      // Simulating getting user data from local storage or API
-      document.addEventListener("DOMContentLoaded", function () {
-          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-          if (user) {
-              document.getElementById("username").textContent = user; // Show username if logged in
-          }
-      });
-  
-      // Example: Store username after login (call this after user logs in)
-      function setUser(name) {
-          localStorage.setItem("loggedInUser", name);
-      }
-  
-      // Example: Clear user on logout
-      function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.reload(); // Refresh page after logout
-      }
-  </script>
-  
-  
-  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-          <!-- Home Link -->
-          <div style="margin-right: 1rem;">
-              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-          </div>
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
 
-          <!-- Health Records Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                  <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                  <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-              </div>
-          </div>
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
 
-          <!-- Diagnostics Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                  <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                  <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-              </div>
-          </div>
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
 
-          <!-- Physicians Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                  <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                  <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-              </div>
-          </div>
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
 
-          <!-- Fertility Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                  <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-              </div>
-          </div>
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
 
-          <!-- AI -->
-          <div style="margin-right: 1rem;">
-              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-          </div>
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
 
-          <!-- Doctors Link -->
-          <div style="margin-right: 1rem;">
-              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-          </div>
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
 
-          <!-- Patients Link -->
-          <div style="margin-right: 1rem;">
-              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-          </div>
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
 
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
 
-
-          <!-- Insights Link -->
-          <div style="margin-right: 1rem;">
-              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-          </div>
-          <div style="margin-right: 1rem;">
-              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-          </div>
-
-          <!-- Contact Link -->
-          <div>
-              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-          </div>
-          
-      </div>
-
-    
-  </nav>
-
-  <!-- for dropdowns -->
-  <script>
-      // JavaScript to handle dropdown visibility
-      document.querySelectorAll('nav > div > div').forEach(navItem => {
-          const dropdown = navItem.querySelector('div');
-          if (dropdown) {
-              navItem.addEventListener('mouseenter', () => {
-                  dropdown.style.display = 'block';
-              });
-              navItem.addEventListener('mouseleave', () => {
-                  dropdown.style.display = 'none';
-              });
-          }
-      });
-    </script>
-
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
 
 
 
@@ -227,76 +238,561 @@
     </div>
   </div>
   
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+  </ol>
+</nav>
+
+    <div style="display: flex; gap: 20px; align-items: center;padding-left: 450px;">
+        <!-- What’s an ENT? (Plain Link) -->
+        <a href="What'send.html" id="link1" onclick="changeColor('link1')" style="color: black; text-decoration: none;" onmouseover="this.style.color='#00a1a7'" onmouseout="restoreColor('link1')">What’s an ENT?</a>
+
+        <!-- Conditions & Treatments (Dropdown with Symbol) -->
+        <div style="position: relative;" onmouseover="showDropdown('conditionsDropdown')" onmouseout="hideDropdown('conditionsDropdown')">
+            <a href="ENT1.html" id="link2" onclick="changeColor('link2')" style="color: black; text-decoration: none;" onmouseover="this.style.color='#00a1a7'; this.querySelector('span').style.color='#00a1a7'" onmouseout="restoreColor('link2')">
+                ENT 
+            </a>
+        </div>
+
+        <!-- Be ENT Smart (Dropdown with Symbol) -->
+        <div style="position: relative;" onmouseover="showDropdown('entSmartDropdown')" onmouseout="hideDropdown('entSmartDropdown')">
+            <a href="besmart.html" id="link3" onclick="changeColor('link3')" style="color: black; text-decoration: none;" onmouseover="this.style.color='#00a1a7'; this.querySelector('span').style.color='#00a1a7'" onmouseout="restoreColor('link3')">
+                Be ENT Smart 
+        </div>
+
+        <!-- ENT Patient Stories (Plain Link) -->
+    <a href="#" onclick="openModal()" style="background-color: #d4a017; color: #fff; border: none; padding: 10px 20px 10px 20px; padding-right: 50px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block;  right: 40px;">
+        FIND AN ENT
+    </a>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; justify-content: center; align-items: center;">
+        <!-- Modal Content -->
+        <div style="max-width: 600px; width: 90%; background-color: #2a2a3e; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); position: relative; display: flex; flex-direction: column; gap: 30px; max-height: 80vh; overflow-y: auto;">
+            <!-- Close Button -->
+            <button onclick="closeModal()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #e0e0e0; font-size: 24px; cursor: pointer;">&times;</button>
+
+            <!-- ENT Specialist Search Form -->
+            <div style="text-align: center;">
+                <!-- Timestamp -->                
+                <!-- Form Heading -->
+                 <form action="http://localhost:5000/api/entspecialist" method="POST" style="max-width: 600px; margin: auto;">
+                    <h2 style="text-align: center; color: #00d9ff; margin-bottom: 20px;">Book Your Appointment</h2>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+
+                    <input id="keywords" name="keywords" type="text" placeholder="Keywords (e.g., sinus surgery)"
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+
+                    <select id="distance" name="distance" style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+                    <option value="" disabled selected>Distance (miles)</option>
+                    <option value="5">Within 5 miles</option>
+                    <option value="10">Within 10 miles</option>
+                    <option value="25">Within 25 miles</option>
+                    <option value="50">Within 50 miles</option>
+                    <option value="100">Within 100 miles</option>
+                    </select>
+
+                    <input id="specialist-name" name="specialist_name" type="text" placeholder="Specialist Name (Optional)"
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+
+                    <input id="city" name="city" type="text" placeholder="City"
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+
+                    <select id="state" name="state"
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+                    <option value="" disabled selected>State or Union Territory</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chandigarh</option>
+                    <option>Delhi</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jammu and Kashmir</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Puducherry</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                    </select>
+
+                    <input id="country" name="country" type="text" value="India" readonly
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0; opacity: 0.7;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+
+                    <select id="specialty" name="specialty"
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px;
+                            background-color: #3a3a4e; color: #e0e0e0;
+                            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                                        inset -3px -3px 6px rgba(255,255,255,0.05); outline: none;">
+                    <option value="" disabled selected>Specialty Area</option>
+                    <option value="otology">Otology (Ear Disorders)</option>
+                    <option value="rhinology">Rhinology (Nose and Sinus)</option>
+                    <option value="laryngology">Laryngology (Throat and Voice)</option>
+                    <option value="head-neck">Head and Neck Surgery</option>
+                    <option value="pediatric-ent">Pediatric ENT</option>
+                    </select>
+
+                    <button type="submit"
+                    style="background: linear-gradient(145deg, #ffcc33, #d4a017); color: #1a1a2e;
+                            border: none; padding: 12px 20px; font-size: 16px; font-weight: bold;
+                            border-radius: 10px; cursor: pointer;
+                            box-shadow: 3px 3px 6px rgba(0,0,0,0.2), -3px -3px 6px rgba(255,255,255,0.05);">
+                    FIND ENT SPECIALIST
+                    </button>
+
+                    <p id="search-message"
+                    style="font-size: 14px; color: #ff6b6b; margin-top: 10px; display: none;">
+                    </p>
+
+                </div>
+                </form>
+
+            </div>
+
+            <!-- Schedule ENT Appointment Form -->
+            <div style="text-align: center;">              
+                <!-- Form Fields -->
+            <form action="http://localhost:5000/api/appointment" method="post" style="width: 100%; max-width: 600px; margin: auto; padding: 20px; background-color: #2c2c3e; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.3); color: #e0e0e0; font-family: sans-serif;">
+            <h2 style="text-align: center; color: #00d9ff; margin-bottom: 20px;">Book Your Appointment</h2>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <input id="name" name="name" type="text" placeholder="Your Name" required
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px; background-color: #3a3a4e; color: #e0e0e0; box-shadow: inset 2px 2px 5px #1a1a2e, inset -2px -2px 5px #4a4a6e; outline: none;">
+
+                <input id="email" name="email" type="email" placeholder="Your Email" required
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px; background-color: #3a3a4e; color: #e0e0e0; box-shadow: inset 2px 2px 5px #1a1a2e, inset -2px -2px 5px #4a4a6e; outline: none;">
+
+                <input id="date" name="date" type="date" required
+                    style="padding: 12px; font-size: 16px; border: none; border-radius: 10px; background-color: #3a3a4e; color: #e0e0e0; box-shadow: inset 2px 2px 5px #1a1a2e, inset -2px -2px 5px #4a4a6e; outline: none;">
+
+                <select id="time-slot" name="time_slot" required
+                        style="padding: 12px; font-size: 16px; border: none; border-radius: 10px; background-color: #3a3a4e; color: #e0e0e0; box-shadow: inset 2px 2px 5px #1a1a2e, inset -2px -2px 5px #4a4a6e; outline: none;">
+                <option value="" disabled selected>Select Time Slot</option>
+                <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+                <option value="Afternoon (12 PM - 3 PM)">Afternoon (12 PM - 3 PM)</option>
+                <option value="Evening (3 PM - 6 PM)">Evening (3 PM - 6 PM)</option>
+                </select>
+
+                <button type="submit"
+                        style="margin-top: 10px; background: linear-gradient(145deg, #3399ff, #0073e6); color: #fff; border: none; padding: 14px 20px; font-size: 16px; font-weight: bold; border-radius: 10px; cursor: pointer; box-shadow: 3px 3px 6px #1a1a2e, -3px -3px 6px #4a4a6e;">
+                SCHEDULE APPOINTMENT
+                </button>
+
+                <p id="appointment-message" style="font-size: 14px; color: #ff6b6b; margin-top: 10px; display: none;"></p>
+            </div>
+            </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modalOverlay').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+        }
+
+        function findENTSpecialist() {
+            const keywords = document.getElementById('keywords').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const messageElement = document.getElementById('search-message');
+            
+            messageElement.style.display = 'none';
+            messageElement.style.color = '#ff6b6b';
+
+            if (!keywords || !city) {
+                messageElement.textContent = 'Please fill in Keywords and City fields.';
+                messageElement.style.display = 'block';
+                return;
+            }
+
+            messageElement.textContent = 'Searching for an ENT specialist...';
+            messageElement.style.color = '#6bff6b';
+            messageElement.style.display = 'block';
+        }
+
+        function scheduleAppointment() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const date = document.getElementById('date').value;
+            const timeSlot = document.getElementById('time-slot').value;
+            const messageElement = document.getElementById('appointment-message');
+            
+            messageElement.style.display = 'none';
+            messageElement.style.color = '#ff6b6b';
+
+            if (!name || !email) {
+                messageElement.textContent = 'Please fill in Name and Email fields.';
+                messageElement.style.display = 'block';
+                return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                messageElement.textContent = 'Please enter a valid email address.';
+                messageElement.style.display = 'block';
+                return;
+            }
+
+            if (!date || !timeSlot) {
+                messageElement.textContent = 'Please select a Date and Time Slot.';
+                messageElement.style.display = 'block';
+                return;
+            }
+
+            messageElement.textContent = `Appointment scheduled for ${date} at ${timeSlot}!`;
+            messageElement.style.color = '#6bff6b';
+            messageElement.style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function findENT() {
+            alert("Searching for an ENT specialist near you...");
+        }
+    </script>
+    </div>
+
+    
   
 
+    <script>
+        function showDropdown(dropdownId) {
+            document.getElementById(dropdownId).style.display = 'block';
+        }
 
-  <!-- Ear Section -->
+        function hideDropdown(dropdownId) {
+            document.getElementById(dropdownId).style.display = 'none';
+        }
+
+        function changeColor(linkId) {
+            // Reset all links to black
+            const links = ['link1', 'link2', 'link3', 'link4'];
+            links.forEach(id => {
+                const link = document.getElementById(id);
+                link.style.color = 'black';
+                const span = link.querySelector('span');
+                if (span) span.style.color = 'black';
+            });
+
+            // Set the clicked link and its span (if any) to blue
+            const clickedLink = document.getElementById(linkId);
+            clickedLink.style.color = '#0073e6';
+            const clickedSpan = clickedLink.querySelector('span');
+            if (clickedSpan) clickedSpan.style.color = '#0073e6';
+        }
+
+        function restoreColor(linkId) {
+            const link = document.getElementById(linkId);
+            // Restore to blue if the link was clicked, otherwise black
+            if (link.style.color === 'rgb(0, 161, 167)') { // Check if hover color (#00a1a7) is active
+                link.style.color = link.getAttribute('data-clicked') === 'true' ? '#0073e6' : 'black';
+                const span = link.querySelector('span');
+                if (span) span.style.color = link.style.color;
+            }
+        }
+
+        // Track clicked state
+        document.querySelectorAll('a[id^="link"]').forEach(link => {
+            link.addEventListener('click', () => {
+                link.setAttribute('data-clicked', 'true');
+            });
+        });
+    </script>
+
+
+   <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+  </ol>
+</nav>
+
+
+
+    <div style="font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px;">SPOTLIGHT</h2>
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <!-- Card 1 -->
+            <div style="flex: 1; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <img src="images/NEW! ENT PATIENT STORIES image.jpg" alt="ENT Patient Stories" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">NEW! ENT PATIENT STORIES</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 10px;">
+                        ENT patients span the gamut of life. ENT specialists are trained to treat and manage life’s fundamental functions and disorders.
+                    </p>
+                    <p style="font-size: 14px; color: #d4a017; font-weight: bold;">READ THESE STORIES FROM REAL-LIFE PATIENTS.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div style="flex: 1; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <img src="images/ear image.jpg" alt="OTC Hearing Aids FAQs" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">OTC HEARING AIDS FAQS</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 10px;">
+                        Over-the-counter (OTC) hearing aids are now available to adults 18 years of age or older with mild-to-moderate hearing loss.
+                    </p>
+                    <p style="font-size: 14px; color: #d4a017; font-weight: bold;">READ THESE IMPORTANT FAQS.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div style="flex: 1; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                <img src="images/sleep image.avif" alt="Improve Your Sleep Quality" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">IMPROVE YOUR SLEEP QUALITY</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 10px;">
+                        Making some simple but important changes to your sleep hygiene can help improve the overall quality and duration of your sleep.
+                    </p>
+                    <p style="font-size: 14px; color: #d4a017; font-weight: bold;">WATCH THIS VIDEO AND CONSIDER THESE TIPS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div style="font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div style="display: flex; align-items: center; background-color: #4a565c; border-radius: 8px; overflow: hidden;">
+            <!-- Left Image Section -->
+            <div style="flex: 1; padding: 20px;">
+                <div style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden;">
+                    <img src="images/ear 1 image.png" alt="ENT Checkup" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <!-- Right Text Section -->
+            <div style="flex: 2; padding: 20px; color: #fff;">
+                <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 15px;">Discover ENT Health!</h1>
+                <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Scroll through “Conditions and Treatments” to learn about specific ENT conditions. Explore consumer articles and health tips in the “Be ENT Smart” area. Or, use the magnifying glass search function located under the “Find an ENT” button to type in a specific term.
+                </p>
+                <div style="display: flex; justify-content: flex-end;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div style="font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h2 style="font-size: 28px; font-weight: bold; color: #333; margin-bottom: 20px; text-align: center;">Get the Care You Need</h2>
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <!-- Card 1 -->
+            <div style="flex: 1; padding: 20px; text-align: center;">
+                <h3 style="font-size: 20px; font-weight: bold; color: #00a1a7; margin-bottom: 15px;">Find an ENT</h3>
+                <p style="font-size: 16px; color: #666; line-height: 1.5; margin-bottom: 15px;">
+                    Think you need to consult an ENT specialist? Find someone with the expertise and location that’s best for your needs.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div style="flex: 1; padding: 20px; text-align: center;">
+                <h3 style="font-size: 20px; font-weight: bold; color: #00a1a7; margin-bottom: 15px;">Be ENT Smart</h3>
+                <p style="font-size: 16px; color: #666; line-height: 1.5; margin-bottom: 15px;">
+                    Learn how to stay ENT healthy, prevent problems, and manage existing conditions to improve your, or a loved one’s, daily life.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div style="flex: 1; padding: 20px; text-align: center;">
+                <h3 style="font-size: 20px; font-weight: bold; color: #00a1a7; margin-bottom: 15px;">About ENTHealth.org</h3>
+                <p style="font-size: 16px; color: #666; line-height: 1.5; margin-bottom: 15px;">
+                    Find out more about the community of physician experts who can help you to Be ENT Smart and how the information was developed.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 30px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+  <h3 style="font-size: 18px; color: #333; margin-bottom: 15px;">🗳️ TAKE OUR POLL</h3>
+  <p style="font-size: 16px; font-weight: bold; margin-bottom: 20px;">What do ENTs (Otolaryngologists) treat?</p>
+
+      <form action="http://localhost:5000/api/poll" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <label><input type="radio" name="poll" value="Ear"> Ear</label>
+      <span id="EarPercent" style="color: #1a73e8;">0%</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <label><input type="radio" name="poll" value="Nose"> Nose</label>
+      <span id="NosePercent" style="color: #1a73e8;">0%</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <label><input type="radio" name="poll" value="Throat"> Throat</label>
+      <span id="ThroatPercent" style="color: #1a73e8;">0%</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <label><input type="radio" name="poll" value="Head and Neck"> Head and Neck</label>
+      <span id="Head and NeckPercent" style="color: #1a73e8;">0%</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <label><input type="radio" name="poll" value="All of the Above"> All of the Above</label>
+      <span id="All of the AbovePercent" style="color: #1a73e8;">0%</span>
+    </div>
+
+    <button type="submit" style="margin-top: 20px; background-color: #1a73e8; color: white; padding: 10px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+      VOTE
+    </button>
+  </form>
+</div> -->
+
+<script>
+  const votes = {
+    "Ear": 0,
+    "Nose": 0,
+    "Throat": 0,
+    "Head and Neck": 0,
+    "All of the Above": 0
+  };
+
+  function submitVote(event) {
+    event.preventDefault();
+
+    const selected = document.querySelector('input[name="poll"]:checked');
+    if (!selected) {
+      alert("❌ Please select an option before voting.");
+      return;
+    }
+
+    const vote = selected.value;
+    votes[vote]++;
+    updatePercentages();
+  }
+
+  function updatePercentages() {
+    const totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+
+    for (const option in votes) {
+      const percent = totalVotes > 0 ? ((votes[option] / totalVotes) * 100).toFixed(1) : 0;
+      document.getElementById(option + "Percent").textContent = percent + "%";
+    }
+  }
+</script>
+
+
+  <script>
+    fetch("http://localhost:5000/api/poll", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        date: document.getElementById("date").value,
+        time_slot: document.getElementById("time-slot").value
+      })
+    })
+    .then(res => res.json())
+    .then(response => {
+      console.log(response);
+    })
+    .catch(err => {
+      console.error('❌ Request failed:', err);
+    });
+
+  </script>
+
+
 <!-- Ear Section -->
-<div style="padding: 40px; background-color: #ffffff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
-  <img src="https://cdn.stocksnap.io/img-thumbs/960w/ear-exam_TJSLVDWIA9.jpg" alt="Ear" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+<div style="padding: 40px 20px; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 30px;">
+  <img src="https://cdn.stocksnap.io/img-thumbs/960w/ear-exam_TJSLVDWIA9.jpg" alt="Ear"
+       style="border-radius: 12px; width: 100%; max-width: 500px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   <div style="max-width: 700px; color: #333;">
     <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 20px;">Ear Care</h2>
-    <p style="padding-left: 40px;">We diagnose and treat various ear conditions such as:</p>
-    <ul style="padding-left: 50px; margin-top: 10px;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Hearing loss and age-related hearing decline</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Ear infections (acute & chronic otitis media)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Tinnitus (ringing in the ears)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Balance disorders & vertigo (BPPV, Meniere’s disease)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Impacted earwax removal</li>
+    <p>We diagnose and treat various ear conditions such as:</p>
+    <ul style="margin-top: 10px; padding-left: 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Hearing loss and age-related hearing decline</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Ear infections (acute & chronic otitis media)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Tinnitus (ringing in the ears)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Balance disorders & vertigo (BPPV, Meniere’s disease)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Impacted earwax removal</li>
     </ul>
-    <p style="padding-left: 40px;">Our audiology department offers:</p>
-    <ul style="padding-left: 50px;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Advanced audiometry and hearing evaluations</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Digital hearing aid fitting & programming</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Custom ear protection for noise and water</li>
+    <p>Our audiology department offers:</p>
+    <ul style="padding-left: 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Advanced audiometry and hearing evaluations</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Digital hearing aid fitting & programming</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Custom ear protection for noise and water</li>
     </ul>
   </div>
 </div>
 
 <!-- Nose Section -->
-<div style="padding: 40px; background-color: #f2f8ff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; flex-direction: row-reverse;">
-  <!-- Image Right Side -->
-  <img src="https://freerangestock.com/sample/162639/patient-with-doctor-and-nurse-using-computer.jpg" alt="Nose" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-
-  <!-- Text Left Side - No extra margin/padding on the left -->
-  <div style="flex: 1; color: #333;margin-left: 120px;">
-    <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 15px;">Nose Care</h2>
+<div style="padding: 40px 20px; background-color: #f2f8ff; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 30px;">
+  <img src="https://freerangestock.com/sample/162639/patient-with-doctor-and-nurse-using-computer.jpg" alt="Nose"
+       style="border-radius: 12px; width: 100%; max-width: 500px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <div style="max-width: 700px; color: #333;">
+    <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 20px;">Nose Care</h2>
     <p>Our ENT specialists provide comprehensive care for conditions like:</p>
-    <ul style="margin: 10px 0 0 0;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Allergic rhinitis and seasonal allergies</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Acute and chronic sinusitis</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nasal polyps and deviated nasal septum</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nosebleeds (epistaxis) and nasal trauma</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Obstructive breathing and snoring</li>
+    <ul style="margin-top: 10px; padding-left: 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Allergic rhinitis and seasonal allergies</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Acute and chronic sinusitis</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Nasal polyps and deviated nasal septum</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Nosebleeds (epistaxis) and nasal trauma</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Obstructive breathing and snoring</li>
     </ul>
     <p style="margin-top: 20px;">We also offer:</p>
-    <ul style="margin: 10px 0 0 0;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Endoscopic sinus surgery (FESS)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Image-guided nasal procedures</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;"><span style="margin-right: 10px;">✔</span>Nasal endoscopy for diagnosis</li>
+    <ul style="padding-left: 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Endoscopic sinus surgery (FESS)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Image-guided nasal procedures</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Nasal endoscopy for diagnosis</li>
     </ul>
   </div>
 </div>
 
-
 <!-- Throat Section -->
-<div style="padding: 40px; background-color: #ffffff; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px;">
-  <img src="https://media.istockphoto.com/id/1465572921/photo/doctor-listening-to-senior-woman-patient-heartbeat.jpg?s=612x612&w=0&k=20&c=M_vrtl6bP0BwKMqrFTnYlBf2EeP0t2eThfUMExGt2xI=" alt="Throat" style="border-radius: 12px; width: 100%; max-width: 600px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+<div style="padding: 40px 20px; background-color: #ffffff; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 30px;">
+  <img src="https://media.istockphoto.com/id/1465572921/photo/doctor-listening-to-senior-woman-patient-heartbeat.jpg?s=612x612&w=0&k=20&c=M_vrtl6bP0BwKMqrFTnYlBf2EeP0t2eThfUMExGt2xI=" alt="Throat"
+       style="border-radius: 12px; width: 100%; max-width: 500px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   <div style="max-width: 700px; color: #333;">
     <h2 style="color: #004080; font-size: 28px; margin-bottom: 20px; border-left: 8px solid #004080; padding-left: 20px;">Throat Care</h2>
-    <p style="padding-left: 40px;">We offer expert diagnosis and treatment for:</p>
-    <ul style="padding-left: 50px; margin-top: 10px;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Tonsillitis and pharyngitis (sore throat)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Vocal cord nodules, polyps, and hoarseness</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Sleep apnea and chronic snoring</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Swallowing difficulties (dysphagia)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Throat tumors and infections</li>
+    <p>We offer expert diagnosis and treatment for:</p>
+    <ul style="padding-left: 0; margin-top: 10px;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Tonsillitis and pharyngitis (sore throat)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Vocal cord nodules, polyps, and hoarseness</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Sleep apnea and chronic snoring</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Swallowing difficulties (dysphagia)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Throat tumors and infections</li>
     </ul>
-    <p style="padding-left: 40px;">Our services include:</p>
-    <ul style="padding-left: 50px;">
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Speech therapy for voice rehabilitation</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Polysomnography (sleep studies)</li>
-      <li style="margin-bottom: 8px; color: #004080; font-weight: 500; list-style: none;"><span style="margin-right: 10px;">✔</span>Minimally invasive throat surgeries</li>
+    <p>Our services include:</p>
+    <ul style="padding-left: 0;">
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Speech therapy for voice rehabilitation</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Polysomnography (sleep studies)</li>
+      <li style="margin-bottom: 8px; color: #004080; font-weight: 500;">✔ Minimally invasive throat surgeries</li>
     </ul>
   </div>
 </div>

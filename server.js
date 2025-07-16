@@ -2,37 +2,68 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const testBookingRoutes = require('./routes/testbooking');  // Import the test booking routes
-const patientLoginRoutes = require("./routes/patientlogin"); // Import the patient login routes
-const patientRoutes = require("./routes/patient");
-const doctorRoutes = require("./routes/doctor"); 
-const clinicRoutes = require("./routes/clinicRegister"); // Import the clinic routes
-const bloodRpoutes = require("./routes/blood"); // Import the blood routes
-const app = express();
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
-
 const path = require("path");
-app.use(express.static(path.join(__dirname))); // serve static files like clinics.html
+const multer = require("multer");
 
-app.get("/clinics", (req, res) => {
-  res.sendFile(path.join(__dirname, "clinics.html"));
+const app = express(); // ✅ Initialize app first
+
+// Middleware setup
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname))); // Serve static files
+
+const upload = multer({ dest: "uploads/" }); // For file uploads
+
+// Routes Import
+const appointment_fertilityRoutes = require("./routes/appointment_fertility");
+const appointmentsRoutes = require("./routes/appointments");
+const bookappointmentRoutes = require("./routes/bookappointment");
+const bloodRoutes = require("./routes/blood");
+const clinicRoutes = require("./routes/clinicRegister");
+const contactRoutes = require("./routes/contact");
+const bloodtestRoutes = require("./routes/bloodtest");
+const diagnosticstestsRoutes = require("./routes/diagnosticstests");
+const doctorRoutes = require("./routes/doctor");
+const entappointmentRoutes = require("./routes/entappointment");
+const entspecialistRoutes = require("./routes/entspecialist"); // Missing in your original code — assumed
+const eyedoctorsRoutes = require("./routes/eyedoctors");
+const eyeformRoutes = require("./routes/eyeform");
+const finddoctorRoutes = require("./routes/finddoctor");
+const homesample_testRoutes = require("./routes/homesample_test");
+const hr_donationsRoutes = require("./routes/hr_donations");
+const hr_packagesRoutes = require("./routes/hr_packages");
+const packagesRoutes = require("./routes/packages");
+const patientloginRoutes = require("./routes/patientlogin");
+
+// Use Routes
+app.use("/api", appointment_fertilityRoutes);
+app.use("/api", appointmentsRoutes);
+app.use("/api", bookappointmentRoutes);
+app.use("/api", bloodRoutes);
+app.use("/api", clinicRoutes);
+app.use("/api", contactRoutes);
+app.use("/api", bloodtestRoutes);
+app.use("/api", diagnosticstestsRoutes);
+app.use("/api", doctorRoutes);
+app.use("/api", entappointmentRoutes);
+app.use("/api", entspecialistRoutes);
+app.use("/api", eyedoctorsRoutes);
+app.use("/api", eyeformRoutes);
+app.use("/api", finddoctorRoutes);
+app.use("/api", homesample_testRoutes);
+app.use("/api", hr_donationsRoutes);
+app.use("/api", hr_packagesRoutes);
+app.use("/api", packagesRoutes);
+app.use("/api", patientloginRoutes);
+
+// Static HTML Page
+app.get("/bookappointments", (req, res) => {
+  res.sendFile(path.join(__dirname, "bookappointments.html"));
 });
 
-
-
-app.use(cors());
-app.use(express.json());  
-app.use(express.urlencoded({ extended: true })); 
-
-
-app.use('/api', clinicRoutes);
-app.use("/api", testBookingRoutes);
-app.use("/api", patientRoutes);
-app.use("/api", patientLoginRoutes); 
-app.use("/api", doctorRoutes);
-app.use("/api", bloodRpoutes); // Use the blood routes
-
-app.listen(5000, '0.0.0.0', () => {
-  console.log('✅ Server is running...');
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Server is running on port ${PORT}...`);
 });

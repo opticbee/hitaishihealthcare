@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
+  </div>
+
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
+
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
+
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+<!-- ENT Navbar and Banner -->
+<div style="width: 100%; margin: 0 auto; padding: 0; box-sizing: border-box;">
+
+  <!-- ENT Navbar -->
+  <div style="background-color: #ffffff; padding: 14px 10px; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <a href="ear.html" style="padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';"
+       onmouseout="this.style.backgroundColor='transparent';">Ear</a>
+
+    <a href="nose.html" style="padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';"
+       onmouseout="this.style.backgroundColor='transparent';">Nose</a>
+
+    <a href="throat.html" style="padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';"
+       onmouseout="this.style.backgroundColor='transparent';">Throat</a>
+
+    <a href="neck.html" style="padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';"
+       onmouseout="this.style.backgroundColor='transparent';">Head & Neck</a>
+
+    <a href="sleep.html" style="padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';"
+       onmouseout="this.style.backgroundColor='transparent';">Sleep & Snoring</a>
+  </div>
+
+  <!-- ENT Banner Image -->
+  <div style="width: 100%; height: auto; overflow: hidden;">
+    <img src="images/ent-bg.webp" alt="ENT Full Banner"
+         style="width: 100%; max-height: 600px; object-fit: cover; display: block;">
+  </div>
+
+</div>
+
+
+
+
+<!-- Main Container -->
+<div style="width: 100%; display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 80%; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); box-sizing: border-box;">
+    <h2 style="margin-bottom: 15px; color: #004080; text-align: center;">🔍 Search Doctor</h2>
+
+    <!-- Search Input -->
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+      <input id="searchDoctor" type="text" placeholder="Search by Doctor Name or Specialty..."
+        style="width: 100%; max-width: 500px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; margin-bottom: 15px;">
+    </div>
+
+    <!-- Filter and Button -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 15px;">
+      <select id="filterSpecialty"
+        style="width: 100%; max-width: 400px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+        <option value="">All Specialties</option>
+        <option>Nose</option>
+        <option>Ear</option>
+        <option>Throat</option>
+        <option>Head & Neck</option>
+        <option>Sleep & Snoring</option>
+      </select>
+      <button onclick="filterDoctors()"
+        style="padding: 10px 20px; background-color: #0056b3; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;"
+        onmouseover="this.style.backgroundColor='#004494'"
+        onmouseout="this.style.backgroundColor='#0056b3'">Filter</button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="doctorResults" style="margin-top: 20px;"></div>
+  </div>
+</div>
+
+<!-- Appointment Popup -->
+<div id="appointmentPopup"
+  style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+  <div
+    style="background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); width: 90%; max-width: 450px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h2 style="margin: 0; color: #0056b3;">Book Appointment</h2>
+      <button onclick="closeForm()" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #999;">&times;</button>
+    </div>
+
+    <div style="margin-bottom: 15px; background-color: #f5f9ff; padding: 12px; border-radius: 6px;">
+      <p style="margin: 0 0 8px; font-weight: bold; color: #333;">Doctor: <span id="popupDoctorName"></span></p>
+      <p style="margin: 0; color: #555;">Location: <span id="popupDoctorAddress"></span></p>
+    </div>
+
+    <form action="http://localhost:5000/api/bookappointment" method="POST"
+      style="display: flex; flex-direction: column; gap: 15px;">
+      <input type="hidden" id="popupDoctor" name="doctor">
+
+      <div>
+        <label style="display:block; font-weight:bold;">Your Name</label>
+        <input type="text" name="name" required
+          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+      </div>
+
+      <div>
+        <label style="display:block; font-weight:bold;">Email</label>
+        <input type="email" name="email" required
+          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+      </div>
+
+      <div style="display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap;">
+        <div style="flex:1; min-width: 120px;">
+          <label style="display:block; font-weight:bold;">Date</label>
+          <input type="date" name="date" required
+            style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+        </div>
+        <div style="flex:1; min-width: 120px;">
+          <label style="display:block; font-weight:bold;">Time</label>
+          <input type="time" name="time" required
+            style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+        </div>
+      </div>
+
+      <div>
+        <label style="display:block; font-weight:bold;">Phone</label>
+        <input type="tel" name="phone" required
+          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+      </div>
+
+      <button type="submit"
+        style="padding: 12px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px;">
+        Confirm Booking
+      </button>
+    </form>
+
+    <button onclick="closeForm()"
+      style="width: 100%; padding: 12px; background-color: #dc3545; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#c82333'"
+      onmouseout="this.style.backgroundColor='#dc3545'">
+      Cancel
+    </button>
+  </div>
+</div>
+
+
+  <script>
+    // Doctor Data
+    const doctors = [];
+    const specialties = ["Nose", "Ear", "Throat", "Head & Neck", "Sleep & Snoring"];
+    const cities = ["Delhi", "Mumbai", "Bangalore", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow"];
+    const doctorNames = ["Dr. Anil Sharma", "Dr. Priya Patel", "Dr. Ravi Kumar", "Dr. Sneha Gupta", "Dr. Vikram Singh", "Dr. Neha Desai", "Dr. Sanjay Mehta", "Dr. Aarti Singh", "Dr. Rohan Kapoor", "Dr. Meera Joshi"];
+    
+    // Helper function to get random array element
+    function rnd(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    // Generate random doctor data
+    for (let i = 1; i <= 320; i++) {
+      doctors.push({
+        name: `${rnd(doctorNames)}-${i}`,
+        specialty: rnd(specialties),
+        address: `${Math.floor(Math.random() * 1000)} Health St, ${rnd(cities)}, India`,
+        phone: `+91-${9000000000 + i}`
+      });
+    }
+
+    // Render doctor cards
+    function renderDoctors(list) {
+      const container = document.getElementById("doctorResults");
+      container.innerHTML = "";
+      
+      if (list.length === 0) {
+        container.innerHTML = `<p style="color: #999; font-size: 16px; text-align: center;">No doctors found. Try another search.</p>`;
+        return;
+      }
+      
+      list.forEach(doc => {
+        const card = document.createElement("div");
+        card.style = "background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;";
+        card.innerHTML = `
+          <h3 style="margin: 0 0 10px; color: #0056b3;">${doc.name} (${doc.specialty})</h3>
+          <p style="margin: 0 0 10px; color: #555;">📍 ${doc.address}</p>
+          <a href="tel:${doc.phone}" style="color: #007bff; text-decoration: none; display: inline-block; margin-bottom: 10px;">📞 ${doc.phone}</a><br>
+          <button onclick="showAppointmentForm('${doc.name}', '${doc.address}')" 
+                  style="padding: 8px 12px; background-color: #28a745; color: #fff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;"
+                  onmouseover="this.style.backgroundColor='#218838'" 
+                  onmouseout="this.style.backgroundColor='#28a745'">
+            Book Appointment
+          </button>
+          <button onclick="getDirections('${doc.address}')" 
+                  style="padding: 8px 12px; background-color: #dc3545; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px; transition: background-color 0.3s;"
+                  onmouseover="this.style.backgroundColor='#c82333'" 
+                  onmouseout="this.style.backgroundColor='#dc3545'">
+            Get Directions
+          </button>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Filter doctors based on search and specialty
+    function filterDoctors() {
+      const searchTerm = document.getElementById("searchDoctor").value.toLowerCase();
+      const specialty = document.getElementById("filterSpecialty").value;
+      const filtered = doctors.filter(doc =>
+        (doc.name.toLowerCase().includes(searchTerm) || doc.specialty.toLowerCase().includes(searchTerm)) &&
+        (specialty === "" || doc.specialty === specialty)
+      );
+      renderDoctors(filtered);
+    }
+
+    // Show appointment form popup
+    function showAppointmentForm(doctorName, doctorAddress) {
+      document.getElementById("popupDoctorName").textContent = doctorName;
+      document.getElementById("popupDoctorAddress").textContent = doctorAddress;
+      document.getElementById("appointmentPopup").style.display = "flex";
+    }
+
+    // Close appointment form
+    function closeForm() {
+      document.getElementById("appointmentPopup").style.display = "none";
+      // Clear form fields
+      document.getElementById("appName").value = "";
+      document.getElementById("appDate").value = "";
+      document.getElementById("appTime").value = "";
+      document.getElementById("appPhone").value = "";
+    }
+
+    // Handle booking submission
+    function bookAppointment() {
+      const name = document.getElementById("appName").value;
+      const date = document.getElementById("appDate").value;
+      const time = document.getElementById("appTime").value;
+      const phone = document.getElementById("appPhone").value;
+      const doctorName = document.getElementById("popupDoctorName").textContent;
+
+      if (name && date && time && phone) {
+        alert(`✅ Appointment confirmed with ${doctorName}`);
+        closeForm();
+      } else {
+        alert("⚠️ Please fill in all fields");
+      }
+    }
+
+    // Open Google Maps with doctor's address
+    function getDirections(address) {
+      const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+      window.open(url, '_blank');
+    }
+
+    // Event listeners
+    document.getElementById("searchDoctor").addEventListener("input", filterDoctors);
+    document.getElementById("filterSpecialty").addEventListener("change", filterDoctors);
+
+    // Initial render (empty)
+    renderDoctors([]);
+  </script>
+
+
+
+    
+<section id="ent-features" style="padding: 4rem 2rem; background-color: #ffffff; text-align: center; border-bottom: 1px solid #e2e8f0;margin: auto; width: 80%;">
+  <h2 style="font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 3rem;">
+    Explore Our ENT Excellence
+  </h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; max-width: 1800px; margin: 0 auto;">
+
+    <!-- Feature 1: Sinus Surgery -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/Advanced Sinus Surgery image.jpg" alt="Sinus Icon" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Advanced Sinus Surgery</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        We provide minimally invasive endoscopic sinus surgery for patients suffering from chronic sinusitis, nasal polyps, and related conditions.
+      </p>
+    </div>
+
+    <!-- Feature 2: Hearing & Audiology -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/Hearing Assessments image.jpg" alt="Hearing Icon" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Hearing Assessments</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        Comprehensive audiometry and hearing aid services for children, adults, and elderly, including newborn screening and tinnitus evaluation.
+      </p>
+    </div>
+
+    <!-- Feature 3: Voice & Throat Disorders -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/Voice & Throat Clinic image.jpg" alt="Voice Icon" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Voice & Throat Clinic</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        Expert care for voice changes, laryngitis, vocal cord nodules, and swallowing disorders with video laryngoscopy.
+      </p>
+    </div>
+
+    <!-- Feature 4: Pediatric ENT -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/Pediatric ENT Care image.jpg" alt="Pediatric ENT" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Pediatric ENT Care</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        Specialized treatment for adenoids, tonsillitis, ear infections, and congenital ENT disorders in children of all age groups.
+      </p>
+    </div>
+
+    <!-- Feature 5: Allergy Testing -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/ENT Allergy Services image.jpg" alt="Allergy Icon" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">ENT Allergy Services</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        In-house allergy testing and immunotherapy for seasonal rhinitis, dust mites, and other airborne allergens.
+      </p>
+    </div>
+
+    <!-- Feature 6: Head & Neck Surgery -->
+    <div style="background-color: #f0f4f8; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 350px; text-align: left;">
+      <img src="images/Head & Neck Oncology image.jpg" alt="Surgery Icon" style="width: 250px; height: 150px; margin-bottom: 1rem;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Head & Neck Oncology</h3>
+      <p style="font-size: 1rem; color: #4a5568; line-height: 1.6;">
+        Surgical treatment for tumors, thyroid nodules, and neck masses using advanced techniques and tumor boards.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- About Us Section -->
+<section id="about" style="padding: 4rem 2rem; background-color: #e2e8f0; text-align: center; border-bottom: 1px solid #cbd5e0; width: 80%; margin: auto; box-sizing: border-box;">
+  <h2 style="font-size: 2.2rem; font-weight: 700; color: #2d3748; margin-bottom: 2rem;">
+    About EntPulse: Our Story
+  </h2>
+
+  <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: left; gap: 1.5rem;">
+    <!-- Paragraphs -->
+    <p style="font-size: 1.05rem; color: #4a5568; line-height: 1.75; margin-bottom: 0.5rem; padding: 0 1rem;">
+      EntPulse was founded on the principle that entertainment should be boundless, accessible, and deeply personal. In an increasingly fragmented digital landscape, we envisioned a single, cohesive platform where users could seamlessly transition between their favorite movies, captivating TV series, thrilling games, and inspiring podcasts. Our journey began in 20XX with a small team of passionate developers, content curators, and user experience designers, united by a shared vision to redefine digital leisure. We believe in providing not just content, but an entire ecosystem that adapts to your unique tastes and lifestyle.
+    </p>
+    <p style="font-size: 1.05rem; color: #4a5568; line-height: 1.75; margin-bottom: 0.5rem; padding: 0 1rem;">
+      From our humble beginnings, we have grown into a leading force in the entertainment industry, continually innovating and expanding our offerings. Our commitment to cutting-edge technology ensures a high-quality streaming and gaming experience, free from buffering and glitches. We pride ourselves on our meticulous content curation process, partnering with top studios, independent creators, and emerging artists to bring you a diverse and enriching selection. Security and privacy are paramount; we implement robust measures to protect your data and ensure a safe environment for all ages.
+    </p>
+    <p style="font-size: 1.05rem; color: #4a5568; line-height: 1.75; padding: 0 1rem;">
+      At EntPulse, our mission extends beyond mere consumption. We aim to foster a vibrant community where users can share recommendations, discuss their favorite shows, and connect over shared interests. We are constantly listening to our community's feedback, implementing new features, and refining existing ones to ensure EntPulse remains at the forefront of digital entertainment. Join us on this exciting journey as we continue to shape the future of how the world experiences joy, excitement, and discovery.
+    </p>
+
+    <!-- Vision & Values -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; width: 100%;">
+      <!-- Vision -->
+      <div style="background-color: #ffffff; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex: 1 1 280px; max-width: 320px; box-sizing: border-box;">
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.75rem;">Our Vision</h4>
+        <p style="font-size: 1rem; color: #6a7c8c;">
+          To be the world's most comprehensive and user-centric digital entertainment platform.
+        </p>
+      </div>
+
+      <!-- Values -->
+      <div style="background-color: #ffffff; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex: 1 1 280px; max-width: 320px; box-sizing: border-box;">
+        <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.75rem;">Our Values</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: left; font-size: 1rem; color: #6a7c8c;">
+          <li style="margin-bottom: 0.5rem;"><strong style="color: #2d3748;">Innovation:</strong> Always pushing boundaries.</li>
+          <li style="margin-bottom: 0.5rem;"><strong style="color: #2d3748;">Quality:</strong> Delivering excellence in every aspect.</li>
+          <li style="margin-bottom: 0.5rem;"><strong style="color: #2d3748;">Community:</strong> Building connections through entertainment.</li>
+          <li><strong style="color: #2d3748;">Integrity:</strong> Operating with transparency and trust.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+        <!-- Testimonials Section - Showcases positive user feedback -->
+        <section id="testimonials" style="padding: 4rem 2rem; background-color: #f7fafc; text-align: center; border-bottom: 1px solid #e2e8f0; width: 100%;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 3rem;">
+                What Our Users Say
+            </h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
+
+                <!-- Testimonial Card 1 -->
+                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); flex: 1 1 300px; max-width: 400px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 30px -4px rgba(0, 0, 0, 0.15), 0 6px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';">
+                    <p style="font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; font-style: italic; position: relative; padding: 0.5rem 0;">
+                        <span style="position: absolute; left: 0; top: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&ldquo;</span>
+                        EntPulse has completely revolutionized how my family and I consume entertainment. The seamless transition between movies and games is incredible, and the content library is unmatched. Absolutely brilliant!
+                        <span style="position: absolute; right: 0; bottom: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&rdquo;</span>
+                    </p>
+                    <div style="font-weight: 600; color: #2d3748; margin-top: 1rem;">
+                        Jane Doe, <span style="color: #718096; font-weight: 400;">Avid Streamer</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); flex: 1 1 300px; max-width: 400px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 30px -4px rgba(0, 0, 0, 0.15), 0 6px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';">
+                    <p style="font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; font-style: italic; position: relative; padding: 0.5rem 0;">
+                        <span style="position: absolute; left: 0; top: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&ldquo;</span>
+                        As a dedicated gamer, I'm genuinely impressed by the exclusive titles and the cloud gaming performance. No downloads, no lag, just pure fun. EntPulse is truly next-gen!
+                        <span style="position: absolute; right: 0; bottom: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&rdquo;</span>
+                    </p>
+                    <div style="font-weight: 600; color: #2d3748; margin-top: 1rem;">
+                        John Smith, <span style="color: #718096; font-weight: 400;">Professional Gamer</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); flex: 1 1 300px; max-width: 400px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 30px -4px rgba(0, 0, 0, 0.15), 0 6px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';">
+                    <p style="font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; font-style: italic; position: relative; padding: 0.5rem 0;">
+                        <span style="position: absolute; left: 0; top: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&ldquo;</span>
+                        I love the curated music playlists and the vast selection of podcasts. It's the perfect companion for my workouts and daily commute. The interface is clean and user-friendly. Highly recommend!
+                        <span style="position: absolute; right: 0; bottom: 0; font-size: 3rem; color: #cbd5e0; line-height: 1; opacity: 0.7;">&rdquo;</span>
+                    </p>
+                    <div style="font-weight: 600; color: #2d3748; margin-top: 1rem;">
+                        Emily White, <span style="color: #718096; font-weight: 400;">Music & Podcast Enthusiast</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Our Team Section - Introduces key personnel -->
+        <section id="team" style="padding: 4rem 2rem; background-color: #e2e8f0; text-align: center; border-bottom: 1px solid #cbd5e0; width: 100%;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 3rem;">
+                Meet Our Visionary Team
+            </h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+
+                <!-- Team Member 1 -->
+                <div style="background-color: #ffffff; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05); flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px -4px rgba(0, 0, 0, 0.15), 0 5px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05)';">
+                    <img src="images/ceo image.avif" alt="Team Member 1" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.25rem; border: 4px solid #4299e1;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 0.5rem;">
+                        Alice Johnson
+                    </h3>
+                    <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+                        Chief Executive Officer
+                    </p>
+                    <p style="font-size: 0.9rem; color: #6a7c8c; line-height: 1.6;">
+                        With over 20 years of experience in tech and media, Alice leads EntPulse with a clear vision for innovation and user-centric growth. Her strategic insights drive our platform's evolution.
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div style="background-color: #ffffff; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05); flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px -4px rgba(0, 0, 0, 0.15), 0 5px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05)';">
+                    <img src="images/cto image.avif" alt="Team Member 2" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.25rem; border: 4px solid #ed8936;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 0.5rem;">
+                        Robert Brown
+                    </h3>
+                    <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+                        Chief Technology Officer
+                    </p>
+                    <p style="font-size: 0.9rem; color: #6a7c8c; line-height: 1.6;">
+                        Robert is the architect behind our robust and scalable technology infrastructure. His expertise ensures a smooth, high-performance experience across all devices.
+                    </p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div style="background-color: #ffffff; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05); flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px -4px rgba(0, 0, 0, 0.15), 0 5px 8px -2px rgba(0, 0, 0, 0.08)';"
+                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -1px rgba(0, 0, 0, 0.05)';">
+                    <img src="images/cmo image.avif" alt="Team Member 3" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.25rem; border: 4px solid #9f7aea;">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 0.5rem;">
+                        Sophia Garcia
+                    </h3>
+                    <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+                        Chief Marketing Officer
+                    </p>
+                    <p style="font-size: 0.9rem; color: #6a7c8c; line-height: 1.6;">
+                        Sophia is the creative mind behind our brand's global reach. She crafts engaging strategies that connect millions of users with the EntPulse experience.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+      
+
+        <!-- FAQ Section - Addresses common questions -->
+        <section id="faq" style="padding: 4rem 2rem; background-color: #ffffff; text-align: center; border-bottom: 1px solid #e2e8f0; width: 100%;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 3rem;">
+                Frequently Asked Questions
+            </h2>
+            <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                <!-- FAQ Item 1 -->
+                <div style="background-color: #f7fafc; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: left; cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+                     onclick="const content1 = this.querySelector('.faq-answer'); content1.style.display = content1.style.display === 'block' ? 'none' : 'block';"
+                     onmouseover="this.style.backgroundColor='#ebf4ff'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.12)';"
+                     onmouseout="this.style.backgroundColor='#f7fafc'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
+                    <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        How do I start my free trial?
+                        <span style="font-size: 1.5rem; color: #2c5282;">&#9660;</span> <!-- Down arrow -->
+                    </h4>
+                    <p class="faq-answer" style="display: none; font-size: 1rem; color: #4a5568; line-height: 1.6; padding-top: 0.5rem; border-top: 1px solid #e2e8f0; margin-top: 1rem;">
+                        Simply click the "Start Your Free Trial" button on our homepage. You'll be prompted to create an account and select your preferred plan. No charges will apply during the trial period, and you can cancel anytime. You will receive an email confirmation with details about your trial duration and terms.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div style="background-color: #f7fafc; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: left; cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+                     onclick="const content2 = this.querySelector('.faq-answer'); content2.style.display = content2.style.display === 'block' ? 'none' : 'block';"
+                     onmouseover="this.style.backgroundColor='#ebf4ff'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.12)';"
+                     onmouseout="this.style.backgroundColor='#f7fafc'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
+                    <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        What devices are supported by EntPulse?
+                        <span style="font-size: 1.5rem; color: #2c5282;">&#9660;</span>
+                    </h4>
+                    <p class="faq-answer" style="display: none; font-size: 1rem; color: #4a5568; line-height: 1.6; padding-top: 0.5rem; border-top: 1px solid #e2e8f0; margin-top: 1rem;">
+                        EntPulse supports a wide range of devices including smartphones (iOS, Android), tablets, smart TVs (Samsung, LG, Roku, Fire TV), gaming consoles (PlayStation, Xbox), and web browsers (Chrome, Firefox, Safari, Edge). Our multi-device sync ensures a consistent experience.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div style="background-color: #f7fafc; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: left; cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+                     onclick="const content3 = this.querySelector('.faq-answer'); content3.style.display = content3.style.display === 'block' ? 'none' : 'block';"
+                     onmouseover="this.style.backgroundColor='#ebf4ff'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.12)';"
+                     onmouseout="this.style.backgroundColor='#f7fafc'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
+                    <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        Can I download content for offline viewing?
+                        <span style="font-size: 1.5rem; color: #2c5282;">&#9660;</span>
+                    </h4>
+                    <p class="faq-answer" style="display: none; font-size: 1rem; color: #4a5568; line-height: 1.6; padding-top: 0.5rem; border-top: 1px solid #e2e8f0; margin-top: 1rem;">
+                        Yes, with our Premium and Family plans, you can download a wide selection of movies, TV shows, and podcasts to your mobile devices for offline enjoyment. This feature is perfect for travel or when you don't have internet access.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div style="background-color: #f7fafc; padding: 1.5rem 2rem; border-radius: 0.75rem; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: left; cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+                     onclick="const content4 = this.querySelector('.faq-answer'); content4.style.display = content4.style.display === 'block' ? 'none' : 'block';"
+                     onmouseover="this.style.backgroundColor='#ebf4ff'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.12)';"
+                     onmouseout="this.style.backgroundColor='#f7fafc'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.08)';">
+                    <h4 style="font-size: 1.3rem; font-weight: 600; color: #2c5282; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        How often is new content added?
+                        <span style="font-size: 1.5rem; color: #2c5282;">&#9660;</span>
+                    </h4>
+                    <p class="faq-answer" style="display: none; font-size: 1rem; color: #4a5568; line-height: 1.6; padding-top: 0.5rem; border-top: 1px solid #e2e8f0; margin-top: 1rem;">
+                        We are continuously adding new movies, series, games, and podcasts to our library on a weekly basis. Our content team works tirelessly to bring you the freshest and most exciting entertainment available. Keep an eye on our "New Releases" section!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding: 4rem 2rem; background-color: #e2e8f0; text-align: center; width: 100%;">
+    <h2 style="font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 3rem;">
+      Get in Touch with EntPulse
+    </h2>
+    <div style="max-width: 700px; margin: 0 auto; background-color: #ffffff; padding: 2.5rem; border-radius: 0.75rem; box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1), 0 4px 8px -2px rgba(0, 0, 0, 0.05);">
+      <p style="font-size: 1.15rem; color: #4a5568; margin-bottom: 2rem;">
+        Have questions, feedback, or need support? Fill out the form below, and our team will get back to you as soon as possible. Your input helps us improve!
+      </p>
+      
+      <form action="http://localhost:5000/api/contact" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="text-align: left;">
+          <label for="name" style="display: block; font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 0.5rem;">Name</label>
+          <input type="text" id="name" name="name" required
+                 style="width: calc(100% - 24px); padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 0.375rem; font-size: 1rem; color: #2d3748; background-color: #f7fafc; transition: border-color 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box;">
+        </div>
+        
+        <div style="text-align: left;">
+          <label for="email" style="display: block; font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 0.5rem;">Email</label>
+          <input type="email" id="email" name="email" required
+                 style="width: calc(100% - 24px); padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 0.375rem; font-size: 1rem; color: #2d3748; background-color: #f7fafc; transition: border-color 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box;">
+        </div>
+        
+        <div style="text-align: left;">
+          <label for="subject" style="display: block; font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 0.5rem;">Subject</label>
+          <input type="text" id="subject" name="subject"
+                 style="width: calc(100% - 24px); padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 0.375rem; font-size: 1rem; color: #2d3748; background-color: #f7fafc; transition: border-color 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box;">
+        </div>
+        
+        <div style="text-align: left;">
+          <label for="message" style="display: block; font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 0.5rem;">Message</label>
+          <textarea id="message" name="message" rows="6" required
+                    style="width: calc(100% - 24px); padding: 0.75rem; border: 1px solid #cbd5e0; border-radius: 0.375rem; font-size: 1rem; color: #2d3748; background-color: #f7fafc; transition: border-color 0.3s ease, box-shadow 0.3s ease; resize: vertical; box-sizing: border-box;"></textarea>
+        </div>
+        
+        <button type="submit" id="submitBtn"
+                style="background-color: #4299e1; color: #ffffff; padding: 1rem 2.5rem; border-radius: 0.5rem; font-size: 1.1rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s ease; width: 100%; max-width: 250px; margin: 0 auto; outline: none;">
+          Send Message
+        </button>
+      </form>
+      
+      <!-- Success Message (hidden by default) -->
+      <div id="successMessage" style="display: none; margin-top: 2rem; padding: 1.5rem; background-color: #f0fff4; border: 1px solid #c6f6d5; border-radius: 0.5rem; color: #2f855a;">
+        <p style="margin: 0; font-weight: 600;">Thank you for your message! We'll get back to you soon.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    subject: document.getElementById('subject').value.trim(),
+    message: document.getElementById('message').value.trim()
+  };
+
+  try {
+    const res = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await res.json();
+    alert(data.message);
+    if (res.ok) {
+      document.getElementById('contactForm').reset();
+    }
+
+  } catch (err) {
+    console.error('Error:', err);
+    alert('❌ Failed to send message. Try again later.');
+  }
+});
+</script>
+
+
+    </main>
+
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+

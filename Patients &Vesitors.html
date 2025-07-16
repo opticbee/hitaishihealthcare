@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
+  </div>
+
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
+
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
+
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+<div style="display: flex; height: 500px;">
+<div style="display: flex; width: 100%; height: 100vh;">
+    <!-- Left Side Image with 50% width -->
+    <div style="width: 50%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <img src="images/hospital inside image.jpg" alt="Hospital Image" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <!-- Right Side Image with 50% width -->
+    <div style="width: 50%; height: 100%; display: flex; align-items: center; justify-content: center;">
+        <img src="images/hospital image.jpg" alt="Hospital Exterior" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+</div>
+</div>
+
+    <div style="display: flex; width: 100%; height: 400px;">
+        <div style="flex: 1; background-color: #f5f7fa; padding: 20px; text-align: left; border-right: 1px solid #ccc;">
+            <p style="color: #007bff; font-size: 24px; margin: 0 0 10px 0;">❤ Patient Information</p>
+            <p style="color: #666; margin: 0 0 20px 0;">Important information you need to know before seeing your Cleveland Clinic doctor, as well as other patient resources we offer.</p>
+            <ul style="list-style: none; padding: 0; color: #007bff;">
+                <li style="margin-bottom: 10px;">Appointment checklist</li>
+                <li style="margin-bottom: 10px;">Admissions</li>
+                <li style="margin-bottom: 10px;">Accessibility</li>
+                <li style="margin-bottom: 10px;">Masking Policy</li>
+                <li style="margin-bottom: 10px;">Preparing for surgery</li>
+                <li style="margin-bottom: 10px;">Planning to go home</li>
+                <li style="margin-bottom: 10px;">Request your medical records</li>
+                <li style="margin-bottom: 10px;">View all patient resources</li>
+            </ul>
+        </div>
+        <div style="flex: 1; background-color: #f5f7fa; padding: 20px; text-align: left; border-right: 1px solid #ccc;">
+            <p style="color: #007bff; font-size: 24px; margin: 0 0 10px 0;">🌐 Parking, Lodging & Travel</p>
+            <p style="color: #666; margin: 0 0 20px 0;">No matter where you're coming from, traveling for medical care can be overwhelming - not to mention stressful. Let us help get you started.</p>
+            <ul style="list-style: none; padding: 0; color: #007bff;">
+                <li style="margin-bottom: 10px;">International patients</li>
+                <li style="margin-bottom: 10px;">Language assistance</li>
+                <li style="margin-bottom: 10px;">Lodging</li>
+                <li style="margin-bottom: 10px;">Parking</li>
+                <li style="margin-bottom: 10px;">Transportation</li>
+                <li style="margin-bottom: 10px;">Travel assistance</li>
+                <li style="margin-bottom: 10px;">Visiting our main campus</li>
+            </ul>
+        </div>
+        <div style="flex: 1; background-color: #f5f7fa; padding: 20px; text-align: left;">
+            <p style="color: #007bff; font-size: 24px; margin: 0 0 10px 0;">$ Billing & Insurance</p>
+            <p style="color: #666; margin: 0 0 20px 0;">Manage your Cleveland Clinic account. Find billing information and financial assistance, plus FAQs.</p>
+            <ul style="list-style: none; padding: 0; color: #007bff;">
+                <li style="margin-bottom: 10px;">Accepted insurance</li>
+                <li style="margin-bottom: 10px;">Financial assistance</li>
+                <li style="margin-bottom: 10px;">Frequently asked questions</li>
+                <li style="margin-bottom: 10px;">Pay your bill online</li>
+                <li style="margin-bottom: 10px;">View all billing and finance resources</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Gap Section -->
+    <div style="height: 50px; background-color: #e0e0e0; text-align: center; padding: 15px; margin: 20px 0; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+        <p style="color: #666; margin: 0; font-size: 16px;">Take a moment to explore more about our services and how we can assist you.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; background-color: #ffffff;">
+        <div style="flex: 1; min-width: 250px; padding: 20px; text-align: center; border-right: 1px solid #eee; background-color: #fef6f0;">
+            <p style="font-size: 24px; color: #d84315; margin: 0 0 10px;">❤️ Compassionate Care</p>
+            <p style="color: #444;">Every patient receives personalized, attentive care — because your wellness journey matters to us.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; padding: 20px; text-align: center; border-right: 1px solid #eee; background-color: #fff3e0;">
+            <p style="font-size: 24px; color: #ff8f00; margin: 0 0 10px;">🌐 Global Presence</p>
+            <p style="color: #444;">With hospitals and clinics across India and abroad, Apollo is one of Asia's largest healthcare networks.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; padding: 20px; text-align: center; border-right: 1px solid #eee; background-color: #fffde7;">
+            <p style="font-size: 24px; color: #558b2f; margin: 0 0 10px;">⚙️ Advanced Technology</p>
+            <p style="color: #444;">Equipped with state-of-the-art diagnostics, robotic surgeries, and AI-powered systems.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; padding: 20px; text-align: center; background-color: #f1f8e9;">
+            <p style="font-size: 24px; color: #2e7d32; margin: 0 0 10px;">📈 Proven Outcomes</p>
+            <p style="color: #444;">Recognized for high recovery rates, shorter stays, and world-class clinical results.</p>
+        </div>
+    </div>
+
+    <script>
+        function submitAppointment(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const date = document.getElementById('date').value;
+
+            if (!name || !email || !phone || !date) {
+                alert("❌ Please fill in all fields.");
+                return;
+            }
+
+            console.log("Appointment submitted:", { name, email, phone, date });
+            document.getElementById('successMsg').style.display = 'block';
+            document.getElementById('appointmentForm').reset();
+        }
+    </script>
+
+
+  <div style="max-width: 1200px; margin: 40px auto; padding: 20px;">
+    <h2 style="text-align: center; font-size: 28px; color: #1a237e;">🌟 Patient Success Stories</h2>
+
+    <!-- Scroll Buttons -->
+    <div style="text-align: center; margin-bottom: 10px;">
+      <button onclick="scrollLeftFunc()" style="padding: 8px 16px; margin: 5px; background: #1a237e; color: #fff; border: none; border-radius: 4px; cursor: pointer;">⬅️ Prev</button>
+      <button onclick="scrollRightFunc()" style="padding: 8px 16px; margin: 5px; background: #1a237e; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Next ➡️</button>
+    </div>
+
+    <!-- Scrollable Container -->
+    <div id="scrollContainer" style="
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px;
+      scrollbar-color: #1a237e #ddd;
+      scrollbar-width: thin;
+    ">
+
+      <!-- WebKit Custom Scrollbar -->
+      <style>
+        #scrollContainer::-webkit-scrollbar {
+          height: 10px;
+        }
+        #scrollContainer::-webkit-scrollbar-track {
+          background: #eee;
+          border-radius: 5px;
+        }
+        #scrollContainer::-webkit-scrollbar-thumb {
+          background: #1a237e;
+          border-radius: 5px;
+        }
+        #scrollContainer::-webkit-scrollbar-thumb:hover {
+          background: #3949ab;
+        }
+      </style>
+
+      <!-- Story Card 1 -->
+      <div style="min-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 15px;">
+        <img src="images/Patient Stories1 image.jpg" alt="Heart" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: #1a237e; font-size: 18px; margin-top: 10px;">Saved by Surgery</h3>
+        <p style="font-size: 14px; color: #555;">"After heart surgery, I’m living life fully again."</p>
+      </div>
+
+      <!-- Story Card 2 -->
+      <div style="min-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 15px;">
+        <img src="images/Patient Stories2images.jpg" alt="Cancer" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: #d81b60; font-size: 18px; margin-top: 10px;">Fighting Cancer</h3>
+        <p style="font-size: 14px; color: #555;">"With the right care, I beat the odds and came out stronger."</p>
+      </div>
+
+      <!-- Story Card 3 -->
+      <div style="min-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 15px;">
+        <img src="images/Patient Stories3images.jpg" alt="Recovery" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: #43a047; font-size: 18px; margin-top: 10px;">Stroke Recovery</h3>
+        <p style="font-size: 14px; color: #555;">"Rehab helped me walk and speak again. Grateful every day."</p>
+      </div>
+
+      <!-- Story Card 4 -->
+      <div style="min-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 15px;">
+        <img src="images/Patient Stories4images.jpg" alt="Kidney" style="width: 100%; border-radius: 8px;">
+        <h3 style="color: #ff9800; font-size: 18px; margin-top: 10px;">New Kidney, New Life</h3>
+        <p style="font-size: 14px; color: #555;">"The transplant changed everything for me and my family."</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollLeftFunc() {
+      const container = document.getElementById("scrollContainer");
+      container.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+
+    function scrollRightFunc() {
+      const container = document.getElementById("scrollContainer");
+      container.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  </script>
+
+  <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
+  </div>
+
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
+
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
+
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+   <!-- ENT Navbar Without Icons -->
+  <div style="background-color: #ffffff; padding: 14px 10px; text-align: center;">
+    <a href="ear.html" style="margin: 6px 10px; padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';" 
+       onmouseout="this.style.backgroundColor='transparent';">Ear</a>
+
+    <a href="nose.html" style="margin: 6px 10px; padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';" 
+       onmouseout="this.style.backgroundColor='transparent';">Nose</a>
+
+    <a href="throat.html" style="margin: 6px 10px; padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';" 
+       onmouseout="this.style.backgroundColor='transparent';">Throat</a>
+
+    <a href="neck.html" style="margin: 6px 10px; padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';" 
+       onmouseout="this.style.backgroundColor='transparent';">Head & Neck</a>
+
+    <a href="sleep.html" style="margin: 6px 10px; padding: 8px 16px; color: #000; text-decoration: none; font-weight: bold; font-size: 15px; border-radius: 20px; display: inline-block;"
+       onmouseover="this.style.backgroundColor='#e0f7fa';" 
+       onmouseout="this.style.backgroundColor='transparent';">Sleep & Snoring</a>
+  </div>
+    <div style="max-width: 1290px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden;">
+        <!-- Header Section -->
+        <header style="background-color: #1a73e8; color: #ffffff; padding: 30px 20px; text-align: center; border-radius: 15px 15px 0 0; margin: -20px -20px 20px -20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h1 style="margin: 0; font-size: 2.8em; letter-spacing: 1px;">The Sleep & Snoring Information Hub</h1>
+            <p style="font-size: 1.1em; opacity: 0.9;">Your comprehensive guide to understanding and improving sleep, and addressing snoring.</p>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav style="background-color: #3f51b5; padding: 10px 0; text-align: center; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap;">
+                <li style="margin: 0 15px;"><a href="#introduction" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Introduction</a></li>
+                <li style="margin: 0 15px;"><a href="#what-is-snoring" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">What is Snoring?</a></li>
+                <li style="margin: 0 15px;"><a href="#health-risks" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Health Risks</a></li>
+                <li style="margin: 0 15px;"><a href="#sleep-tips" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Sleep Tips</a></li>
+                <li style="margin: 0 15px;"><a href="#snoring-remedies" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Snoring Remedies</a></li>
+                <li style="margin: 0 15px;"><a href="#when-to-see-doctor" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">When to See a Doctor</a></li>
+                <li style="margin: 0 15px;"><a href="#quiz" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Snoring Quiz</a></li>
+                <li style="margin: 0 15px;"><a href="#faq" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">FAQ</a></li>
+                <li style="margin: 0 15px;"><a href="#contact" style="color: #ffffff; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 8px;">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section id="introduction" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Introduction to Healthy Sleep</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Sleep is a fundamental human need, as vital to our health and well-being as food, water, and exercise. It allows our body and mind to repair, regenerate, and consolidate memories. Adequate sleep is crucial for cognitive function, emotional regulation, physical health, and overall quality of life. Unfortunately, in our fast-paced modern world, many individuals neglect their sleep, leading to a myriad of health issues.</p>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">One common disruptor of restful sleep, both for the individual and their sleep partner, is snoring. While often perceived as a harmless annoyance, snoring can sometimes be an indication of a more serious underlying health condition, such as sleep apnea. Understanding the causes, impacts, and potential solutions for snoring is the first step towards achieving better sleep for everyone involved.</p>
+            <img src="images/sleep image1.jpg" alt="Illustration of peaceful sleep" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">This hub aims to provide comprehensive, easy-to-understand information on sleep health and snoring. From debunking common myths to offering practical tips and outlining various treatment options, we hope to empower you with the knowledge needed to take control of your sleep health. Dive in to learn more about how quality sleep can transform your life and how to effectively manage snoring.</p>
+        </section>
+
+        <!-- What is Snoring? Section -->
+        <section id="what-is-snoring" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">What is Snoring? Understanding the Noise</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Snoring is the vibrating sound that occurs as air flows past relaxed tissues in your throat during sleep. When you fall asleep, the muscles in the roof of your mouth (soft palate), tongue, and throat relax. These tissues can relax enough to partially block your airway and vibrate when you breathe. The more narrowed your airway, the more forceful the airflow becomes, which increases tissue vibration and makes your snoring louder.</p>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Common Causes of Snoring:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Age:</strong> As you get older, the throat muscles naturally relax more, increasing the likelihood of snoring.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Alcohol Consumption:</strong> Alcohol acts as a muscle relaxant, leading to greater relaxation of throat muscles and increased snoring.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Sleeping Position:</strong> Sleeping on your back often causes the tongue to fall back into the throat, narrowing the airway.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Obesity:</strong> Excess fatty tissue around the neck can narrow the airway.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Nasal Problems:</strong> Chronic nasal congestion, a deviated septum, or nasal polyps can obstruct airflow.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Allergies:</strong> Inflamed nasal passages due to allergies can restrict breathing.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Enlarged Tonsils or Adenoids:</strong> These are more common in children but can affect adults, narrowing the airway.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Throat Anatomy:</strong> A low, thick soft palate, or enlarged tonsils or adenoids can narrow the airway.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Sleep Deprivation:</strong> Being overtired can cause throat muscles to relax more, leading to snoring.</li>
+            </ul>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Understanding the specific cause of your snoring is crucial for finding an effective solution. While occasional snoring is generally harmless, loud and chronic snoring, especially if accompanied by pauses in breathing, can be a sign of a more serious condition like sleep apnea.</p>
+            <img src="images/snoring image.jpg" alt="Illustration of throat anatomy and airway" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Different types of snoring exist, from positional snoring (only when sleeping on your back) to chronic snoring. Identifying your snoring pattern can help guide you towards appropriate remedies. For instance, if you only snore when on your back, a change in sleeping position might be all that's needed. If snoring is persistent and loud, further investigation is recommended.</p>
+        </section>
+
+        <!-- Health Risks Section -->
+        <section id="health-risks" style="padding: 25px; margin-bottom: 15px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Health Risks Associated with Snoring</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">While snoring might seem like a minor issue, especially to the snorer, it can have significant implications for health, particularly when it's a symptom of obstructive sleep apnea (OSA). It's not just about the noise; it's about the quality of breathing and oxygen levels during sleep.</p>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Obstructive Sleep Apnea (OSA): The Primary Concern</h3>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">OSA is a serious sleep disorder in which breathing repeatedly stops and starts during sleep. These pauses, or apneas, occur when the throat muscles relax and block the airway. Each apnea event can last from a few seconds to more than a minute, and they can occur hundreds of times a night. When breathing stops, oxygen levels in the blood drop, and carbon dioxide levels rise. This signals the brain to briefly wake up the person to resume breathing, often with a loud gasp or snort.</p>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Common signs and symptoms of OSA include:</p>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Loud snoring (a key indicator)</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Episodes of breathing cessation during sleep (reported by a sleep partner)</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Abrupt awakenings accompanied by gasping or choking</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Daytime sleepiness or fatigue, regardless of hours slept</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Morning headaches</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Difficulty concentrating</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Irritability or mood changes</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">High blood pressure</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;">Decreased libido</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Other Potential Health Problems:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Cardiovascular Problems:</strong> OSA is strongly linked to high blood pressure (hypertension), which is a major risk factor for heart disease, stroke, and heart attacks. The repeated drops in blood oxygen and increases in blood pressure during apnea events put a significant strain on the cardiovascular system.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Stroke:</strong> Chronic snoring, especially with OSA, has been associated with an increased risk of stroke, potentially due to the cumulative damage to blood vessels and increased inflammation.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Type 2 Diabetes:</strong> Sleep deprivation and fragmented sleep, often caused by snoring and OSA, can lead to insulin resistance, increasing the risk of developing type 2 diabetes.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Weight Gain:</strong> Poor sleep disrupts hormones that regulate appetite (ghrelin and leptin), leading to increased hunger and cravings for unhealthy foods, contributing to weight gain and making OSA worse.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Accidents:</strong> Excessive daytime sleepiness resulting from disrupted sleep significantly increases the risk of motor vehicle accidents and workplace errors.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Relationship Problems:</strong> Loud snoring can severely impact the sleep quality of a bed partner, leading to frustration, resentment, and even separate sleeping arrangements.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Reduced Quality of Life:</strong> Chronic fatigue, irritability, and poor concentration can drastically reduce one's overall quality of life, affecting work performance, social interactions, and mental well-being.</li>
+            </ul>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">It is vital not to ignore loud, habitual snoring, especially if it's accompanied by any of the symptoms of snoring apnea. Consulting a healthcare professional for a proper diagnosis is the best course of action to prevent or manage these serious health risks.</p>
+        </section>
+
+        <!-- Tips for Better Sleep Section -->
+        <section id="sleep-tips" style="padding: 25px; margin-bottom: 2px; background-color: #ffffff; border: 12px solid #8ab4f4; border-radius: 4px;">
+            <h2 style="color: #1a73e8; font-size: 2em; margin: 0; margin-bottom: 10px;">Tips for Better Sleep Quality</h2>
+            <p style="margin-bottom: 15px; font-size: 1em; line-height: 1.5em;">Improving overall quality sleep can often reduce snoring, especially if it is not severe or linked to sleep apnea.  Establishing good sleep hygiene is the foundation for restful nights. These tips focus on creating an optimal environment and routine for sleep.</p>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin: 10px; margin-bottom: 5px;">Establish a Consistent Sleep Schedule:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Go to bed and wake up at the same time every day,</strong> even on weekends. This helps regulate your body's natural sleep-wake cycle (circadian rhythm).</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Avoid sleeping in too much</strong> on weekends, as this can disrupt your rhythm for the following week.</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1em; margin-top: 10px; margin-bottom: 5px;">Create a Relaxing Bedtime Routine:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Wind down before bed:</strong> Engage in calming activities like reading a book, taking a warm bath, listening to soothing music, or meditating for 30-60 minutes before sleep.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Avoid stimulating activities:</strong> Steer clear of vigorous exercise, heavy meals, and intense discussions close to bedtime.</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1em; margin-top: 10px; margin-bottom: 5px;">Optimize Your Sleep Environment:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Keep your bedroom dark, quiet, and cool.</strong> Block out light with blackout curtains, use earplugs or a white noise machine if needed, and set the thermostat to a comfortable cool temperature (around 18-20°C or 65-68°F).</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Ensure your mattress and pillows are comfortable and supportive.</strong> Replace them if they are old or saggy.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Keep your bedroom clean and free of clutter.</strong></li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1em; margin-top: 10px; margin-bottom: 5px;">Limit Stimulants and Alcohol:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Caffeine:</strong> Avoid caffeine (coffee, tea, soda, chocolate) at least 6 hours before bedtime.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Nicotine:</strong> Nicotine is a stimulant; avoid smoking or vaping close to sleep.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Alcohol:</strong> While alcohol may initially make you feel sleepy, it disrupts sleep later in the night and can worsen snoring. Avoid alcohol several hours before bed.</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1; margin-top: 10px; margin-bottom: 5px;">Manage Diet and Exercise:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Eat light dinners:</strong> Avoid heavy, fatty, or spicy meals close to bedtime, as they can cause indigestion.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Stay hydrated:</strong> But limit liquids before bed to avoid waking up for bathroom breaks.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Regular exercise:</strong> Engage in in moderate exercise most days of the week, but avoid intense workouts too close to bedtime (within 2-3 hours).</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1em; margin-top: 10px; margin-bottom: 5px;">Limit Screen Time:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Blue light:</strong> The blue light emitted from from phones, tablets, computers, and TVs can interfere with melatonin production, the hormone that regulates sleep. Avoid screens for at least an hour before bed.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Consider blue light filters</strong> for devices if you must use them in the evening.</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1em; margin-top: 10px; margin-bottom: 5px;">Daytime Habits:</h3>
+            <ul style="margin-left: 25px; list-style-type: disc; margin-bottom: 15px;">
+                <ul style="margin-left: 25px; margin-bottom: 15px;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Limit naps:</strong> If you must nap, keep it short (20-30 minutes) and early in the afternoon. Long or late naps can disrupt nighttime sleep.</li>
+                <li style="margin-bottom: 8px; font-size: 1em;"><strong>Get daily sunlight exposure:</strong> Exposure to natural light, especially in the morning, helps regulate your circadian rhythm.</li>
+            </ul>
+            <img src="images/sleep image3.avif" alt="Image of a relaxing bedroom" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <p style="margin-bottom: 15px; font-size: 1em; line-height: 1.5;">Implementing these practices consistently can significantly improve your sleep quality, reducing the likelihood of snoring, and enhance your overall health and well-being. Patience and consistency are key when trying to establish new sleep habits.</p>
+        </section>
+
+        <!-- Snoring Remedies Section -->
+        <section id="snoring-remedies" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Snoring Remedies and Treatment Options</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Depending on the cause and severity of your snoring, a variety of remedies and treatments are available, ranging from simple lifestyle changes to medical interventions. It's often best to start with less invasive options and consult a professional if they aren't effective.</p>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Lifestyle Changes:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Change Sleeping Position:</strong> Sleeping on your side can prevent your tongue and soft palate from collapsing and obstructing your airway. Wedge pillows or special "anti-snore" pillows can help maintain a side-sleeping position. Some even sew a tennis ball into the back of their pajamas top to make back sleeping uncomfortable.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Lose Weight:</strong> Even a small amount of weight loss can reduce fatty tissue in the throat, which can narrow the airway and contribute to snoring.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>LSmoking:</strong> Avoid alcohol and sedatives before bed.</li>
+                <li style="margin-left: 25px; margin-bottom: 8px; font-size: 1.05em;"><strong>Quit Smoking:</strong> Smoking irritates the mucous membranes in the throat and nose, leading to swelling and reduced airflow. Quitting can significantly reduce snoring.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Treat Nasal Congestion:</strong> If allergies or a cold causes congestion, over-the-counter nasal sprays (use sparingly to avoid rebound congestion), antihistamines or decongestants may help. Saline nasal sprays or a neti pot can also clear nasal passages.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Stay Hydrated:</strong> Drinking plenty of fluids helps keep secretions in the nose and soft palate thinner, reducing stickiness that can worsen snoring.</li>
+            </ul>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Oral Appliances and Devices:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px;">
+                <li style="margin-bottom: 8px; font-size: 1em;"><li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Oral Appliances (Mandibular Advancement Devices - MADs):</strong> These custom-fitted mouthpieces worn during sleep reposition reposition the lower jaw and/or tongue forward, opening up the airway. They are often effective for mild to moderate snoring and OSA. They must be fitted by a dentist or orthodontist.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Nasal Strips:</strong> Adhesive strips applied to the bridge of the nose can gently pull the nostrils open, improving airflow. They are effective for snoring caused by nasal congestion but not for throat-based snoring.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Nasal Dilators:</strong> Small, flexible devices inserted into the nostrils to keep them open.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Chin Straps:</strong> These fabric straps wrap around the head and chin to keep the mouth closed during sleep, which can help some snorers who breathe primarily through their mouth.</li>
+            </ul>
+            <img src="images/sleep image4.jpg" alt="Example of an anti-snoring device like a MAD" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Medical Interventions (for severe cases or OSA):</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>CPAP (Continuous Positive Airway Pressure):</strong> For individuals diagnosed with moderate to severe obstructive sleep apnea, CPAP is the most effective treatment. It involves wearing a mask over your nose and/or mouth during sleep, which delivers a continuous stream of air to keep your airway open.</li>
+                <li style="margin-bottom: 20px; font-size: 1.35em;"><strong>Surgical Options:</strong> Various surgical procedures can be considered, often as a last resort, for specific anatomical issues:
+                    <ul style="margin-left: 25px; margin-bottom: 15px;">
+                        <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Uvulopalatopharyngoplasty (UPPP):</strong> Removes excess tissue from the back of the throat and palate.</li>
+                        <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Laser-assisted Uvulopalatoplasty (LAUP):</strong> A less invasive procedure that shortens the soft palate.</li>
+                        <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Li:</strong> Use strong</li>
+                        <li style="margin-bottom: -8px; font-size: 1.05em;"><strong>Genioglossus Advancement (GGA) or Hyoid Suspension:</strong></li>
+                        <li style="margin-bottom: li8px; font-size: 1.05em;"><strong>Tonsillectomy or Adenoidectomy:</strong> Removal of enlarged tonsils or adenoids, often effective for children.</li>
+                        <li style="margin-bottom: li8px; font-size: 1.05em;"><strong>Septoplasty or Turbinate Reduction:</strong> To correct li>nasal obstructions like a deviated septum or enlarged turbinates.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Before pursuing any treatment, especially medical interventions, it is crucial to consult with a doctor or a sleep specialist. They can accurately diagnose the cause of your snoring and recommend the most appropriate and effective course of action for your specific situation. Self-treating without understanding the underlying issue can be ineffective and potentially dangerous, particularly if sleep apnea is present.</p>
+        </section>
+
+        <!-- When to See a Doctor Section -->
+        <section id="when-to-see-doctor" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">When to See a Doctor About Snoring</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">While occasional snoring is common, certain signs and symptoms warrant a visit to a healthcare professional. Loud, chronic snoring is often more than just an inconvenience; it can be a red flag for underlying health issues, most notably obstructive sleep apnea (OSA). Early diagnosis and treatment are crucial for preventing serious complications.</p>
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">Consider seeing a doctor if you experience any of the following:</h3>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Loud, habitual snoring:</strong> If your snoring is consistent, loud, and disruptive to your or your partner's sleep on most nights.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Witnessed breathing pauses:</strong> If a sleep partner observes you stopping breathing, gasping, or choking during sleep. This is a primary sign of sleep apnea.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Excessive daytime sleepiness:</strong> If you feel extremely tired or fall asleep easily during the day, even after a full night's sleep.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Morning headaches:</strong> Frequent headaches upon waking can be a sign of reduced oxygen levels during sleep.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Difficulty concentrating:</strong> Impaired cognitive function, memory problems, or trouble focusing during the day.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Irritability or mood changes:</strong> Chronic sleep deprivation can negatively impact emotional regulation.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>High blood pressure:</strong> If you have hypertension, and especially if it's difficult to control, snoring should be investigated as a potential contributing factor.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Recent weight gain:</strong> Significant weight gain can exacerbate snoring and OSA.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Unexplained fatigue:</strong> Feeling drained and unrefreshed, even if you feel you are sleeping enough hours.</li>
+                <li style="margin-bottom: 10px; font-size: 1.05em;"><strong>Snoring in children:</strong> If a child snores regularly, gasps, or has restless sleep, it could indicate enlarged tonsils/adenoids or childhood sleep apnea, which can affect development and behavior.</li>
+            </ul>
+            <img src="images/doctor image.avif" alt="Illustration of a person consulting a doctor" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #3f51b5; font-size: 1.6em; margin-top: 20px; margin-bottom: 10px;">What to Expect at the Doctor's Visit:</h3>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Your doctor will likely ask about your snoring patterns, daytime symptoms, and medical history. They may also ask your sleep partner about their observations. Depending on the initial assessment, they might recommend:</p>
+            <ul style="margin-left: 25px; margin-bottom: 15px; list-style-type: disc;">
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>A physical examination:</strong> To check your mouth, nose, and throat for any anatomical obstructions.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>A sleep study (Polysomnography):</strong> This is the most definitive test for diagnosing sleep apnea. It can be done in a sleep lab or, in some cases, with a home sleep apnea test. During a sleep study, various parameters are monitored, including brain waves, heart rate, breathing effort, oxygen levels, and leg movements.</li>
+                <li style="margin-bottom: 8px; font-size: 1.05em;"><strong>Referral to a specialist:</strong> Such as an ENT (Ear, Nose, and Throat) specialist, a sleep specialist, or a dentist trained in oral appliance therapy.</li>
+            </ul>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Ignoring symptoms associated with snoring can lead to serious long-term health consequences. Taking proactive steps to consult a healthcare provider is an investment in your health and well-being.</p>
+        </section>
+
+        <!-- Snoring Assessment Quiz Section -->
+        <section id="quiz" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Snoring Assessment Quiz</h2>
+            <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Take this quick quiz to get a general idea of your snoring severity and potential risk factors. This is for informational purposes only and not a substitute for professional medical advice.</p>
+            <div style="background-color: #e3f2fd; padding: 25px; border-radius: 12px; margin-top: 20px; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);">
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">1. How often do you snore?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q1" value="0" style="margin-right: 8px;"> Never or rarely</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q1" value="1" style="margin-right: 8px;"> Sometimes (1-2 nights a week)</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q1" value="3" style="margin-right: 8px;"> Often (3-5 nights a week)</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q1" value="5" style="margin-right: 8px;"> Every night</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">2. How loud is your snoring?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q2" value="0" style="margin-right: 8px;"> Barely audible</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q2" value="1" style="margin-right: 8px;"> Quiet, not disruptive</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q2" value="3" style="margin-right: 8px;"> Moderately loud, audible in adjacent rooms</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q2" value="5" style="margin-right: 8px;"> Very loud, disruptive to others in the house</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">3. Has anyone ever told you that you stop breathing, gasp, or choke during sleep?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q3" value="0" style="margin-right: 8px;"> No</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q3" value="5" style="margin-right: 8px;"> Yes, occasionally</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q3" value="10" style="margin-right: 8px;"> Yes, frequently</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">4. Do you often feel tired, fatigued, or sleepy during the day, even after a full night's sleep?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q4" value="0" style="margin-right: 8px;"> No, I feel refreshed</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q4" value="3" style="margin-right: 8px;"> Sometimes</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q4" value="5" style="margin-right: 8px;"> Often or always</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">5. Do you have high blood pressure?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q5" value="0" style="margin-right: 8px;"> No</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q5" value="3" style="margin-right: 8px;"> Yes, managed</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q5" value="5" style="margin-right: 8px;"> Yes, uncontrolled or newly diagnosed</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">6. What is your typical sleeping position?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q6" value="3" style="margin-right: 8px;"> Primarily on my back</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q6" value="1" style="margin-right: 8px;"> Primarily on my side</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q6" value="0" style="margin-right: 8px;"> Primarily on my stomach</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q6" value="2" style="margin-right: 8px;"> Varies</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">7. Do you consume alcohol or sedatives within a few hours of bedtime?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q7" value="0" style="margin-right: 8px;"> No</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q7" value="3" style="margin-right: 8px;"> Sometimes</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q7" value="5" style="margin-right: 8px;"> Frequently</label></div>
+
+                <div style="margin-bottom: 15px; font-size: 1.1em; font-weight: bold; color: #0d47a1;">8. Is your BMI (Body Mass Index) considered overweight or obese?</div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q8" value="0" style="margin-right: 8px;"> No</label></div>
+                <div style="margin-bottom: 8px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q8" value="3" style="margin-right: 8px;"> Yes, overweight</label></div>
+                <div style="margin-bottom: 15px;"><label style="display: block; padding: 8px 10px; border-radius: 5px;"><input type="radio" name="q8" value="5" style="margin-right: 8px;"> Yes, obese</label></div>
+
+                <button type="button" onclick="calculateQuizScore()" style="background-color: #4caf50; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1em; font-weight: bold; display: block; margin-top: 20px; width: fit-content;">Get My Score</button>
+                <div id="quiz-result" style="margin-top: 25px; padding: 15px; background-color: #c8e6c9; border: 1px solid #81c784; border-radius: 8px; font-weight: bold; color: #2e7d32;"></div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Accordion) -->
+        <section id="faq" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 12px solid #e0e0e0; border-radius: 1px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Frequently Asked Questions (FAQ)</h2>
+            <div>
+                <div style=" margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;  border-radius: 8px 8px 0 0;">
+                        <span>What is the difference between snoring and sleep apnea?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 0 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 15px 0;">Snoring is the sound produced by vibrating soft tissues in the throat during sleep due to obstructed airflow. Sleep apnea, specifically Obstructive Sleep Apnea (OSA), is a more serious condition where breathing repeatedly stops and starts during sleep due to a complete or partial collapse of the airway. While all sleep apnea patients snore, not all snorers have sleep apnea. Sleep apnea is characterized by pauses in breathing, followed by gasps or snorts, and often leads to significant daytime sleepiness and other health risks.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
+                        <span>Can losing weight help with snoring?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 15px 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 0;">Yes, absolutely. Excess weight, particularly around the neck, can contribute to snoring by increasing fatty tissue that narrows the airway. Even a modest amount of weight loss can significantly reduce or eliminate snoring in many individuals. It's often one of the first lifestyle changes recommended.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
+                        <span>Are over-the-counter snoring remedies effective?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 15px 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 0;">The effectiveness of over-the-counter (OTC) snoring remedies varies greatly depending on the cause of snoring. Nasal strips or dilators may help if snoring is due to nasal congestion. Oral sprays or devices that claim to "tighten" throat tissues often have limited, temporary effects. Custom-fitted oral appliances from a dentist are generally more effective than generic OTC mouthpieces for mild to moderate cases. It's important to understand the cause of your snoring before trying various OTC products.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
+                        <span>Is snoring hereditary?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 15px 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 0;">While snoring itself isn't directly hereditary, certain anatomical features that predispose individuals to snoring can be inherited. These include a narrower airway, a larger tongue, or a lower, thicker soft palate. Therefore, if your parents or close relatives snore, you might be more prone to it yourself.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
+                        <span>Can children snore, and is it serious?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 15px 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 0;">Yes, children can snore. While occasional snoring during a cold is common, habitual snoring (more than three nights a week) in children should be evaluated by a doctor. It can be a sign of enlarged tonsils or adenoids, which are the most common cause of sleep apnea in children. Untreated sleep apnea in children can lead to behavioral problems, learning difficulties, growth issues, and even heart problems.</p>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden;">
+                    <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
+                        <span>How does alcohol affect snoring?</span>
+                        <span class="icon" style="font-size: 1.2em;">▼</span>
+                    </div>
+                    <div class="accordion-content" style="padding: 15px 20px; background-color: #fafafa; display: none;">
+                        <p style="margin: 0;">Alcohol is a central nervous system depressant and a muscle relaxant. When consumed before bedtime, it relaxes the muscles in the throat and soft palate more than usual. This increased relaxation causes the airway to narrow further, leading to more intense and louder snoring, even in individuals who don't typically snore. It can also worsen existing snoring and sleep apnea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Contact Us Section -->
+<section id="contact" style="padding: 25px; margin-bottom: 30px; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);">
+    <h2 style="color: #1a73e8; font-size: 2.2em; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Contact Us / Feedback</h2>
+    <p style="margin-bottom: 15px; font-size: 1.05em; line-height: 1.7;">Have questions, feedback, or want to share your experience? We'd love to hear from you. Please fill out the form below.</p>
+
+<form action="http://localhost:5000/api/sleepfeedback" method="POST">
+        <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #0d47a1;">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name" style="width: calc(100% - 20px); padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold; color: #0d47a1;">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address" style="width: calc(100% - 20px); padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="subject" style="display: block; margin-bottom: 8px; font-weight: bold; color: #0d47a1;">Subject:</label>
+            <input type="text" id="subject" name="subject" required placeholder="e.g., Question about snoring, Feedback" style="width: calc(100% - 20px); padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="message" style="display: block; margin-bottom: 8px; font-weight: bold; color: #0d47a1;">Your Message:</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Type your message here..." style="width: calc(100% - 20px); padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box; resize: vertical; min-height: 100px;"></textarea>
+        </div>
+        <button type="submit" style="background-color: #1a73e8; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1em; font-weight: bold;">Send Message</button>
+        <div id="form-status" style="margin-top: 15px; font-weight: bold; color: #1a73e8;"></div>
+    </form>
+</section>
+
+
+
+    <script>
+        // JavaScript for the Snoring Assessment Quiz
+        function calculateQuizScore() {
+            let score = 0;
+            // Get all radio button groups for questions
+            const q1Radios = document.querySelectorAll('input[name="q1"]:checked');
+            const q2Radios = document.querySelectorAll('input[name="q2"]:checked');
+            const q3Radios = document.querySelectorAll('input[name="q3"]:checked');
+            const q4Radios = document.querySelectorAll('input[name="q4"]:checked');
+            const q5Radios = document.querySelectorAll('input[name="q5"]:checked');
+            const q6Radios = document.querySelectorAll('input[name="q6"]:checked');
+            const q7Radios = document.querySelectorAll('input[name="q7"]:checked');
+            const q8Radios = document.querySelectorAll('input[name="q8"]:checked');
+
+            // Check if all questions are answered
+            if (q1Radios.length === 0 || q2Radios.length === 0 || q3Radios.length === 0 ||
+                q4Radios.length === 0 || q5Radios.length === 0 || q6Radios.length === 0 ||
+                q7Radios.length === 0 || q8Radios.length === 0) {
+                document.getElementById('quiz-result').innerHTML = "<span style='color: #d32f2f;'>Please answer all questions before getting your score.</span>";
+                return; // Exit function if not all questions are answered
+            }
+
+            // Sum up the scores from selected radio buttons
+            score += parseInt(q1Radios[0].value);
+            score += parseInt(q2Radios[0].value);
+            score += parseInt(q3Radios[0].value);
+            score += parseInt(q4Radios[0].value);
+            score += parseInt(q5Radios[0].value);
+            score += parseInt(q6Radios[0].value);
+            score += parseInt(q7Radios[0].value);
+            score += parseInt(q8Radios[0].value);
+
+            const resultDiv = document.getElementById('quiz-result');
+            let message = "";
+            let messageColor = "";
+
+            // Provide feedback based on the total score
+            if (score <= 5) {
+                message = "Your snoring risk appears low. Keep up good sleep habits!";
+                messageColor = "#2e7d32"; // Green
+            } else if (score <= 15) {
+                message = "You have a moderate risk for snoring or mild sleep disruption. Consider reviewing sleep hygiene tips and lifestyle changes.";
+                messageColor = "#ffa000"; // Orange
+            } else if (score <= 25) {
+                message = "Your score indicates a significant risk for problematic snoring and potential sleep apnea. It is highly recommended to consult a doctor or a sleep specialist for a proper evaluation.";
+                messageColor = "#d32f2f"; // Red
+            } else {
+                message = "Your score suggests a high likelihood of severe snoring or sleep apnea. Please seek immediate medical advice from a doctor or sleep specialist.";
+                messageColor = "#c62828"; // Dark Red
+            }
+
+            resultDiv.innerHTML = `<p style="color: ${messageColor};">Your Score: <strong>${score}</strong></p><p style="color: ${messageColor};">${message}</p>`;
+            resultDiv.style.display = 'block'; // Make sure the result div is visible
+        }
+
+        // JavaScript for the FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all accordion headers
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                // Add click event listener to each header
+                header.addEventListener('click', function() {
+                    // Toggle the 'active' class on the header
+                    this.classList.toggle('active');
+
+                    // Get the next sibling element, which should be the content
+                    const content = this.nextElementSibling;
+
+                    // Toggle the 'show' class on the content to animate visibility
+                    if (content.classList.contains('show')) {
+                        content.classList.remove('show');
+                        content.style.maxHeight = null; // Reset max-height to allow transition when closing
+                        content.style.opacity = 0; // Reset opacity for fade out
+                        // Set display to none after transition to hide completely
+                        content.addEventListener('transitionend', function handler() {
+                            content.style.display = 'none';
+                            content.removeEventListener('transitionend', handler);
+                        }, { once: true });
+                    } else {
+                        // Close any other open accordions before opening the new one
+                        document.querySelectorAll('.accordion-content.show').forEach(openContent => {
+                            if (openContent !== content) { // Don't close the one just clicked
+                                openContent.classList.remove('show');
+                                openContent.style.maxHeight = null;
+                                openContent.style.opacity = 0;
+                                openContent.previousElementSibling.classList.remove('active');
+                                openContent.addEventListener('transitionend', function handler() {
+                                    openContent.style.display = 'none';
+                                    openContent.removeEventListener('transitionend', handler);
+                                }, { once: true });
+                            }
+                        });
+
+                        content.style.display = 'block'; // Make it block to calculate scrollHeight
+                        // Set max-height to the actual scroll height for smooth transition
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.opacity = 1; // Set opacity for fade in
+                        content.classList.add('show');
+                    }
+                });
+            });
+        });
+
+        // JavaScript for handling the Contact Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formStatus = document.getElementById('form-status');
+            formStatus.style.color = '#1a73e8'; // Reset color
+            formStatus.textContent = 'Sending your message...'; // Show sending message
+
+            // Simulate a network request (e.g., to a server-side script)
+            // In a real application, you would send this data to a backend server.
+            setTimeout(() => {
+                // Get form data (for demonstration purposes, not actually sending)
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                console.log('Form Submitted!');
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Subject:', subject);
+                console.log('Message:', message);
+
+                // Simulate success or failure
+                const success = Math.random() > 0.1; // 90% chance of success
+
+                if (success) {
+                    formStatus.style.color = '#2e7d32'; // Green for success
+                    formStatus.textContent = 'Message sent successfully! Thank you for your feedback.';
+                    // Clear the form fields on successful submission
+                    document.getElementById('contact-form').reset();
+                } else {
+                    formStatus.style.color = '#d32f2f'; // Red for error
+                    contentStatus.style.color = 'Failed to send message. Please try again later.';
+                }
+            }, 1500); // Simulate 1.5 seconds delay for network request
+        });
+    </script>
+
+    <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

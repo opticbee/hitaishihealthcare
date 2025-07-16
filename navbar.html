@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi HealthCare</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-blue: #007bff;
+            --dark-blue: #2581de;
+            --text-color: #333;
+            --white: #fff;
+        }
+
+        /* Basic body styling */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* --- Top Navigation Bar Styling --- */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-blue);
+            padding: 15px 40px;
+            flex-wrap: wrap; /* Allows items to wrap onto the next line */
+            border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-nav .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-nav .logo-title img {
+            height: 50px;
+            border-radius: 8px; /* Rounded corners for logo */
+        }
+
+        .top-nav .logo-title h2 {
+            color: var(--white);
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .top-nav .logo-title p {
+            color: var(--white);
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .top-nav .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Allows search to take available space */
+            max-width: 300px; /* Limit search width on larger screens */
+            margin: 0 20px; /* Spacing around search input */
+        }
+
+        .top-nav input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-nav .fa-search {
+            position: absolute;
+            right: 10px;
+            color: var(--primary-blue); /* Icon color to match theme */
+            font-weight: bolder;
+            pointer-events: none; /* Allows clicks to pass through to input */
+        }
+
+        .top-nav .nav-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap; /* Allows buttons to wrap */
+            justify-content: flex-end; /* Align to the right */
+        }
+
+        .top-nav .nav-buttons a {
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            white-space: nowrap; /* Prevent buttons from breaking words */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-nav .nav-buttons a:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        .top-nav .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-left: 20px;
+        }
+
+        .top-nav .social-icons a {
+            color: var(--white);
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .top-nav .social-icons a:hover {
+            color: #f0f0f0;
+            transform: scale(1.1);
+        }
+
+        .top-nav .social-icons .fa-user-circle {
+            font-size: 22px;
+            margin-left: 10px;
+        }
+
+        /* --- Main Navigation Bar Styling (second nav) --- */
+        .main-nav {
+            background-color: var(--dark-blue);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+        }
+
+        .main-nav-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        .main-nav .nav-item {
+            margin-right: 1rem;
+            position: relative;
+            border-radius: 5px; /* Rounded corners for nav items */
+        }
+
+        .main-nav .nav-item a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block; /* Important for padding and clickable area */
+            border-radius: 5px; /* Rounded corners for links */
+        }
+
+        .main-nav .nav-item a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .main-nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 200px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+            border-radius: 8px; /* More rounded corners for dropdowns */
+            overflow: hidden;
+            z-index: 1001;
+            top: 100%; /* Position dropdown below the parent link */
+            left: 0;
+            margin-top: 5px; /* Small gap between parent and dropdown */
+            animation: fadeIn 0.3s ease-out; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-nav .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: normal; /* Reset font weight for dropdown items */
+            border-radius: 0; /* No rounded corners for inner links */
+        }
+
+        .main-nav .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover for desktop */
+        .main-nav .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
+        /* --- Mobile Responsiveness --- */
+
+        /* Hamburger menu icon (hidden by default on desktop) */
+        .menu-toggle-label {
+            display: none; /* Hidden on desktop */
+            font-size: 30px;
+            color: var(--white);
+            cursor: pointer;
+            order: 1; /* Places it before other items on mobile */
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-toggle-label:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        #menu-toggle {
+            display: none; /* Hide the actual checkbox */
+        }
+
+        /* Media Query for larger tablets and smaller laptops */
+        @media (max-width: 992px) {
+            .top-nav {
+                padding: 15px 20px;
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align to the left */
+            }
+
+            .top-nav .logo-title {
+                margin-bottom: 15px;
+                width: 100%; /* Take full width */
+                justify-content: center; /* Center logo and title */
+            }
+
+            .top-nav .search-container {
+                width: 100%;
+                max-width: none; /* Remove max-width constraint */
+                margin: 0 0 15px 0; /* Adjust margin */
+            }
+
+            .top-nav .nav-buttons,
+            .top-nav .social-icons {
+                width: 100%;
+                justify-content: center; /* Center buttons and social icons */
+                gap: 10px;
+                margin-left: 0; /* Remove left margin */
+            }
+
+            .top-nav .social-icons {
+                margin-top: 10px;
+            }
+
+            .top-nav .nav-buttons a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            /* Main Navigation Bar for smaller screens */
+            .main-nav {
+                padding: 1rem;
+            }
+
+            .main-nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-nav .nav-item {
+                margin-right: 0;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator for menu items */
+                border-radius: 0; /* Remove rounded corners for full-width items */
+            }
+
+            .main-nav .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .main-nav .nav-item a {
+                padding: 1rem;
+            }
+
+            /* Ensure dropdowns are still relative to their parent nav-item */
+            .main-nav .dropdown-content {
+                position: static; /* Make dropdowns flow within the main nav */
+                width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+                background-color: rgba(255, 255, 255, 0.05); /* Slightly different background for sub-items */
+                margin-top: 0; /* Remove gap */
+            }
+
+            .main-nav .dropdown-content a {
+                padding-left: 2rem; /* Indent dropdown items */
+                color: var(--white);
+            }
+            .main-nav .dropdown-content a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        /* Media Query for typical tablet sizes */
+        @media (max-width: 768px) {
+            .top-nav .nav-buttons {
+                display: none; /* Hide all action buttons on very small screens */
+            }
+
+            .top-nav .social-icons {
+                justify-content: center; /* Center social icons */
+                width: auto; /* Allow social icons to shrink */
+            }
+
+            .main-nav-container {
+                position: relative; /* For positioning the hamburger icon */
+                align-items: center; /* Center items when collapsed */
+            }
+
+            /* Show hamburger menu and hide regular nav links */
+            .menu-toggle-label {
+                display: block; /* Show hamburger icon */
+                position: absolute;
+                right: 15px; /* Position to the right */
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .main-nav .nav-item {
+                display: none; /* Hide all nav items by default */
+                text-align: center; /* Center text when menu is open */
+            }
+
+            /* When the menu toggle is checked, show the nav items */
+            #menu-toggle:checked ~ .main-nav-container .nav-item {
+                display: block; /* Show nav items as blocks */
+            }
+
+            /* Hide dropdown content by default on mobile */
+            .main-nav .dropdown-content {
+                display: none !important; /* Force hide with !important */
+            }
+
+            /* Show dropdown content when parent is clicked (handled by JS) */
+            .main-nav .nav-item.active .dropdown-content {
+                display: block !important;
+            }
+        }
+
+        /* Media Query for mobile phone sizes */
+        @media (max-width: 600px) {
+            .top-nav {
+                padding: 10px 15px;
+            }
+            .top-nav .logo-title h2 {
+                font-size: 28px;
+            }
+
+            .top-nav .logo-title p {
+                font-size: 16px;
+            }
+
+            .top-nav .social-icons {
+                margin-top: 15px;
+            }
+
+            .top-nav .search-container {
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="top-nav">
+    
+    <!-- Logo and Title -->
+    <div class="logo-title">
+        <img src="images/Hitaishi HealthCare (1).png" alt="Logo">
+        <div>
+            <h2>Hitaishi</h2>
+            <p>HealthCare Service</p>
+        </div>
+    </div>
+    
+    <!-- Search Input -->
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <!-- Buttons -->
+    <div class="nav-buttons">
+        <a href="blood.html">
+            ❤️ Blood Donation
+        </a>
+        <a href="clinics.html">
+            Book Appointment
+        </a>
+        <a href="doctors.html">
+            Find a Doctor
+        </a>
+        <a href="clinic.html">
+            Clinic
+        </a>
+        <a href="Eyecare.html">
+            Eye Care
+        </a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/HitaishiHealth" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- Display Logged-in User Name (uncomment if you want to use it) -->
+        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+
+        <!-- Profile Icon -->
+        <a href="patientLogin.html">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+
+    </nav>
+    
+    <script>
+        // Simulating getting user data from local storage or API
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
+            if (user) {
+                const usernameSpan = document.getElementById("username");
+                if (usernameSpan) { // Check if the element exists before trying to set textContent
+                    usernameSpan.textContent = user; // Show username if logged in
+                }
+            }
+        });
+    
+        // Example: Store username after login (call this after user logs in)
+        function setUser(name) {
+            localStorage.setItem("loggedInUser", name);
+        }
+    
+        // Example: Clear user on logout
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload(); // Refresh page after logout
+        }
+    </script>
+    
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+        <!-- Checkbox for hamburger menu toggle -->
+        <input type="checkbox" id="menu-toggle">
+        <!-- Label acts as the hamburger icon, linked to the checkbox -->
+        <label for="menu-toggle" class="menu-toggle-label"><i class="fas fa-bars"></i></label>
+        
+        <div class="main-nav-container">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="index.html">Home</a>
+            </div>
+
+            <!-- Health Records Dropdown -->
+            <div class="nav-item has-dropdown">
+                <a href="healthRecords.html">Health Records</a>
+                <div class="dropdown-content">
+                    <a href="bloodtest.html">Blood Tests</a>
+                    <a href="donations.html">Donations</a>
+                    <a href="inventory.html">Inventory</a>
+                </div>
+            </div>
+
+            <!-- Diagnostics Dropdown -->
+            <div class="nav-item has-dropdown">
+                <a href="Diagnostics.html">Diagnostics</a>
+                <div class="dropdown-content">
+                    <a href="xray.html">X-Ray</a>
+                    <a href="ultrasound.html">Ultrasound</a>
+                    <a href="mri.html">MRI</a>
+                </div>
+            </div>
+
+            <!-- Physicians Dropdown -->
+            <div class="nav-item has-dropdown">
+                <a href="Physician.html">Physicians</a>
+                <div class="dropdown-content">
+                    <a href="cardiologist.html">Cardiologist</a>
+                    <a href="neuralogist.html">Neurologist</a>
+                    <a href="dermatologist.html">Dermatologist</a>
+                </div>
+            </div>
+
+            <!-- Fertility Dropdown -->
+            <div class="nav-item has-dropdown">
+                <a href="fertility.html">Fertility</a>
+                <div class="dropdown-content">
+                    <a href="IVF.html">IVF</a>
+                    <a href="iui.html">IUI</a>
+                    <a href="sarogasi.html">Surrogacy</a>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div class="nav-item">
+                <a href="ai.html">AI & Blockchain</a>
+            </div>
+
+            <!-- Doctors Link -->
+            <div class="nav-item">
+                <a href="doctor.html">Doctors</a>
+            </div>
+
+            <!-- Patients Link -->
+            <div class="nav-item">
+                <a href="patientLogin.html">Patients</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="Cancer.html">Cancer</a>
+            </div>
+
+            <!-- Dental Link -->
+            <div class="nav-item">
+                <a href="Dental.html">Dental</a>
+            </div>
+            
+            <!-- ENT Link -->
+            <div class="nav-item">
+                <a href="ENT.html">ENT</a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="contact.html">Contact</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- JavaScript for dropdowns and mobile menu toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dropdown hover for desktop
+            document.querySelectorAll('.main-nav .nav-item.has-dropdown').forEach(navItem => {
+                const dropdown = navItem.querySelector('.dropdown-content');
+                if (dropdown) {
+                    navItem.addEventListener('mouseenter', () => {
+                        if (window.innerWidth > 768) { // Only on desktop
+                            dropdown.style.display = 'block';
+                        }
+                    });
+                    navItem.addEventListener('mouseleave', () => {
+                        if (window.innerWidth > 768) { // Only on desktop
+                            dropdown.style.display = 'none';
+                        }
+                    });
+
+                    // Mobile dropdown toggle on click
+                    const parentLink = navItem.querySelector('a');
+                    parentLink.addEventListener('click', (event) => {
+                        if (window.innerWidth <= 768) { // Only on mobile
+                            event.preventDefault(); // Prevent navigating immediately
+                            navItem.classList.toggle('active'); // Toggle active class on parent
+                            dropdown.style.display = navItem.classList.contains('active') ? 'block' : 'none';
+                        }
+                    });
+                }
+            });
+
+            // Handle mobile menu toggle (hamburger icon)
+            const menuToggle = document.getElementById('menu-toggle');
+            menuToggle.addEventListener('change', function() {
+                const navItems = document.querySelectorAll('.main-nav .nav-item');
+                if (this.checked) {
+                    // If menu is checked, show all nav items
+                    navItems.forEach(item => item.style.display = 'block');
+                } else {
+                    // If menu is unchecked, hide all nav items (on mobile)
+                    if (window.innerWidth <= 768) {
+                        navItems.forEach(item => item.style.display = 'none');
+                        // Also close any open dropdowns when menu is closed
+                        document.querySelectorAll('.main-nav .nav-item.active').forEach(item => {
+                            item.classList.remove('active');
+                            const dropdown = item.querySelector('.dropdown-content');
+                            if (dropdown) dropdown.style.display = 'none';
+                        });
+                    }
+                }
+            });
+
+            // Adjust menu visibility on window resize (e.g., rotating tablet or resizing desktop browser)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    // If resizing to desktop view, ensure menu is unchecked and all items are visible
+                    menuToggle.checked = false; // Uncheck hamburger menu
+                    document.querySelectorAll('.main-nav .nav-item').forEach(item => item.style.display = 'block'); // Show all nav items
+                    // Ensure dropdowns revert to hover behavior and are closed
+                    document.querySelectorAll('.main-nav .nav-item.has-dropdown').forEach(navItem => {
+                        navItem.classList.remove('active'); // Remove active class
+                        const dropdown = navItem.querySelector('.dropdown-content');
+                        if (dropdown) dropdown.style.display = 'none'; // Hide dropdown
+                    });
+                } else {
+                    // If resizing back to mobile, re-apply display: none if toggle is unchecked
+                    if (!menuToggle.checked) {
+                        document.querySelectorAll('.main-nav .nav-item').forEach(item => item.style.display = 'none');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

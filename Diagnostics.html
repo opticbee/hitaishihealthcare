@@ -1,808 +1,1837 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Diagnostic Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
-<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f5f7fa; color: #333;">
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
 
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
-    
-  <!-- Logo and Title -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-      <div>
-          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-      </div>
-  </div>
-  
-  <!-- search input icons -->
-  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-      <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
 
-  <!-- Buttons -->
-  <div style="display: flex; gap: 15px;">
-      <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          ❤️ Blood Donation
-      </a>
-      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Book Appointment
-      </a>
-      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Find a Doctor
-      </a>
-      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Clinic
-      </a>
-      <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Eye Care
-      </a>
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
   </div>
 
-  <!-- Social Media Icons -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-whatsapp"></i>
-      </a>
-      
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
 
-      <!-- Display Logged-in User Name -->
-      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
-
-      <!-- Profile Icon -->
-      <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-          <i class="fas fa-user-circle"></i>
-      </a>
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
   </div>
 
-  </nav>
-  
-  <script>
-      // Simulating getting user data from local storage or API
-      document.addEventListener("DOMContentLoaded", function () {
-          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-          if (user) {
-              document.getElementById("username").textContent = user; // Show username if logged in
-          }
-      });
-  
-      // Example: Store username after login (call this after user logs in)
-      function setUser(name) {
-          localStorage.setItem("loggedInUser", name);
-      }
-  
-      // Example: Clear user on logout
-      function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.reload(); // Refresh page after logout
-      }
-  </script>
-  
-  
-  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-          <!-- Home Link -->
-          <div style="margin-right: 1rem;">
-              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-          </div>
-
-          <!-- Health Records Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                  <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                  <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-              </div>
-          </div>
-
-          <!-- Diagnostics Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                  <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                  <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-              </div>
-          </div>
-
-          <!-- Physicians Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                  <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                  <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-              </div>
-          </div>
-
-          <!-- Fertility Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                  <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-              </div>
-          </div>
-
-          <!-- AI -->
-          <div style="margin-right: 1rem;">
-              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-          </div>
-
-          <!-- Doctors Link -->
-          <div style="margin-right: 1rem;">
-              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-          </div>
-
-          <!-- Patients Link -->
-          <div style="margin-right: 1rem;">
-              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-          </div>
-
-
-
-          <!-- Insights Link -->
-          <div style="margin-right: 1rem;">
-              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-          </div>
-          <div style="margin-right: 1rem;">
-              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-          </div>
-
-          <!-- Contact Link -->
-          <div>
-              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-          </div>
-          
-      </div>
-
-    
-  </nav>
-
-  <!-- for dropdowns -->
-  <script>
-      // JavaScript to handle dropdown visibility
-      document.querySelectorAll('nav > div > div').forEach(navItem => {
-          const dropdown = navItem.querySelector('div');
-          if (dropdown) {
-              navItem.addEventListener('mouseenter', () => {
-                  dropdown.style.display = 'block';
-              });
-              navItem.addEventListener('mouseleave', () => {
-                  dropdown.style.display = 'none';
-              });
-          }
-      });
-    </script>
-
-
-  <!-- Hero Section -->
-  <section style="background-color: #f0f4ff; padding: 80px 20px; font-family: 'Segoe UI', sans-serif;">
-    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-  
-      <!-- Text Content -->
-      <div style="flex: 1; min-width: 280px;">
-        <h1 style="font-size: 3rem; color: #2a6de0; margin-bottom: 20px;">Premium Diagnostic Services</h1>
-        <p style="font-size: 1.2rem; color: #444; line-height: 1.6; margin-bottom: 30px;">
-          Experience fast, reliable, and affordable diagnostic testing backed by modern technology and expert care. Your health is our priority.
-        </p>
-        <button onclick="scrollToBooking()" 
-          style="padding: 14px 32px; font-size: 1rem; font-weight: bold; color: white; background: #2a6de0; border: none; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); cursor: pointer; transition: 0.3s;">
-          Book Now
-        </button>
-      </div>
-  
-      <!-- Image Section -->
-      <div style="flex: 1; min-width: 280px; text-align: center;">
-        <img src="images/pngwing.com (16).png" alt="Diagnostic Services"
-          style="width: 100%; max-width: 500px;">
-      </div>
-  
-    </div>
-  </section>
-  
-  <script>
-    function scrollToBooking() {
-      const bookingSection = document.getElementById("booking"); // Update this ID to match your booking section
-      if (bookingSection) {
-        bookingSection.scrollIntoView({ behavior: "smooth" });
-      } else {
-        alert("Booking section not found.");
-      }
-    }
-  </script>
-  
-
-  <!-- Search -->
-<div style="padding: 40px 20px 20px; text-align: center; background-color:#f9fbff ;">
-    <input type="text" id="searchInput" placeholder="🔍 Search for tests or locations..." 
-      style="padding: 12px 20px; width: 80%; max-width: 500px; border: 1px solid #ccc; border-radius: 30px; font-size: 16px;">
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
   </div>
-  
-  <!-- Categories Section -->
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; padding: 40px 20px; background-color: #f9fbff;">
-  
-    <!-- Card Template -->
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform 0.3s;">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">Health Checkups</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Full Body Checkup</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Heart Risk Package</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Diabetes Check</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Women's Wellness</a></li>
-      </ul>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
     </div>
-  
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">Lab Tests</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ CBC</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Thyroid Panel</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Vitamin D</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Liver Function</a></li>
-      </ul>
-    </div>
-  
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">Locations</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">📍 Delhi</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">📍 Mumbai</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">📍 Bangalore</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">📍 Hyderabad</a></li>
-      </ul>
-    </div>
-  
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">X-ray Services</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Chest X-ray</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Dental X-ray</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Abdominal X-ray</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Spine X-ray</a></li>
-      </ul>
-    </div>
-  
-    <!-- New: Ultrasound -->
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">Ultrasound Scans</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Pelvic Ultrasound</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Obstetric Ultrasound</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Abdomen Scan</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Breast Ultrasound</a></li>
-      </ul>
-    </div>
-  
-    <!-- New: COVID Tests -->
-    <div style="background: #fff; border-radius: 15px; padding: 25px; width: 280px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
-      <h3 style="border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; font-size: 20px; color: #2a6de0;">COVID Tests</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 15px;">
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ RT-PCR Test</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Rapid Antigen Test</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Antibody Test</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">✔ Home Collection</a></li>
-      </ul>
-    </div>
-  
-  </div>
-  
-  <section id="x-ray" style="padding: 60px 20px; background: linear-gradient(to right, #eef2f3, #ffffff); font-family: 'Segoe UI', sans-serif;">
-    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-  
-      <!-- Image Area -->
-      <div style="flex: 1; min-width: 300px; text-align: center;">
-        <img src="https://media.istockphoto.com/id/1296447730/photo/close-up-of-doctors-analysing-radiological-chest-x-ray-film.jpg?s=612x612&w=0&k=20&c=t5P38CvCU129gJmydOfWBaFL0pRJeXVySYWFcvyOZoE=" alt="X-Ray Service"
-          style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease;"
-          onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </div>
-  
-      <!-- Content Area -->
-      <div style="flex: 1; min-width: 300px;">
-        <h2 style="font-size: 36px; color: #222; margin-bottom: 15px;">High-Precision Digital X-Rays</h2>
-        <p style="font-size: 17px; color: #555; line-height: 1.7;">
-          Experience our advanced digital X-ray diagnostics that deliver crystal-clear imaging with lower radiation exposure. We ensure quick processing, professional evaluation, and affordable care.
-        </p>
-        <ul style="margin-top: 25px; padding-left: 20px; color: #444; font-size: 16px;">
-          <li>🩻 Bone Fracture Detection</li>
-          <li>🫁 Chest & Lung Screening</li>
-          <li>🦴 Joint & Spine Imaging</li>
-          <li>📄 Quick Digital Reports</li>
-        </ul>
-        <button onclick="bookXray()" 
-          style="margin-top: 30px; padding: 14px 30px; font-size: 16px; font-weight: 600; color: white; background: linear-gradient(135deg, #007bff, #0056b3); border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); transition: background 0.3s;">
-          Book Your X-Ray
-        </button>
-      </div>
-  
-    </div>
-  </section>
-  
-  <script>
-    function bookXray() {
-      alert("Redirecting to X-Ray booking page...");
-      window.location.href = "xray-booking.html"; // replace with your booking link
-    }
-  </script>
-  <section id="ultrasound" style="padding: 60px 20px; background: linear-gradient(135deg, #f0f4f8, #ffffff); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="text-align: center; font-size: 36px; color: #1a1a1a; margin-bottom: 16px;">🩺 Ultrasound Services</h2>
-      <p style="text-align: center; color: #444; font-size: 18px; max-width: 850px; margin: 0 auto 40px;">
-        Get accurate and safe diagnostic imaging with our advanced ultrasound services, tailored for patients of all ages.
-      </p>
-  
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 30px;">
-        <div style="background: #ffffff; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
-          <img src="https://cdn3.iconfinder.com/data/icons/human-internal-organs/1200/Single_3CartoonOrganyRom-512.png" alt="Abdominal" style="margin-bottom: 12px; border-radius: 50%; background: #e6f0fa; height: 100px;width: 100px;">
-          <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;">Abdominal Ultrasound</h3>
-          <p style="color: #555; font-size: 15px;">Detects liver, kidney, pancreas, and other abdominal issues.</p>
-          <button onclick="alert('Booking Abdominal Ultrasound')" style="margin-top: 15px; padding: 10px 24px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">Book Now</button>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
         </div>
-  
-        <div style="background: #ffffff; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
-          <img src="https://cdn-icons-png.flaticon.com/512/6143/6143217.png" alt="Pelvic" style="margin-bottom: 12px; border-radius: 50%; background: #e6f0fa; height: 100px;width: 100px;">
-          <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;">Pelvic Ultrasound</h3>
-          <p style="color: #555; font-size: 15px;">Examines reproductive organs like the uterus and ovaries.</p>
-          <button onclick="alert('Booking Pelvic Ultrasound')" style="margin-top: 15px; padding: 10px 24px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">Book Now</button>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
         </div>
-  
-        <div style="background: #ffffff; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
-          <img src="https://cdn-icons-png.flaticon.com/512/6830/6830736.png" alt="Thyroid" style="margin-bottom: 12px; border-radius: 50%; background: #e6f0fa; padding: 10px;height: 100px;width: 100px;">
-          <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;">Thyroid Ultrasound</h3>
-          <p style="color: #555; font-size: 15px;">Analyzes thyroid nodules and neck-related abnormalities.</p>
-          <button onclick="alert('Booking Thyroid Ultrasound')" style="margin-top: 15px; padding: 10px 24px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">Book Now</button>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
         </div>
-  
-        <div style="background: #ffffff; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
-          <img src="https://cdn-icons-png.flaticon.com/512/10363/10363647.png" alt="Pregnancy" style="margin-bottom: 12px; border-radius: 50%; background: #e6f0fa; height: 100px;width: 100px;">
-          <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;">Pregnancy Ultrasound</h3>
-          <p style="color: #555; font-size: 15px;">Monitors fetal development and maternal health.</p>
-          <button onclick="alert('Booking Pregnancy Ultrasound')" style="margin-top: 15px; padding: 10px 24px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">Book Now</button>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
         </div>
-      </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
     </div>
-  </section>
-  <div id="mri" style="max-width: 1200px; margin: 40px auto; padding: 30px; background: linear-gradient(135deg, #e0f7fa, #ffffff); border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
-    <h2 style="color: #00796b; font-size: 28px; margin-bottom: 10px;">🧠 MRI Scans</h2>
-    <p style="color: #444; font-size: 16px; margin-bottom: 20px;">Magnetic Resonance Imaging (MRI) is a safe, non-invasive scan that provides detailed insights into the human body.</p>
-  
-    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-      <button onclick="handleMRI('brain')" style="flex: 1; padding: 12px; border: none; border-radius: 8px; background: #d1c4e9; color: #4a148c; font-weight: bold; cursor: pointer;">Brain MRI</button>
-      <button onclick="handleMRI('spine')" style="flex: 1; padding: 12px; border: none; border-radius: 8px; background: #b2dfdb; color: #004d40; font-weight: bold; cursor: pointer;">Spine MRI</button>
-      <button onclick="handleMRI('knee')" style="flex: 1; padding: 12px; border: none; border-radius: 8px; background: #ffccbc; color: #e64a19; font-weight: bold; cursor: pointer;">Knee MRI</button>
-      <button onclick="handleMRI('abdominal')" style="flex: 1; padding: 12px; border: none; border-radius: 8px; background: #c8e6c9; color: #1b5e20; font-weight: bold; cursor: pointer;">Abdominal MRI</button>
-      <button onclick="handleMRI('wholebody')" style="flex: 1; padding: 12px; border: none; border-radius: 8px; background: #ffe082; color: #ff6f00; font-weight: bold; cursor: pointer;">Whole Body MRI</button>
-    </div>
-  
-    <div id="hospital-list" style="margin-top: 20px; font-size: 15px; color: #333;"></div>
-  
-    <!-- Location -->
-    <div style="margin-top: 25px;">
-      <label for="mri-location" style="font-weight: bold; color: #333;">📍 Choose Location:</label>
-      <select id="mri-location" onchange="showMRIInfo()" style="padding: 10px; width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
-        <option value="">Select Location</option>
-        <option value="delhi">Delhi</option>
-        <option value="mumbai">Mumbai</option>
-        <option value="bangalore">Bangalore</option>
-      </select>
-    </div>
-  
-    <div id="mri-info" style="margin-top: 15px; font-size: 15px; color: #555;"></div>
-  
-    <!-- Dynamic Fields -->
-    <div id="mri-form-fields" style="margin-top: 25px;">
-      <label id="scan-label" for="scan-notes" style="font-weight: bold; color: #333;">📝 Notes:</label>
-      <input type="text" id="scan-notes" placeholder="Any specific instructions?" 
-             style="padding: 10px; width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
-  
-      <!-- Price -->
-      <div style="margin-top: 20px;">
-        <label style="font-weight: bold; color: #333;">💸 Estimated Price:</label>
-        <input type="text" id="scan-price" readonly 
-               style="padding: 10px; width: 100%; background: #f0f0f0; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
-      </div>
-  
-      <!-- Upload -->
-      <div style="margin-top: 20px;">
-        <label for="prescription-upload" style="font-weight: bold; color: #333;">📄 Upload Prescription (Optional):</label>
-        <input type="file" id="prescription-upload" accept=".pdf,.jpg,.jpeg,.png"
-               style="padding: 10px; width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
-      </div>
-    </div>
-  
-    <!-- Appointment -->
-    <div style="margin-top: 25px;">
-      <label for="appointment-date" style="font-weight: bold; color: #333;">📅 Choose Appointment Date:</label>
-      <input type="date" id="appointment-date" style="padding: 10px; width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
-    </div>
-  
-    <button onclick="bookMRI()" style="margin-top: 25px; background: #00796b; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">Book Now</button>
-  
-    <div id="booking-confirmation" style="margin-top: 20px; font-size: 16px; font-weight: 500;"></div>
-  </div>
-  
-  <script>
-    function handleMRI(scanType) {
-      showScanHospitals(scanType);
-      updateFormFields(scanType);
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
     }
-  
-    function showScanHospitals(scanType) {
-      const hospitals = {
-        brain: "Hospitals for Brain MRI: AIIMS Delhi, Apollo Mumbai, Narayana Bangalore",
-        spine: "Hospitals for Spine MRI: Max Healthcare Delhi, Jaslok Mumbai, Fortis Bangalore",
-        knee: "Hospitals for Knee MRI: Safdarjung Delhi, Hinduja Mumbai, Manipal Bangalore",
-        abdominal: "Hospitals for Abdominal MRI: Sir Ganga Ram Delhi, Breach Candy Mumbai, Columbia Asia Bangalore",
-        wholebody: "Hospitals for Whole Body MRI: BLK Hospital Delhi, Tata Memorial Mumbai, Aster Bangalore"
-      };
-      document.getElementById('hospital-list').innerText = hospitals[scanType] || "";
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
     }
-  
-    function updateFormFields(scanType) {
-      const scanLabel = document.getElementById('scan-label');
-      const scanNotes = document.getElementById('scan-notes');
-      const scanPrice = document.getElementById('scan-price');
-  
-      const scanDetails = {
-        brain: {
-          label: "🧠 Brain MRI Notes:",
-          placeholder: "Mention symptoms like headache, memory loss...",
-          price: "₹4,000 - ₹6,000"
-        },
-        spine: {
-          label: "🦴 Spine MRI Notes:",
-          placeholder: "Mention back pain, injury history...",
-          price: "₹4,500 - ₹6,500"
-        },
-        knee: {
-          label: "🦿 Knee MRI Notes:",
-          placeholder: "Mention swelling, sports injury, etc.",
-          price: "₹3,500 - ₹5,500"
-        },
-        abdominal: {
-          label: "🩺 Abdominal MRI Notes:",
-          placeholder: "Mention digestive issues, pain details...",
-          price: "₹4,000 - ₹6,000"
-        },
-        wholebody: {
-          label: "🌐 Whole Body MRI Notes:",
-          placeholder: "Mention any full-body scans or concerns...",
-          price: "₹8,000 - ₹12,000"
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
         }
-      };
-  
-      if (scanDetails[scanType]) {
-        scanLabel.innerText = scanDetails[scanType].label;
-        scanNotes.placeholder = scanDetails[scanType].placeholder;
-        scanPrice.value = scanDetails[scanType].price;
-      } else {
-        scanLabel.innerText = "📝 Notes:";
-        scanNotes.placeholder = "Any specific instructions?";
-        scanPrice.value = "";
-      }
-    }
-  
-    function showMRIInfo() {
-      const location = document.getElementById('mri-location').value;
-      const infoBox = document.getElementById('mri-info');
-      let message = "";
-  
-      switch(location) {
-        case "delhi":
-          message = "✅ MRI scans in Delhi start from ₹3,500. Nearby centers: AIIMS, Max Healthcare.";
-          break;
-        case "mumbai":
-          message = "✅ MRI scans in Mumbai start from ₹4,000. Nearby centers: Lilavati Hospital, Jaslok Hospital.";
-          break;
-        case "bangalore":
-          message = "✅ MRI scans in Bangalore start from ₹3,800. Nearby centers: Apollo, Narayana Health.";
-          break;
-        default:
-          message = "";
-      }
-  
-      infoBox.innerHTML = message;
-    }
-  
-    function bookMRI() {
-      const location = document.getElementById('mri-location').value;
-      const date = document.getElementById('appointment-date').value;
-      const confirmationBox = document.getElementById('booking-confirmation');
-  
-      if (!location || !date) {
-        confirmationBox.style.color = "#e53935";
-        confirmationBox.innerText = "⚠ Please select both location and date to proceed.";
-        return;
-      }
-  
-      confirmationBox.style.color = "#388e3c";
-      confirmationBox.innerText = ✅ Your MRI scan is booked for ${date} in ${location.charAt(0).toUpperCase() + location.slice(1)}.;
-    }
-  </script>
-  
-  
-  <!-- Booking Section -->
-  <div id="booking" style="padding: 40px 20px; background: #fff; text-align: center;">
-    <h2 style="margin-bottom: 20px;">Book Your Test</h2>
-    <form onsubmit="event.preventDefault(); alert('Test Booked Successfully!')" style="max-width: 500px; margin: 0 auto;">
-      <input type="text" placeholder="Full Name" required
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-      <input type="tel" placeholder="Phone Number" required
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-      <input type="text" placeholder="Preferred Test or Package"
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
-      <button type="submit" style="background: #2a6de0; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold;">Submit</button>
-    </form>
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+
+
+   <!-- Enhanced Section 1: Hero Banner -->
+
+<section style="position: relative; height: 80vh; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; padding-bottom: 30px;">
+  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"><source src="images/ds_herosection-video.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+  <div style="animation: fadeInUp 1.2s ease-out;">
+    <p style="font-size: 34px; color: #facc15; background: transparent; padding: 8px 20px; border-radius: 8px; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); margin-bottom: 6px;">
+      Trusted diagnostics. Fast results. Book your test now with Hitaishi HealthCare.
+    </p>
+    <p style="font-size: 20px; color: #fef9c3; background: transparent; padding: 5px 15px; border-radius: 6px; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+      Get accurate reports, expert consultations, and home sample collection all in one place.
+    </p>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    function scrollToBooking() {
-      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</section>
+
+    <!---section-2------buy buttons----------->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f7fa;">
+  <div style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 20px 0;">
+    <h1 style="color: #0284C7; background: linear-gradient(to right, #0ea5e9, #0369a1); background-clip: text; -webkit-text-fill-color: transparent; font-size: 40px; font-weight: 800; font-family: 'Segoe UI', sans-serif; letter-spacing: 1.2px; position: relative; display: inline-block; padding-bottom: 15px;">
+      Diagnostic Tests
+      <span style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 80%; height: 4px; background-color: #0ea5e9; border-radius: 4px; box-shadow: 0 2px 6px rgba(14,165,233,0.5);"></span>
+    </h1>
+  </div>
+  
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+    <!-- Row 1 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">FASTING PLASMA GLUCOSE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures blood sugar after fasting for 8+ hours</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹80</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('FASTING PLASMA GLUCOSE', '₹80')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">POST LUNCH GLUCOSE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures blood sugar 2 hours after eating</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹80</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('POST LUNCH GLUCOSE', '₹80')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">COMPLETE BLOOD PICTURE (CBP)</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Evaluates overall health and detects disorders</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹430</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('COMPLETE BLOOD PICTURE (CBP)', '₹430')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">GLYCATED HEMOGLOBIN (HbA1c)</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures average blood glucose over 2-3 months</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹650</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('GLYCATED HEMOGLOBIN (HbA1c)', '₹650')">BOOK</button>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">CREATININE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures kidney function and health</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹150</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('CREATININE', '₹150')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">THYROID PROFILE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Assesses thyroid function (TSH, T3, T4)</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹550</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('THYROID PROFILE', '₹550')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">LIPID PROFILE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures cholesterol and triglycerides</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹500</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('LIPID PROFILE', '₹500')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">LIVER FUNCTION TEST</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Evaluates liver health and enzymes</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹600</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('LIVER FUNCTION TEST', '₹600')">BOOK</button>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">KIDNEY FUNCTION TEST</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Comprehensive kidney health assessment</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹450</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('KIDNEY FUNCTION TEST', '₹450')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">URINE ROUTINE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Basic urine analysis for various conditions</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹200</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('URINE ROUTINE', '₹200')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">VITAMIN D TOTAL</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures Vitamin D levels in blood</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹1200</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('VITAMIN D TOTAL', '₹1200')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">VITAMIN B12</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures Vitamin B12 levels in blood</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹900</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('VITAMIN B12', '₹900')">BOOK</button>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">IRON PROFILE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Comprehensive iron level assessment</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹700</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('IRON PROFILE', '₹700')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">CALCIUM</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures calcium levels in blood</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹300</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('CALCIUM', '₹300')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">MAGNESIUM</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures magnesium levels in blood</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹350</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('MAGNESIUM', '₹350')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">ELECTROLYTES</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Sodium, Potassium, Chloride levels</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹400</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('ELECTROLYTES', '₹400')">BOOK</button>
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">URIC ACID</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures uric acid levels in blood</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹250</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('URIC ACID', '₹250')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">PSA (PROSTATE)</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Prostate-specific antigen test</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹800</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('PSA (PROSTATE)', '₹800')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">HBA1C + FASTING</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Combo test for diabetes monitoring</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹700</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('HBA1C + FASTING', '₹700')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">LIPID + GLUCOSE</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Cholesterol and sugar level combo</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹600</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('LIPID + GLUCOSE', '₹600')">BOOK</button>
+      </div>
+    </div>
+
+    <!-- Row 6 -->
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">COMPLETE HEMOGRAM</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Detailed blood cell analysis</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹350</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('COMPLETE HEMOGRAM', '₹350')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">ESR (SED RATE)</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Erythrocyte sedimentation rate test</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹150</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('ESR (SED RATE)', '₹150')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">CRP (C-REACTIVE PROTEIN)</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Measures inflammation in the body</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹500</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('CRP (C-REACTIVE PROTEIN)', '₹500')">BOOK</button>
+      </div>
+    </div>
+
+    <div style="width: 23%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <h3 style="color: #333; margin: 0 0 10px 0; font-size: 16px; font-weight: 600; min-height: 40px;">DENGUE NS1 ANTIGEN</h3>
+      <p style="color: #666; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">Early detection of dengue infection</p>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="color: #333; font-size: 18px; font-weight: 700; margin: 0;">₹900</p>
+        <button style="background: #005b96; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s ease;" onclick="showBookingForm('DENGUE NS1 ANTIGEN', '₹900')">BOOK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Popup Form -->
+  <div id="bookingPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 1000;">
+    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 90%; width: 300px;height: auto; text-align: left; position: relative;">
+      <h2 style="color: #333; margin-top: 0; margin-bottom: 20px; font-size: 1.5rem;">Book Your Test</h2>
+     
+     
+     
+     
+     
+     <!-----BACKEND FORM----->
+
+     
+      <!-- <form id="bookingForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Test Name</label>
+    <input type="text" id="popupTestName" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f5f5f5;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Full Name</label>
+    <input type="text" id="popupFullName" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Email</label>
+    <input type="email" id="popupEmail" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Phone Number</label>
+    <input type="tel" id="popupPhone" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Preferred Date</label>
+    <input type="date" id="popupDate" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div style="display: flex; gap: 10px; margin-top: 10px;">
+    <button type="button" onclick="closeBookingForm()" style="background: #e0e0e0; color: #333; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 1rem; flex: 1; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#d0d0d0'" onmouseout="this.style.backgroundColor='#e0e0e0'">
+      Cancel
+    </button>
+    <button type="submit" style="background: #005b96; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 1rem; flex: 1; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#004a7c'" onmouseout="this.style.backgroundColor='#005b96'">
+      Submit Booking
+    </button>
+  </div>
+    </form>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+  
+    const data = {
+      testName: document.getElementById('popupTestName').value,
+      fullName: document.getElementById('popupFullName').value,
+      email: document.getElementById('popupEmail').value,
+      phone: document.getElementById('popupPhone').value,
+      preferredDate: document.getElementById('popupDate').value
+    };
+
+    
+    const API_URL = `http://localhost:3000/api/diagnosticstests`; // ← Change this
+
+   
+    fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(result => {
+      alert('✅ Booking submitted successfully!');
+      document.getElementById('bookingForm').reset();
+    
+    })
+    .catch(error => {
+      console.error('🚫 Booking submission failed:', error);
+      alert('Something went wrong. Please try again later.');
+    });
+  });
+</script> -->
+
+<form action="http://localhost:5000/api/diagnosticstests" method="post" id="bookingForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Test Name</label>
+    <input type="text" id="popupTestName" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f5f5f5;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Full Name</label>
+    <input type="text" id="popupFullName" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Email</label>
+    <input type="email" id="popupEmail" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Phone Number</label>
+    <input type="tel" id="popupPhone" required pattern="[6-9]{1}[0-9]{9}" maxlength="10" title="Phone number must start with 6, 7, 8, or 9 and be 10 digits" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div>
+    <label style="display: block; margin-bottom: 5px; font-weight: 600; color: #333;">Preferred Date</label>
+    <input type="date" id="popupDate" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  </div>
+  <div style="display: flex; gap: 10px; margin-top: 10px;">
+    <button type="button" onclick="closeBookingForm()" style="background: #e0e0e0; color: #333; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 1rem; flex: 1; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#d0d0d0'" onmouseout="this.style.backgroundColor='#e0e0e0'">
+      Cancel
+    </button>
+    <button type="submit" style="background: #005b96; color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 1rem; flex: 1; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#004a7c'" onmouseout="this.style.backgroundColor='#005b96'">
+      Submit Booking
+    </button>
+  </div>
+</form>
+
+<script>
+  // Disable past dates
+  const popupDate = document.getElementById('popupDate');
+  const today = new Date().toISOString().split('T')[0];
+  popupDate.setAttribute('min', today);
+
+  document.getElementById('bookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const phone = document.getElementById('popupPhone').value.trim();
+    const phoneRegex = /^[6-9]{1}[0-9]{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("❌ Phone number must start with 6, 7, 8, or 9 and be exactly 10 digits.");
+      return;
     }
 
-    document.getElementById('searchInput').addEventListener('input', function() {
-      const query = this.value.toLowerCase();
-      const lists = document.querySelectorAll("ul li");
-      lists.forEach(item => {
-        item.style.display = item.innerText.toLowerCase().includes(query) ? "list-item" : "none";
-      });
+    const data = {
+      testName: document.getElementById('popupTestName').value,
+      fullName: document.getElementById('popupFullName').value,
+      email: document.getElementById('popupEmail').value,
+      phone: phone,
+      preferredDate: popupDate.value
+    };
+
+    const API_URL = `http://localhost:5000/api/diagnosticstests`;
+
+    fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(result => {
+      alert('✅ Booking submitted successfully!');
+      document.getElementById('bookingForm').reset();
+    })
+    .catch(error => {
+      console.error('🚫 Booking submission failed:', error);
+      alert('Something went wrong. Please try again later.');
+    });
+  });
+</script>
+
+
+
+    </div>
+  </div>
+
+  <script>
+    function showBookingForm(testName, price) {
+      document.getElementById('bookingPopup').style.display = 'flex';
+      document.getElementById('popupTestName').value = testName + ' - ' + price;
+      document.getElementById('popupFullName').value = '';
+      document.getElementById('popupEmail').value = '';
+      document.getElementById('popupPhone').value = '';
+      document.getElementById('popupDate').value = '';
+    }
+
+    function closeBookingForm() {
+      document.getElementById('bookingPopup').style.display = 'none';
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Booking submitted successfully! We will contact you shortly.');
+      closeBookingForm();
     });
   </script>
-
-
-
-
-<!-- chatbot -->
-<div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
-  <i class="fas fa-comments" style="font-size: 30px; color: #2c3e50;"></i>
 </div>
-  
-<!-- Chatbot Container (initially hidden) -->
-<div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
-  <!-- Chatbot Header -->
-  <div id="chatbot-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-      <h3 style="margin: 0; font-size: 18px; font-weight: bold; color: #2c3e50;">Hitaishi AI Chatbot</h3>
-      <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
+
+<!-------section-3------home collection samples------->
+
+<!-- Premium Home Sample Test Section -->
+    <div style="background: linear-gradient(to right, #f9fbfd, #ffffff); padding: 40px 0; font-family: 'Helvetica Neue', Arial, sans-serif;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 30px; padding: 0 20px;">
+    
+    <!-- Image Column -->
+    <div style="flex: 1; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,91,150,0.1);">
+      <img src="images/ds_homesample.png" 
+           alt="Professional home sample collection" 
+           style="width: 100%; height: auto; display: block; transition: transform 0.3s;" 
+           onmouseover="this.style.transform='scale(1.02)'" 
+           onmouseout="this.style.transform='scale(1)'">
+    </div>
+    
+    <!-- Content Column -->
+    <div style="flex: 1; min-width: 300px;">
+      <h2 style="color: #0a2540; font-size: 28px; margin-bottom: 12px; font-weight: 700; line-height: 1.3;">Professional Home Sample Collection</h2>
+      <p style="color: #425466; line-height: 1.5; margin-bottom: 18px; font-size: 15px;">
+        Experience hospital-grade sample collection in the comfort of your home. Our certified phlebotomists bring the lab to you with meticulous care and precision.
+      </p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 8px;">
+          <div style="color: #005b96; font-size: 18px;">✓</div>
+          <span style="color: #425466; font-size: 14px;">7AM-9PM slots</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 8px;">
+          <div style="color: #005b96; font-size: 18px;">✓</div>
+          <span style="color: #425466; font-size: 14px;">Certified experts</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 8px;">
+          <div style="color: #005b96; font-size: 18px;">✓</div>
+          <span style="color: #425466; font-size: 14px;">Sterile equipment</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 8px;">
+          <div style="color: #005b96; font-size: 18px;">✓</div>
+          <span style="color: #425466; font-size: 14px;">Digital reports</span>
+        </div>
+      </div>
+      
+      <button onclick="showHomeSampleForm()" 
+              style="background: #005b96; 
+                     color: white; 
+                     border: none; 
+                     padding: 12px 24px; 
+                     border-radius: 6px; 
+                     font-size: 15px; 
+                     font-weight: 600; 
+                     cursor: pointer; 
+                     transition: all 0.2s;
+                     box-shadow: 0 2px 5px rgba(0,91,150,0.2);
+                     display: inline-flex;
+                     align-items: center;
+                     gap: 8px;"
+              onmouseover="this.style.background='#004682'; this.style.transform='translateY(-1px)'"
+              onmouseout="this.style.background='#005b96'; this.style.transform='translateY(0)'">
+        <span>Schedule Home Visit</span>
+        <span style="font-size: 18px;">→</span>
+      </button>
+    </div>
+  </div>
   </div>
 
-  <!-- Chat Area -->
-  <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
-      <!-- Welcome message -->
-      <div>
-          <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #2c3e50; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
+<!-- Premium Popup Form -->
+<div id="homeSamplePopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(3px);">
+  <div style="background: white; width: 90%; max-width: 450px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); overflow: hidden; animation: fadeIn 0.25s ease-out;">
+    <div style="padding: 20px 25px; border-bottom: 1px solid #f0f2f5; display: flex; justify-content: space-between; align-items: center;">
+      <h3 style="margin: 0; font-size: 18px; color: #0a2540; font-weight: 600;">Schedule Home Collection</h3>
+      <span onclick="hideHomeSampleForm()" style="color: #64748b; font-size: 22px; cursor: pointer; padding: 5px;">&times;</span>
+    </div>
+    
+    <div style="padding: 20px 25px;">
+
+
+    <!-- <form id="homeSampleForm" style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); font-family: 'Segoe UI', sans-serif; max-width: 500px; margin: 0 auto;">
+  
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Full Name*</label>
+    <input type="text" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px; transition: 0.2s;"
+           onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'"
+           onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Mobile Number*</label>
+    <input type="tel" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;"
+           onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'"
+           onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Email*</label>
+    <input type="email" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;"
+           onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'"
+           onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Preferred Date & Time*</label>
+    <input type="datetime-local" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;"
+           onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'"
+           onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Tests Required</label>
+    <select id="testSelect" onchange="handleOtherOption(this)" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;"
+            onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'"
+            onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+      <option value="">Select test</option>
+      <option value="Blood Test">Blood Test</option>
+      <option value="Urine Test">Urine Test</option>
+      <option value="Liver Function Test (LFT)">Liver Function Test (LFT)</option>
+      <option value="Kidney Function Test (KFT)">Kidney Function Test (KFT)</option>
+      <option value="Thyroid Profile">Thyroid Profile</option>
+      <option value="Diabetes Screening">Diabetes Screening</option>
+      <option value="Lipid Profile">Lipid Profile</option>
+      <option value="Vitamin D Test">Vitamin D Test</option>
+      <option value="CBC (Complete Blood Count)">CBC (Complete Blood Count)</option>
+      <option value="Iron Studies">Iron Studies</option>
+      <option value="Allergy Panel">Allergy Panel</option>
+      <option value="Infection Screening">Infection Screening</option>
+      <option value="Heart Health Panel">Heart Health Panel</option>
+      <option value="Hormone Panel">Hormone Panel</option>
+      <option value="Full Body Checkup">Full Body Checkup</option>
+      <option value="Other">Other</option>
+    </select>
+    <input id="otherInput" type="text" placeholder="Please specify your test" style="display: none; margin-top: 8px; width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" />
+  </div>
+
+  <div style="display: flex; gap: 10px; margin-top: 8px;">
+    <button type="button" onclick="hideHomeSampleForm()" 
+            style="flex: 1; padding: 8px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 5px; font-weight: 600; cursor: pointer; transition: 0.2s;"
+            onmouseover="this.style.background='#e2e8f0'"
+            onmouseout="this.style.background='#f1f5f9'">
+      Cancel
+    </button>
+    <button type="submit" 
+            style="flex: 1; padding: 8px; background: #2563eb; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: 0.2s;"
+            onmouseover="this.style.background='#1d4ed8'"
+            onmouseout="this.style.background='#2563eb'">
+      Confirm Booking
+    </button>
+  </div>
+            </form>
+
+            <script>
+  
+  function handleOtherOption(selectElement) {
+    const otherInput = document.getElementById('otherInput');
+    if (selectElement.value === 'Other') {
+      otherInput.style.display = 'block';
+      otherInput.setAttribute('required', 'required');
+    } else {
+      otherInput.style.display = 'none';
+      otherInput.removeAttribute('required');
+    }
+  }
+
+  
+  function hideHomeSampleForm() {
+    document.getElementById('homeSampleForm').reset();
+    alert('Booking form cancelled.');
+  }
+
+ 
+  document.getElementById('homeSampleForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+  
+    const form = e.target;
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const phone = form.querySelector('input[type="tel"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const dateTime = form.querySelector('input[type="datetime-local"]').value;
+    const testSelected = document.getElementById('testSelect').value;
+    const otherTest = document.getElementById('otherInput').value.trim();
+
+    const testName = testSelected === 'Other' ? otherTest : testSelected;
+
+   
+    const data = {
+      name,
+      phone,
+      email,
+      date: dateTime,
+      note: testName
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/api/homesample_test_booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert('Booking confirmed!');
+        form.reset();
+        document.getElementById('otherInput').style.display = 'none';
+      } else {
+        const errText = await response.text();
+        alert('Booking failed: ' + errText);
+      }
+    } catch (error) {
+      alert('Error: ' + error.message);
+    }
+  });
+       </script> -->
+
+<form id="homeSampleForm" style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); font-family: 'Segoe UI', sans-serif; max-width: 500px; margin: 0 auto;">
+  
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Full Name*</label>
+    <input type="text" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px; transition: 0.2s;" onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Mobile Number*</label>
+    <input type="tel" id="mobileInput" pattern="[6-9]{1}[0-9]{9}" maxlength="10" required title="Phone must start with 6,7,8,9 and be 10 digits" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Email*</label>
+    <input type="email" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Preferred Date & Time*</label>
+    <input type="datetime-local" id="preferredDateTime" required style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+  </div>
+
+  <div>
+    <label style="display: block; margin-bottom: 4px; color: #334155; font-size: 13px; font-weight: 600;">Tests Required</label>
+    <select id="testSelect" onchange="handleOtherOption(this)" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" onfocus="this.style.borderColor='#2563eb'; this.style.boxShadow='0 0 0 2px rgba(37,99,235,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+      <option value="">Select test</option>
+      <option value="Blood Test">Blood Test</option>
+      <option value="Urine Test">Urine Test</option>
+      <option value="Liver Function Test (LFT)">Liver Function Test (LFT)</option>
+      <option value="Kidney Function Test (KFT)">Kidney Function Test (KFT)</option>
+      <option value="Thyroid Profile">Thyroid Profile</option>
+      <option value="Diabetes Screening">Diabetes Screening</option>
+      <option value="Lipid Profile">Lipid Profile</option>
+      <option value="Vitamin D Test">Vitamin D Test</option>
+      <option value="CBC (Complete Blood Count)">CBC (Complete Blood Count)</option>
+      <option value="Iron Studies">Iron Studies</option>
+      <option value="Allergy Panel">Allergy Panel</option>
+      <option value="Infection Screening">Infection Screening</option>
+      <option value="Heart Health Panel">Heart Health Panel</option>
+      <option value="Hormone Panel">Hormone Panel</option>
+      <option value="Full Body Checkup">Full Body Checkup</option>
+      <option value="Other">Other</option>
+    </select>
+    <input id="otherInput" type="text" placeholder="Please specify your test" style="display: none; margin-top: 8px; width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px;" />
+  </div>
+
+  <div style="display: flex; gap: 10px; margin-top: 8px;">
+    <button type="button" onclick="hideHomeSampleForm()" style="flex: 1; padding: 8px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 5px; font-weight: 600; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">Cancel</button>
+    <button type="submit" style="flex: 1; padding: 8px; background: #2563eb; color: white; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">Confirm Booking</button>
+  </div>
+</form>
+
+<script>
+  function handleOtherOption(selectElement) {
+    const otherInput = document.getElementById('otherInput');
+    if (selectElement.value === 'Other') {
+      otherInput.style.display = 'block';
+      otherInput.setAttribute('required', 'required');
+    } else {
+      otherInput.style.display = 'none';
+      otherInput.removeAttribute('required');
+    }
+  }
+
+  function hideHomeSampleForm() {
+    document.getElementById('homeSampleForm').reset();
+    document.getElementById('otherInput').style.display = 'none';
+    alert('Booking form cancelled.');
+  }
+
+  // ⏰ Set minimum date-time to now
+  const preferredDateTime = document.getElementById('preferredDateTime');
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  preferredDateTime.min = now.toISOString().slice(0, 16);
+
+  // ✅ Submission with phone check
+  document.getElementById('homeSampleForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const phone = form.querySelector('input[type="tel"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const dateTime = form.querySelector('input[type="datetime-local"]').value;
+    const testSelected = document.getElementById('testSelect').value;
+    const otherTest = document.getElementById('otherInput').value.trim();
+    const testName = testSelected === 'Other' ? otherTest : testSelected;
+
+    const phoneRegex = /^[6-9]{1}[0-9]{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("❌ Mobile number must start with 6, 7, 8, or 9 and be exactly 10 digits.");
+      return;
+    }
+
+    const data = {
+      name,
+      phone,
+      email,
+      date: dateTime,
+      note: testName
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/homesample_test_booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert('✅ Booking confirmed!');
+        form.reset();
+        document.getElementById('otherInput').style.display = 'none';
+      } else {
+        const errText = await response.text();
+        alert('🚫 Booking failed: ' + errText);
+      }
+    } catch (error) {
+      alert('🚫 Error: ' + error.message);
+    }
+  });
+</script>
+
+
       </div>
   </div>
-
-  <!-- Chat Input -->
-  <div id="input-area" style="display: flex; align-items: center;">
-      <input type="text" id="user-input" style="width: 75%; padding: 10px; border-radius: 30px; border: 1px solid #ddd; font-size: 16px; margin-right: 10px; background-color: #f9f9f9;" placeholder="Type your message..." />
-      <button id="send-btn" style="width: 20%; background-color:#2c3e50; color: white; font-size: 16px; border-radius: 30px; padding: 10px; border: none; cursor: pointer; transition: background-color 0.3s ease;">Send</button>
-  </div>
 </div>
+
+
+<!-- <script>
+  
+  function handleOtherOption(select) {
+    const otherInput = document.getElementById('otherInput');
+    if (select.value === 'Other') {
+      otherInput.style.display = 'block';
+      otherInput.setAttribute('required', 'required');
+    } else {
+      otherInput.style.display = 'none';
+      otherInput.removeAttribute('required');
+    }
+  }
+
+  
+  function hideHomeSampleForm() {
+    document.getElementById('homeSampleForm').reset();
+    document.getElementById('otherInput').style.display = 'none';
+    alert("Form cancelled.");
+  }
+
+  
+  document.getElementById('homeSampleForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const fullName = form.querySelector('input[type="text"]').value.trim();
+    const mobile = form.querySelector('input[type="tel"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const dateTime = form.querySelector('input[type="datetime-local"]').value;
+    const selectedTest = form.querySelector('select').value;
+    const otherTest = document.getElementById('otherInput').value.trim();
+
+    const testName = selectedTest === 'Other' ? otherTest : selectedTest;
+
+    
+    const payload = {
+      fullName,
+      mobile,
+      email,
+      dateTime,
+      testName
+    };
+
+    try {
+      const response = await fetch(`http://localhost:3000/api/homesample_test`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Booking confirmed successfully!');
+        form.reset();
+        document.getElementById('otherInput').style.display = 'none';
+      } else {
+        alert('Failed to book: ' + (result.message || 'Something went wrong.'));
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error: Could submit form.');
+    }
+  });
+</script> -->
+
+
 <script>
-// Show the chatbot when the icon is clicked
-document.getElementById('chatbot-icon').addEventListener('click', function() {
-    let chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.style.display = 'block';
-    chatbotContainer.style.transform = 'translateY(0)';
-    chatbotContainer.style.opacity = '1';
-    document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
-});
-
-// Handle sending messages
-document.getElementById('send-btn').addEventListener('click', function() {
-    sendMessage();
-});
-
-// Allow sending messages with Enter key
-document.getElementById('user-input').addEventListener('keypress', function(event) {
-    if (event.key === "Enter") {
-        sendMessage();
-    }
-});
-
-function sendMessage() {
-    var userInput = document.getElementById('user-input').value.trim();
-    if (userInput !== '') {
-        var chatArea = document.getElementById('chat-area');
-
-        // User Message
-        var userMessage = document.createElement('div');
-        userMessage.classList.add('message', 'user-message');
-        styleMessage(userMessage, '#3498db', 'white', 'flex-end');
-        userMessage.textContent = userInput;
-        chatArea.appendChild(userMessage);
-
-        // Scroll to the bottom
-        chatArea.scrollTop = chatArea.scrollHeight;
-
-        // Clear the input field
-        document.getElementById('user-input').value = '';
-
-        // Simulate chatbot response after 1 second
-        setTimeout(function() {
-            var botMessage = document.createElement('div');
-            botMessage.classList.add('message', 'bot-message');
-            styleMessage(botMessage, '#2c3e50', 'white', 'flex-start');
-            botMessage.textContent = getBotReply(userInput);
-            chatArea.appendChild(botMessage);
-
-            // Scroll to the bottom
-            chatArea.scrollTop = chatArea.scrollHeight;
-        }, 1000);
-    }
+// Show home sample form
+function showHomeSampleForm() {
+  document.getElementById('homeSamplePopup').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 
-function styleMessage(element, bgColor, textColor, align) {
-    element.style.padding = '8px 12px';
-    element.style.borderRadius = '20px';
-    element.style.margin = '5px 0';
-    element.style.maxWidth = '75%';
-    element.style.fontSize = '16px';
-    element.style.backgroundColor = bgColor;
-    element.style.color = textColor;
-    element.style.alignSelf = align;
+// Hide home sample form
+function hideHomeSampleForm() {
+  document.getElementById('homeSamplePopup').style.display = 'none';
+  document.body.style.overflow = 'auto'; // Re-enable scrolling
 }
 
-function getBotReply(userMessage) {
-    userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+// Form submission
+document.getElementById('homeSampleForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you! Our representative will call you within 30 minutes to confirm your appointment.');
+  hideHomeSampleForm();
+});
 
-      const responses = {
-          "hi": "Hello, How are you?",
-          "hello": "Hi, How are you?",
-          "how are you": "I'm just a bot, but I'm doing great! How about you?",
-          "good morning": "Good morning! Have a fantastic day ahead!",
-          "good night": "Good night! Sweet dreams!",
-          "thank you": "You're welcome! 😊",
-          "what's your name": "I'm your friendly chatbot!",
-          "who created you": "I was created by Naveen Teja! 😉",
-          "who is your master": "My Master is NaveenTeja. He holds root access to my system.",
-          "bye": "Goodbye! Have a great day!",
-          "what can you do": "I can chat with you! Ask me anything. 😊",
-
-          "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
-          "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
-          "how often should I get a health checkup": "It depends on your age and medical history. Generally, adults should get a checkup once a year.",
-          "what is an MRI scan": "An MRI (Magnetic Resonance Imaging) scan uses magnetic fields and radio waves to create detailed images of organs and tissues in the body.",
-          "how can I check my blood sugar levels": "You can check your blood sugar using a glucometer at home or through a lab test for fasting blood sugar (FBS) and HbA1c levels.",
-          "what are the symptoms of high blood pressure": "Symptoms include headaches, dizziness, blurred vision, and chest pain, though it may not always show noticeable signs.",
-          "what is a lipid profile test": "A lipid profile test measures cholesterol levels in your blood, including LDL, HDL, and triglycerides.",
-          "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
-          "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
-          "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
-
-          // Fertility-Related Q&A
-          "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
-          "how to check fertility in women": "Female fertility can be assessed through hormone tests (AMH, FSH, LH), ultrasound scans, and ovulation tracking.",
-          "what are common causes of infertility": "Infertility can be caused by hormonal imbalances, blocked fallopian tubes, low sperm count, lifestyle factors, or underlying health conditions.",
-          "what is IVF": "IVF (In Vitro Fertilization) is a fertility treatment where an egg and sperm are combined in a lab and then implanted into the uterus.",
-          "how to increase chances of conception": "Maintain a healthy diet, track ovulation, reduce stress, exercise regularly, and avoid smoking or excessive alcohol consumption.",
-          "what are signs of ovulation": "Signs include mild pelvic pain, increased cervical mucus, a rise in basal body temperature, and changes in hormone levels.",
-          "what foods boost fertility": "Foods rich in antioxidants, omega-3 fatty acids, and folic acid—like leafy greens, nuts, fish, and whole grains—support fertility.",
-          "what is PCOS and how does it affect fertility": "PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that can cause irregular periods and ovulation issues, affecting fertility.",
-          "how long does it take to get pregnant": "It varies, but most couples conceive within a year of trying. If unsuccessful after a year, consult a fertility specialist.",
-          "can stress affect fertility": "Yes, high stress levels can disrupt hormone balance and ovulation, potentially affecting fertility.",
-          "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause.",
-      
-        // fun section
-          "tell me a joke": "Why did the scarecrow win an award? Because he was outstanding in his field!",
-
-      
-        };
-
-      
-    return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
-}
-
-// Close the chatbot
-document.getElementById('close-chat').addEventListener('click', function() {
-    document.getElementById('chatbot-container').style.display = 'none';
-    document.getElementById('chatbot-icon').style.display = 'flex'; // Show the icon again
+// Close when clicking outside
+document.getElementById('homeSamplePopup').addEventListener('click', function(e) {
+  if (e.target === this) hideHomeSampleForm();
 });
 </script>
 
-  <!-- Footer Section -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 
+<!-- Section 4: Diagnostic Packages -->
+<section style="padding: 80px 20px; max-width: 1200px; margin: 0 auto; font-family: 'Segoe UI', Arial, sans-serif;">
+  <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; text-align: center; margin-bottom: 40px; font-size: 32px; font-weight: 600; position: relative;">
+    <span style="display: block; font-size: 16px; color: #F5A623; margin-bottom: 8px; font-weight: 500;">COMPREHENSIVE HEALTH SCREENING</span>
+    Diagnostic Packages
+    <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100%; height: 3px; background: linear-gradient(90deg, #0057B8 0%, #F5A623 100%);"></span>
+  </h2>
 
-<footer style="background: #0c2340; color: white; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 30px;">
-  
-      <!-- Company Info -->
-      <div style="flex: 1 1 250px;">
-        <h3 style="margin-bottom: 10px;">🧪 Hitaishi&nbsp;healthCare Diagnostics</h3>
-        <p style="line-height: 1.6; color: #ccc;">Your trusted partner for precise, reliable diagnostic solutions including MRI, X-Ray, Ultrasound, and Health Checkups.</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Card Template -->
+    <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 10px; display: flex; flex-direction: column; height: 100%; max-width: 360px; transition: box-shadow 0.3s ease, transform 0.3s ease;" onmouseover="this.style.boxShadow='0 10px 30px rgba(0, 87, 184, 0.1)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+
+      <div style="background: #0057B8; color: white; padding: 20px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+        <h3 style="margin: 0; font-size: 20px;">Full Body Checkup</h3>
+        <p style="margin: 5px 0 0; font-size: 13px;">Complete health assessment</p>
       </div>
-  
-      <!-- Quick Links -->
-      <div style="flex: 1 1 200px;">
-        <h4 style="margin-bottom: 10px;">Quick Links</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#mri" style="color: #ccc; text-decoration: none;">MRI Scans</a></li>
-          <li><a href="#x-ray" style="color: #ccc; text-decoration: none;">X-Ray Services</a></li>
-          <li><a href="#ultrasound" style="color: #ccc; text-decoration: none;">Ultrasound</a></li>
-          <li><a href="#locations" style="color: #ccc; text-decoration: none;">Locations</a></li>
+
+      <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <ul style="list-style: none; padding-left: 0; color: #333; font-size: 14px; margin: 0 0 20px 0;">
+          <li style="margin-bottom: 8px;">✓ Complete blood count (CBC)</li>
+          <li style="margin-bottom: 8px;">✓ X-ray (chest PA view)</li>
+          <li style="margin-bottom: 8px;">✓ Ultrasound (whole abdomen)</li>
+          <li style="margin-bottom: 8px;">✓ Urine routine & microscopy</li>
+          <li style="margin-bottom: 8px;">✓ Liver & kidney function tests</li>
         </ul>
-      </div>
-  
-      <!-- Contact -->
-      <div style="flex: 1 1 200px;">
-        <h4 style="margin-bottom: 10px;">Contact Us</h4>
-        <p style="color: #ccc;">📍&nbsp;Pragati&nbsp;Nagar,kukatypally,Hyderbad,Telangana, India</p>
-        <p style="color: #ccc;">📞 +91 87901 70525</p>
-        <p style="color: #ccc;">✉ support@hitaishihealthCare.in</p>
-      </div>
-  
-      <!-- Social Media -->
-      <div style="flex: 1 1 200px;">
-        <h4 style="margin-bottom: 10px;">Follow Us</h4>
-        <div style="display: flex; gap: 15px;">
-          <!-- <a href="#" title="Facebook" style="color: white;">
-            <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 4.99 3.66 9.12 8.44 9.88v-6.99H8.1v-2.89h2.34V9.41c0-2.3 1.37-3.58 3.47-3.58.99 0 2.03.18 2.03.18v2.25h-1.14c-1.13 0-1.48.7-1.48 1.42v1.71h2.53l-.4 2.89h-2.13v6.99C18.34 21.2 22 17.06 22 12.07z"/></svg>
-          </a>
-          <a href="#" title="Twitter" style="color: white;">
-            <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.29 4.29 0 0 0 1.88-2.37c-.84.5-1.77.86-2.76 1.05a4.27 4.27 0 0 0-7.3 3.89A12.14 12.14 0 0 1 3.16 4.6a4.26 4.26 0 0 0 1.32 5.7 4.2 4.2 0 0 1-1.94-.54v.06c0 2 1.42 3.66 3.3 4.04a4.28 4.28 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.57 8.57 0 0 1 2 19.54 12.1 12.1 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.69 0-.18 0-.35-.01-.53A8.36 8.36 0 0 0 22.46 6z"/></svg>
-          </a>
-          <a href="#" title="Instagram" style="color: white;">
-            <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm10 2c1.1 0 2 .9 2 2v2h-2V4zM7 4h6v2H7c-1.1 0-2 .9-2 2v2h2v8H5v-2h2v-2H5v-2h2v-2H5V8c0-1.1.9-2 2-2zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>
 
-          </a> -->
-          <!-- <div style="display: flex; align-items: center; gap: 15px;"> -->
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="#" style="color: white; font-size: 20px; text-decoration: none;">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+        <div style="text-align: center;">
+          <p style="margin: 0; font-size: 24px; color: #007A33; font-weight: bold;">
+            <span style="font-size: 14px; color: #999; text-decoration: line-through; display: block;">₹3,800</span>₹2,500
+          </p>
+          <button onclick="showHealthPopup('Full Body Checkup', '2500')" style="margin-top: 15px; background: #F5A623; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; width: 100%; transition: background 0.3s;" onmouseover="this.style.background='#e69500'" onmouseout="this.style.background='#F5A623'">Book Package</button>
         </div>
       </div>
     </div>
-  
-    <div style="text-align: center; color: #888; font-size: 14px; margin-top: 30px;">
-      © 2025 Hitaishi HelathCare  Diagnostics. All rights reserved.
+
+    <!-- Duplicate and Replace for Next 2 Cards -->
+
+    <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 10px; display: flex; flex-direction: column; height: 100%; max-width: 360px; transition: box-shadow 0.3s ease, transform 0.3s ease;" onmouseover="this.style.boxShadow='0 10px 30px rgba(0, 87, 184, 0.1)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+
+      <div style="background: #0057B8; color: white; padding: 20px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+        <h3 style="margin: 0; font-size: 20px;">Cardiac Health Package</h3>
+        <p style="margin: 5px 0 0; font-size: 13px;">Comprehensive heart check</p>
+      </div>
+
+      <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <ul style="list-style: none; padding-left: 0; color: #333; font-size: 14px; margin: 0 0 20px 0;">
+          <li style="margin-bottom: 8px;">✓ Resting ECG</li>
+          <li style="margin-bottom: 8px;">✓ Complete lipid profile</li>
+          <li style="margin-bottom: 8px;">✓ Treadmill stress test (TMT)</li>
+          <li style="margin-bottom: 8px;">✓ Cardiac consultation</li>
+          <li style="margin-bottom: 8px;">✓ CRP & cardiac markers</li>
+        </ul>
+
+        <div style="text-align: center;">
+          <p style="margin: 0; font-size: 24px; color: #007A33; font-weight: bold;">
+            <span style="font-size: 14px; color: #999; text-decoration: line-through; display: block;">₹4,500</span>₹3,200
+          </p>
+          <button onclick="showHealthPopup('Cardiac Health Package', '3200')" style="margin-top: 15px; background: #F5A623; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; width: 100%; transition: background 0.3s;" onmouseover="this.style.background='#e69500'" onmouseout="this.style.background='#F5A623'">Book Package</button>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <div style="flex: 1 1 30%; background: #fff; border: 1px solid #ddd; border-radius: 10px; display: flex; flex-direction: column; height: 100%; max-width: 360px; transition: box-shadow 0.3s ease, transform 0.3s ease; position: relative;" onmouseover="this.style.boxShadow='0 10px 30px rgba(0, 87, 184, 0.1)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+
+      <div style="position: absolute; top: 12px; right: -28px; background: #E63946; color: white; padding: 5px 24px; transform: rotate(45deg); font-size: 12px; font-weight: bold;">POPULAR</div>
+
+      <div style="background: #0057B8; color: white; padding: 20px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+        <h3 style="margin: 0; font-size: 20px;">Executive Health Check</h3>
+        <p style="margin: 5px 0 0; font-size: 13px;">Premium comprehensive package</p>
+      </div>
+
+      <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <ul style="list-style: none; padding-left: 0; color: #333; font-size: 14px; margin: 0 0 20px 0;">
+          <li style="margin-bottom: 8px;">✓ Complete blood work (CBC, ESR)</li>
+          <li style="margin-bottom: 8px;">✓ Thyroid & diabetes profile</li>
+          <li style="margin-bottom: 8px;">✓ ECG & 2D Echo cardiography</li>
+          <li style="margin-bottom: 8px;">✓ CT Calcium scoring</li>
+          <!-- <li style="margin-bottom: 8px;">✓ Full body health consultation</li> -->
+          <li style="margin-bottom: 8px;">✓ Vitamin D & B12 tests</li>
+        </ul>
+
+        <div style="text-align: center;">
+          <p style="margin: 0; font-size: 24px; color: #007A33; font-weight: bold;">
+            <span style="font-size: 14px; color: #999; text-decoration: line-through; display: block;">₹8,500</span>₹6,900
+          </p>
+          <button onclick="showHealthPopup('Executive Health Check', '6900')" style="margin-top: 15px; background: #F5A623; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; width: 100%; transition: background 0.3s;" onmouseover="this.style.background='#e69500'" onmouseout="this.style.background='#F5A623'">Book Package</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+              <!--5 Health Package Booking Popup -->
+<div id="healthPackageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: white; width: 90%; max-width: 360px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden;">
+        <div style="background: linear-gradient(135deg, #0057B8 0%, #003D82 100%); color: white; padding: 15px 20px; text-align: center; position: relative;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 600;" id="modalPackageTitle">Package Name</h3>
+            <p style="margin: 5px 0 0; font-size: 14px; font-weight: 500;" id="modalPackageCost">Price: ₹0</p>
+            <span onclick="hideHealthModal()" style="position: absolute; top: 10px; right: 15px; font-size: 22px; cursor: pointer; color: white;">×</span>
+        </div>
+        <div style="padding: 20px;">
+
+<!-- 
+             <form id="healthBookingForm" style="display: flex; flex-direction: column; gap: 12px;"> 
+                <input type="hidden" id="selectedPackageName" name="packageName">
+                <input type="hidden" id="selectedPackageCost" name="packageCost">
+                
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Full Name</label>
+                    <input type="text" name="name" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Email Address</label>
+                    <input type="email" name="email" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Phone Number</label>
+                    <input type="tel" name="phone" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Preferred Date</label>
+                    <input type="date" name="date" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Additional Notes (Optional)</label>
+                    <textarea name="note" style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; min-height: 60px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'"></textarea>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 8px;">
+                    <button type="button" onclick="hideHealthModal()" style="background: #f0f0f0; color: #444; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; flex: 1; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#dcdcdc'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1)'">Cancel</button>
+                    <button type="submit" style="background: linear-gradient(135deg, #F5A623 0%, #E69500 100%); color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; flex: 1; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 10px rgba(245,166,35,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Confirm Booking</button>
+                </div>
+            </form> 
+            
+            <script> 
   
+    let currentPackage = {
+        name: '',
+        cost: ''
+    };
+
+    function showHealthPopup(packageName, packageCost) {
+        currentPackage.name = packageName;
+        currentPackage.cost = packageCost;
+        
+        document.getElementById('modalPackageTitle').textContent = packageName;
+        document.getElementById('modalPackageCost').textContent = 'Price: ₹' + packageCost;
+        document.getElementById('selectedPackageName').value = packageName;
+        document.getElementById('selectedPackageCost').value = packageCost;
+        document.getElementById('healthPackageModal').style.display = 'flex';
+    }
+
+    function hideHealthModal() {
+        document.getElementById('healthPackageModal').style.display = 'none';
+    }
+
+    document.getElementById('healthBookingForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            date: form.date.value,
+            note: form.note.value,
+            packageName: form.packageName.value,
+            packageCost: form.packageCost.value
+        };
+
+        try {
+            const response = await fetch("http://localhost:3000/api/packages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("✅ Booking confirmed: " + result.message);
+                form.reset();
+                hideHealthModal();
+            } else {
+                alert("❌ Error: " + result.message);
+            }
+        } catch (error) {
+            console.error("There was an error:", error);
+            alert("❌ Failed to connect to server. Please try again.");
+        }
+    });
+</script>   -->
+<form id="healthBookingForm" style="display: flex; flex-direction: column; gap: 12px;"> 
+                <input type="hidden" id="selectedPackageName" name="packageName">
+                <input type="hidden" id="selectedPackageCost" name="packageCost">
+                
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Full Name</label>
+                    <input type="text" name="name" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Email Address</label>
+                    <input type="email" name="email" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Phone Number</label>
+                    <input type="tel" name="phone" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Preferred Date</label>
+                    <input type="date" name="date" required style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 4px; font-weight: 600; color: #222; font-size: 13px;">Additional Notes (Optional)</label>
+                    <textarea name="note" style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; min-height: 60px; transition: border 0.3s;" onfocus="this.style.borderColor='#E69500'" onblur="this.style.borderColor='#ccc'"></textarea>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 8px;">
+                    <button type="button" onclick="hideHealthModal()" style="background: #f0f0f0; color: #444; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; flex: 1; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#dcdcdc'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1)'">Cancel</button>
+                    <button type="submit" style="background: linear-gradient(135deg, #F5A623 0%, #E69500 100%); color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; flex: 1; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 10px rgba(245,166,35,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Confirm Booking</button>
+                </div>
+            </form> 
+
+<script>
+  let currentPackage = {
+    name: '',
+    cost: ''
+  };
+
+  function showHealthPopup(packageName, packageCost) {
+    currentPackage.name = packageName;
+    currentPackage.cost = packageCost;
+
+    document.getElementById('modalPackageTitle').textContent = packageName;
+    document.getElementById('modalPackageCost').textContent = 'Price: ₹' + packageCost;
+    document.getElementById('selectedPackageName').value = packageName;
+    document.getElementById('selectedPackageCost').value = packageCost;
+    document.getElementById('healthPackageModal').style.display = 'flex';
+  }
+
+  function hideHealthModal() {
+    document.getElementById('healthPackageModal').style.display = 'none';
+  }
+
+  // ✅ Set min date to today
+  window.addEventListener('DOMContentLoaded', function () {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.querySelector('#healthBookingForm input[name="date"]');
+    if (dateInput) dateInput.setAttribute('min', today);
+  });
+
+  document.getElementById('healthBookingForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const phone = form.phone.value.trim();
+
+    // ✅ Validate phone number: starts with 6-9 and is 10 digits
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      alert('❌ Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+      return;
+    }
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      date: form.date.value,
+      note: form.note.value,
+      packageName: form.packageName.value,
+      packageCost: form.packageCost.value
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/packages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("✅ Booking confirmed: " + result.message);
+        form.reset();
+        hideHealthModal();
+      } else {
+        alert("❌ Error: " + result.message);
+      }
+    } catch (error) {
+      console.error("There was an error:", error);
+      alert("❌ Failed to connect to server. Please try again.");
+    }
+  });
+</script>
+
+
+
+        </div>
+    </div>
+</div>
+
+ 
+      <!-- Section 6: Why Choose Hitaishi Diagnostics? -->
+   <section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);">
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+        <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; margin-bottom: 20px; font-size: 26px; font-weight: 700;">Why Choose Hitaishi Diagnostics?</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #333;">
+                <span style="background-color: #007A33; color: white; border-radius: 50%; width: 28px; height: 28px; min-width: 28px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 18px; font-weight: bold; line-height: 1;">✓</span>
+                Cutting-edge technology like Siemens 500 MA X-ray and advanced ultrasound
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #333;">
+                <span style="background-color: #007A33; color: white; border-radius: 50%; width: 28px; height: 28px; min-width: 28px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 18px; font-weight: bold; line-height: 1;">✓</span>
+                Quick turnaround times for lab results
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #333;">
+                <span style="background-color: #007A33; color: white; border-radius: 50%; width: 28px; height: 28px; min-width: 28px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 18px; font-weight: bold; line-height: 1;">✓</span>
+                Experienced radiologists and lab technicians
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: flex-start; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #333;">
+                <span style="background-color: #007A33; color: white; border-radius: 50%; width: 28px; height: 28px; min-width: 28px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 18px; font-weight: bold; line-height: 1;">✓</span>
+                Affordable, transparent pricing
+            </li>
+        </ul>
+        <!-- <button style="background-color: #F5A623; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-weight: 600; margin-top: 20px; cursor: pointer; font-family: 'Roboto', sans-serif; font-size: 16px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#E0951C'" onmouseout="this.style.backgroundColor='#F5A623'">Learn More About Our Technology</button> -->
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+        <img src="images/ds_whychose_hitaishi_diagnostics.png" alt="Hitaishi Diagnostic Lab" style="width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    </div>
+</section>
+
+    <!-- Section 7: Diagnostic Services List -->
+   <section style="padding: 60px 20px; background-color: #F5F5F5;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; text-align: center; margin-bottom: 40px;">Our Diagnostic Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">High-resolution X-ray Imaging</h3>
+                    <p>Advanced digital X-ray technology for clear, detailed images with minimal radiation exposure.</p>
+                </div>
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">Advanced Ultrasound</h3>
+                    <p>3D/4D imaging for detailed visualization of organs, muscles, and blood flow patterns.</p>
+                </div>
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">Blood and Urine Tests</h3>
+                    <p>Comprehensive panels for complete blood count, metabolic screening, and more.</p>
+                </div>
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">Cardiac Diagnostics</h3>
+                    <p>ECG, stress tests, and echocardiography for comprehensive heart health assessment.</p>
+                </div>
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">Specialized Tests</h3>
+                    <p>Thyroid function, lipid profile, and other specialized diagnostic services.</p>
+                </div>
+                <div style="background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;">
+                    <h3 style="color: #0057B8; margin-top: 0;">MRI & CT Scans</h3>
+                    <p>State-of-the-art imaging technology for detailed cross-sectional views of organs and tissues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Advanced Technology Showcase -->
+ <section style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; text-align: center; margin-bottom: 40px;">Our Advanced Technology</h2>
+    <div style="width: 90%; margin: 0 auto; display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap;">
+        <div style="width: 300px; background-color: #F5F5F5; border-radius: 10px; padding: 20px; text-align: center;">
+            <img src="images/ds_siamans 500 x-ray-image.png" alt="Siemens 500 MA X-ray Machine" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+            <h3 style="margin: 0; color: #0057B8;">Siemens 500 MA X-ray</h3>
+            <p>High-resolution imaging with minimal radiation exposure</p>
+        </div>
+        <div style="width: 300px; background-color: #F5F5F5; border-radius: 10px; padding: 20px; text-align: center;">
+            <img src="images/ds_altrasound-image.png" alt="Advanced Ultrasound Machine" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+            <h3 style="margin: 0; color: #0057B8;">3D/4D Ultrasound</h3>
+            <p>Detailed visualization for accurate diagnostics</p>
+        </div>
+        <div style="width: 300px; background-color: #F5F5F5; border-radius: 10px; padding: 20px; text-align: center;">
+            <img src="images/ds_automated lab system-image.png" alt="Modern Lab Equipment" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+            <h3 style="margin: 0; color: #0057B8;">Automated Lab Systems</h3><p>Precision testing with quick turnaround times</p
+                ></div>
+            </div
+            ></section>
+
+   <!--section:9-hitaishi healthcare services------>
+
+             <div style="background-color: #024D74; padding: 30px 20px; text-align: center; color: white; font-family: Arial, sans-serif;">
+    <h2 style="font-size: 26px; margin-bottom: 30px;">HITAISHI HEALTHCARE SERVICES</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;">
+        
+        <!-- Card 1 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">2500+</h3>
+            <p style="margin: 5px 0;">Expert Professionals</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Including Radiologists & Lab Technicians</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">80M+</h3>
+            <p style="margin: 5px 0;">Lives Impacted</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Caring for All Age Groups Across India</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">30+ Years</h3>
+            <p style="margin: 5px 0;">Legacy in Healthcare</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Delivering Consistent Quality Service</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">120+</h3>
+            <p style="margin: 5px 0;">Health Centres</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Modern Labs, Clinics & Facilities</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">20+ Cities</h3>
+            <p style="margin: 5px 0;">Across 5 States</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Pan-India Accessibility & Reach</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div style="background-color: #046380; padding: 20px; width: 220px; height: 160px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 18px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 10px rgba(0, 0, 0, 0.15)'">
+            <h3 style="font-size: 28px; margin: 0; color: #FFFFFF;">300+</h3>
+            <p style="margin: 5px 0;">Corporate Partners</p>
+            <p style="font-size: 12px; color: #E0F7FA;">Trusted by Leading Institutions</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <span style="display: inline-block; background-color: #00FF88; padding: 10px; border-radius: 50%; box-shadow: 0 0 10px rgba(0,255,136,0.5);"></span>
+    </div>
+          </div>
+
+    <!-- Section 10: Meet Our Diagnostic Team -->
+    <section style="padding: 60px 20px; background-color: #F5F5F5;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; text-align: center; margin-bottom: 40px;">Meet Our Diagnostic Team</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background-color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <img src="images/ds_mahesh_garg.png" alt="Dr. Mahesh Garg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #007A33; margin-bottom: 15px;">
+                    <h3 style="margin: 0; color: #0057B8;">Dr. Mahesh Garg</h3>
+                    <p style="color: #007A33; font-weight: 600; margin: 5px 0;">MBBS, MD (Radiology)</p>
+                    <p>15+ years of experience in diagnostic imaging</p>
+                </div>
+                <div style="background-color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <img src="images/ds_priya_sharma.png" alt="Dr. Priya Sharma" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #007A33; margin-bottom: 15px;">
+                    <h3 style="margin: 0; color: #0057B8;">Dr. Priya Sharma</h3>
+                    <p style="color: #007A33; font-weight: 600; margin: 5px 0;">PhD (Pathology)</p>
+                    <p>Specialized in clinical laboratory diagnostics</p>
+                </div>
+                <div style="background-color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <img src="images/ds_rahul_verma.png" alt="Rahul Verma" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #007A33; margin-bottom: 15px;">
+                    <h3 style="margin: 0; color: #0057B8;">Rahul Verma</h3>
+                    <p style="color: #007A33; font-weight: 600; margin: 5px 0;">Senior Lab Technician</p>
+                    <p>10+ years in precision testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section 9: Patient Testimonials -->
+ <section style="padding: 50px 15px; max-width: 90%; margin: 0 auto; background: radial-gradient(circle, #f0f8ff 0%, #ffffff 100%);">
+  <h2 style="font-family: 'Poppins', sans-serif; color: #1a3c6e; text-align: center; font-size: 32px; font-weight: 600; margin-bottom: 40px; letter-spacing: 1px;">What Our Patients Say</h2>
+  <div style="display: flex; flex-wrap: nowrap; gap: 20px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: thin; scrollbar-color: #1a3c6e #e6e6e6;">
+
+```
+<!-- Card Template Start -->
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Quick results and caring staff! My ultrasound was done efficiently with proper communication.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- A.K. (Ultrasound)</p>
+</div>
+<!-- Card Template End -->
+
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Lab tests were affordable and I got my reports through email in just 6 hours.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- S.P. (Blood Test)</p>
+</div>
+
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Dr. Garg clearly explained my X-ray report and helped with the right diagnosis.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- R.M. (X-ray)</p>
+</div>
+
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">MRI process was smooth, and the technicians made the experience stress-free.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- P.T. (MRI)</p>
+</div>
+
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Staff was helpful and explained my ECG report in a very friendly manner.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- K.S. (ECG)</p>
+</div>
+
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">CT scan process was very efficient, and I accessed my reports online smoothly.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- N.V. (CT Scan)</p>
+</div>
+
+<!-- New Card 1 -->
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Booking online was easy and I received reminders and updates via SMS.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- M.D. (Online Booking)</p>
+</div>
+
+<!-- New Card 2 -->
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Home sample collection was punctual and very convenient for my elderly parents.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- L.S. (Home Collection)</p>
+</div>
+
+<!-- New Card 3 -->
+<div style="background-color: #fefefe; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 0 0 auto; width: 260px;" 
+  onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)';" 
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+  <p style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #2d2d2d; margin-bottom: 15px; line-height: 1.6;">Staff explained the procedure clearly before doing my mammography, making me feel at ease.</p>
+  <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 13px; color: #004080; margin: 0;">- B.T. (Mammography)</p>
+</div>
+```
+
+  </div>
+</section>
+
+    <!-- Section 10: FAQs on Diagnostics -->
+ <section style="padding: 60px 20px; background-color: #F5F5F5;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        <h2 style="font-family: 'Roboto', sans-serif; color: #0057B8; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">How long does it take to get test results?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Most lab tests are processed within 24 hours. Imaging results are typically available within 48 hours.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">Do I need a doctor's referral?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Some tests require a referral, while others (like basic blood tests) can be booked directly.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">Are your diagnostic tests covered by insurance?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">We accept most major insurance providers. Please check with your insurer for coverage details.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">How do I prepare for a specific test?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Preparation instructions vary by test. Our team will provide detailed guidance upon booking your appointment.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">Can I get a copy of my test results?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Yes, you can request a copy of your results. We offer secure online portals and printed reports.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">What are your operating hours?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Our centers are open Monday to Saturday, from 8 AM to 7 PM. Please check our website for specific location hours.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">Is online appointment booking available?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">Yes, you can easily book appointments through our website or mobile app 24/7.</p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+            <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <h3 style="margin: 0; color: #0057B8;">Do you offer home sample collection?</h3>
+                <span class="faq-icon" style="font-size: 20px; font-weight: bold;">+</span>
+            </div>
+            <p class="faq-answer" style="display: none; margin-top: 10px; color: #333;">For certain tests, we offer convenient home sample collection services. Please contact us for more details.</p>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.display === 'block';
+
+                // Close all other answers
+                faqItems.forEach(otherItem => {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('.faq-icon');
+                    if (otherAnswer !== answer && otherAnswer.style.display === 'block') {
+                        otherAnswer.style.display = 'none';
+                        otherIcon.textContent = '+';
+                    }
+                });
+
+                // Toggle the clicked answer
+                if (isOpen) {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    });
+</script>
+
+<!-- Footer -->
+<footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+ 
+
+
+
+
 </body>
 </html>

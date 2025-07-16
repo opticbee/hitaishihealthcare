@@ -1,507 +1,1068 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eye Care Services - Hitaishi Health</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
-<body style="margin:0;padding:0;font-family:sans-serif;">
- 
-  
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
-    
-  <!-- Logo and Title -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-      <div>
-          <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-          <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-      </div>
-  </div>
-  
-  <!-- search input icons -->
-  <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-  <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-      <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
-
-  <!-- Buttons -->
-  <div style="display: flex; gap: 15px;">
-      <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          ❤️ Blood Donation
-      </a>
-      <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Book Appointment
-      </a>
-      <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Find a Doctor
-      </a>
-      <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Clinic
-      </a>
-      <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-          Eye Care
-      </a>
-  </div>
-
-  <!-- Social Media Icons -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-          <i class="fab fa-whatsapp"></i>
-      </a>
-      
-
-      <!-- Display Logged-in User Name -->
-      <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
-
-      <!-- Profile Icon -->
-      <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-          <i class="fas fa-user-circle"></i>
-      </a>
-  </div>
-
-  </nav>
-  
-  <script>
-      // Simulating getting user data from local storage or API
-      document.addEventListener("DOMContentLoaded", function () {
-          const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-          if (user) {
-              document.getElementById("username").textContent = user; // Show username if logged in
-          }
-      });
-  
-      // Example: Store username after login (call this after user logs in)
-      function setUser(name) {
-          localStorage.setItem("loggedInUser", name);
-      }
-  
-      // Example: Clear user on logout
-      function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.reload(); // Refresh page after logout
-      }
-  </script>
-  
-  
-  <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-      <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-          <!-- Home Link -->
-          <div style="margin-right: 1rem;">
-              <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
-          </div>
-
-          <!-- Health Records Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                  <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                  <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-              </div>
-          </div>
-
-          <!-- Diagnostics Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                  <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                  <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-              </div>
-          </div>
-
-          <!-- Physicians Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                  <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                  <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-              </div>
-          </div>
-
-          <!-- Fertility Dropdown -->
-          <div style="position: relative; margin-right: 1rem;">
-              <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-              <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                  <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                  <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                  <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-              </div>
-          </div>
-
-          <!-- AI -->
-          <div style="margin-right: 1rem;">
-              <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-          </div>
-
-          <!-- Doctors Link -->
-          <div style="margin-right: 1rem;">
-              <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-          </div>
-
-          <!-- Patients Link -->
-          <div style="margin-right: 1rem;">
-              <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-          </div>
-
-
-
-          <!-- Insights Link -->
-          <div style="margin-right: 1rem;">
-              <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-          </div>
-          <div style="margin-right: 1rem;">
-              <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-          </div>
-
-          <!-- Contact Link -->
-          <div>
-              <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-          </div>
-          
-      </div>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
     
-  </nav>
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
 
-  <!-- for dropdowns -->
-  <script>
-      // JavaScript to handle dropdown visibility
-      document.querySelectorAll('nav > div > div').forEach(navItem => {
-          const dropdown = navItem.querySelector('div');
-          if (dropdown) {
-              navItem.addEventListener('mouseenter', () => {
-                  dropdown.style.display = 'block';
-              });
-              navItem.addEventListener('mouseleave', () => {
-                  dropdown.style.display = 'none';
-              });
-          }
-      });
-    </script>
-
-
-
-
-
-
-  <section style="position:relative;width:100%;min-height:550px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:white;">
-    
-    <!-- Background slideshow images -->
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-2;">
-      <img src="https://res.glassesshop.com/ckeditorImg/6699e23ca5746.jpg"
-           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transform:scale(1.1);transition:opacity 1s ease, transform 10s ease;" />
-      <img src="https://www.lappeneyecare.com/wp-content/uploads/2023/10/man-holding-eye-contact.jpg"
-           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transform:scale(1);transition:opacity 1s ease, transform 10s ease;" />
-      <img src="https://drranimenon.com/wp-content/uploads/2023/09/lasik-treatment-new2.jpg"
-           style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transform:scale(1);transition:opacity 1s ease, transform 10s ease;" />
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
     </div>
-
-    <!-- Gradient overlay -->
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));z-index:-1;"></div>
-
-    <!-- Content -->
-    <div style="max-width:700px;padding:30px 20px;z-index:1;">
-      <h1 style="font-size:3em;margin-bottom:15px;">Comprehensive Eye Care</h1>
-      <p style="font-size:1.2em;line-height:1.6;margin-bottom:25px;">
-        Welcome to Hitaishi Health Care Services – Eye Care Division. We provide cutting-edge diagnostics, compassionate care, and customized solutions for all your vision needs.
-      </p>
-      <a href="#contact" style="text-decoration:none;">
-        <button style="padding:12px 25px;font-size:1em;background:#00bcd4;border:none;border-radius:5px;color:white;cursor:pointer;transition:background 0.3s ease;">
-          Visit Us
-        </button>
-      </a>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
     </div>
-  </section>
-
-
-  <!-- JavaScript for slideshow -->
-  <script>
-    const slides = document.querySelectorAll('section img');
-    let currentSlide = 0;
-
-    setInterval(() => {
-      slides[currentSlide].style.opacity = '0';
-      slides[currentSlide].style.transform = 'scale(1)';
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].style.opacity = '1';
-      slides[currentSlide].style.transform = 'scale(1.1)';
-    }, 5000);
-  </script>
-<!-- EYE CARE TREATMENTS SECTION -->
-<section style="padding:60px 20px;background:white;text-align:center;">
-  <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">Our Eye Care Treatments</h2>
-  <p style="font-size:1.1em;color:#666;margin-bottom:40px;">We diagnose and treat a wide range of vision problems with precision and care.</p>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:1200px;margin:0 auto;">
-
-    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">👁 Refractive Errors</h3>
-      <p style="color:#555;">Treatments for Myopia, Hyperopia, and Astigmatism including eyeglasses, contact lenses, and laser correction.</p>
-      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
-    </div>
-
-    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🧠 Cataract Surgery</h3>
-      <p style="color:#555;">Advanced cataract treatment and lens replacement surgeries with high precision and safety.</p>
-      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
-    </div>
-
-    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">💉 Glaucoma Treatment</h3>
-      <p style="color:#555;">Early detection and pressure control through medication, laser therapy, or surgery.</p>
-      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
-    </div>
-
-    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔬 Diabetic Retinopathy</h3>
-      <p style="color:#555;">Retinal care for diabetic patients using advanced imaging and laser treatment to prevent vision loss.</p>
-      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
-    </div>
-
-    <div style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-      <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔍 Regular Eye Checkups</h3>
-      <p style="color:#555;">We recommend periodic exams to maintain eye health, even without symptoms. Prevention is better than cure!</p>
-      <button style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
-    </div>
-
   </div>
-</section>
 
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
 
-  <!-- ABOUT SECTION -->
-  <section style="padding:80px 20px;background:linear-gradient(120deg, #f0faff, #e0f7fa);display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:60px;max-width:1200px;margin:auto;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;min-height:90vh;">
-
-    <!-- Left Modern Illustration & Shapes -->
-    <div style="flex:1 1 480px;position:relative;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.08);overflow:hidden;height:auto;">
-      <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" preserveAspectRatio="none" viewBox="0 0 800 800">
-        <defs>
-          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#00bcd4"/>
-            <stop offset="100%" stop-color="#0097a7"/>
-          </linearGradient>
-        </defs>
-        <circle cx="400" cy="400" r="300" fill="url(#grad1)" opacity="0.3" />
-        <circle cx="200" cy="200" r="100" fill="#00bcd4" opacity="0.2" />
-        <circle cx="600" cy="600" r="150" fill="#0097a7" opacity="0.2" />
-      </svg>
-      <div style="position:relative;z-index:1;padding:40px;text-align:center;color:#004d61;max-width:400px;">
-        <!-- <img src="https://cdn-icons-png.flaticon.com/512/2989/2989988.png" alt="Modern Eye Icon" style="width:100px;height:auto;margin-bottom:25px;"> -->
-        <h3 style="font-size:2em;margin-bottom:15px;">Total Vision Care</h3>
-        <p style="font-size:1.1em;line-height:1.6;color:#333;">
-          Where technology meets trust. From routine checkups to laser precision surgeries, we keep your vision crystal clear.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Right Content -->
-    <div style="flex:1 1 500px;background:white;padding:40px 30px;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:center;">
-      <h2 style="font-size:2.4em;margin-bottom:20px;color:#004d61;">About Our Eye Care</h2>
-      <p style="font-size:1.15em;line-height:1.8;color:#444;margin-bottom:25px;">
-        At <strong style="color:#00bcd4;">Hitaishi Health Care</strong>, we specialize in comprehensive eye examinations, early detection of eye diseases, and advanced surgical procedures.
-        Our compassionate specialists ensure every patient gets personalized, clear-sighted care.
-      </p>
-      <ul style="list-style:none;padding:0;margin:0 0 30px 0;">
-        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Regular eye check-ups</li>
-        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Cataract & Lasik Surgery</li>
-        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Pediatric Eye Care</li>
-        <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Glaucoma & Retina Treatment</li>
-      </ul>
-      <a href="#" style="display:inline-block;padding:14px 32px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;text-decoration:none;font-size:1.05em;border-radius:30px;font-weight:bold;transition:transform 0.3s;align-self:flex-start;">Book Appointment</a>
-    </div>
-  </section><br>
-  
-  
-  
-<!-- COUNTERS SECTION -->
-<section style="padding:60px 20px;background:#f0fbfc;text-align:center; height: 300px;" id="counter-section" >
-    <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">Trusted by Thousands</h2>
-    <p style="font-size:1.1em;color:#666;margin-bottom:40px;">Delivering exceptional eye care with a compassionate touch.</p>
-  
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:0 auto;">
-      <div style="flex:1 1 200px;">
-        <h3 style="font-size:3em;color:#00bcd4;">
-          <span class="counter" data-target="10000">0</span>+
-        </h3>
-        <p style="color:#555;">Patients Treated</p>
-      </div>
-      <div style="flex:1 1 200px;">
-        <h3 style="font-size:3em;color:#00bcd4;">
-          <span class="counter" data-target="2500">0</span>+
-        </h3>
-        <p style="color:#555;">Successful Surgeries</p>
-      </div>
-      <div style="flex:1 1 200px;">
-        <h3 style="font-size:3em;color:#00bcd4;">
-          <span class="counter" data-target="200">0</span>+
-        </h3>
-        <p style="color:#555;">Expert Doctors</p>
-      </div>
-      <div style="flex:1 1 200px;">
-        <h3 style="font-size:3em;color:#00bcd4;">
-          <span class="counter" data-target="8">0</span>+
-        </h3>
-        <p style="color:#555;">Clinics Nationwide</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- SCRIPT -->
-  <script>
-    const counters = document.querySelectorAll('.counter');
-    const section = document.getElementById('counter-section');
-  
-    const animateCounter = (counter) => {
-      counter.innerText = '0';
-      const target = +counter.getAttribute('data-target');
-      const increment = target / 200;
-  
-      const update = () => {
-        const current = +counter.innerText.replace(/,/g, '');
-        if (current < target) {
-          counter.innerText = Math.ceil(current + increment).toLocaleString();
-          setTimeout(update, 20);
-        } else {
-          counter.innerText = target.toLocaleString();
-        }
-      };
-  
-      update();
-    };
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          counters.forEach(counter => {
-            animateCounter(counter);
-          });
-        } else {
-          counters.forEach(counter => counter.innerText = '0');
-        }
-      });
-    }, { threshold: 0.5 });
-  
-    observer.observe(section);
-  </script>
-  
-  <!-- TESTIMONIALS SECTION -->
-<section style="padding:60px 20px;text-align:center;">
-  <h2 style="font-size:2.5em;margin-bottom:10px;color:#333;">What Our Patients Say</h2>
-  <p style="font-size:1.1em;color:#666;margin-bottom:40px;">Real stories from people whose lives we’ve helped improve.</p>
-
-  <div id="testimonial-container" style="position:relative;max-width:800px;margin:0 auto;height:100px;overflow:hidden;">
-    
-    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:1;transition:opacity 1s ease;">
-      <p style="font-size:1.2em;color:#444;">"I had a fantastic experience with Hitaishi Eye Care. The doctors are highly professional and compassionate."</p>
-      <h4 style="color:#00bcd4;margin-top:15px;">– Ramesh K., Hyderabad</h4>
-    </div>
-
-    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 1s ease;">
-      <p style="font-size:1.2em;color:#444;">"The staff made me feel comfortable throughout my cataract surgery. Highly recommended!"</p>
-      <h4 style="color:#00bcd4;margin-top:15px;">– Meena S., Bangalore</h4>
-    </div>
-
-    <div class="testimonial" style="position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 1s ease;">
-      <p style="font-size:1.2em;color:#444;">"Regular checkups here helped me catch my glaucoma early. Forever grateful!"</p>
-      <h4 style="color:#00bcd4;margin-top:15px;">– Anil J., Pune</h4>
-    </div>
-
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
   </div>
-</section>
 
-<!-- CAROUSEL SCRIPT -->
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
 <script>
-  const testimonials = document.querySelectorAll('.testimonial');
-  let index = 0;
-
-  setInterval(() => {
-    testimonials.forEach((t, i) => {
-      t.style.opacity = (i === index) ? '1' : '0';
-    });
-    index = (index + 1) % testimonials.length;
-  }, 5000); // Change every 5 seconds
-</script>
-<!-- FAQ SECTION -->
-<section style="padding:60px 20px;background:#f8d4f5ad;max-width:900px;margin:auto;border-radius: 10px;">
-    <h2 style="text-align:center;font-size:2.5em;margin-bottom:30px;color:#333;">Frequently Asked Questions</h2>
-  
-    <!-- FAQ Item -->
-    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
-      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
-        What is the ideal frequency for eye check-ups?
-      </button>
-      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
-        Adults should have their eyes checked every 1–2 years. Children and those with conditions may require more frequent visits.
-      </div>
-    </div>
-  
-    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
-      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
-        Do you offer surgery for cataracts and glaucoma?
-      </button>
-      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
-        Yes, we offer advanced cataract surgeries, laser procedures, and glaucoma treatments with expert specialists.
-      </div>
-    </div>
-  
-    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
-      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
-        Is vision testing available for children?
-      </button>
-      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
-        Absolutely! We offer pediatric eye exams tailored for children's comfort and accurate results.
-      </div>
-    </div>
-  
-    <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
-      <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
-        How can I book an appointment?
-      </button>
-      <div style="display:none;padding:15px;background:#fafafa;color:#555;">
-        You can book online through our website or call our helpline directly. Walk-ins are also welcome.
-      </div>
-    </div>
-  </section><br>
-  
-  <!-- FAQ Toggle Script -->
-  <script>
-    function toggleFAQ(btn) {
-      const panel = btn.nextElementSibling;
-      const allPanels = document.querySelectorAll("section button + div");
-      allPanels.forEach(p => {
-        if (p !== panel) p.style.display = "none";
-      });
-      panel.style.display = panel.style.display === "block" ? "none" : "block";
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
     }
-  </script>
-  
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+ 
+ 
+    <section style="position:relative;width:100%;min-height:550px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:white;">
     
-  <!-- CONTACT SECTION -->
+      <!-- Background slideshow images -->
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-2;">
+        <img src="https://res.glassesshop.com/ckeditorImg/6699e23ca5746.jpg" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transform:scale(1.1);transition:opacity 1s ease, transform 10s ease;" />
+        <img src="https://www.lappeneyecare.com/wp-content/uploads/2023/10/man-holding-eye-contact.jpg" loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transform:scale(1);transition:opacity 1s ease, transform 10s ease;" />
+      </div>
+
+
+      <!-- Gradient overlay -->
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));z-index:-1;"></div>
+
+
+      <!-- Content -->
+      <div style="max-width:700px;padding:30px 20px;z-index:1;">
+        <h1 style="font-size:3em;margin-bottom:15px;">Comprehensive Eye Care</h1>
+        <p style="font-size:1.2em;line-height:1.6;margin-bottom:25px;">
+          Welcome to Hitaishi Health Care Services – Eye Care Division. We provide cutting-edge diagnostics, compassionate care, and customized solutions for all your vision needs.
+        </p>
+        <a href="contact.html" style="text-decoration:none;">
+          <button style="padding:12px 25px;font-size:1em;background:#00bcd4;border:none;border-radius:5px;color:white;cursor:pointer;transition:background 0.3s ease;">
+            Visit Us
+          </button>
+        </a>
+      </div>
+    </section>
+    <!-- JavaScript for slideshow -->
+    <script>
+      const slides = document.querySelectorAll('section img');
+      let currentSlide = 0;
+
+
+      setInterval(() => {
+        slides[currentSlide].style.opacity = '0';
+        slides[currentSlide].style.transform = 'scale(1)';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.opacity = '1';
+        slides[currentSlide].style.transform = 'scale(1.1)';
+      }, 5000);
+    </script>
+
+    <!-- EYE CARE TREATMENTS SECTION -->
+    <section style="padding:60px 20px;background:white;text-align:center;">
+        <h2 style="font-size:2.5em;margin-bottom:10px;color:#000000;">Our Eye Care Treatments</h2>
+        <p style="font-size:1.1em;color:#000000;margin-bottom:40px;"><b>We diagnose and treat a wide range of vision problems with precision and care.</b></p>
+
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:1200px;margin:0 auto;">
+
+            <!-- Each Card -->
+            <div class="treatment-card" style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#f9fcff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:all 0.4s;">
+              <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">👁️ Refractive Errors</h3>
+              <p style="color:#080808;">Treatments for Myopia, Hyperopia, and Astigmatism including eyeglasses, contact lenses, and laser correction.</p>
+              <button  onclick="location.href='eyeDoctors.html'"  style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+            </div>
+
+            <div class="treatment-card" style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#f9fcff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:all 0.4s;">
+              <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🧠 Cataract Surgery</h3>
+              <p style="color:#000000;">Advanced cataract treatment and lens replacement surgeries with high precision and safety.</p>
+              <button  onclick="location.href='eyeDoctors.html'"  style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+            </div>
+
+            <div class="treatment-card" style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#f9fcff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:all 0.4s;">
+              <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">💉 Glaucoma Treatment</h3>
+              <p style="color:#050505;">Early detection and pressure control through medication, laser therapy, or surgery.</p>
+              <button  onclick="location.href='eyeDoctors.html'"  style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+            </div>
+
+            <div class="treatment-card" style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#f9fcff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:all 0.4s;">
+              <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔬 Diabetic Retinopathy</h3>
+              <p style="color:#000000;">Retinal care for diabetic patients using advanced imaging and laser treatment to prevent vision loss.</p>
+              <button  onclick="location.href='eyeDoctors.html'"  style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+            </div>
+
+            <div class="treatment-card" style="flex:1 1 300px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#f9fcff;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:all 0.4s;">
+              <h3 style="color:#00bcd4;font-size:1.4em;margin-bottom:10px;">🔍 Regular Eye Checkups</h3>
+              <p style="color:#030303;">We recommend periodic exams to maintain eye health, even without symptoms. Prevention is better than cure!</p>
+              <button onclick="location.href='eyeDoctors.html'" style="margin-top:20px;padding:12px 30px;background:linear-gradient(to right,#00bcd4,#0097a7);color:white;font-weight:bold;font-size:1em;border:none;border-radius:30px;cursor:pointer;transition:background 0.3s;">Book Now</button>
+            </div>
+
+        </div>
+      
+        <!-- Hover Effect Styling -->
+        <style>
+                .treatment-card:hover {
+                  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+                  transform: translateY(-8px);
+                  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.3);
+                }
+
+                .treatment-card:hover h3 {
+                  color: #006064;
+                }
+
+                .treatment-card:hover p {
+                  color: #004d40;
+                }
+          
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .treatment-card {
+                transition: all 0.4s ease-in-out !important;
+            }
+
+            .treatment-card:hover {
+                background: linear-gradient(135deg, #00bcd4, #006064) !important;
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 12px 30px rgba(0, 188, 212, 0.2);
+                border-color: #00bcd4 !important;
+            }
+
+            .treatment-card:hover .card-content h3,
+            .treatment-card:hover .card-content p {
+                color: #fff !important;
+            }
+
+            .treatment-card:hover .card-hover-bg {
+                opacity: 0.15;
+            }
+
+            .treatment-card:hover button {
+                background: linear-gradient(to right, #ffffff, #e0f7fa) !important;
+                color: #006064 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(255,255,255,0.3);
+            }
+
+            button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+            input:focus, textarea:focus {
+                border-color: #00bcd4 !important;
+                outline: none;
+            }
+
+            @media (max-width: 768px) {
+                .treatment-card {
+                    flex: 1 1 100% !important;
+                }
+            }
+        </style>
+    </section>
+
+    <section style="padding:60px 20px; background:#f9faff url('images/eye.png') no-repeat center center; background-size:100%; animation:zoomEffect 15s ease-in-out infinite; font-family:'Segoe UI', sans-serif; text-align:center; position:relative; overflow:hidden;">
+
+      <!-- Overlay -->
+      <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.85); z-index:0;"></div>
+
+      <div style="position:relative; z-index:1; max-width:1100px; margin:auto;">
+
+        <h3 style="font-size:2em; font-weight:bold; color:#000; margin-bottom:10px; position:relative; z-index:2;">
+          Step-by-Step Guide for the<br> 
+          <span style="color:#00bcd4;">Eye Care Treatment Journey</span>
+        </h3>
+        <p style="font-size:1em; color:#555; margin-bottom:40px; position:relative; z-index:2;"><i>What to Expect During Your Personalized Eye Care Process</i></p>
+
+        <div id="stepsWrapper" style="display:flex; flex-direction:row; gap:40px; align-items:center; flex-wrap:wrap; justify-content:center;">
+
+          <!-- Step 1 -->
+          <div class="step-box" style="flex:1; max-width:300px; text-align:center; position:relative; z-index:2;">
+            <div style="width:60px; height:60px; border-radius:50%; background:#00bcd4; color:white; font-weight:bold; font-size:1.4em; display:flex; align-items:center; justify-content:center; margin:auto;">1</div>
+            <img src="https://img.icons8.com/ios-filled/100/000000/document--v1.png" loading="lazy" style="width:50px; margin:20px 0;">
+            <h3 style="font-size:1.2em; font-weight:bold; color:#000;">Registration</h3>
+            <p style="font-size:0.95em; color:#555;">Visit your Eye Care Professional and share your findings or connect with our team for expert guidance.</p>
+          </div>
+
+          <!-- Arrow -->
+          <img class="arrow" src="https://img.icons8.com/ios-filled/50/fa314a/long-arrow-right.png" loading="lazy" style="width:30px;">
+
+          <!-- Step 2 -->
+          <div class="step-box" style="flex:1; max-width:300px; text-align:center; position:relative; z-index:2;">
+            <div style="width:60px; height:60px; border-radius:50%; background:#00bcd4; color:white; font-weight:bold; font-size:1.4em; display:flex; align-items:center; justify-content:center; margin:auto;">2</div>
+            <img src="https://img.icons8.com/ios-filled/100/000000/visible.png" loading="lazy" style="width:50px; margin:20px 0;">
+            <h3 style="font-size:1.2em; font-weight:bold; color:#000;">Assessment</h3>
+            <p style="font-size:0.95em; color:#555;">Undergo an in-clinic or online assessment by our specialists to check your vision and determine treatment needs.</p>
+          </div>
+
+          <!-- Arrow -->
+          <img class="arrow" src="https://img.icons8.com/ios-filled/50/fa314a/long-arrow-right.png" loading="lazy" style="width:30px;">
+
+          <!-- Step 3 -->
+          <div class="step-box" style="flex:1; max-width:300px; text-align:center; position:relative; z-index:2;">
+            <div style="width:60px; height:60px; border-radius:50%; background:#00bcd4; color:white; font-weight:bold; font-size:1.4em; display:flex; align-items:center; justify-content:center; margin:auto;">3</div>
+            <img src="https://img.icons8.com/ios-filled/100/000000/online-support.png" loading="lazy" style="width:50px; margin:20px 0;">
+            <h3 style="font-size:1.2em; font-weight:bold; color:#000;">Treatment</h3>
+            <p style="font-size:0.95em; color:#555;">Receive tailored eye care treatment under expert supervision, either in-clinic or from the comfort of your home.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Responsive Style -->
+      <style>
+        @keyframes zoomEffect {
+          0% { background-size: 100%; }
+          50% { background-size: 110%; }
+          100% { background-size: 100%; }
+        }
+
+        @media (max-width: 768px) {
+          #stepsWrapper {
+            flex-direction: column !important;
+            gap: 30px !important;
+          }
+
+          .arrow {
+            display: none !important;
+          }
+
+          .step-box {
+            max-width: 100% !important;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            background: #fff;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section style="padding:80px 20px;background:linear-gradient(120deg, #f0faff, #e0f7fa);display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:60px;max-width:1200px;margin:auto;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;min-height:90vh;">
+
+
+      <!-- Left Modern Illustration & Shapes -->
+      <div style="flex:1 1 480px;position:relative;display:flex;align-items:center;justify-content:center;background:#ffffff;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.08);overflow:hidden;height:auto;">
+        
+        <!-- Animated SVG Background -->
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" preserveAspectRatio="none" viewBox="0 0 800 800">
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00bcd4"/>
+              <stop offset="100%" stop-color="#0097a7"/>
+            </linearGradient>
+          </defs>
+          <circle cx="400" cy="400" r="300" fill="url(#grad1)" opacity="0.3" style="animation: float1 8s ease-in-out infinite;" />
+          <circle cx="200" cy="200" r="100" fill="#00bcd4" opacity="0.2" style="animation: float2 6s ease-in-out infinite;" />
+          <circle cx="600" cy="600" r="150" fill="#0097a7" opacity="0.2" style="animation: float3 7s ease-in-out infinite;" />
+        </svg>
+
+        <!-- Foreground Content -->
+        <div style="position:relative;z-index:1;padding:40px;text-align:center;color:#004d61;max-width:400px;">
+          <h4 style="font-size:2em;margin-bottom:15px;">Total Vision Care</h4>
+          <p style="font-size:1.1em;line-height:1.6;color:#333;">
+            Where technology meets trust. From routine checkups to laser precision surgeries, we keep your vision crystal clear.
+          </p>
+        </div>
+      </div>
+          <!-- Right Content -->
+      <div style="flex:1 1 500px; background: linear-gradient(rgba(255,255,255,0.9), rgba(255, 255, 255, 0.705)), url('images/care.png') no-repeat center center; background-size: 120%; padding:40px 30px; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.06); display:flex; flex-direction:column; justify-content:center; animation:zoomOut 15s ease-in-out infinite;">
+        <h5 style="font-size:2.4em;margin-bottom:20px;color:#004d61;">About Our Eye Care</h5>
+        <p style="font-size:1.15em;line-height:1.8;color:#444;margin-bottom:25px;">
+          At <strong style="color:#00bcd4;">Hitaishi Health Care</strong>, we specialize in comprehensive eye examinations, early detection of eye diseases, and advanced surgical procedures.
+          Our compassionate specialists ensure every patient gets personalized, clear-sighted care.
+        </p>
+        <ul style="list-style:none;padding:0;margin:0 0 30px 0;">
+          <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Regular eye check-ups</li>
+          <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Cataract & Lasik Surgery</li>
+          <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Pediatric Eye Care</li>
+          <li style="margin-bottom:12px;font-size:1.05em;color:#333;"><span style="color:#00bcd4;font-weight:bold;margin-right:10px;">✓</span>Glaucoma & Retina Treatment</li>
+        </ul>
+      </div>
+
+      <!-- Add this style anywhere inside your <style> tag or within <style> block -->
+      <style>
+        @keyframes zoomOut {
+          0% { background-size: 120%; }
+          50% { background-size: 100%; }
+          100% { background-size: 120%; }
+        }
+     
+        @keyframes float1 {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px) translateX(10px); }
+          100% { transform: translateY(0px); }
+        }
+
+        @keyframes float2 {
+          0% { transform: translateX(0px); }
+          50% { transform: translateX(-15px) translateY(10px); }
+          100% { transform: translateX(0px); }
+        }
+
+        @keyframes float3 {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(25px) translateX(-10px); }
+          100% { transform: translateY(0px); }
+        }
+      </style>
+
+    </section>
+  
+    <section style="padding:60px 20px; background:#f9f9ff; font-family:'Segoe UI', sans-serif;">
+      <h6 style="text-align:center; font-size:2.5em; margin-bottom:40px; color:#2b2b52; text-shadow:1px 1px 2px rgba(0,0,0,0.2); animation:fadeIn 1s ease-in;">
+        Our Specialties
+      </h6>
+
+      <style>
+        @media screen and (max-width: 768px) {
+          .specialties-container {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+          .specialty-card {
+            flex: 1 1 100% !important;
+            width: 100% !important;
+            max-width: 90% !important;
+          }
+        }
+      </style>
+
+      <div class="specialties-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+
+        <!-- Card 1 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#e8f0fe; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/hypertensive.png" loading="lazy" alt="Hypertensive Retinopathy" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#1a237e;">Hypertensive Retinopathy</h3>
+            <p style="font-size:1em; color:#333;">Advanced diagnostics and treatment plans to manage hypertension-related retinal damage effectively.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#fff0f5; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/stargardt.png" loading="lazy" alt="Stargardt Disease" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#880e4f;">Stargardt Disease</h3>
+            <p style="font-size:1em; color:#333;">Personalized care and low vision aids to help patients cope with this inherited macular degeneration.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#f0fff4; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/color_blindness.png" loading="lazy" alt="Colour Blindness" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#006400;">Colour Blindness</h3>
+            <p style="font-size:1em; color:#333;">Innovative tools and consultations to manage color vision deficiency with clarity and comfort.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#fffde7; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/high_myopia.png" loading="lazy" alt="High Myopia" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#f9a825;">High Myopia</h3>
+            <p style="font-size:1em; color:#333;">Expert monitoring and treatment of severe nearsightedness to prevent long-term vision issues.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#e0f7fa; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/retinal.png" loading="lazy" alt="Retinal Vasculitis" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#00796b;">Retinal Vasculitis</h3>
+            <p style="font-size:1em; color:#333;">Precise diagnosis and immunological approaches to control inflammation of retinal vessels.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="specialty-card" style="flex:1 1 280px; background:#fbe9e7; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.4s ease; text-align:center; cursor:pointer; position:relative; overflow:hidden;">
+          <img src="images/retinal_artery.png" loading="lazy" alt="Central Retinal Artery Occlusion" style="width:100%; opacity:0; transition:opacity 0.5s; position:absolute; top:0; left:0; height:100%; object-fit:cover; z-index:0;">
+          <div style="position:relative; z-index:1;">
+            <h3 style="margin-bottom:10px; font-size:1.5em; color:#bf360c;">Central Retinal Artery Occlusion</h3>
+            <p style="font-size:1em; color:#333;">Urgent and precise treatments for sudden vision loss due to artery blockage in the retina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const cards = document.querySelectorAll('.specialty-card');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          const img = card.querySelector('img');
+          if(img) img.style.opacity = '1';
+        });
+        card.addEventListener('mouseleave', () => {
+          const img = card.querySelector('img');
+          if(img) img.style.opacity = '0';
+        });
+      });
+    </script>
+
+    <section style="background:#f8fbff; padding:60px 20px; font-family:'Segoe UI', sans-serif;">
+      <style>
+        .hover-image {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-image:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+      </style>
+
+      <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:40px; align-items:center;">
+        
+        <!-- Image -->
+        <div style="flex:1; min-width:280px; text-align:center;">
+          <img src="images/healthy_eye.png" loading="lazy" alt="Healthy Eyes Tips" class="hover-image" style="width:100%; max-width:400px; border-radius:20px; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+
+        <!-- Text Content -->
+        <div style="flex:2; min-width:300px;">
+          <h2 style="font-size:1.8em; color:#002B5B; margin-top:-30px; margin-bottom:15px;">
+            Why Healthy Eye Habits Are More Vital Than Ever
+          </h2>
+          <p style="color:#444; line-height:1.7; margin-bottom:20px;">
+            With growing screen time, pollution, and changing lifestyles, maintaining healthy eye habits is essential. Small daily practices can go a long way in preventing eye strain, preserving vision, and supporting long-term ocular health naturally.
+          </p>
+          <ul style="list-style:none; padding-left:0; color:#005691; font-size:1.05em;">
+            <li style="margin-bottom:10px;">✔ Follow the 20-20-20 rule to reduce screen fatigue</li>
+            <li style="margin-bottom:10px;">✔ Eat leafy greens, omega-rich fish, and vitamin A foods</li>
+            <li style="margin-bottom:10px;">✔ Stay hydrated and blink often to prevent dryness</li>
+            <li style="margin-bottom:10px;">✔ Wear UV-protective sunglasses when outdoors</li>
+            <li style="margin-bottom:10px;">✔ Avoid rubbing eyes and wash hands frequently</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Credibility Section -->
+      <div style="margin-top:50px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; text-align:center; color:#003366;">
+        <div style="flex:1; min-width:200px;">
+          <img src="images/checkup.png" loading="lazy" alt="Eye Checkup Icon" class="hover-image" style="height:50px; margin-bottom:10px;">
+          <p>Annual Eye Checkups Recommended</p>
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <img src="images/food_icon.png" loading="lazy" alt="Healthy Diet Icon" class="hover-image" style="height:50px; margin-bottom:10px;">
+          <p>Nutrition is Key to Vision Longevity</p>
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <img src="images/sunglasses.png" loading="lazy" alt="Sunglasses Icon" class="hover-image" style="height:50px; margin-bottom:10px;">
+          <p>Protect Eyes from Harmful UV Rays</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTERS SECTION -->
+    <section id="counter-section" style="padding:60px 20px; background:#f0fbfc; text-align:center; font-family:'Segoe UI', sans-serif;">
+      <h2 style="font-size:2em; margin-bottom:10px; color:#333;">Trusted by Thousands</h2>
+      <p style="font-size:1em; color:#666; margin-bottom:40px;">Delivering exceptional eye care with a compassionate touch.</p>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1000px; margin:auto;">
+        <!-- Counter 1 -->
+        <div style="flex:1 1 150px; min-width:140px;">
+          <h3 style="font-size:2.5em; color:#00bcd4;">
+            <span class="counter" data-target="10000">0</span>+
+          </h3>
+          <p style="color:#555; font-size:0.95em;">Patients Treated</p>
+        </div>
+
+        <!-- Counter 2 -->
+        <div style="flex:1 1 150px; min-width:140px;">
+          <h3 style="font-size:2.5em; color:#00bcd4;">
+            <span class="counter" data-target="2500">0</span>+
+          </h3>
+          <p style="color:#555; font-size:0.95em;">Successful Surgeries</p>
+        </div>
+
+        <!-- Counter 3 -->
+        <div style="flex:1 1 150px; min-width:140px;">
+          <h3 style="font-size:2.5em; color:#00bcd4;">
+            <span class="counter" data-target="200">0</span>+
+          </h3>
+          <p style="color:#555; font-size:0.95em;">Expert Doctors</p>
+        </div>
+
+        <!-- Counter 4 -->
+        <div style="flex:1 1 150px; min-width:140px;">
+          <h3 style="font-size:2.5em; color:#00bcd4;">
+            <span class="counter" data-target="8">0</span>+
+          </h3>
+          <p style="color:#555; font-size:0.95em;">Clinics Nationwide</p>
+        </div>
+      </div>
+
+      <!-- Counter Animation Script -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const counters = document.querySelectorAll(".counter");
+
+          const options = {
+            root: null,
+            threshold: 0.3,
+          };
+
+          const animateCounter = (el) => {
+            const updateCount = () => {
+              const target = +el.getAttribute("data-target");
+              const count = +el.innerText;
+              const increment = target / 100;
+
+              if (count < target) {
+                el.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20);
+              } else {
+                el.innerText = target;
+              }
+            };
+            updateCount();
+          };
+
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          }, options);
+
+          counters.forEach(counter => observer.observe(counter));
+        });
+      </script>
+    </section>
+
+    <section id="eye-surgery" style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <h2 style="color: #2a6496;font-size:2em; margin-top: 40px;text-align: center; border-bottom: 2px solid #2a6496; padding-bottom: 20px;">Eye Surgery Procedures</h2>
+
+          <style>
+              .surgery-type:hover {
+                  transform: scale(1.02);
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                  transition: all 0.3s ease;
+              }
+
+              .surgery-type {
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+              }
+          </style>
+
+          <div class="surgery-type" style="background-color: white; padding: 15px; margin-bottom: 20px; border-left: 5px solid #4CAF50;">
+              <h2 style="color: #4CAF50; margin-top: 0;">LASIK Surgery</h2>
+              <p style="line-height: 1.6;">LASIK (Laser-Assisted In Situ Keratomileusis) is a popular refractive surgery that corrects vision by reshaping the cornea using an excimer laser.</p>
+              <ul style="list-style-type: square; padding-left: 20px;">
+                  <li style="margin-bottom: 5px;">Procedure time: 10-15 minutes per eye</li>
+                  <li style="margin-bottom: 5px;">Recovery: 24-48 hours</li>
+                  <li style="margin-bottom: 5px;">Success rate: Over 96%</li>
+              </ul>
+          </div>
+
+          <div class="surgery-type" style="background-color: white; padding: 15px; margin-bottom: 20px; border-left: 5px solid #FF5722;">
+              <h2 style="color: #FF5722; margin-top: 0;">Cataract Surgery</h2>
+              <p style="line-height: 1.6;">Cataract surgery involves removing the cloudy natural lens and replacing it with an artificial intraocular lens (IOL).</p>
+              <div style="display: flex; gap: 20px;">
+                  <div style="flex: 1; background-color: #FFF8E1; padding: 10px; border-radius: 5px;">
+                      <h3 style="color: #FF9800;">Traditional</h3>
+                      <p>Uses ultrasound to break up the cloudy lens</p>
+                  </div>
+                  <div style="flex: 1; background-color: #E8F5E9; padding: 10px; border-radius: 5px;">
+                      <h3 style="color: #4CAF50;">Laser-Assisted</h3>
+                      <p>More precise with femtosecond laser technology</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="surgery-type" style="background-color: white; padding: 15px; border-left: 5px solid #9C27B0;">
+              <h2 style="color: #9C27B0; margin-top: 0;">PRK Surgery</h2>
+              <p style="line-height: 1.6;">Photorefractive Keratectomy (PRK) is an alternative to LASIK that doesn't create a corneal flap, making it suitable for patients with thin corneas.</p>
+              <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                  <tr style="background-color: #f3e5f5;">
+                      <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Aspect</th>
+                      <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Details</th>
+                  </tr>
+                  <tr>
+                      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Recovery Time</td>
+                      <td style="padding: 8px; border-bottom: 1px solid #ddd;">3-5 days</td>
+                  </tr>
+                  <tr style="background-color: #f9f9f9;">
+                      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Pain Level</td>
+                      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Moderate (first few days)</td>
+                  </tr>
+              </table>
+          </div>
+    </section>
+      
+    <section style="padding:60px 20px; background:#f8faff; font-family:'Segoe UI', sans-serif; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:40px;">
+        <div style="flex:1; min-width:300px; max-width:400px; text-align:center;">
+            <div style="background:#cce5ff; border-radius:50% 50% 0 0 / 60% 60% 0 0; padding:20px;">
+              <img src="images/eye_donation.png" loading="lazy" alt="Eye Donation Team"
+                style="width:100%; border-radius:20px; transition:transform 0.4s ease, box-shadow 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+            </div>
+          </div>
+
+          <div style="flex:1; min-width:300px; max-width:600px;">
+            <h3 style="color:#2b2b52; font-size:1.2em; margin-bottom:10px;">Support the Cause</h3>
+            <h2 style="color:#0d47a1; font-size:2em; font-weight:bold; margin-bottom:20px;">Donate Eyes, Gift Vision</h2>
+            <p style="color:#333; font-size:1.1em; line-height:1.6; margin-bottom:20px;">
+              Every eye donation is a step toward giving the gift of sight. By pledging your eyes, you can help restore vision for someone in need and make a lasting impact.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+              <div style="background:#e3f2fd; padding:10px 15px; border-radius:20px; font-size:0.95em;">Restore Vision</div>
+              <div style="background:#d1c4e9; padding:10px 15px; border-radius:20px; font-size:0.95em;">Inspire Hope</div>
+              <div style="background:#ffe0b2; padding:10px 15px; border-radius:20px; font-size:0.95em;">Live Beyond Life</div>
+            </div>
+            <p style="font-size:1em; color:#555;"><strong>Mission:</strong> To promote eye donation and enable more corneal transplant procedures for the visually impaired through awareness and action.</p>
+            <a href="eyeDonate.html"  target="_blank" style="text-decoration:none;">
+              <button style="margin-top:20px; padding:10px 25px; background:#0d47a1; color:white; border:none; border-radius:25px; font-size:1em; cursor:pointer;">
+                Pledge to Donate Eyes
+              </button>
+            </a>
+
+          </div>
+    </section>
+    <script>
+            const counters = document.querySelectorAll('.counter');
+            const section = document.getElementById('counter-section');
+        
+            const animateCounter = (counter) => {
+              counter.innerText = '0';
+              const target = +counter.getAttribute('data-target');
+              const increment = target / 200;
+        
+              const update = () => {
+                const current = +counter.innerText.replace(/,/g, '');
+                if (current < target) {
+                  counter.innerText = Math.ceil(current + increment).toLocaleString();
+                  setTimeout(update, 20);
+                } else {
+                  counter.innerText = target.toLocaleString();
+                }
+              };
+        
+              update();
+            };
+        
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  counters.forEach(counter => {
+                    animateCounter(counter);
+                  });
+                } else {
+                  counters.forEach(counter => counter.innerText = '0');
+                }
+              });
+            }, { threshold: 0.5 });
+        
+            observer.observe(section);
+    </script>
+
+    <section style="padding:60px 20px; background:linear-gradient(135deg, #ffffff 0%, #ffffff 100%); font-family:'Segoe UI', sans-serif; position:relative; overflow:hidden; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; text-align:center;">
+
+        <!-- Decorative background shapes -->
+        <div style="position:absolute; top:-60px; left:-80px; width:200px; height:200px; background:rgba(0,123,255,0.1); transform:rotate(45deg); z-index:0;"></div>
+        <div style="position:absolute; bottom:-80px; right:-100px; width:250px; height:250px; background:rgba(220,53,69,0.08); border-radius:50%; z-index:0;"></div>
+        <div style="position:absolute; top:50%; left:50%; width:140px; height:140px; background:rgba(0,0,0,0.02); border-radius:50%; transform:translate(-50%,-50%); z-index:0;"></div>
+
+        <!-- Vision -->
+        <div style="flex:1; min-width:300px; max-width:400px; padding:20px; z-index:1;">
+          <h2 style="color:#d63384; font-size:2.2em; margin-bottom:20px;">Our Vision</h2>
+          <p style="color:#333; font-size:1.05em; line-height:1.7;">
+            We aspire to lead the future of eye care by inspiring a world where every person enjoys clear, healthy vision. Through dedication to medical innovation, personalized care, and unwavering compassion, we aim to be the trusted eye health partner for generations. Our vision includes a community where sight is preserved, restored, and celebrated through cutting-edge solutions and inclusive care.
+          </p>
+        </div>
+
+        <!-- Eye Image -->
+        <div style="flex:1; min-width:250px; max-width:300px; padding:20px; z-index:1;">
+          <img src="images/blueeye.png" loading="lazy" alt="Blue Eye Graphic" style="width:100%; max-width:350px; border-radius:50%; " />
+        </div>
+
+        <!-- Mission -->
+        <div style="flex:1; min-width:300px; max-width:400px; padding:20px; z-index:1;">
+          <h2 style="color:#d63384; font-size:2.2em; margin-bottom:20px;">Our Mission</h2>
+          <p style="color:#333; font-size:1.05em; line-height:1.7;">
+            Our mission is to make visionary care accessible for all—restoring sight, preventing vision loss, and improving lives. Through groundbreaking research, advanced treatment, and heartfelt service, we bring light to those in need. We are committed to making the world brighter by enabling people to see clearly, live fully, and thrive with dignity.
+          </p>
+        </div>
+    </section>
+
+     <!-- TESTIMONIALS SECTION -->
+    <section style="padding:60px 20px; text-align:center; 
+        background: url('images/baby.png') no-repeat center center; 
+        background-size: cover; 
+        position: relative; 
+        color: #333; 
+        font-family: 'Segoe UI', sans-serif;
+        overflow: hidden;
+      ">
+
+        <!-- Overlay -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255, 255, 255, 0.726); z-index:0;"></div>
+
+        <div style="position:relative; z-index:1; max-width:800px; margin:0 auto;">
+
+          <h2 style="font-size:2.5em; margin-bottom:10px; color:#333;">What Our Patients Say</h2>
+          <p style="font-size:1.1em; color:#666; margin-bottom:40px;">Real stories from people whose lives we’ve helped improve.</p>
+
+          <div id="testimonial-container" style="position:relative; height:100px; overflow:hidden;">
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:1; transition:opacity 1s ease;">
+              <p style="font-size:1.2em; color:#444;">"I had a fantastic experience with Hitaishi Eye Care. The doctors are highly professional and compassionate."</p>
+              <h4 style="color:#00bcd4; margin-top:-15px;">– Ramesh K., Hyderabad</h4>
+            </div>
+
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:0; transition:opacity 1s ease;">
+              <p style="font-size:1.2em; color:#444;">"The staff made me feel comfortable throughout my cataract surgery. Highly recommended!"</p>
+              <h4 style="color:#00bcd4; margin-top:15px;">– Meena S., Bangalore</h4>
+            </div>
+
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:0; transition:opacity 1s ease;">
+              <p style="font-size:1.2em; color:#444;">"Regular checkups here helped me catch my glaucoma early. Forever grateful!"</p>
+              <h4 style="color:#00bcd4; margin-top:15px;">– Anil J., Pune</h4>
+            </div>
+          </div>
+        </div>
+    </section>
+    <script>
+        const testimonials = document.querySelectorAll('.testimonial');
+        let index = 0;
+
+
+        setInterval(() => {
+          testimonials.forEach((t, i) => {
+            t.style.opacity = (i === index) ? '1' : '0';
+          });
+          index = (index + 1) % testimonials.length;
+        }, 5000); // Change every 5 seconds
+    </script>
+      
+    <section style="padding:60px 20px; background:#f9f9f9; font-family:'Segoe UI', sans-serif; text-align:center;">
+        <h2 style="font-size:2.5em; color:#1a237e;margin-top: -40px; margin-bottom:10px;">Eye Donation – A Visionary Impact</h2>
+        <p style="max-width:800px; margin:auto; font-size:1.1em; color:#444; line-height:1.6; margin-bottom:30px;">
+          Donating eyes gives the gift of sight, allowing those with corneal blindness to see the world again. Eye donors become silent heroes whose selfless decisions help restore confidence, independence, and life itself for someone else.
+        </p>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1000px; margin:auto;">
+
+          <!-- Item 1 -->
+          <div 
+            onmouseover="this.style.background='#007BFF'; this.style.color='#fff';" 
+            onmouseout="this.style.background='white'; this.style.color='#000';"
+            style="flex:1 1 250px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:20px; border-radius:10px; transition:all 0.3s ease; cursor:pointer;"
+          >
+            <p style="font-weight:bold; font-size:1.1em;">Vision Restored</p>
+            <p style="font-size:0.95em;">A single donor can restore the vision of two people affected by corneal blindness.</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div 
+            onmouseover="this.style.background='#4CAF50'; this.style.color='#fff';" 
+            onmouseout="this.style.background='white'; this.style.color='#000';"
+            style="flex:1 1 250px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:20px; border-radius:10px; transition:all 0.3s ease; cursor:pointer;"
+          >
+            <p style="font-weight:bold; font-size:1.1em;">Social Reintegration</p>
+            <p style="font-size:0.95em;">Recipients regain the ability to work, learn, and participate fully in society.</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div 
+            onmouseover="this.style.background='#FF9800'; this.style.color='#fff';" 
+            onmouseout="this.style.background='white'; this.style.color='#000';"
+            style="flex:1 1 250px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:20px; border-radius:10px; transition:all 0.3s ease; cursor:pointer;"
+          >
+            <p style="font-weight:bold; font-size:1.1em;">Family Hope</p>
+            <p style="font-size:0.95em;">Families see their loved ones live with dignity again, thanks to your donation.</p>
+          </div>
+
+          <!-- Item 4 -->
+          <div 
+            onmouseover="this.style.background='#E91E63'; this.style.color='#fff';" 
+            onmouseout="this.style.background='white'; this.style.color='#000';"
+            style="flex:1 1 250px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:20px; border-radius:10px; transition:all 0.3s ease; cursor:pointer;"
+          >
+            <p style="font-weight:bold; font-size:1.1em;">Legacy of Light</p>
+            <p style="font-size:0.95em;">Your decision leaves a legacy that touches lives far beyond your own.</p>
+          </div>
+
+        </div>
+    </section>      
+  
+      <!-- FAQ SECTION -->
+    <section style="padding:60px 20px; background: url('images/faq.png') center/cover fixed; position: relative; max-width:100; border-radius: 0;">
+
+      <div style="background-color: rgba(255, 255, 255, 0.517); padding: 40px; border-radius: 10px;">
+        <h2 style="text-align:center;font-size:2.5em;margin-bottom:30px;color:#333;">Frequently Asked Questions</h2>
+
+        <!-- FAQ Item -->
+        <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+          <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+            What is the ideal frequency for eye check-ups?
+          </button>
+          <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+            Adults should have their eyes checked every 1–2 years. Children and those with conditions may require more frequent visits.
+          </div>
+        </div>
+
+        <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+          <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+            Do you offer surgery for cataracts and glaucoma?
+          </button>
+          <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+            Yes, we offer advanced cataract surgeries, laser procedures, and glaucoma treatments with expert specialists.
+          </div>
+        </div>
+
+        <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+          <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+            Is vision testing available for children?
+          </button>
+          <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+            Absolutely! We offer pediatric eye exams tailored for children's comfort and accurate results.
+          </div>
+        </div>
+
+        <div style="margin-bottom:15px;border:1px solid #eee;border-radius:6px;overflow:hidden;">
+          <button onclick="toggleFAQ(this)" style="width:100%;padding:15px;text-align:left;background:#f0fbfc;border:none;font-size:1.1em;font-weight:bold;cursor:pointer;">
+            How can I book an appointment?
+          </button>
+          <div style="display:none;padding:15px;background:#fafafa;color:#555;">
+            You can book online through our website or call our helpline directly. Walk-ins are also welcome.
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleFAQ(btn) {
+        const panel = btn.nextElementSibling;
+        const allPanels = document.querySelectorAll("section button + div");
+        allPanels.forEach(p => {
+          if (p !== panel) p.style.display = "none";
+        });
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      }
+    </script>      
+ 
 <!-- Footer -->
 <footer style="background:#004d61;color:white;padding:50px 20px;text-align:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
   <div style="max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;">
-    
+   
     <!-- About -->
     <div style="flex:1 1 250px;text-align:left;">
       <h3 style="margin-bottom:15px;font-size:1.5em;">Hitaishi Health Care</h3>
@@ -509,6 +1070,7 @@
         At Hitaishi Health Care, we specialize in comprehensive eye examinations, advanced diagnostics, and personalized treatments. From cataract surgery to laser vision correction, our goal is to protect and enhance your vision with compassion and innovation.
       </p>
     </div>
+
 
     <!-- Quick Links -->
     <div style="flex:1 1 200px;text-align:left;margin-left: 60px;">
@@ -521,6 +1083,7 @@
       </ul>
     </div>
 
+
     <!-- Contact -->
     <div style="flex:1 1 200px;text-align:left;">
       <h4 style="margin-bottom:10px;">Contact Us</h4>
@@ -530,6 +1093,7 @@
         📧 contact@hitaishihealthcare.com
       </p>
     </div>
+
 
     <!-- Follow Us -->
     <div style="flex:1 1 200px;text-align:left;">
@@ -551,14 +1115,16 @@
     </div>
     </div>
 
-    
+
+   
+
 
   </div>
  <!-- chatbot -->
  <div id="chatbot-icon" style="position: fixed; bottom: 40px; right: 20px; width: 60px; height: 60px; background-color: #ffffffc0; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: all 0.3s ease-in-out;">
   <i class="fas fa-comments" style="font-size: 30px; color: #1dddb3;"></i>
 </div>
-  
+ 
 <!-- Chatbot Container (initially hidden) -->
 <div id="chatbot-container" style="position: fixed; bottom: 80px; right: 20px; width: 320px; background-color: #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding: 20px; display: none; z-index: 1000; transform: translateY(20px); opacity: 0; transition: all 0.3s ease-in-out;">
   <!-- Chatbot Header -->
@@ -567,6 +1133,7 @@
       <button id="close-chat" style="background-color: #e74c3c; border: none; color: white; font-size: 16px; border-radius: 50%; width: 25px; height: 25px; cursor: pointer;">X</button>
   </div>
 
+
   <!-- Chat Area -->
   <div id="chat-area" style="background-color: #f5f5f5; height: 250px; overflow-y: auto; padding: 10px; border-radius: 10px; margin-bottom: 15px; background: linear-gradient(to bottom, #fafafa, #f0f0f0);">
       <!-- Welcome message -->
@@ -574,6 +1141,7 @@
           <p class="message bot-message" style="padding: 8px 12px; border-radius: 20px; margin: 5px 0; max-width: 75%; font-size: 16px; background-color: #1dddb3; color: white; align-self: flex-start;">Hi! How can I assist you today?</p>
       </div>
   </div>
+
 
   <!-- Chat Input -->
   <div id="input-area" style="display: flex; align-items: center;">
@@ -591,10 +1159,12 @@ document.getElementById('chatbot-icon').addEventListener('click', function() {
     document.getElementById('chatbot-icon').style.display = 'none'; // Hide icon after opening
 });
 
+
 // Handle sending messages
 document.getElementById('send-btn').addEventListener('click', function() {
     sendMessage();
 });
+
 
 // Allow sending messages with Enter key
 document.getElementById('user-input').addEventListener('keypress', function(event) {
@@ -603,10 +1173,12 @@ document.getElementById('user-input').addEventListener('keypress', function(even
     }
 });
 
+
 function sendMessage() {
     var userInput = document.getElementById('user-input').value.trim();
     if (userInput !== '') {
         var chatArea = document.getElementById('chat-area');
+
 
         // User Message
         var userMessage = document.createElement('div');
@@ -615,11 +1187,14 @@ function sendMessage() {
         userMessage.textContent = userInput;
         chatArea.appendChild(userMessage);
 
+
         // Scroll to the bottom
         chatArea.scrollTop = chatArea.scrollHeight;
 
+
         // Clear the input field
         document.getElementById('user-input').value = '';
+
 
         // Simulate chatbot response after 1 second
         setTimeout(function() {
@@ -629,11 +1204,13 @@ function sendMessage() {
             botMessage.textContent = getBotReply(userInput);
             chatArea.appendChild(botMessage);
 
+
             // Scroll to the bottom
             chatArea.scrollTop = chatArea.scrollHeight;
         }, 1000);
     }
 }
+
 
 function styleMessage(element, bgColor, textColor, align) {
     element.style.padding = '8px 12px';
@@ -646,8 +1223,10 @@ function styleMessage(element, bgColor, textColor, align) {
     element.style.alignSelf = align;
 }
 
+
 function getBotReply(userMessage) {
     userMessage = userMessage.toLowerCase(); // Convert to lowercase for consistency
+
 
       const responses = {
           "hi": "Hello, How are you?",
@@ -662,6 +1241,7 @@ function getBotReply(userMessage) {
           "bye": "Goodbye! Have a great day!",
           "what can you do": "I can chat with you! Ask me anything. 😊",
 
+
           // Health Diagnostic Services
           "what are common health checkups": "Common health checkups include blood tests, cholesterol tests, blood pressure monitoring, diabetes screening, and full-body checkups.",
           "what is CBC test": "A Complete Blood Count (CBC) test measures different components of your blood, such as red and white blood cells, hemoglobin, and platelets.",
@@ -673,6 +1253,7 @@ function getBotReply(userMessage) {
           "what is a thyroid test": "A thyroid test checks hormone levels (TSH, T3, and T4) to detect thyroid disorders like hypothyroidism or hyperthyroidism.",
           "what are the symptoms of diabetes": "Symptoms include frequent urination, excessive thirst, unexplained weight loss, fatigue, and blurred vision.",
           "how to improve immunity": "Boost your immunity by eating a balanced diet, exercising, getting enough sleep, managing stress, and staying hydrated.",
+
 
           // Fertility-Related Q&A
           "how to check fertility in men": "Male fertility is usually tested through a semen analysis, which checks sperm count, motility, and morphology.",
@@ -688,9 +1269,11 @@ function getBotReply(userMessage) {
           "what are the treatment options for infertility": "Treatment options include lifestyle changes, medications, hormone therapy, IUI, IVF, and surgical interventions, depending on the cause."
       };
 
-      
+
+     
     return responses[userMessage] || "I'm not sure how to respond to that. Can you try something else?";
 }
+
 
 // Close the chatbot
 document.getElementById('close-chat').addEventListener('click', function() {
@@ -699,6 +1282,7 @@ document.getElementById('close-chat').addEventListener('click', function() {
 });
 </script>
 
+
   <!-- Copyright -->
   <div style="margin-top:40px;font-size:0.9em;color:#ccc;">
     © 2025 Hitaishi Health Care. All rights reserved.
@@ -706,5 +1290,10 @@ document.getElementById('close-chat').addEventListener('click', function() {
 </footer>
 
 
+
+
 </body>
 </html>
+
+
+

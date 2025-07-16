@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
+    </div>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
+    </div>
+  </div>
+
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
+
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
+
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
+    </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
+
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
+
+  <!-- Header Section -->
+  <div style="text-align: center; padding: 30px 20px;">
+    <h2 style="color: #004080; font-size: 36px; margin-bottom: 10px;">Find a Doctor</h2>
+    <p style="color: #333; font-size: 16px; max-width: 700px; margin: 0 auto;">
+      Our find a doctor tool assists you in choosing from our diverse pool of health specialists. Discover better health & wellness by using our doctor ratings & reviews to make your choice.
+    </p>
+  </div>
+
+
+    <!-- Main Input Box -->
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <h2 style="text-align: center; color: #4a148c; margin-bottom: 25px;">Search for Nose Specialist</h2>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+
+                <form action="http://localhost:5000/api/finddoctor" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="position: relative;">
+                <label for="name" style="display: block; margin-bottom: 6px; color: #333;">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                <span id="nameError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid name</span>
+            </div>
+            <div style="position: relative;">
+                <label for="phone" style="display: block; margin-bottom: 6px; color: #333;">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                <span id="phoneError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid phone number</span>
+            </div>
+            <div style="position: relative;">
+                <label for="email" style="display: block; margin-bottom: 6px; color: #333;">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                <span id="emailError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid email address</span>
+            </div>
+            <div style="position: relative;">
+                <label for="location" style="display: block; margin-bottom: 6px; color: #333;">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter your city or state" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                <div id="locationSuggestions" style="position: absolute; top: 100%; left: 0; width: 100%; max-height: 150px; overflow-y: auto; background-color: #fff; border: 1px solid #4a148c; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none; z-index: 10;"></div>
+                <span id="locationError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please enter a valid city or state</span>
+            </div>
+            <button onclick="searchDoctors()" style="background-color: #4a148c; color: white; padding: 14px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">🔍 Search Doctors</button>
+            </form>
+        </div>
+    </div>
+<script>
+async function searchDoctors(event) {
+    event.preventDefault();
+
+    // Hide all error messages
+    document.getElementById('nameError').style.display = 'none';
+    document.getElementById('phoneError').style.display = 'none';
+    document.getElementById('emailError').style.display = 'none';
+    document.getElementById('locationError').style.display = 'none';
+
+    // Get input values
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const location = document.getElementById('location').value.trim();
+
+    let isValid = true;
+
+    // Basic field validation
+    if (!name) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+    if (!phone) {
+        document.getElementById('phoneError').innerText = 'Phone number is required';
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+    }
+    if (!email) {
+        document.getElementById('emailError').innerText = 'Email is required';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+    if (!location) {
+        document.getElementById('locationError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return;
+    }
+
+    // Send data to backend (example with fetch)
+    try {
+        const response = await fetch('http://localhost:5000/api/finddoctor', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, phone, email, location }),
+        });
+
+        const data = await response.json();
+
+        if (data.status === false) {
+            alert(data.error || "Something went wrong.");
+        } else {
+            alert("Doctors found!"); // or redirect/display result
+        }
+
+    } catch (error) {
+        console.error("Error:", error);
+        alert("An unexpected error occurred.");
+    }
+}
+</script>
+
+    <!-- Popup Modal -->
+    <div id="bookingPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+        <div style="background-color: #ffffff; border-radius: 12px; padding: 30px; width: 100%; max-width: 500px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); position: relative;">
+            <span onclick="closePopup()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; color: #4a148c; cursor: pointer;">×</span>
+            <h2 style="color: #4a148c; font-size: 22px; margin-bottom: 20px; text-align: center;">Book Nose Specialist Appointment</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div>
+                    <select id="hospital" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                        <option value="">Select Hospital</option>
+                    </select>
+
+
+                    <span id="hospitalError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please select a hospital</span>
+                </div>
+                <div>
+                    <select id="specialist" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                        <option value="">Select Specialist</option>
+                    </select>
+                    <span id="specialistError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please select a specialist</span>
+                </div>
+                <div>
+                    <input id="appointmentDate" type="date" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;" min="2025-06-26">
+                    <span id="dateError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please select a valid date</span>
+                </div>
+                <div>
+                    <select id="appointmentTime" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
+                        <option value="">Select Time</option>
+                    </select>
+                    <span id="timeError" style="color: #d81b60; font-size: 12px; margin-top: 5px; display: none;">Please select a time</span>
+                </div>
+                <div id="appointmentSummary" style="display: none; background-color: #f3e7ff; padding: 10px; border-radius: 6px; font-size: 14px; color: #4a148c; margin-bottom: 10px;">
+                    <p><strong>Appointment Summary:</strong></p>
+                    <p id="summaryText"></p>
+                </div>
+                <button onclick="previewAppointment()" style="background-color: #4a148c; color: white; padding: 14px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">Preview Appointment</button>
+                <button id="confirmButton" onclick="bookAppointment()" style="display: none; background-color: #4a148c; color: white; padding: 14px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">Confirm Appointment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Indian states and cities for location matching
+        const stateCityMap = {
+            "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+            "Delhi": ["Delhi", "New Delhi"],
+            "Karnataka": ["Bengaluru", "Mysore"],
+            "Tamil Nadu": ["Chennai", "Coimbatore"],
+            "Telangana": ["Hyderabad", "Secunderabad"],
+            "West Bengal": ["Kolkata", "Howrah"],
+            "Gujarat": ["Ahmedabad", "Surat"],
+            "Haryana": ["Gurugram", "Faridabad"],
+            "Rajasthan": ["Jaipur", "Udaipur"],
+            "Uttar Pradesh": ["Lucknow", "Kanpur"],
+            "Andhra Pradesh": ["Visakhapatnam", "Vijayawada"],
+            "Arunachal Pradesh": ["Itanagar"],
+            "Assam": ["Guwahati"],
+            "Bihar": ["Patna"],
+            "Chhattisgarh": ["Raipur"],
+            "Goa": ["Panaji"],
+            "Himachal Pradesh": ["Shimla"],
+            "Jharkhand": ["Ranchi"],
+            "Kerala": ["Thiruvananthapuram"],
+            "Madhya Pradesh": ["Bhopal"],
+            "Manipur": ["Imphal"],
+            "Meghalaya": ["Shillong"],
+            "Mizoram": ["Aizawl"],
+            "Nagaland": ["Kohima"],
+            "Odisha": ["Bhubaneswar"],
+            "Punjab": ["Chandigarh"],
+            "Sikkim": ["Gangtok"],
+            "Tripura": ["Agartala"],
+            "Uttarakhand": ["Dehradun"],
+            "Andaman and Nicobar Islands": ["Port Blair"],
+            "Chandigarh": ["Chandigarh"],
+            "Dadra and Nagar Haveli and Daman and Diu": ["Daman"],
+            "Jammu and Kashmir": ["Srinagar"],
+            "Ladakh": ["Leh"],
+            "Lakshadweep": ["Kavaratti"],
+            "Puducherry": ["Puducherry"]
+        };
+
+        // Nose-related ENT hospitals with associated states
+        const hospitals = [
+            { name: "Nose Care Hub", state: "Maharashtra" },
+            { name: "Clear Sinus Clinic", state: "Delhi" },
+            { name: "ENT Wellness Centre", state: "Karnataka" },
+            { name: "Apollo Nose Clinic", state: "Tamil Nadu" },
+            { name: "Fortis ENT Care", state: "Telangana" },
+            { name: "Breathe Well Clinic", state: "Maharashtra" },
+            { name: "Nose Specialty Centre", state: "West Bengal" },
+            { name: "Elite Sinus Studio", state: "Gujarat" },
+            { name: "ENT Solutions Clinic", state: "Haryana" },
+            { name: "Clear Nose Clinic", state: "Rajasthan" },
+            { name: "Prime ENT Care", state: "Maharashtra" },
+            { name: "ENT Pro Clinic", state: "Delhi" },
+            { name: "Healthy Nose Clinic", state: "Karnataka" },
+            { name: "Sinus Harmony Centre", state: "Tamil Nadu" },
+            { name: "Nose Health Clinic", state: "Telangana" },
+            { name: "ENT Elite Care", state: "Maharashtra" },
+            { name: "Clear Breathe Clinic", state: "West Bengal" },
+            { name: "Nose Zone Clinic", state: "Gujarat" },
+            { name: "Sinus Ease Clinic", state: "Haryana" },
+            { name: "ENT Pride Centre", state: "Rajasthan" },
+            { name: "Nose Wellness Clinic", state: "Maharashtra" },
+            { name: "ENT Serenity Clinic", state: "Delhi" },
+            { name: "Sinus Care Studio", state: "Karnataka" },
+            { name: "Nose Bliss Centre", state: "Tamil Nadu" },
+            { name: "Clear ENT Clinic", state: "Telangana" },
+            { name: "Nose Perfection Clinic", state: "Maharashtra" },
+            { name: "Sinus Care Clinic", state: "West Bengal" },
+            { name: "ENT Sparkle Hub", state: "Gujarat" },
+            { name: "Healthy Sinus Clinic", state: "Haryana" },
+            { name: "Nose Joy Centre", state: "Rajasthan" },
+            { name: "Pure Nose Clinic", state: "Maharashtra" },
+            { name: "ENT Peace Clinic", state: "Delhi" },
+            { name: "Nose Studio Hub", state: "Karnataka" },
+            { name: "Sinus Elegance Clinic", state: "Tamil Nadu" },
+            { name: "Nose Magic Clinic", state: "Telangana" },
+            { name: "ENT Charm Clinic", state: "Maharashtra" },
+            { name: "Sinus Wellness Clinic", state: "West Bengal" },
+            { name: "Nose Pride Clinic", state: "Gujarat" },
+            { name: "Breathe Clear Clinic", state: "Haryana" },
+            { name: "ENT Harmony Hub", state: "Rajasthan" },
+            { name: "Nose Pure Clinic", state: "Maharashtra" },
+            { name: "ENT Clarity Clinic", state: "Delhi" },
+            { name: "Sinus Elite Clinic", state: "Karnataka" },
+            { name: "Nose Grace Clinic", state: "Tamil Nadu" },
+            { name: "Clear Nose Hub", state: "Telangana" },
+            { name: "ENT Shine Clinic", state: "Maharashtra" },
+            { name: "Sinus Glory Clinic", state: "West Bengal" },
+            { name: "Nose Star Clinic", state: "Gujarat" },
+            { name: "Healthy Breathe Hub", state: "Haryana" },
+            { name: "Nose Dream Clinic", state: "Rajasthan" }
+        ];
+
+        // Nose-related specialists
+        const specialists = [
+            "Dr. Priya Sharma - Rhinologist",
+            "Dr. Meera Jain - Sinus Specialist",
+            "Dr. Neha Kapoor - Allergy & Sinus Care",
+            "Dr. Pooja Malhotra - General ENT",
+            "Dr. Vikram Patel - Nose Surgeon",
+            "Dr. Anil Gupta - Sinus & Allergy Specialist",
+            "Dr. Sneha Reddy - Pediatric ENT",
+            "Dr. Rajesh Kumar - Nasal Reconstruction",
+            "Dr. Sanjay Desai - ENT Specialist",
+            "Dr. Arjun Rao - Sinus Care Specialist"
+        ];
+
+        // Available time slots
+        const allTimeSlots = [
+            "09:00 AM", "10:00 AM", "11:00 AM", "02:00 PM", "03:00 PM", "04:00 PM"
+        ];
+
+        // Populate specialist dropdown
+        const specialistSelect = document.getElementById('specialist');
+        specialists.forEach(specialist => {
+            const option = document.createElement('option');
+            option.value = specialist;
+            option.textContent = specialist;
+            specialistSelect.appendChild(option);
+        });
+
+        // Location suggestions
+        const locationInput = document.getElementById('location');
+        const suggestionsDiv = document.getElementById('locationSuggestions');
+        const allLocations = Object.keys(stateCityMap).concat(...Object.values(stateCityMap).flat());
+
+        locationInput.addEventListener('input', () => {
+            const query = locationInput.value.trim().toLowerCase();
+            suggestionsDiv.innerHTML = '';
+            suggestionsDiv.style.display = 'none';
+
+            if (query) {
+                const filteredLocations = allLocations.filter(loc => loc.toLowerCase().startsWith(query));
+                if (filteredLocations.length > 0) {
+                    suggestionsDiv.style.display = 'block';
+                    filteredLocations.forEach(loc => {
+                        const div = document.createElement('div');
+                        div.style.padding = '8px';
+                        div.style.cursor = 'pointer';
+                        div.style.borderBottom = '1px solid #f3e7ff';
+                        div.style.transition = 'background-color 0.2s';
+                        div.textContent = loc;
+                        div.onmouseover = () => div.style.backgroundColor = '#ede7f6';
+                        div.onmouseout = () => div.style.backgroundColor = '#fff';
+                        div.onclick = () => {
+                            locationInput.value = loc;
+                            suggestionsDiv.style.display = 'none';
+                        };
+                        suggestionsDiv.appendChild(div);
+                    });
+                }
+            }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!locationInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+                suggestionsDiv.style.display = 'none';
+            }
+        });
+
+        // Search doctors and show popup
+        function searchDoctors() {
+            // Reset error messages
+            document.querySelectorAll('span[id$="Error"]').forEach(span => span.style.display = 'none');
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const location = document.getElementById('location').value.trim();
+
+            let isValid = true;
+
+            // Validate inputs
+            if (!name || !/^[a-zA-Z\s]{2,}$/.test(name)) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            if (!phone || !/^\+?\d{10,15}$/.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            if (!location || !/^[a-zA-Z\s]{2,}$/.test(location)) {
+                document.getElementById('locationError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Match location to state
+                let matchedState = null;
+                const locationLower = location.toLowerCase();
+                for (const [state, cities] of Object.entries(stateCityMap)) {
+                    if (locationLower === state.toLowerCase() || cities.some(city => city.toLowerCase() === locationLower)) {
+                        matchedState = state;
+                        break;
+                    }
+                }
+
+                if (!matchedState) {
+                    alert('No hospitals found for the entered location. Please enter a valid city or state.');
+                    return;
+                }
+
+                // Filter hospitals by state
+                const hospitalSelect = document.getElementById('hospital');
+                hospitalSelect.innerHTML = '<option value="">Select Hospital</option>';
+                const filteredHospitals = hospitals.filter(h => h.state === matchedState);
+
+                if (filteredHospitals.length === 0) {
+                    alert('No nose specialist hospitals available in this state.');
+                    return;
+                }
+
+                filteredHospitals.forEach(hospital => {
+                    const option = document.createElement('option');
+                    option.value = hospital.name;
+                    option.textContent = hospital.name;
+                    hospitalSelect.appendChild(option);
+                });
+
+                // Show popup and reset fields
+                document.getElementById('bookingPopup').style.display = 'flex';
+                document.getElementById('appointmentSummary').style.display = 'none';
+                document.getElementById('confirmButton').style.display = 'none';
+                document.getElementById('hospital').value = '';
+                document.getElementById('specialist').value = '';
+                document.getElementById('appointmentDate').value = '';
+                document.getElementById('appointmentTime').value = '';
+                updateTimeSlots('');
+            }
+        }
+
+        // Update time slots based on date (simulated availability)
+        document.getElementById('appointmentDate').addEventListener('change', () => {
+            const selectedDate = document.getElementById('appointmentDate').value;
+            updateTimeSlots(selectedDate);
+        });
+
+        function updateTimeSlots(selectedDate) {
+            const timeSelect = document.getElementById('appointmentTime');
+            timeSelect.innerHTML = '<option value="">Select Time</option>';
+
+            if (selectedDate) {
+                const date = new Date(selectedDate);
+                const day = date.getDay();
+                let availableSlots = [...allTimeSlots];
+
+                // Simulate availability
+                if (day === 0 || day === 6) { // Weekend
+                    availableSlots = availableSlots.filter(slot => !["09:00 AM", "04:00 PM"].includes(slot));
+                } else if (date.toISOString().split('T')[0] === '2025-06-26') { // Busy date
+                    availableSlots = availableSlots.filter(slot => !["10:00 AM", "02:00 PM"].includes(slot));
+                }
+
+                availableSlots.forEach(slot => {
+                    const option = document.createElement('option');
+                    option.value = slot;
+                    option.textContent = slot;
+                    timeSelect.appendChild(option);
+                });
+            } else {
+                allTimeSlots.forEach(slot => {
+                    const option = document.createElement('option');
+                    option.value = slot;
+                    option.textContent = slot;
+                    timeSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('bookingPopup').style.display = 'none';
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('location').value = '';
+            document.getElementById('hospital').value = '';
+            document.getElementById('specialist').value = '';
+            document.getElementById('appointmentDate').value = '';
+            document.getElementById('appointmentTime').value = '';
+            document.getElementById('appointmentSummary').style.display = 'none';
+            document.getElementById('confirmButton').style.display = 'none';
+            document.getElementById('locationSuggestions').style.display = 'none';
+            document.querySelectorAll('span[id$="Error"]').forEach(span => span.style.display = 'none');
+        }
+
+        // Preview appointment
+        function previewAppointment() {
+            // Reset error messages
+            document.querySelectorAll('span[id$="Error"]').forEach(span => span.style.display = 'none');
+
+            // Get selections
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const hospital = document.getElementById('hospital').value;
+            const specialist = document.getElementById('specialist').value;
+            const appointmentDate = document.getElementById('appointmentDate').value;
+            const appointmentTime = document.getElementById('appointmentTime').value;
+
+            let isValid = true;
+
+            // Validate popup inputs
+            if (!hospital) {
+                document.getElementById('hospitalError').style.display = 'block';
+                isValid = false;
+            }
+            if (!specialist) {
+                document.getElementById('specialistError').style.display = 'block';
+                isValid = false;
+            }
+            if (!appointmentDate) {
+                document.getElementById('dateError').style.display = 'block';
+                isValid = false;
+            } else {
+                const selectedDate = new Date(appointmentDate);
+                const today = new Date('2025-06-26');
+                if (selectedDate < today) {
+                    document.getElementById('dateError').style.display = 'block';
+                    isValid = false;
+                }
+            }
+            if (!appointmentTime) {
+                document.getElementById('timeError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Show summary if valid
+            if (isValid) {
+                const summaryText = `Name: ${name}<br>Phone: ${phone}<br>Email: ${email}<br>Location: ${location}<br>Hospital: ${hospital}<br>Specialist: ${specialist}<br>Date: ${appointmentDate}<br>Time: ${appointmentTime}`;
+                document.getElementById('summaryText').innerHTML = summaryText;
+                document.getElementById('appointmentSummary').style.display = 'block';
+                document.getElementById('confirmButton').style.display = 'block';
+            }
+        }
+
+        // Book appointment
+        function bookAppointment() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const hospital = document.getElementById('hospital').value;
+            const specialist = document.getElementById('specialist').value;
+            const appointmentDate = document.getElementById('appointmentDate').value;
+            const appointmentTime = document.getElementById('appointmentTime').value;
+
+            const appointmentData = {
+                name,
+                phone,
+                email,
+                location,
+                hospital,
+                specialist,
+                date: appointmentDate,
+                time: appointmentTime,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('noseAppointmentContactData', JSON.stringify(appointmentData));
+            alert(`Appointment booked for ${name} with ${specialist} at ${hospital} on ${appointmentDate} at ${appointmentTime}!`);
+            closePopup();
+        }
+    </script>
+
+  <!-- Review & Ratings -->
+  <div style="max-width: 700px; margin: 40px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h3 style="color: #004080; text-align: center; font-size: 24px; margin-bottom: 20px;">⭐ Patient Reviews & Ratings</h3>
+
+    <div style="border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px;">
+      <p style="margin: 0;"><strong>Dr. A.K. Mehta</strong> - Nose Specialist, Hyderabad</p>
+      <p style="color: #888; margin: 5px 0;">“Dr. Mehta diagnosed my sinus issue quickly and the treatment was very effective. Highly recommend!”</p>
+      <p style="color: #f39c12;">★★★★☆ (4.5/5)</p>
+    </div>
+
+    <div style="border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px;">
+      <p style="margin: 0;"><strong>Dr. Sneha Reddy</strong> - ENT Specialist, Bangalore</p>
+      <p style="color: #888; margin: 5px 0;">“Excellent care, listened to my nose allergy symptoms in detail. Friendly and knowledgeable.”</p>
+      <p style="color: #f39c12;">★★★★★ (5/5)</p>
+    </div>
+
+    <div>
+      <p style="margin: 0;"><strong>Dr. Suresh Nair</strong> - Rhinologist, Kochi</p>
+      <p style="color: #888; margin: 5px 0;">“Clean clinic, smooth appointment process, and very detailed explanation of nasal treatment.”</p>
+      <p style="color: #f39c12;">★★★★☆ (4/5)</p>
+    </div>
+  </div>
+
+  <!-- Help Section -->
+  <div style="text-align: center; margin: 30px auto 40px; max-width: 600px;">
+    <h3 style="color: #004080; font-size: 22px; margin-bottom: 10px;">📞 Need Help?</h3>
+    <p style="color: #444; font-size: 15px;">
+      If you have trouble finding a doctor, contact our support team at <strong>support@doctorfinder.com</strong> or call <strong>(123) 456-7890</strong>.
+      We're here to assist you.
+    </p>
+  </div>
+
+  <footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>

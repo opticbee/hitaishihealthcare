@@ -8,214 +8,214 @@
     <meta name="author" content="Hitaishi Healthcare">
     <meta name="robots" content="index, follow">
     <title>Blood & Organ Donation - Hitaishi Healthcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333;">
 
 
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
 
-
-
-
-<!-- Navigation Bar -->
-<nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
-    
-    <!-- Logo and Title -->
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-        <div>
-            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-        </div>
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
     </div>
-    
-    <!-- search input icons -->
-    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
-
-    <!-- Buttons -->
-    <div style="display: flex; gap: 15px;">
-        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            ❤️ Blood Donation
-        </a>
-        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Book Appointment
-        </a>
-        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Find a Doctor
-        </a>
-        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Clinic
-        </a>
-        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Eye Care
-        </a>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
     </div>
+  </div>
 
-    <!-- Social Media Icons -->
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
 
-        <!-- Display Logged-in User Name -->
-        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
 
-        <!-- Profile Icon -->
-        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-            <i class="fas fa-user-circle"></i>
-        </a>
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
     </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
 
-    </nav>
-    
-    <script>
-        // Simulating getting user data from local storage or API
-        document.addEventListener("DOMContentLoaded", function () {
-            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-            if (user) {
-                document.getElementById("username").textContent = user; // Show username if logged in
-            }
-        });
-    
-        // Example: Store username after login (call this after user logs in)
-        function setUser(name) {
-            localStorage.setItem("loggedInUser", name);
-        }
-    
-        // Example: Clear user on logout
-        function logout() {
-            localStorage.removeItem("loggedInUser");
-            window.location.reload(); // Refresh page after logout
-        }
-    </script>
-    
-    
-    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <!-- Home Link -->
-            <div style="margin-right: 1rem;">
-                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
             </div>
-
-            <!-- Health Records Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-                </div>
-            </div>
-
-            <!-- Diagnostics Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-                </div>
-            </div>
-
-            <!-- Physicians Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-                </div>
-            </div>
-
-            <!-- Fertility Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-                </div>
-            </div>
-
-            <!-- AI -->
-            <div style="margin-right: 1rem;">
-                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-            </div>
-
-            <!-- Doctors Link -->
-            <div style="margin-right: 1rem;">
-                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-            </div>
-
-            <!-- Patients Link -->
-            <div style="margin-right: 1rem;">
-                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-            </div>
-
-
-
-            <!-- Insights Link -->
-            <div style="margin-right: 1rem;">
-                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-            </div>
-            <div style="margin-right: 1rem;">
-                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-            </div>
-
-            <!-- Contact Link -->
-            <div>
-                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-            </div>
-            
         </div>
 
-      
-    </nav>
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
 
-    <!-- for dropdowns -->
-    <script>
-        // JavaScript to handle dropdown visibility
-        document.querySelectorAll('nav > div > div').forEach(navItem => {
-            const dropdown = navItem.querySelector('div');
-            if (dropdown) {
-                navItem.addEventListener('mouseenter', () => {
-                    dropdown.style.display = 'block';
-                });
-                navItem.addEventListener('mouseleave', () => {
-                    dropdown.style.display = 'none';
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
                 });
             }
-        });
-    </script>
-
-
-
-
-
-
-
-
-
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
 
 
 
@@ -234,68 +234,66 @@
             Become a Donor
           </a>
         </div>
-      </div>
+    </div>
      
      
      
-
 
     <!-- Mission Section -->
     <div style="padding: 60px 20px; background-color: #fff; text-align: center;">
-     <h2 style="font-size: 36px; color: #227eda; margin: 0 0 20px; position: relative; text-align: center;">
-     Our Mission
-   
 
+    <h2 style="font-size: 36px; color: #227eda; margin: 0 0 20px; text-align: center;">Our Mission</h2>
 
-  </h2>
-  <br>
- 
- 
-     <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-         <!-- Left Image Section -->
-         <div style="flex: 0 0 50%; max-width: 500px;">
-             <img src="https://www.livemint.com/lm-img/img/2023/09/28/600x338/People-can-sign-a-pledge-form-with-NOTTO-or-expres_1695920309339.jpg" alt="Hitaishi Healthcare blood donation drive" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-         </div>
- 
-         <!-- Right Text Section -->
-         <div style="flex: 0 0 50%; text-align: left;">
-             <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
-                 Hitaishi Healthcare is committed to saving lives through blood and organ donation programs. We organize donation drives and facilitate organ pledges to support critical medical needs in underserved communities.
-             </p>
-             <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
-                 By empowering individuals to donate blood, platelets, and pledge organs, we aim to strengthen our healthcare system and ensure that life-saving resources reach those in need. Our network of dedicated volunteers, healthcare professionals, and community organizations work together to promote these life-saving causes and make a real difference in people's lives.
-             </p>
-             <!-- <p style="font-size: 18px; line-height: 1.6; margin: 0;">
-                 With a focus on education, outreach, and seamless coordination, Hitaishi Healthcare is determined to create a future where every donation can be a catalyst for saving lives and improving the health of communities around the world.
-             </p> -->
-         </div>
-     </div>
- </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px;">
+
+        <!-- Left Image Section -->
+        <div style="flex: 1 1 100%; max-width: 600px; text-align: center;">
+        <img src="https://www.livemint.com/lm-img/img/2023/09/28/600x338/People-can-sign-a-pledge-form-with-NOTTO-or-expres_1695920309339.jpg"
+            alt="Hitaishi Healthcare blood donation drive"
+            style="width: 100%; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+
+        <!-- Right Text Section -->
+        <div style="flex: 1 1 100%; max-width: 600px; text-align: left;">
+        <p style="font-size: 18px; line-height: 1.6; margin: 20px 0;">
+            Hitaishi Healthcare is committed to saving lives through blood and organ donation programs. We organize donation drives and facilitate organ pledges to support critical medical needs in underserved communities.
+        </p>
+        <p style="font-size: 18px; line-height: 1.6; margin: 20px 0;">
+            By empowering individuals to donate blood, platelets, and pledge organs, we aim to strengthen our healthcare system and ensure that life-saving resources reach those in need. Our network of dedicated volunteers, healthcare professionals, and community organizations work together to promote these life-saving causes and make a real difference in people's lives.
+        </p>
+        </div>
+
+    </div>
+    </div>
 
 
 
 
- <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-direction: row; margin: 40px 0;">
+<!-- Power of Donors Section -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; margin: 40px 0;">
+
   <!-- Left Text Section -->
-  <div style="flex: 0 0 50%; text-align: left;">
-      <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;color: hotpink">The Power of Donors: Changing Lives</h2><br>
-      <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
-          Donors are the lifeblood of Hitaishi Healthcare, making a profound impact on individuals and communities alike. Their selfless contributions provide the critical resources needed to save lives, from blood donations to organ pledges.
-      </p>
-      <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
-          Every donor becomes a beacon of hope, bringing essential medical supplies to those in desperate need. By empowering individuals to donate, we ensure that healthcare remains accessible to all, regardless of their circumstances.
-      </p>
-      <!-- <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
-          The ripple effect of a donor’s kindness goes far beyond the donation itself. It inspires others, strengthens healthcare systems, and fosters a sense of community and compassion that resonates with us all.
-      </p> -->
+  <div style="flex: 1 1 100%; max-width: 600px; text-align: left;">
+    <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px; color: hotpink;">The Power of Donors: Changing Lives</h2>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
+      Donors are the lifeblood of Hitaishi Healthcare, making a profound impact on individuals and communities alike. Their selfless contributions provide the critical resources needed to save lives, from blood donations to organ pledges.
+    </p>
+    <p style="font-size: 18px; line-height: 1.6; margin: 0 0 20px;">
+      Every donor becomes a beacon of hope, bringing essential medical supplies to those in desperate need. By empowering individuals to donate, we ensure that healthcare remains accessible to all, regardless of their circumstances.
+    </p>
   </div>
-
 
   <!-- Right Image Section -->
-  <div style="flex: 0 0 50%; max-width: 500px;">
-      <img src="https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjcwMDAwLXdpa2ltZWRpYS1pbWFnZS1rb3dhemwzZC5qcGc.jpg" alt="Hitaishi Healthcare blood donation drive" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="flex: 1 1 100%; max-width: 600px; text-align: center;">
+    <img src="https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjcwMDAwLXdpa2ltZWRpYS1pbWFnZS1rb3dhemwzZC5qcGc.jpg"
+         alt="Hitaishi Healthcare blood donation drive"
+         style="width: 100%; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div>
+
+
+
+
 <!-- Healthcare Donation Section -->
 <section style="padding: 80px 20px; background: #f8f9fa;">
     <div style="max-width: 1200px; margin: 0 auto;">
@@ -378,83 +376,83 @@
 
 
     <div style="padding: 60px 20px; background-color: #fff; text-align: center;">
-     <h2 style="font-size: 36px; color: red; margin: 0 0 20px; position: relative; text-align: center;">
-      Join Us in Making a Difference
-   
- 
-   </h2>
-   <br>
-     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-         <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #ff6b6b, #ff8e53); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-             <h3 style="font-size: 24px; margin: 0 0 10px;">5,000+</h3>
-             <p style="font-size: 16px; margin: 0;">Blood Units Donated</p>
-         </div>
-         <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #007bff, #00d4ff); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-             <h3 style="font-size: 24px; margin: 0 0 10px;">1,000+</h3>
-             <p style="font-size: 16px; margin: 0;">Organ Pledges</p>
-         </div>
-         <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #28a745, #27ae60); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-             <h3 style="font-size: 24px; margin: 0 0 10px;">100+</h3>
-             <p style="font-size: 16px; margin: 0;">Donation Drives</p>
-         </div>
-         <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #f39c12, #f1c40f); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-             <h3 style="font-size: 24px; margin: 0 0 10px;">200+</h3>
-             <p style="font-size: 16px; margin: 0;">Volunteer Hours</p>
-         </div>
-     </div>
- </div>
- 
+        <h2 style="font-size: 36px; color: red; margin: 0 0 20px; position: relative; text-align: center;">
+        Join Us in Making a Difference
+    
+    
+        </h2>
+        <br>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #ff6b6b, #ff8e53); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 24px; margin: 0 0 10px;">5,000+</h3>
+                    <p style="font-size: 16px; margin: 0;">Blood Units Donated</p>
+                </div>
+                <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #007bff, #00d4ff); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 24px; margin: 0 0 10px;">1,000+</h3>
+                    <p style="font-size: 16px; margin: 0;">Organ Pledges</p>
+                </div>
+                <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #28a745, #27ae60); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 24px; margin: 0 0 10px;">100+</h3>
+                    <p style="font-size: 16px; margin: 0;">Donation Drives</p>
+                </div>
+                <div style="width: 250px; padding: 20px; background: linear-gradient(135deg, #f39c12, #f1c40f); color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 24px; margin: 0 0 10px;">200+</h3>
+                    <p style="font-size: 16px; margin: 0;">Volunteer Hours</p>
+                </div>
+            </div>
+    </div>
+    
  
 
 
     <!-- Testimonials Section -->
     <div style="padding: 60px 20px; background: linear-gradient(135deg, #f0f4f8, #dfe9f3); text-align: center; position: relative;">
-     <h2 style="font-size: 36px; color: #2c3e50; margin: 0 0 20px; position: relative; text-align: center;">
-      What Our Donors Say
-   
- 
-   </h2>
-  <br>
-     
-     <div id="scroll-container" style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 20px; padding: 10px; width: 80%; text-align: center; margin: 0 auto;">
-     
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #ffecb3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Donating blood through Hitaishi was simple and rewarding. I know I helped save a life."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Priya S., Blood Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #c8e6c9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Pledging my organs with Hitaishi gave me peace knowing I can help others."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Anil K., Organ Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #f8bbd0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"I feel proud to be a part of the cause through Hitaishi. Amazing experience!"</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Ramesh D., Blood Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #d1c4e9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"The organ donation pledge was hassle-free and the team guided me properly."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Sunita R., Organ Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #ffcc80; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"I donated platelets for the first time and Hitaishi made it so easy and comfortable."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Neha V., Platelet Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #b3e5fc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"The staff at Hitaishi are very supportive and encouraging throughout the donation."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Arjun P., Blood Donor</p>
-         </div>
- 
-         <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #fff59d; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-             <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Registering as a donor was one of the best decisions I made, thanks to Hitaishi."</p>
-             <p style="font-size: 14px; color: #666; margin: 0;">- Meena S., Organ Donor</p>
-         </div>
-     
-     </div>
- </div>
+        <h2 style="font-size: 36px; color: #2c3e50; margin: 0 0 20px; position: relative; text-align: center;">
+        What Our Donors Say
+    
+    
+        </h2>
+        <br>
+        
+        <div id="scroll-container" style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 20px; padding: 10px; width: 80%; text-align: center; margin: 0 auto;">
+        
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #ffecb3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Donating blood through Hitaishi was simple and rewarding. I know I helped save a life."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Priya S., Blood Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #c8e6c9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Pledging my organs with Hitaishi gave me peace knowing I can help others."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Anil K., Organ Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #f8bbd0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"I feel proud to be a part of the cause through Hitaishi. Amazing experience!"</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Ramesh D., Blood Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #d1c4e9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"The organ donation pledge was hassle-free and the team guided me properly."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Sunita R., Organ Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #ffcc80; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"I donated platelets for the first time and Hitaishi made it so easy and comfortable."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Neha V., Platelet Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #b3e5fc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"The staff at Hitaishi are very supportive and encouraging throughout the donation."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Arjun P., Blood Donor</p>
+            </div>
+    
+            <div style="width: 150px; height: 150px; flex: 0 0 auto; padding: 20px; background-color: #fff59d; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 16px; line-height: 1.6; margin: 0 0 15px;">"Registering as a donor was one of the best decisions I made, thanks to Hitaishi."</p>
+                <p style="font-size: 14px; color: #666; margin: 0;">- Meena S., Organ Donor</p>
+            </div>
+        
+        </div>
+    </div>
  
  
      <!-- Scroll Buttons -->
@@ -531,28 +529,41 @@
         </div>
 
 
-        <!-- Partnership Opportunities -->
-        <div style="background: #f8f9fa; border-radius: 12px; padding: 40px; margin-bottom: 60px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                <div>
-                    <h3 style="color: #2c3e50; margin: 0 0 20px; font-size: 1.8em;">Corporate Partnerships</h3>
-                    <p style="color: #666; margin: 0 0 25px;">Align your organization with meaningful healthcare initiatives through:</p>
-                    <ul style="color: #666; padding-left: 20px;">
-                        <li style="margin-bottom: 10px;">CSR Program Collaborations</li>
-                        <li style="margin-bottom: 10px;">Employee Volunteering</li>
-                        <li>Matched Giving Programs</li>
-                    </ul>
-                </div>
-                <div style="text-align: center;">
-                    <div style="display: inline-block; background: #e74c3c; color: #fff; padding: 25px; border-radius: 12px;">
-                        <div style="font-size: 1.5em; margin-bottom: 10px;">Become a Health Partner</div>
-                        <button style="background: #fff; color: #e74c3c; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">
-                            Explore Partnerships
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Partnership Opportunities -->
+<div style="background: #f8f9fa; border-radius: 12px; padding: 40px; margin-bottom: 60px;">
+
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  ">
+
+    <!-- Text Content -->
+    <div style="flex: 1 1 100%; max-width: 600px;">
+      <h3 style="color: #2c3e50; margin: 0 0 20px; font-size: 1.8em;">Corporate Partnerships</h3>
+      <p style="color: #666; margin: 0 0 25px;">Align your organization with meaningful healthcare initiatives through:</p>
+      <ul style="color: #666; padding-left: 20px;">
+        <li style="margin-bottom: 10px;">CSR Program Collaborations</li>
+        <li style="margin-bottom: 10px;">Employee Volunteering</li>
+        <li>Matched Giving Programs</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action Box -->
+    <div style="flex: 1 1 100%; max-width: 400px; text-align: center;">
+      <div style="display: inline-block; background: #e74c3c; color: #fff; padding: 25px; border-radius: 12px; width: 100%; max-width: 350px;">
+        <div style="font-size: 1.5em; margin-bottom: 10px;">Become a Health Partner</div>
+        <button style="background: #fff; color: #e74c3c; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">
+          Explore Partnerships
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
         <!-- Volunteer Section -->

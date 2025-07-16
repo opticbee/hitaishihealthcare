@@ -3,783 +3,1023 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitaishi Healthcare - Fertility Solutions</title>
+    <title>Hitaishi Healthcare Services</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
-<body style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6;">
+<body style="overflow-x: hidden; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
-
-    <!-- Navigation Bar -->
-   <nav style="display: flex; justify-content: space-between; align-items: center; background: #007bff; padding: 15px 40px;">
     
-    <!-- Logo and Title -->
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 50px;">
-        <div>
-            <h2 style="color: #fff; margin: 0; font-size: 36px;">Hitaishi</h2>
-            <p style="color: #fff; margin: 0; font-size: 18px;">HealthCare Service</p>
-        </div>
+<!-- Navigation Bar 1 -->
+<nav style="display: flex; align-items: center; justify-content: space-between; background: #007bff; padding: 10px 20px; flex-wrap: wrap; position: relative;">
+
+  <!-- Left: Logo & Title -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="images/Hitaishi HealthCare (1).png" alt="Logo" style="height: 40px;">
+    <div>
+      <h2 style="color: #fff; margin: 0; font-size: 22px;">Hitaishi</h2>
+      <p style="color: #fff; margin: 0; font-size: 12px;">HealthCare Service</p>
     </div>
-    
-    <!-- search input icons -->
-    <input type="text" placeholder="Search..." style="padding: 10px; border-radius: 5px; border: none; width: 100px; font-size: 16px;">
-    <!-- <button style="background: #fff; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;"> -->
-        <i class="fas fa-search" style="margin-left: -90px; color: #fff; font-weight: bolder;"></i>
-
-    <!-- Buttons -->
-    <div style="display: flex; gap: 15px;">
-        <a href="blood.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            ❤️ Blood Donation
-        </a>
-        <a href="clinics.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Book Appointment
-        </a>
-        <a href="doctors.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Find a Doctor
-        </a>
-        <a href="clinic.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Clinic
-        </a>
-        <a href="eyecare.html" style="background: white; color: #007bff; padding: 10px 15px; border-radius: 5px; font-size: 16px; text-decoration: none; font-weight: bold;">
-            Eye Care
-        </a>
+    <!-- Search Icon After Title -->
+    <div style="position: relative; margin-left: 10px;">
+      <input type="text" placeholder="Search..." style="padding: 8px 30px 8px 10px; border-radius: 5px; border: none; font-size: 14px;">
+      <i class="fas fa-search" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #007bff;"></i>
     </div>
+  </div>
 
-    <!-- Social Media Icons -->
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="https://www.facebook.com/profile.php?id=61575554344989" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://x.com/HitaishiHealth" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/hitaishihealthcare/" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/@HitaishiHealthCare" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://t.me" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://www.whatsapp.com" target="_blank" style="color: white; font-size: 20px; text-decoration: none;">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        
+  <!-- Hamburger & Close (Mobile only) -->
+  <div onclick="toggleMenu1()" id="hamburger1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&#9776;</div>
+  <div onclick="toggleMenu1()" id="closeIcon1" style="font-size: 26px; color: white; cursor: pointer; display: none;">&times;</div>
 
-        <!-- Display Logged-in User Name -->
-        <!--  <span id="username" style="color: white; font-size: 18px; margin-left: 15px;"></span> -->
+  <!-- Center: Nav Items -->
+  <div id="navItems1" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; flex: 1; margin-left: 20px; margin-right: 20px;">
+    <a href="blood.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">❤️ Blood</a>
+    <a href="clinics.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Appointment</a>
+    <a href="doctors.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Doctors</a>
+    <a href="clinic.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Clinic</a>
+    <a href="Eyecare.html" style="background: white; color: #007bff; padding: 8px 12px; border-radius: 5px; font-size: 14px; text-decoration: none; font-weight: bold;">Eye Care</a>
+  </div>
 
-        <!-- Profile Icon -->
-        <a href="patientLogin.html" style="color: white; font-size: 22px; text-decoration: none; margin-left: 10px;">
-            <i class="fas fa-user-circle"></i>
-        </a>
+  <!-- Right: Social Media Icons -->
+  <div style="display: flex; gap: 10px; align-items: center;">
+    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+    <a href="patientLogin.html" style="color: white; font-size: 20px;"><i class="fas fa-user-circle"></i></a>
+  </div>
+</nav>
+
+<!-- Navigation Bar 2 -->
+<nav style="background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="hamburger2">&#9776;</div>
+        <div onclick="toggleMenu2()" style="font-size: 26px; color: white; cursor: pointer; display: none;" id="closeIcon2">&times;</div>
     </div>
+    <div id="navLinks2" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; margin-top: 10px;">
+        <div style="position: relative;"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Home</a></div>
 
-    </nav>
-    
-    <script>
-        // Simulating getting user data from local storage or API
-        document.addEventListener("DOMContentLoaded", function () {
-            const user = localStorage.getItem("loggedInUser"); // Retrieve stored user
-            if (user) {
-                document.getElementById("username").textContent = user; // Show username if logged in
-            }
-        });
-    
-        // Example: Store username after login (call this after user logs in)
-        function setUser(name) {
-            localStorage.setItem("loggedInUser", name);
-        }
-    
-        // Example: Clear user on logout
-        function logout() {
-            localStorage.removeItem("loggedInUser");
-            window.location.reload(); // Refresh page after logout
-        }
-    </script>
-    
-    
-    <nav style="margin-left: -50px; margin-top: -10px; background-color: #2581de; padding: 1rem 2rem; position: sticky; top: 0; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); z-index: 1000;">
-        <div style="display: flex; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <!-- Home Link -->
-            <div style="margin-right: 1rem;">
-                <a href="HHS.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Home</a>
+        <div style="position: relative;">
+            <a href="healthRecords.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Health Records <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="bloodtest.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Blood Tests</a>
+                <a href="donations.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Donations</a>
+                <a href="inventory.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Inventory</a>
             </div>
-
-            <!-- Health Records Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="healthRecords.html" style="color: white; text-decoration: none;  padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Health&nbsp;Records</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="bloodtest.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Blood Tests</a>
-                    <a href="donations.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Donations</a>
-                    <a href="inventory.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Inventory</a>
-                </div>
-            </div>
-
-            <!-- Diagnostics Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Diagnostics</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="xray.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">X-Ray</a>
-                    <a href="ultrasound.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Ultrasound</a>
-                    <a href="mri.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">MRI</a>
-                </div>
-            </div>
-
-            <!-- Physicians Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Physicians</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="cardiologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Cardiologist</a>
-                    <a href="neuralogist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Neurologist</a>
-                    <a href="dermatologist.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Dermatologist</a>
-                </div>
-            </div>
-
-            <!-- Fertility Dropdown -->
-            <div style="position: relative; margin-right: 1rem;">
-                <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Fertility</a>
-                <div style="display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 5px; overflow: hidden; z-index: 1001;">
-                    <a href="IVF.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IVF</a>
-                    <a href="iui.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">IUI</a>
-                    <a href="sarogasi.html" style="color: #333; padding: 12px 16px; display: block; text-decoration: none; transition: background-color 0.3s;">Surrogacy</a>
-                </div>
-            </div>
-
-            <!-- AI -->
-            <div style="margin-right: 1rem;">
-                <a href="ai.html" style="max-width: 100px; overflow: hidden; color: white; text-decoration: none; padding: 0.5rem 0.5rem; font-weight: bold; transition: background-color 0.3s; white-space: nowrap;">AI & Blockchain</a>
-            </div>
-
-            <!-- Doctors Link -->
-            <div style="margin-right: 1rem;">
-                <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Doctors</a>
-            </div>
-
-            <!-- Patients Link -->
-            <div style="margin-right: 1rem;">
-                <a href="patientLogin.html"  style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Patients</a>
-            </div>
-
-
-
-            <!-- Insights Link -->
-            <div style="margin-right: 1rem;">
-                <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Dental</a>
-            </div>
-            <div style="margin-right: 1rem;">
-                <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">ENT</a>
-            </div>
-
-            <!-- Contact Link -->
-            <div>
-                <a href="contact.html" style="color: white; text-decoration: none;margin-right: 5px; padding: 0.5rem 1rem; font-weight: bold; transition: background-color 0.3s;">Contact </a>
-            </div>
-            
         </div>
 
-      
-    </nav>
+        <div style="position: relative;">
+            <a href="Diagnostics.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Diagnostics <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="xray.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">X-Ray</a>
+                <a href="ultrasound.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Ultrasound</a>
+                <a href="mri.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">MRI</a>
+            </div>
+        </div>
 
-    <!-- for dropdowns -->
-    <script>
-        // JavaScript to handle dropdown visibility
-        document.querySelectorAll('nav > div > div').forEach(navItem => {
-            const dropdown = navItem.querySelector('div');
-            if (dropdown) {
-                navItem.addEventListener('mouseenter', () => {
-                    dropdown.style.display = 'block';
+        <div style="position: relative;">
+            <a href="Physician.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Physicians <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="cardiologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Cardiologist</a>
+                <a href="neuralogist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Neurologist</a>
+                <a href="dermatologist.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Dermatologist</a>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <a href="fertility.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">
+                Fertility <i class="fas fa-caret-down"></i>
+            </a>
+            <div style="display: none; position: absolute; background-color: white; min-width: 180px; border-radius: 5px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+                <a href="IVF.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IVF</a>
+                <a href="iui.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">IUI</a>
+                <a href="sarogasi.html" style="display: block; padding: 12px 16px; text-decoration: none; color: #333;">Surrogacy</a>
+            </div>
+        </div>
+
+        <a href="ai.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">AI & Blockchain</a>
+        <a href="doctor.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Doctors</a>
+        <a href="patientLogin.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Patients</a>
+        <a href="Cancer.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Cancer</a>
+        <a href="Dental.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Dental</a>
+        <a href="ENT.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">ENT</a>
+        <a href="contact.html" style="color: white; text-decoration: none; padding: 0.5rem 1rem; font-weight: bold;">Contact</a>
+    </div>
+</nav>
+
+<script>
+  // Navbar 1
+  function toggleMenu1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    const isHidden = navItems.style.display === 'none' || navItems.style.display === '';
+    if (isHidden) {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'column';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  }
+  function checkScreenWidth1() {
+    const navItems = document.getElementById('navItems1');
+    const hamburger = document.getElementById('hamburger1');
+    const closeIcon = document.getElementById('closeIcon1');
+    if (window.innerWidth <= 768) {
+      navItems.style.display = 'none';
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+    } else {
+      navItems.style.display = 'flex';
+      navItems.style.flexDirection = 'row';
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'none';
+    }
+  }
+  window.addEventListener('resize', checkScreenWidth1);
+  window.addEventListener('DOMContentLoaded', checkScreenWidth1);
+
+  // Navbar 2
+  function toggleMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        ham.style.display = "none";
+        close.style.display = "block";
+    } else {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    }
+  }
+  function setResponsiveMenu2() {
+    const nav = document.getElementById("navLinks2");
+    const ham = document.getElementById("hamburger2");
+    const close = document.getElementById("closeIcon2");
+    if (window.innerWidth <= 768) {
+        nav.style.display = "none";
+        ham.style.display = "block";
+        close.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "row";
+        nav.style.justifyContent = "center";
+        ham.style.display = "none";
+        close.style.display = "none";
+    }
+  }
+  window.addEventListener('resize', setResponsiveMenu2);
+  window.addEventListener('DOMContentLoaded', setResponsiveMenu2);
+
+  // Dropdowns on hover (desktop) and tap (mobile) for Navbar 2
+  function setupDropdowns2() {
+    document.querySelectorAll('#navLinks2 > div').forEach(item => {
+        const dropdown = item.querySelector('div');
+        item.onmouseenter = null;
+        item.onmouseleave = null;
+        item.onclick = null;
+        if (dropdown) {
+            if (window.innerWidth > 768) {
+                item.addEventListener('mouseenter', () => dropdown.style.display = 'block');
+                item.addEventListener('mouseleave', () => dropdown.style.display = 'none');
+            } else {
+                item.addEventListener('click', function(e) {
+                    if (e.target === item.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
                 });
-                navItem.addEventListener('mouseleave', () => {
-                    dropdown.style.display = 'none';
-                });
             }
-        });
-    </script>
-   
-   <!-- Hero Section -->
-   <section style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/free-photo/top-view-glasses-optical-objects-with-notebook-mock-up_23-2148320322.jpg?ga=GA1.1.820390763.1746679981&semt=ais_hybrid&w=740'); height: 70vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; margin-top: 0;">
-     <div>
-       <h2 style="font-size: 3.8em; margin-bottom: 25px; letter-spacing: 1.5px; color: #2980b9;">Your Journey to Parenthood</h2>
-       <p style="font-size: 1.4em; margin-bottom: 40px; max-width: 800px; line-height: 1.8;">Advanced reproductive technologies combined with compassionate care</p>
-       <div style="display: flex; gap: 20px; justify-content: center;">
-         <a href="javascript:void(0);" onclick="document.getElementById('popupForm').style.display='block';"
-            style="background-color: #e74c3c; color: white; padding: 18px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: all 0.3s;">
-           Book Consultation
-         </a>
-       </div>
-     </div>
-   </section>
-   
-   <!-- Popup Form -->
-   <div id="popupForm" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 9999;">
-     <div style="background-color: white; width: 90%; max-width: 500px; margin: 100px auto; padding: 30px; border-radius: 15px; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-       <h2 style="margin-top: 0; color: #e74c3c;">Fertility Consultation Form</h2>
-       <form>
-         <label style="display:block; margin-top: 15px;">Full Name:</label>
-         <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-   
-         <label style="display:block; margin-top: 15px;">Email:</label>
-         <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-   
-         <label style="display:block; margin-top: 15px;">Phone Number:</label>
-         <input type="tel" placeholder="Your Phone Number" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-   
-         <label style="display:block; margin-top: 15px;">Preferred Date & Time:</label>
-         <input type="datetime-local" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-   
-         <label style="display:block; margin-top: 15px;">Message:</label>
-         <textarea placeholder="Your Message" rows="3" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-   
-         <button type="submit" style="margin-top: 20px; padding: 12px 25px; background-color: #e74c3c; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">Submit</button>
-   
-         <button type="button" onclick="document.getElementById('popupForm').style.display='none';" style="margin-left: 15px; margin-top: 20px; padding: 12px 25px; background-color: #ccc; color: black; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">Close</button>
-       </form>
-     </div>
-   </div>
-   
-    <!-- Stats Bar -->
-    <!-- <div style="background-color: #e74c3c; color: white; padding: 50px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
-            <div>
-                <h3 style="font-size: 2.8em; margin: 0;">5000+</h3>
-                <p>Successful Pregnancies</p>
-            </div>
-            <div>
-                <h3 style="font-size: 2.8em; margin: 0;">98%</h3>
-                <p>Patient Satisfaction</p>
-            </div>
-            <div>
-                <h3 style="font-size: 2.8em; margin: 0;">15+</h3>
-                <p>Years Experience</p>
-            </div>
-        </div>
-    </div> -->
-
-
-    <div style="background-color:#f7faff; padding:40px; font-family:Arial, sans-serif; border-radius:10px; max-width:900px; margin:auto; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-     <h2 style="color:#2a5d84; font-size:32px; margin-bottom:20px; text-align:center; position: relative;">
-      <span style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); width: 30px; height: 2px; background-color: #2a5d84;"></span>
-      Fertility Care & Treatments
-      <span style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); width: 30px; height: 2px; background-color: #2a5d84;"></span>
-    </h2>
-   
-     <p style="font-size:18px; color:#333; line-height:1.6; margin-bottom:20px;">
-       Fertility is the natural capability to produce offspring. For many individuals and couples, conceiving a child can be a challenging journey. At our clinic, we offer comprehensive fertility services designed to support your path to parenthood.
-     </p>
-     <ul style="font-size:18px; color:#444; padding-left:20px; margin-bottom:20px;">
-       <li style="margin-bottom:10px;">✅ Fertility Evaluation & Diagnosis</li>
-       <li style="margin-bottom:10px;">✅ Intrauterine Insemination (IUI)</li>
-       <li style="margin-bottom:10px;">✅ In Vitro Fertilization (IVF)</li>
-       <li style="margin-bottom:10px;">✅ Egg & Sperm Freezing</li>
-       <li style="margin-bottom:10px;">✅ Hormonal Therapies & Counseling</li>
-     </ul>
-     <p style="font-size:18px; color:#333; line-height:1.6;">
-       Our experienced specialists work with cutting-edge technologies and compassionate care to help increase your chances of conception. Whether you’re just starting or have faced fertility challenges, we’re here to help.
-     </p>
-     <!-- <button style="margin-top:20px; background-color:#2a5d84; color:white; padding:12px 24px; font-size:16px; border:none; border-radius:5px; cursor:pointer;">
-       Book a Consultation
-     </button> -->
-   </div>
-   
-    <!-- Comprehensive Services Section -->
-    <section style="padding: 100px 20px; background-color: #f8f9fa;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-         <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-          <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-right: 15px;"></div>
-         
-          <h3 style="text-align: center; font-size: 2.8em; color: #2c3e50; margin: 0;">
-            Hitaishi Fertility Care
-          </h3>
-         
-          <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-left: 15px;"></div>
-        </div>
-       
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: #666; font-size: 1.1em;">We offer a full spectrum of fertility services supported by cutting-edge technology</p>
-           
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-   
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #e74c3c22; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFP6SSgK2uKc6Ro7ur8xEI0rPdi5BIZgsXXw&s" alt="IVF" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #e74c3c; margin: 0 0 15px;">IVF & ICSI</h4>
-                 <p style="color: #555; line-height: 1.8;">Advanced assisted reproductive technologies with personalized protocols.</p>
-             </div>
-         
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #2980b922; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXsLTbwAaUoFarz-utHKEK9mp-x5KMAAuQQ7RJl5h7ZX0YIuy2bSfUs_qMEJyptxvTtk&usqp=CAU" alt="Genetics" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #2980b9; margin: 0 0 15px;">Genetic Testing</h4>
-                 <p style="color: #555; line-height: 1.8;">PGT-A/M and comprehensive chromosomal screening for healthy embryos.</p>
-             </div>
-         
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #27ae6022; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6HCJIk3kAqLGQ33yGBlLMDawmlbP0VF5-VA&s" alt="Embryo Freezing" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #27ae60; margin: 0 0 15px;">Embryo Freezing</h4>
-                 <p style="color: #555; line-height: 1.8;">Secure your future family with vitrification-based freezing techniques.</p>
-             </div>
-         
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #8e44ad22; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmw0OTc1NDg1MDM4MS1pbWFnZS1rdWNnbGtraC5qcGc.jpg" alt="Donor Program" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #8e44ad; margin: 0 0 15px;">Donor Programs</h4>
-                 <p style="color: #555; line-height: 1.8;">Egg, sperm, and embryo donor programs with ethical transparency and care.</p>
-             </div>
-         
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #f39c1222; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZkQ1B4ezRuiOK2GE1XAJYOYnbrzazbE02A&s" alt="Male Fertility" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #f39c12; margin: 0 0 15px;">Male Fertility</h4>
-                 <p style="color: #555; line-height: 1.8;">Expert diagnosis and treatment for male infertility, including TESA & TESE.</p>
-             </div>
-         
-             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="width: 60px; height: 60px; background-color: #16a08522; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                     <img src="https://tdlawgroup.com/wp-content/uploads/2021/05/Screen-Shot-2021-05-14-at-3.03.32-PM-1024x682.png" alt="Surrogacy" style="width: 35px;">
-                 </div>
-                 <h4 style="color: #16a085; margin: 0 0 15px;">Surrogacy Support</h4>
-                 <p style="color: #555; line-height: 1.8;">End-to-end legal and medical guidance for successful surrogacy journeys.</p>
-             </div>
-         
-         </div>
+        }
+    });
+  }
+  window.addEventListener('resize', setupDropdowns2);
+  window.addEventListener('DOMContentLoaded', setupDropdowns2);
+</script>
 
 
 
 
-         <section style="padding: 80px 20px; background-color: white;">
-          <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
-              <!-- Left Side Image -->
-              <div style="flex: 1; min-width: 300px;">
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                       alt="Fertility journey"
-                       style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-              </div>
-             
-              <!-- Right Side Content -->
-              <div style="flex: 1; min-width: 300px;">
-                  <h3 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 30px;">Your Journey with Us</h3>
-                  <ol style="color: #666; line-height: 2; font-size: 1.1em; padding-left: 20px;">
-                      <li style="margin-bottom: 15px; padding-left: 10px;">
-                          <strong style="color: #e74c3c; display: inline-block; width: 180px;">Initial Consultation:</strong>
-                          Meet with our specialists to review your history.
-                      </li>
-                      <li style="margin-bottom: 15px; padding-left: 10px;">
-                          <strong style="color: #e74c3c; display: inline-block; width: 180px;">Diagnosis & Testing:</strong>
-                          Hormonal tests, ultrasound, semen analysis, etc.
-                      </li>
-                      <li style="margin-bottom: 15px; padding-left: 10px;">
-                          <strong style="color: #e74c3c; display: inline-block; width: 180px;">Treatment Planning:</strong>
-                          Customized plan based on your fertility goals.
-                      </li>
-                      <li style="margin-bottom: 15px; padding-left: 10px;">
-                          <strong style="color: #e74c3c; display: inline-block; width: 180px;">Treatment:</strong>
-                          IVF/ICSI, IUI, donor program, or other procedure.
-                      </li>
-                      <li style="margin-bottom: 15px; padding-left: 10px;">
-                          <strong style="color: #e74c3c; display: inline-block; width: 180px;">Pregnancy Support:</strong>
-                          Ongoing care through pregnancy and delivery guidance.
-                      </li>
-                  </ol>
-              </div>
-          </div>
-      </section>
-       
-         
+  <!-- Hero Section -->
+  <div style="position:relative;width:100%;height:500px;overflow:hidden;">
+    <video autoplay loop muted style="width:100%;height:100%;object-fit:cover;">
+      <source src="images/hero_fertility.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;text-align:center;">
+      <h1 style="font-size:48px;margin:0 0 10px 0;">Your Journey to Parenthood Begins Here</h1>
+      <p style="font-size:18px;max-width:600px;margin:auto;">Advanced Fertility Solutions Tailored for You</p>
+    </div>
+  </div>
+<div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; background:#f9f9f9; padding:40px 20px;">
+  
+  <!-- Left Image -->
+  <img src="images/why choose us_fertility .png" style="width:45%; border-radius:10px; animation:zoomInOut 3s ease-in-out infinite;">
 
+  <!-- Right Content -->
+  <div style="width:50%; padding:20px;">
+    <h2 style="font-size:32px; font-weight:800; color:#333; margin-bottom:15px;">WHY CHOOSE US?</h2>
+    
+    <p style="font-size:18px; line-height:1.6; color:#444; animation:fadeText 2s ease-in-out infinite alternate;">
+      At Hitaishi Fertility, self-cycle has always been the encouraged choice. We are India’s 1st fertility provider to follow international protocols. With highest success rates, an expert team of fertility specialists, trained embryologists, counsellors, fertility trained nurses we support you in each step of your fertility journey. We offer fertility treatment with uncompromising ethics, transparent pricing, patient centric approach with highest quality of care.
+    </p>
 
-    <!-- Medical Team Section -->
-    <section style="padding: 100px 20px; background-color: white;">
-     <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-       <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-right: 15px;"></div>
-       
-       <h3 style="text-align: center; font-size: 2.8em; color: #2c3e50; margin: 0; font-family: 'Segoe UI', sans-serif;">
-         Our Fertility Specialists
-       </h3>
-       
-       <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-left: 15px;"></div>
-     </div>
-     
-         <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: #666; font-size: 1.1em;">Meet our team of board-certified reproductive endocrinologists</p>
+    <!-- Call Button with Icon -->
+    <a href="tel:+918790170525" style="display:inline-flex; align-items:center; padding:12px 20px; background:#0d99d6; color:white; border-radius:30px; font-weight:600; text-decoration:none; margin-top:15px; transition:background 0.3s;">
+      <img src="images/call_us icon_fertility.png" alt="Call Icon" style="width:22px; height:22px; margin-right:12px;">
+      CALL US
+    </a>
+  </div>
 
-
-         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-             
-             <div style="text-align: center;">
-                 <img src="https://t3.ftcdn.net/jpg/05/36/11/48/360_F_536114849_bvWlMFZPVgXoCzKnhRbm1iAXbvwMXpCa.jpg" alt="Dr. Sharma" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                 <h4 style="margin: 0; color: #2c3e50;">Dr. Anika Sharma</h4>
-                 <p style="color: #e74c3c; margin: 10px 0;">Reproductive Endocrinologist</p>
-                 <p style="color: #666;">20+ years experience in fertility treatments</p>
-             </div>
-
-
-             <div style="text-align: center;">
-                 <img src="https://t4.ftcdn.net/jpg/04/72/16/47/360_F_472164755_Her4lvdu74u85ezegfzPEZqm09wMkkv9.jpg" alt="Dr. Mehta" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                 <h4 style="margin: 0; color: #2c3e50;">Dr. Kavita Mehta</h4>
-                 <p style="color: #e74c3c; margin: 10px 0;">IVF & IUI Specialist</p>
-                 <p style="color: #666;">Expert in egg freezing and donor IVF</p>
-             </div>
-
-
-             <div style="text-align: center;">
-                 <img src="https://media.istockphoto.com/id/1346124900/photo/confident-successful-mature-doctor-at-hospital.jpg?s=612x612&w=0&k=20&c=S93n5iTDVG3_kJ9euNNUKVl9pgXTOdVQcI_oDGG-QlE=" alt="Dr. Roy" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                 <h4 style="margin: 0; color: #2c3e50;">Dr. Nishant Roy</h4>
-                 <p style="color: #e74c3c; margin: 10px 0;">Fertility Surgeon</p>
-                 <p style="color: #666;">Minimally invasive laparoscopic procedures</p>
-             </div>
-
-
-             <div style="text-align: center;">
-                 <img src="https://media.istockphoto.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=" alt="Dr. Iyer" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                 <h4 style="margin: 0; color: #2c3e50;">Dr. Radhika Iyer</h4>
-                 <p style="color: #e74c3c; margin: 10px 0;">Embryologist</p>
-                 <p style="color: #666;">Specialist in embryo transfer & genetics</p>
-             </div>
-
-
-         </div>
-     </div>
-</section>
-
-
-<!-- Patient Testimonials -->
-<section style="padding: 100px 20px; background-color: #f8f9fa; position: relative; margin-top: -40px;">
-     <div style="max-width: 1200px; margin: 0 auto; position: relative;">
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 50px;">
-       <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-right: 15px;"></div>
-       
-       <h3 style="text-align: center; font-size: 2.8em; color: #2c3e50; margin: 0; font-family: 'Segoe UI', sans-serif;">
-         Success Stories
-       </h3>
-       
-       <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-left: 15px;"></div>
-     </div>
-     
-         
-         <!-- Scroll Container -->
-         <div style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 30px; padding-bottom: 20px;" class="scroll-container">
-             <!-- Testimonial 1 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://freedesignfile.com/upload/2017/09/happy-blessed-romantic-couple-Stock-Photo-08.jpg" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Priya & Raj Mehta</h5>
-                         <p style="margin: 5px 0 0; color: #666;">IVF Success, 2022</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"The compassionate care and advanced treatments helped us complete our family after 8 years of trying."</p>
-             </div>
-
-
-             <!-- Testimonial 2 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://images.pexels.com/photos/19673175/pexels-photo-19673175/free-photo-of-romantic-couple-in-seaside.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Anjali & Vivek Singh</h5>
-                         <p style="margin: 5px 0 0; color: #666;">IUI Success, 2023</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"Thank you for making our dream come true! The staff was incredibly supportive throughout the process."</p>
-             </div>
-
-
-             <!-- Testimonial 3 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://cdn.stocksnap.io/img-thumbs/280h/senior-couple_CUVC2INVAV.jpg" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Neha & Arjun Kapoor</h5>
-                         <p style="margin: 5px 0 0; color: #666;">Egg Freezing, 2021</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"Professional and empathetic service. They helped me preserve my fertility options at the right time."</p>
-             </div>
-
-
-             <!-- Testimonial 4 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://images.pexels.com/photos/18253230/pexels-photo-18253230/free-photo-of-traditional-indian-wedding-couple.jpeg" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Sonia & Ravi Verma</h5>
-                         <p style="margin: 5px 0 0; color: #666;">Surrogacy, 2020</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"Their end-to-end support made the complex surrogacy process smooth and stress-free for us."</p>
-             </div>
-
-
-             <!-- Testimonial 5 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvUwyhALMSV_yRh9wjQaOs5SkkEZHuOeTVH8LextVOg-ThRLcyef6ksDFDLRLbNte6C8U&usqp=CAU" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Meera & Karan Patel</h5>
-                         <p style="margin: 5px 0 0; color: #666;">Fertility Preservation, 2023</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"Excellent counseling and state-of-the-art facilities gave us confidence in our decision."</p>
-             </div>
-
-
-             <!-- Testimonial 6 -->
-             <div style="min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwPvppw9z8TfYnJpUhaokjwbZl-QCUvSfs1fzHV58z-Pcf4L8vtUCUNPlJuMsRu6_ScY0&usqp=CAU" alt="Patient" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px;">
-                     <div>
-                         <h5 style="margin: 0; color: #2c3e50;">Aisha & Sameer Khan</h5>
-                         <p style="margin: 5px 0 0; color: #666;">IVF Twins, 2023</p>
-                     </div>
-                 </div>
-                 <p style="color: #666; line-height: 1.8;">"We're blessed with twins! Grateful for the team's expertise and constant support."</p>
-             </div>
-         </div>
-
-
-         <!-- Scroll Buttons -->
-         <button style="position: absolute; top: 50%; left: -30px; transform: translateY(-50%); background: #e74c3c; border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px;">❮</button>
-         <button style="position: absolute; top: 50%; right: -30px; transform: translateY(-50%); background: #e74c3c; border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px;">❯</button>
-     </div>
-</section>
-
-
-<section style="padding: 80px 20px 100px; background-color: white; border-bottom: 1px solid #f0f0f0;">
- <div style="max-width: 1200px; margin: 0 auto;">
-   <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-  <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-right: 15px;"></div>
-
-
-  <h2 style="text-align: center; font-size: 3em; color: #2c3e50; margin: 0; font-family: 'Segoe UI', sans-serif;">
-    Comprehensive Fertility Care
-  </h2>
-
-
-  <div style="flex: 1; height: 2px; background-color: #2c3e50; margin-left: 15px;"></div>
 </div>
 
 
-     <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; color: #666; font-size: 1.2em; line-height: 1.6;">
-         From diagnosis to delivery, we provide complete fertility solutions with cutting-edge technology and personalized care.
-     </p>
+<!-- Section 2 -->
+<div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; background:#ffffff; padding:40px 20px;">
+  <!-- Left Content -->
+  <div style="width:50%; padding:20px;">
+    <h2 style="font-size:28px; font-weight:800; color:#333; margin-bottom:15px;">SELF-CYCLE - OUR MOST ENCOURAGED CHOICE</h2>
+    <p style="font-size:18px; line-height:1.6; color:#444;">
+      We always look for a little bit of us in our children. Hence at Hitaishi Fertility, self-cycle has always been the most encouraged choice among couples seeking fertility treatment. This way couples are ensured of their progeny.
+    </p>
+    <a href="javascript:void(0);"  onclick="goToFertility()" style="text-decoration: none;">
+      <button style="background:#0d99d6; color:white; padding:12px 20px; border:none; border-radius:30px; cursor:pointer; font-weight:600;">
+        Book an Appointment
+      </button>
+    </a>
+    <script>
+            function goToFertility() {
+                sessionStorage.setItem("selectedSpecialization", "Fertility");
+                window.location.href = "doctors.html";
+            }
+         </script>
 
 
-     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
-         <!-- Treatment 1 -->
-         <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 5px solid #e74c3c;">
-             <h3 style="color: #2c3e50; margin-top: 0;">IVF Treatment</h3>
-             <p style="color: #666; line-height: 1.7;">
-                 Our IVF program boasts a 72% success rate for women under 35. We offer:
-                 <ul style="color: #666; padding-left: 20px; line-height: 1.7;">
-                     <li>Conventional IVF</li>
-                     <li>ICSI for male factor infertility</li>
-                     <li>Blastocyst culture</li>
-                     <li>Assisted hatching</li>
-                 </ul>
-             </p>
-             <a href="#" style="display: inline-block; background: #e74c3c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px;">Learn More</a>
-         </div>
+  </div>
+
+  <!-- Right Image -->
+  <img src="images/self_cycle_fertility.png" style="width:45%; border-radius:10px; animation:zoomInOut 3s ease-in-out infinite;">
+</div>
 
 
-         <!-- Treatment 2 -->
-         <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 5px solid #3498db;">
-             <h3 style="color: #2c3e50; margin-top: 0;">Fertility Preservation</h3>
-             <p style="color: #666; line-height: 1.7;">
-                 Options for those needing to delay parenthood:
-                 <ul style="color: #666; padding-left: 20px; line-height: 1.7;">
-                     <li>Egg freezing (vitrification)</li>
-                     <li>Sperm banking</li>
-                     <li>Embryo freezing</li>
-                     <li>Ovarian tissue freezing</li>
-                 </ul>
-             </p>
-             <a href="#" style="display: inline-block; background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px;">Learn More</a>
-         </div>
 
+<div style="display:flex; flex-wrap:wrap; background:#f4f4f4; padding:0 20px;">
+  <img src="images/fertility_services.png" style="width:100%; max-width:600px; height:auto; border-radius:10px; object-fit:cover; align-self:stretch; flex:1 1 300px;">
+  <div style="flex:1 1 300px; padding:50px 20px 20px 20px; box-sizing:border-box;">
+    <h2 style="font-size:28px; font-weight:800; color:#333; margin:0 0 15px 0;">FERTILITY SERVICES</h2>
 
-         <!-- Treatment 3 -->
-         <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 5px solid #2ecc71;">
-             <h3 style="color: #2c3e50; margin-top: 0;">Male Infertility Solutions</h3>
-             <p style="color: #666; line-height: 1.7;">
-                 Specialized treatments for male factor issues:
-                 <ul style="color: #666; padding-left: 20px; line-height: 1.7;">
-                     <li>Sperm retrieval procedures</li>
-                     <li>Varicocele repair</li>
-                     <li>DNA fragmentation testing</li>
-                     <li>Andrology services</li>
-                 </ul>
-             </p>
-             <a href="#" style="display: inline-block; background: #2ecc71; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px;">Learn More</a>
-         </div>
-     </div>
+    <ul style="list-style:none; padding:0; margin:0; font-size:17px; line-height:2; color:#444;">
+      <li><a href="fertlity_services_subpage.html#assessment" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">INFERTILITY ASSESSMENT</a></li>
+      <li><a href="fertlity_services_subpage.html#ivf" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">IN-VITRO FERTILISATION (IVF Treatment)</a></li>
+      <li><a href="fertlity_services_subpage.html#icsi" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">INTRA CYTOPLASMIC SPERM INJECTION (ICSI Treatment)</a></li>
+      <li><a href="fertlity_services_subpage.html#surgeries" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">FERTILITY ENHANCING SURGERIES</a></li>
+      <li><a href="fertlity_services_subpage.html#pgt" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">GENETIC TESTING (PGT)</a></li>
+      <li><a href="fertlity_services_subpage.html#freezing" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">FREEZING - EGG, SPERM, EMBRYOS</a></li>
+      <li><a href="fertlity_services_subpage.html#cancer" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">PRESERVATION FOR CANCER PATIENTS</a></li>
+      <li><a href="fertlity_services_subpage.html#iui" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">INTRAUTERINE INSEMINATION (IUI)</a></li>
+      <li><a href="fertlity_services_subpage.html#surrogacy" style="color:#222; text-decoration:none; border-bottom:1px solid #ccc; display:block; padding:5px 0;">SURROGACY PROGRAM</a></li>
+    </ul>
 
-
-     <!-- Stats Section -->
-     <div style="background: #e74c3c; padding: 50px 30px; border-radius: 10px; color: white; text-align: center; margin-bottom: 60px;">
-         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-             <div>
-                 <h3 style="font-size: 3em; margin: 0;">5,000+</h3>
-                 <p style="margin: 5px 0 0; font-size: 1.2em;">Babies Born</p>
-             </div>
-             <div>
-                 <h3 style="font-size: 3em; margin: 0;">78%</h3>
-                 <p style="margin: 5px 0 0; font-size: 1.2em;">Success Rate</p>
-             </div>
-             <div>
-                 <h3 style="font-size: 3em; margin: 0;">20+</h3>
-                 <p style="margin: 5px 0 0; font-size: 1.2em;">Years Experience</p>
-             </div>
-             <div>
-                 <h3 style="font-size: 3em; margin: 0;">98%</h3>
-                 <p style="margin: 5px 0 0; font-size: 1.2em;">Patient Satisfaction</p>
-             </div>
-         </div>
-     </div>
-
-
-     <!-- FAQ Section -->
-     <section style="padding: 80px 20px; background: #f9f9f9;">
-      <div style="max-width: 1000px; margin: 0 auto;">
-          <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 15px; color: #2c3e50;">Frequently Asked Questions</h2>
-          <p style="text-align: center; color: #7f8c8d; margin-bottom: 50px; font-size: 1.1em;">
-              Click on any question to view the answer
-          </p>
- 
-          <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 30px;">
-              <!-- Question 1 -->
-              <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-                  <div onclick="toggleAnswer('answer1')" style="padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                      <h3 style="color: #2c3e50; margin: 0; font-size: 1.2em;">What's the success rate of IVF at your clinic?</h3>
-                      <span id="icon1" style="font-size: 1.5em; color: #e74c3c;">+</span>
-                  </div>
-                  <div id="answer1" style="display: none; padding: 0 20px 20px 20px; color: #666; line-height: 1.7;">
-                      Our clinic maintains a 72% success rate for women under 35, significantly higher than the national average. We achieve 65% for ages 35-37, 55% for 38-40, and 40% for 41-42. Each case is unique, and we provide personalized success projections during consultations.
-                  </div>
-              </div>
- 
-              <!-- Question 2 -->
-              <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-                  <div onclick="toggleAnswer('answer2')" style="padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                      <h3 style="color: #2c3e50; margin: 0; font-size: 1.2em;">How long does the IVF process take from start to finish?</h3>
-                      <span id="icon2" style="font-size: 1.5em; color: #e74c3c;">+</span>
-                  </div>
-                  <div id="answer2" style="display: none; padding: 0 20px 20px 20px; color: #666; line-height: 1.7;">
-                      A complete IVF cycle typically takes 4-6 weeks: 10-14 days for ovarian stimulation, 1 day for egg retrieval, 3-5 days for embryo culture, and the transfer. Additional time may be needed for pre-treatment testing (2-4 weeks) and frozen embryo transfers (3-6 weeks).
-                  </div>
-              </div>
- 
-              <!-- Question 3 -->
-              <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-                  <div onclick="toggleAnswer('answer3')" style="padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                      <h3 style="color: #2c3e50; margin: 0; font-size: 1.2em;">What tests are required before starting treatment?</h3>
-                      <span id="icon3" style="font-size: 1.5em; color: #e74c3c;">+</span>
-                  </div>
-                  <div id="answer3" style="display: none; padding: 0 20px 20px 20px; color: #666; line-height: 1.7;">
-                      <ul style="margin: 0; padding-left: 20px;">
-                          <li>For women: Hormone tests (AMH, FSH, LH), ultrasound scan, HSG</li>
-                          <li>For men: Semen analysis, DNA fragmentation test</li>
-                          <li>For both: Infectious disease screening, genetic testing</li>
-                      </ul>
-                  </div>
-              </div>
- 
-              <!-- Question 4 -->
-              <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-                  <div onclick="toggleAnswer('answer4')" style="padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                      <h3 style="color: #2c3e50; margin: 0; font-size: 1.2em;">What's the difference between IUI and IVF?</h3>
-                      <span id="icon4" style="font-size: 1.5em; color: #e74c3c;">+</span>
-                  </div>
-                  <div id="answer4" style="display: none; padding: 0 20px 20px 20px; color: #666; line-height: 1.7;">
-                      <p><strong>IUI (Intrauterine Insemination):</strong> Sperm is washed and placed directly in the uterus during ovulation (success rate 10-20% per cycle).</p>
-                      <p><strong>IVF (In Vitro Fertilization):</strong> Eggs are retrieved, fertilized in lab, and embryos transferred (success rate 40-70% per cycle). IVF is more effective but more invasive and expensive.</p>
-                  </div>
-              </div>
- 
-              <!-- Question 5 -->
-              <div style="margin-bottom: 15px;">
-                  <div onclick="toggleAnswer('answer5')" style="padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                      <h3 style="color: #2c3e50; margin: 0; font-size: 1.2em;">Is there an age limit for fertility treatments?</h3>
-                      <span id="icon5" style="font-size: 1.5em; color: #e74c3c;">+</span>
-                  </div>
-                  <div id="answer5" style="display: none; padding: 0 20px 20px 20px; color: #666; line-height: 1.7;">
-                      We treat women up to age 50 using their own eggs, and up to age 55 with donor eggs. Success rates decline significantly after 40. For men, there's no strict age limit but sperm quality typically declines after 45.
-                  </div>
-              </div>
-          </div>
- 
-          <!-- <div style="text-align: center; margin-top: 40px;">
-              <a href="#" style="display: inline-block; background: #e74c3c; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 1.1em;">
-                  View All FAQs
-              </a>
-          </div> -->
+    <div id="moreServices" style="display:none; margin-top:20px; font-size:15px; color:#333; animation: fadeIn 0.5s ease-in-out;">
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>INFERTILITY ASSESSMENT:</strong> Comprehensive evaluation to diagnose fertility issues in men and women.
       </div>
-  </section>
- 
-  <script>
-  function toggleAnswer(id) {
-      const answer = document.getElementById(id);
-      const icon = document.getElementById('icon' + id.slice(-1));
-     
-      if (answer.style.display === 'none' || answer.style.display === '') {
-          answer.style.display = 'block';
-          icon.textContent = '-';
-      } else {
-          answer.style.display = 'none';
-          icon.textContent = '+';
-      }
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>IVF Treatment:</strong> A process where eggs are fertilized by sperm outside the body and implanted into the uterus.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>ICSI Treatment:</strong> An advanced IVF technique involving the injection of a single sperm directly into an egg.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>Fertility Surgeries:</strong> Includes laparoscopy or hysteroscopy to remove obstacles to conception.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>Genetic Testing:</strong> Preimplantation Genetic Testing (PGT) to screen embryos for genetic disorders.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>Freezing Services:</strong> Secure cryopreservation of eggs, sperm, or embryos for future use.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>Oncofertility:</strong> Fertility preservation options for cancer patients before treatment.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>IUI (Intrauterine Insemination):</strong> A procedure where sperm is placed directly into a woman’s uterus to enhance fertilization.
+      </div>
+      <div style="background:#fff; border-radius:8px; padding:15px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <strong>Surrogacy Program:</strong> A legal arrangement where another woman carries and delivers a child for intended parents.
+      </div>
+    </div>
+
+    <a href="javascript:void(0);" onclick="toggleServices()" id="toggleBtn" 
+       style="display:inline-block; padding:10px 20px; background:#0d99d6; color:#fff; border-radius:25px; font-weight:600; text-decoration:none; margin-top:20px; transition:background 0.3s ease;">
+       KNOW MORE
+    </a>
+  </div>
+</div>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script>
+  function toggleServices() {
+    const more = document.getElementById("moreServices");
+    const btn = document.getElementById("toggleBtn");
+
+    if (more.style.display === "none" || more.style.display === "") {
+      more.style.display = "block";
+      btn.innerText = "SHOW LESS";
+    } else {
+      more.style.display = "none";
+      btn.innerText = "KNOW MORE";
+    }
   }
-  </script>
+</script>
 
 
-<!-- Footer -->
-<footer style="background-color: #2c3e50; color: white; padding: 60px 20px; font-family: Arial, sans-serif;">
- <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-   
-   <!-- About Section -->
-   <div>
-     <h4 style="color: #e74c3c; margin-bottom: 20px; font-size: 20px;">Hitaishi Fertility</h4>
-     <p style="color: #ecf0f1; font-size: 15px; line-height: 1.7;">
-       We are committed to helping families grow through advanced fertility treatments, cutting-edge technology, and compassionate care.
-     </p>
-   </div>
-   
-   <!-- Quick Links -->
-   <div>
-     <h4 style="color: #e74c3c; margin-bottom: 20px; font-size: 20px;">Quick Links</h4>
-     <a href="#privacy" style="display: block; color: #ecf0f1; text-decoration: none; font-size: 15px; margin-bottom: 10px;">Privacy Policy</a>
-     <a href="#careers" style="display: block; color: #ecf0f1; text-decoration: none; font-size: 15px; margin-bottom: 10px;">Careers</a>
-     <a href="#faq" style="display: block; color: #ecf0f1; text-decoration: none; font-size: 15px; margin-bottom: 10px;">FAQ</a>
-   </div>
+
+<!-- Section 3 Bottom Stats -->
+<div style="display:flex; justify-content:center; align-items:center; gap:40px; background:#eee; padding:40px 0;"><div style="width:120px; height:120px; border-radius:100px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:16px; font-weight:600; text-align:center;"><img src="images/102 cities_fertility.png" style="width:30px; height:30px; margin-bottom:5px;">102 Centers</div><div style="width:120px; height:120px; border-radius:100px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:16px; font-weight:600; text-align:center;"><img src="images/63 cities_fertility.png" style="width:30px; height:30px; margin-bottom:5px;">63 Cities</div><div style="width:120px; height:120px; border-radius:100px; background:white; box-shadow:0 0 10px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:16px; font-weight:600; text-align:center;"><img src="images/pregniencies_fertility.png" style="width:30px; height:30px; margin-bottom:5px;">91977 IVF Pregnancies</div></div>
+
+<!-- Inline Animation Styles -->
+<style>
+@keyframes zoomInOut { 0% { transform:scale(1); } 50% { transform:scale(1.05); } 100% { transform:scale(1); }
+}
+@keyframes fadeText { 0% { opacity:1; } 100% { opacity:0.6; }
+}
+</style>
+
+<div style="text-align:center;padding:40px 20px;background:#fff;">
+  <h2 style="font-size:28px;color:#4a4a4a;margin-bottom:40px;">WHICH STAGE OF FERTILITY JOURNEY YOU ARE IN?</h2>
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:40px;max-width:1200px;margin:auto;">
+
+    <a href="#conceiving" style="text-decoration:none;color:#000;">
+      <div style="text-align:center;">
+        <div style="width:160px;height:160px;clip-path:polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);border:4px solid #ccc;padding:5px;transition:transform 0.3s;overflow:hidden;">
+          <img src="images/fertility_stage_1.png" alt="Problems Conceiving" style="width:100%;height:100%;object-fit:cover;clip-path:inherit;">
+        </div>
+        <p style="font-weight:bold;margin-top:15px;">I am having problems conceiving</p>
+      </div>
+    </a>
+
+    <a href="#start-treatment" style="text-decoration:none;color:#000;">
+      <div style="text-align:center;">
+        <div style="width:160px;height:160px;clip-path:polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);border:4px solid #ccc;padding:5px;transition:transform 0.3s;overflow:hidden;">
+          <img src="images/fertility_stage_2.png" alt="Start Treatment" style="width:100%;height:100%;object-fit:cover;clip-path:inherit;">
+        </div>
+        <p style="font-weight:bold;margin-top:15px;">I want to start my fertility treatment</p>
+      </div>
+    </a>
+
+    <a href="#donor" style="text-decoration:none;color:#000;">
+      <div style="text-align:center;">
+        <div style="width:160px;height:160px;clip-path:polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);border:4px solid #ccc;padding:5px;transition:transform 0.3s;overflow:hidden;">
+          <img src="images/fertility_stage_3.png" alt="Looking for Donor" style="width:100%;height:100%;object-fit:cover;clip-path:inherit;">
+        </div>
+        <p style="font-weight:bold;margin-top:15px;">I am looking for a donor</p>
+      </div>
+    </a>
+
+    <a href="#freeze-gametes" style="text-decoration:none;color:#000;">
+      <div style="text-align:center;">
+        <div style="width:160px;height:160px;clip-path:polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);border:4px solid #ccc;padding:5px;transition:transform 0.3s;overflow:hidden;">
+          <img src="images/fertility_stage_4.png" alt="Freeze Gametes" style="width:100%;height:100%;object-fit:cover;clip-path:inherit;">
+        </div>
+        <p style="font-weight:bold;margin-top:15px;">I want to freeze my gametes<br>(egg, sperm, embryo)</p>
+      </div>
+    </a>
+
+  </div>
+</div>
 
 
-   <!-- Contact Section -->
-   <div>
-     <h4 style="color: #e74c3c; margin-bottom: 20px; font-size: 20px;">Contact</h4>
-     <p style="margin: 0 0 12px; font-size: 15px;">📞 +91 98765 43210</p>
-     <p style="margin: 0 0 12px; font-size: 15px;">📩 contact@hitaishifertility.com</p>
-     <p style="margin: 0; font-size: 15px;">📍 Mumbai, Delhi, Bangalore</p>
-   </div>
- </div>
+<style>
+  a div:hover div {
+    transform: scale(1.05);
+    border-color: #999;
+  }
+</style>
+
+<div style="display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;padding:0;margin:0;background:linear-gradient(to right,#fff1f0,#f6f6f6);">
+  
+  <!-- Left Image -->
+  <div style="flex:1;min-width:300px;max-width:600px;overflow:hidden;border-radius:0 10px 10px 0;">
+    <img src="images/baby_welcome_fertility.png" alt="Baby Welcome" style="width:100%; height:100%; object-fit:cover; display:block;">
+  </div>
+
+  <!-- Right Form -->
+  <div style="flex:1;min-width:300px;max-width:600px;padding:40px;background:#fff;border-radius:0 20px 20px 0;box-shadow:-4px 0 12px rgba(0,0,0,0.1);">
+<form id="submit_fertility">
+
+  <input type="text" name="name" placeholder="Your Name*" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;">
+  <input type="email" name="email" placeholder="Your Email" style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;">
+  <input type="text" name="phone" placeholder="Mobile Number*" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;">
+  <input type="text" name="centre" placeholder="Preferred Centre*" required style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;">
+
+  <label style="display:flex;align-items:center;margin-bottom:15px;font-size:14px;color:#a00;">
+    <input type="checkbox" name="privacy" checked required style="margin-right:8px;">
+    I agree to the <a href="#" style="margin-left:4px;color:#a00;text-decoration:underline;">Privacy Policy</a>
+  </label>
+
+  <button type="submit" style="width:100%;padding:12px;background:#0073a8;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;">
+    Submit
+  </button>
+
+</form>
 
 
- <!-- Bottom Note -->
- <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #34495e;">
-   <p style="margin: 0; font-size: 14px; color: #bdc3c7;">© 2023 Hitaishi Fertility Care. All Rights Reserved.</p>
- </div>
-</footer>
 
+ <script>
+  document.getElementById('submit_fertility').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = this;
+    let valid = true;
+
+    // Validate required inputs
+    const inputs = form.querySelectorAll('input[required]');
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.style.border = '2px solid red';
+        valid = false;
+      } else {
+        input.style.border = '1px solid #ccc';
+      }
+    });
+
+    if (!valid) {
+      alert('Please fill all required fields.');
+      return;
+    }
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('http://localhost:5000/api/submit_fertility', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        document.getElementById('successMessage').style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+          document.getElementById('successMessage').style.display = 'none';
+        }, 2500);
+      } else {
+        alert(result.error || 'Error booking appointment. Try again later.');
+      }
+
+    } catch (err) {
+      console.error('Fetch error:', err);
+      alert('Network error. Please check your connection.');
+    }
+  });
+</script>
+
+<div id="successMessage" style="display:none; color:green; font-weight:bold; text-align:center; margin-top:15px;">
+ submitted successfully!
+</div>
+
+  </div>
+
+</div>
+
+
+
+<style>
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@media screen and (max-width: 768px) {
+  div[style*='display:flex'] {
+    flex-direction: column;
+  }
+}
+</style>
+
+<section id="experts" style="padding: 40px 20px; background-color: #f5f5f5; font-family: Arial, sans-serif;">
+    <h6 style="text-align: center;font-size: 2.4em; color: #0a2e8a; margin-bottom: 30px;">OUR IVF SPECIALISTS - Hitaishi</h6>
+    
+        <div id="carousel" style="position: relative; overflow: hidden; max-width: 1200px; margin: auto;">
+            <div id="cardWrapper" style="display: flex; transition: transform 0.5s ease;"></div>
+
+            <div onclick="moveSlide(-1)" style="position: absolute; top: 45%; left: 0; font-size: 30px; cursor: pointer; color: #99004d;">&#10094;</div>
+            <div onclick="moveSlide(1)" style="position: absolute; top: 45%; right: 0; font-size: 30px; cursor: pointer; color: #99004d;">&#10095;</div>
+            
+            <div style="text-align: center; margin-top: 20px;" id="dotsContainer"></div>
+        </div>
+        <!-- Appointment Form Modal -->
+        <div id="appointmentForm" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 25px; border-radius: 15px; width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; position: relative;">
+            
+            <!-- Close Button -->
+            <span onclick="hideAppointmentForm()" style="position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; color: #99004d;">&times;</span>
+            
+            <h2 style="color: #0a2e8a; margin-bottom: 20px; text-align: center;">Book Your Appointment</h2>
+            
+            <form id="bookingForm" style="display: grid; gap: 12px;">
+            <div style="background: #f5f5f5; padding: 10px; border-radius: 8px;">
+                <p style="margin: 0; font-weight: bold;">Doctor: <span id="doctorName"></span></p>
+                <p style="margin: 5px 0 0;">Specialization: <span id="doctorSpec"></span></p>
+                <p style="margin: 5px 0 0;">Consultation Fee: <span id="doctorFee"></span></p>
+            </div>
+
+            <div>
+                <label for="userName" style="display: block; margin-bottom: 4px; color: #0a2e8a;">Full Name</label>
+                <input type="text" id="userName" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="userEmail" style="display: block; margin-bottom: 4px; color: #0a2e8a;">Email</label>
+                <input type="email" id="userEmail" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="userPhone" style="display: block; margin-bottom: 4px; color: #0a2e8a;">Phone Number</label>
+                <input type="tel" id="userPhone" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="appointmentDay" style="display: block; margin-bottom: 4px; color: #0a2e8a;">Appointment Date</label>
+                <input type="date" id="appointmentDay" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div>
+                <label for="appointmentTime" style="display: block; margin-bottom: 4px; color: #0a2e8a;">Preferred Time Slot</label>
+                <select id="appointmentTime" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="">Select a time slot</option>
+                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                </select>
+            </div>
+
+            <button type="submit" style="padding: 10px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">CONFIRM APPOINTMENT</button>
+            </form>
+        </div>
+        </div>
+
+        <script>
+        function showAppointmentForm(button) {
+            const card = button.closest('div[style*="background: white"]');
+            const doctorName = button.getAttribute('data-doctor');
+            const fee = button.getAttribute('data-fee');
+            const specialization = card.querySelector('.specialization').textContent;
+
+            document.getElementById('doctorName').textContent = doctorName;
+            document.getElementById('doctorSpec').textContent = specialization;
+            document.getElementById('doctorFee').textContent = fee;
+            document.getElementById('appointmentForm').style.display = 'flex';
+
+            // Set today's date as minimum for date input
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('appointmentDay').min = today;
+        }
+
+        function hideAppointmentForm() {
+            document.getElementById('appointmentForm').style.display = 'none';
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = {
+            doctor: document.getElementById('doctorName').textContent,
+            specialization: document.getElementById('doctorSpec').textContent,
+            fee: document.getElementById('doctorFee').textContent,
+            patient_name: document.getElementById('userName').value,
+            email: document.getElementById('userEmail').value,
+            phone: document.getElementById('userPhone').value,
+            appointment_date: document.getElementById('appointmentDay').value,
+            time_slot: document.getElementById('appointmentTime').value,
+            };
+
+            try {
+            const response = await fetch('http://localhost:5000/api/appointments', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            if (!response.ok) throw new Error('Booking failed. Try again.');
+
+            alert('✅ Appointment booked successfully!');
+            this.reset();
+            hideAppointmentForm();
+            } catch (error) {
+            alert(❌ Error: ${error.message});
+            }
+        });
+
+            let doctors = [];
+            let slideIndex = 0;
+            const cardsPerView = 3;
+            const cardWrapper = document.getElementById('cardWrapper');
+            const dotsContainer = document.getElementById('dotsContainer');
+
+            async function loadDoctors() {
+            try {
+                const response = await fetch('http://localhost:5000/api/specialists');
+                if (!response.ok) throw new Error('Failed to load doctors');
+
+                doctors = await response.json();
+                renderDoctors(doctors);
+                renderDots(doctors.length);
+                updateSlidePosition();
+            } catch (err) {
+                console.error("❌ Error fetching doctors:", err);
+                cardWrapper.innerHTML = '<p style="color:red; text-align:center; width:100%;">Failed to load doctors.</p>';
+            }
+            }
+
+            function renderDoctors(list) {
+            cardWrapper.innerHTML = '';
+            list.forEach(doc => {
+                const card = document.createElement('div');
+                card.style.flex = '0 0 33.333%';
+                card.style.padding = '10px';
+                card.style.boxSizing = 'border-box';
+                card.innerHTML = `
+                <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+                    <img src="${doc.image || 'https://via.placeholder.com/120'}" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+                    <h3 style="color: #007399;">${doc.name}</h3>
+                    <p class="specialization" style="font-size: 14px;">${doc.specialization}</p>
+                    <p style="color: #0a2e8a;">${doc.description || 'Expert in oncology care'}</p>
+                    <p>${doc.location || 'India'}</p>
+                    <button onclick="showAppointmentForm(this)" 
+                    data-doctor="${doc.name}" 
+                    data-fee="₹${doc.fee}" 
+                    style="padding: 10px 20px; background-color: #0a2e8a; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    BOOK AN APPOINTMENT
+                    </button>
+                </div>
+                `;
+                cardWrapper.appendChild(card);
+            });
+            }
+
+            function renderDots(total) {
+            const numDots = Math.max(1, Math.ceil(total / cardsPerView));
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                dot.onclick = () => currentSlide(i);
+                dot.style.cssText = 'height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;';
+                dotsContainer.appendChild(dot);
+            }
+            }
+
+            function updateSlidePosition() {
+            const offset = -slideIndex * (100 / cardsPerView);
+            cardWrapper.style.transform = translateX(${offset}%);
+            document.querySelectorAll('.dot').forEach((d, i) => {
+                d.style.backgroundColor = i === slideIndex ? '#99004d' : '#bbb';
+            });
+            }
+
+            function moveSlide(n) {
+            const maxIndex = Math.max(0, Math.ceil(doctors.length / cardsPerView) - 1);
+            slideIndex = Math.min(maxIndex, Math.max(0, slideIndex + n));
+            updateSlidePosition();
+            }
+
+            function currentSlide(n) {
+            slideIndex = n;
+            updateSlidePosition();
+            }
+
+            window.addEventListener('load', loadDoctors);
+            window.addEventListener('resize', updateSlidePosition);
+        </script>
+    </section>
+
+<div style="padding: 40px 20px; background-color: #f5f5f5; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #99004d; margin-bottom: 30px;">OUR IVF SPECIALISTS - Hitaishi</h2>
+  <div id="carousel" style="position: relative; overflow: hidden; max-width: 1200px; margin: auto;">
+    <div id="cardWrapper" style="display: flex; transition: transform 0.5s ease;">
+      <!-- 8 Cards -->
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center; transition: transform 0.3s, border-color 0.3s;">
+          <img src="images/saroja _fertility.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Saroja Koppala</h3>
+          <p style="font-size: 14px;">M.B.B.S (Prize medalist), DFFP(UK), MRCOG(UK), FRCOG(UK)</p>
+          <p style="color: #99004d;">Over 15+ years of experience in the field of reproductive medicine</p>
+          <p>Infertility Specialist in Hyderabad</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/MEENA RAO.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Meena Rao</h3>
+          <p style="font-size: 14px;">M.D. (OBG), FNB - Reproductive Medicine</p>
+          <p style="color: #99004d;">10+ years expertise in IVF and IUI treatments</p>
+          <p>Chief Fertility Specialist - Chennai</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/ANITA_DESMUKH.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Anita Deshmukh</h3>
+          <p style="font-size: 14px;">MBBS, DGO, Fellowship in Reproductive Medicine</p>
+          <p style="color: #99004d;">Renowned IVF specialist with 12+ years experience</p>
+          <p>Fertility Consultant - Mumbai</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/LAKSHMI_NAIR.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Lakshmi Nair</h3>
+          <p style="font-size: 14px;">MS - Obstetrics and Gynaecology, IVF Specialist</p>
+          <p style="color: #99004d;">Expert in laparoscopic and fertility surgery</p>
+          <p>Infertility Consultant - Kochi</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/RAVI KRISHNA.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Ravi Krishna</h3>
+          <p style="font-size: 14px;">MD (OBG), IVF & Andrology Specialist</p>
+          <p style="color: #99004d;">Over 18+ years handling complex infertility cases</p>
+          <p>IVF Head - Bangalore Center</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/PRIYA.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Priya Shah</h3>
+          <p style="font-size: 14px;">DNB (OBG), IVF & Reproductive Endocrinology</p>
+          <p style="color: #99004d;">Special interest in PCOS & recurrent IVF failures</p>
+          <p>Fertility Expert - Ahmedabad</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/KIRAN PATEL.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Kiran Patil</h3>
+          <p style="font-size: 14px;">MBBS, MD, Diploma in ART</p>
+          <p style="color: #99004d;">Renowned for patient-centric fertility treatment</p>
+          <p>Consultant IVF Specialist - Pune</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 33.333%; padding: 10px; box-sizing: border-box;">
+        <div style="background: white; border: 2px solid #ccc; padding: 20px; border-radius: 20px; text-align: center;">
+          <img src="images/NEHA.png" alt="Doctor" style="width: 120px; height: 120px; border-radius: 50%; border: 5px solid #99004d;">
+          <h3 style="color: #007399;">Dr. Neha Srivastava</h3>
+          <p style="font-size: 14px;">MBBS, MS, ART & IVF Certification</p>
+          <p style="color: #99004d;">Expertise in embryo transfer and donor cycles</p>
+          <p>IVF & Fertility Specialist - Delhi</p>
+          <button style="padding: 10px 20px; background-color: #99004d; color: white; border: none; border-radius: 5px; cursor: pointer;">BOOK AN APPOINTMENT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <div onclick="moveSlide(-1)" style="position: absolute; top: 45%; left: 0; font-size: 30px; cursor: pointer; color: #99004d;">&#10094;</div>
+    <div onclick="moveSlide(1)" style="position: absolute; top: 45%; right: 0; font-size: 30px; cursor: pointer; color: #99004d;">&#10095;</div>
+
+    <!-- Dots -->
+    <div style="text-align: center; margin-top: 20px;">
+      <span class="dot" onclick="currentSlide(0)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(1)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(2)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(3)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(4)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(5)" style="height: 15px; width: 15px; margin: 0 5px; display: inline-block; background-color: #bbb; border-radius: 50%; cursor: pointer;"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const wrapper = document.getElementById('cardWrapper');
+  const dots = document.querySelectorAll('.dot');
+  const totalCards = 8;
+  const cardsPerView = 3;
+  const maxSlideIndex = totalCards - cardsPerView;
+
+  function updateSlidePosition() {
+    const wrapperWidth = document.getElementById('carousel').offsetWidth;
+    const cardWidth = wrapperWidth / cardsPerView;
+    const offset = slideIndex * cardWidth;
+    wrapper.style.transform = `translateX(-${offset}px)`;
+
+    dots.forEach((dot, i) => {
+      dot.style.backgroundColor = i === slideIndex ? '#99004d' : '#bbb';
+    });
+  }
+
+  function moveSlide(n) {
+    slideIndex += n;
+    if (slideIndex < 0) slideIndex = 0;
+    if (slideIndex > maxSlideIndex) slideIndex = maxSlideIndex;
+    updateSlidePosition();
+  }
+
+  function currentSlide(n) {
+    slideIndex = n;
+    updateSlidePosition();
+  }
+
+  window.addEventListener('resize', updateSlidePosition);
+  window.addEventListener('load', () => {
+    updateSlidePosition();
+  });
+</script>
+
+<div style="text-align: center; padding: 60px 20px; background-color: #ffffff; font-family: Arial, sans-serif;">
+  <h2 style="color: #99004d; margin-bottom: 10px;">Choose the best. Choose Hitaishi Fertility.</h2>
+  <p style="color: #333; font-size: 18px; margin: 10px 0;">
+    Hitaishi Fertility is among the most trusted service providers in fertility treatment.
+  </p>
+  <p style="color: #333; font-size: 18px; margin-bottom: 50px;">
+    At Hitaishi, we aim to provide advanced Assisted Reproductive Technology (ART) in India on par with global standards.
+  </p>
+
+<div style="background-color: #fafafa; font-family: Arial, sans-serif; padding: 30px; max-width: 1200px; margin: auto;">
+  <!-- Section Template -->
+<div style="border-top: 1px solid #99004d; padding: 15px 10px;" onclick="toggleSection(this)">
+  <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <strong style="font-size: 16px; color: #99004d;">Treatments</strong>
+    <span style="font-size: 20px; color: #99004d;">+</span>
+  </div>
+  <div style="display: none; padding-top: 10px; color: #333;">
+    <ul style="columns: 3; list-style-type: disc; padding-left: 20px; margin: 10px 0 0 0;">
+      <li style="padding-left: 4px;"><a href="#iui" style="color:#333;text-decoration:none;">IUI Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#ivf" style="color:#333;text-decoration:none;">IVF Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#icsi" style="color:#333;text-decoration:none;">ICSI Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#counselling" style="color:#333;text-decoration:none;">Infertility Counselling</a></li>
+      <li style="padding-left: 4px;"><a href="#endoscopy" style="color:#333;text-decoration:none;">Endoscopy Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#advanced-ivf" style="color:#333;text-decoration:none;">Advanced IVF Solutions</a></li>
+      <li style="padding-left: 4px;"><a href="#donation" style="color:#333;text-decoration:none;">Donation Program Embryo / Egg / Sperm</a></li>
+      <li style="padding-left: 4px;"><a href="#andrology" style="color:#333;text-decoration:none;">Andrology Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#pgt" style="color:#333;text-decoration:none;">Preimplantation Genetic Testing (PGT)</a></li>
+      <li style="padding-left: 4px;"><a href="#embryology" style="color:#333;text-decoration:none;">Embryology</a></li>
+      <li style="padding-left: 4px;"><a href="#female-infertility" style="color:#333;text-decoration:none;">Female Infertility Treatment</a></li>
+      <li style="padding-left: 4px;"><a href="#fertility-enhancing-surgeries-female" style="color:#333;text-decoration:none;">Fertility Enhancing Surgeries - Female</a></li>
+      <li style="padding-left: 4px;"><a href="#fertility-enhancing-surgeries-male" style="color:#333;text-decoration:none;">Fertility Enhancing Surgeries - Male</a></li>
+      <li style="padding-left: 4px;"><a href="#vitrification" style="color:#333;text-decoration:none;">Vitrification Egg, Embryo, Sperm Freezing</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  <div style="border-top: 1px solid #99004d; padding: 15px 0;" onclick="toggleSection(this)">
+    <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+      <strong style="font-size: 16px; color: #99004d;">IVF Centres in India</strong>
+      <span style="font-size: 20px; color: #99004d;">+</span>
+    </div>
+    <div style="display: none; padding-top: 10px; color: #333;">
+      India hosts numerous reputed IVF centres equipped with state-of-the-art technology. Top cities include Delhi, Mumbai, Bangalore, Chennai, and Hyderabad. These centres offer high success rates and are staffed by experienced professionals. Many centres are accredited and follow international treatment protocols.
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid #99004d; padding: 15px 0;" onclick="toggleSection(this)">
+    <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+      <strong style="font-size: 16px; color: #99004d;">IVF Doctors in India</strong>
+      <span style="font-size: 20px; color: #99004d;">+</span>
+    </div>
+    <div style="display: none; padding-top: 10px; color: #333;">
+      IVF doctors in India are highly qualified, many with international training and years of experience in reproductive medicine. They specialize in infertility diagnostics, assisted reproductive techniques, and personalized patient care. Consultations often include pre-treatment evaluations, protocol design, and post-treatment follow-ups.
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid #99004d; padding: 15px 0;" onclick="toggleSection(this)">
+    <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+      <strong style="font-size: 16px; color: #99004d;">IVF Cost in India</strong>
+      <span style="font-size: 20px; color: #99004d;">+</span>
+    </div>
+    <div style="display: none; padding-top: 10px; color: #333;">
+      IVF treatment in India is more affordable compared to many other countries. The cost typically ranges between ₹1,00,000 to ₹2,50,000 per cycle. Factors affecting the cost include clinic reputation, technology used, number of cycles required, and additional procedures like ICSI, PGT, or embryo freezing.
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleSection(section) {
+  const allSections = document.querySelectorAll('[onclick="toggleSection(this)"]');
+  allSections.forEach(sec => {
+    const content = sec.querySelector('div:nth-child(2)');
+    const icon = sec.querySelector('span');
+    if (sec !== section) {
+      content.style.display = 'none';
+      icon.textContent = '+';
+    }
+  });
+
+  const content = section.querySelector('div:nth-child(2)');
+  const icon = section.querySelector('span');
+  const isVisible = content.style.display === 'block';
+  content.style.display = isVisible ? 'none' : 'block';
+  icon.textContent = isVisible ? '+' : '–';
+}
+</script>
+
+<footer style="background-color: black; color: white; padding: 30px 10%; font-family: Arial, sans-serif; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Quick Links</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">About Us</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Our Team</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Accreditation</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Awards And Accolades</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Social Responsibility</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Tele Radiology</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Services</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Health Checkups</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Home Sample Collection</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Download Reports</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Corporate Wellness</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">COVID-19</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact Us</h3>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Virtual Tour</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Careers</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Blog</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">Investors</a>
+                <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px;">FAQs</a>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Subscribe to News Letter</h3>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; margin-bottom: 10px; width: 80%; border: none; border-radius: 5px;">
+                <button style="padding: 10px; width: 50%; border: none; border-radius: 5px; background-color: teal; color: white; cursor: pointer;">Subscribe</button>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Contact</h3>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@hitaishihealth.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                    <i class="fas fa-phone"></i>
+                    <span>8790170525</span>
+                </div>
+                <h3 style="margin-bottom: 15px; font-size: 18px;">Social Media</h3>
+                <div>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 20px; margin-right: 15px;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid gray; margin-top: 20px;">
+            <p>© Copyright 2025 By Hitaishi Health Service. All Rights Reserved</p>
+            <a href="#" style="color: white; text-decoration: none;">Sitemap</a> |
+            <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a> |
+            <a href="#" style="color: white; text-decoration: none;">Terms of Use</a>
+        </div>
+    </footer>
 
 </body>
 </html>
-
-
-
