@@ -1,4 +1,6 @@
-// server.js
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -66,4 +68,24 @@ app.get("/bookappointments", (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Server is running on port ${PORT}...`);
+});
+
+
+// 🔐 HTTPS SSL certificate paths (from Certbot)
+const sslOptions = {
+  key: fs.readFileSync('/etc/letsencrypt/live/hitaishihealthcare.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/hitaishihealthcare.com/fullchain.pem')
+};
+
+// ✅ Start HTTPS server on port 443
+https.createServer(sslOptions, app).listen(443, () => {
+  console.log("✅ Secure HTTPS server running on port 443");
+});
+
+// 🔁 Redirect HTTP → HTTPS
+http.createServer((req, res) => {
+  res.writeHead(301, { Location: 'https://' + req.headers.host + req.url });
+  res.end();
+}).listen(80, () => {
+  console.log("🌐 Redirecting all HTTP to HTTPS on port 80");
 });

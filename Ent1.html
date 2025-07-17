@@ -300,7 +300,7 @@
       <p style="margin: 0; color: #555;">Location: <span id="popupDoctorAddress"></span></p>
     </div>
 
-    <form action="http://localhost:5000/api/bookappointment" method="POST"
+    <form action="https://hitaishihealthcare.com/api/bookappointment" method="POST"
       style="display: flex; flex-direction: column; gap: 15px;">
       <input type="hidden" id="popupDoctor" name="doctor">
 
@@ -765,7 +765,7 @@
         Have questions, feedback, or need support? Fill out the form below, and our team will get back to you as soon as possible. Your input helps us improve!
       </p>
       
-      <form action="http://localhost:5000/api/contact" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <form action="https://hitaishihealthcare.com/api/contact" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
         <div style="text-align: left;">
           <label for="name" style="display: block; font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 0.5rem;">Name</label>
           <input type="text" id="name" name="name" required
@@ -816,7 +816,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   };
 
   try {
-    const res = await fetch('http://localhost:5000/api/contact', {
+    const res = await fetch('https://hitaishihealthcare.com/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)

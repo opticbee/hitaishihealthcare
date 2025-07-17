@@ -382,7 +382,7 @@
       const formData = new FormData(this);
       const data = Object.fromEntries(formData);
   
-      fetch('http://localhost:5000/api/contact', {
+      fetch('https://hitaishihealthcare.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

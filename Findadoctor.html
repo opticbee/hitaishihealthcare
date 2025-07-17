@@ -229,7 +229,7 @@
         <h2 style="text-align: center; color: #4a148c; margin-bottom: 25px;">Search for Nose Specialist</h2>
         <div style="display: flex; flex-direction: column; gap: 18px;">
 
-                <form action="http://localhost:5000/api/finddoctor" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <form action="https://hitaishihealthcare.com/api/finddoctor" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
             <div style="position: relative;">
                 <label for="name" style="display: block; margin-bottom: 6px; color: #333;">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 12px; border: 1px solid #4a148c; border-radius: 6px; font-size: 16px;">
@@ -299,7 +299,7 @@ async function searchDoctors(event) {
 
     // Send data to backend (example with fetch)
     try {
-        const response = await fetch('http://localhost:5000/api/finddoctor', {
+        const response = await fetch('https://hitaishihealthcare.com/api/finddoctor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

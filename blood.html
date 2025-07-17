@@ -441,12 +441,28 @@
             </script>
         </div>
   
-      <!-- Donor List -->
-      <div id="donorsContent" style="display: none;">
-        <div id="donorCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
-          <!-- Donor cards injected via JS -->
+        <!-- Donor List -->
+        <style>
+        #donorCardsContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 per row if space allows */
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            #donorCardsContainer {
+            grid-template-columns: 1fr; /* 1 per row on mobile */
+            }
+        }
+        </style>
+
+        <div id="donorsContent" style="display: none;">
+        <div id="donorCardsContainer">
+            <!-- Donor cards injected via JS -->
         </div>
-      </div>
+        </div>
+
     </div>
   </section>
   
@@ -477,7 +493,7 @@
         location: document.getElementById('locationInput').value,
         contactNumber: document.getElementById('contactNumber').value
       };
-      fetch('https://hitashihealthcare.com/api/register', {
+      fetch('https://hitaishihealthcare.com/api/register', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData)
       })
       .then(res => res.json())
@@ -489,7 +505,7 @@
   
     async function fetchDonors() {
       try {
-        const res = await fetch('http://localhost:5000/api/donors');
+        const res = await fetch('https://hitaishihealthcare.com/api/donors');
         const donors = await res.json();
         const container = document.getElementById('donorCardsContainer');
         container.innerHTML = '';

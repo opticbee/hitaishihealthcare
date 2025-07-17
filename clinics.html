@@ -261,7 +261,7 @@
         const clinicContainer = document.getElementById("clinicCards");
 
         try {
-            const res = await fetch('http://localhost:5000/api/clinics');
+            const res = await fetch('https://hitaishihealthcare.com/api/clinics');
             if (!res.ok) throw new Error("API request failed");
             const data = await res.json(); // ✅ Only one .json() call
 

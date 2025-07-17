@@ -744,14 +744,14 @@
   }
 
   async function loadAppointments() {
-    const res = await fetch(`http://localhost:5000/api/appointments/${uid}`);
+    const res = await fetch(`https://hitaishihealthcare.com/api/appointments/${uid}`);
     const data = await res.json();
     const container = document.getElementById("appointmentList");
     container.innerHTML = data.map(app => `<p><strong>${app.patient_name}</strong> - ${app.date} @ ${app.time}</p>`).join('');
   }
 
   async function loadHistory() {
-    const res = await fetch(`http://localhost:5000/api/history/${uid}`);
+    const res = await fetch(`https://hitaishihealthcare.com/api/history/${uid}`);
     const data = await res.json();
     const container = document.getElementById("historyContent");
     container.innerHTML = data.map(h => `<p><strong>${h.patient_name}</strong> - ${h.date} - ${h.disease} - ${h.treatment}</p>`).join('');
@@ -772,7 +772,7 @@
     e.preventDefault();
     const formData = {};
     new FormData(this).forEach((value, key) => { formData[key] = value; });
-    const res = await fetch(`http://localhost:5000/api/updatedoctors/${uid}`, {
+    const res = await fetch(`https://hitaishihealthcare.com/api/updatedoctors/${uid}`, {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)

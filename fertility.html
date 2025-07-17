@@ -477,7 +477,7 @@
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('http://localhost:5000/api/submit_fertility', {
+      const response = await fetch('https://hitaishihealthcare.com/api/submit_fertility', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -626,7 +626,7 @@
             };
 
             try {
-            const response = await fetch('http://localhost:5000/api/appointments', {
+            const response = await fetch('https://hitaishihealthcare.com/api/appointments', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -650,7 +650,7 @@
 
             async function loadDoctors() {
             try {
-                const response = await fetch('http://localhost:5000/api/specialists');
+                const response = await fetch('https://hitaishihealthcare.com/api/specialists');
                 if (!response.ok) throw new Error('Failed to load doctors');
 
                 doctors = await response.json();

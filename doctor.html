@@ -219,7 +219,7 @@
     <!-- Registraion form -->
     <div style="font-family: Arial, sans-serif; margin: 0; padding: 20px;background: url('https://img.freepik.com/free-photo/abstract-design-background-smooth-flowing-lines_1048-14640.jpg?semt=ais_country_boost&w=740') no-repeat center center / cover;">
         <!-- <h2 style="text-align: center; color: #333;">Doctor Registration Form</h2> -->
-        <form id="doctorRegistrationForm" action="http://localhost:5000/api/doctors" method="POST"  style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <form id="doctorRegistrationForm" action="https://hitaishihealthcare.com/api/doctors" method="POST"  style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
             <h2 style="text-align: center; color: blue;">Doctor Registration Form</h2><br>
             <h3>Personal Information</h3>
             <div style="display: flex; gap: 30px;">
@@ -363,7 +363,7 @@
       
           const data = Object.fromEntries(formData.entries());
       
-          const res = await fetch('http://localhost:5000/api/doctors', {
+          const res = await fetch('https://hitaishihealthcare.com/api/doctors', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
