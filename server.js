@@ -59,10 +59,21 @@ app.use("/api", hr_packagesRoutes);
 app.use("/api", packagesRoutes);
 app.use("/api", patientloginRoutes);
 
-// Static HTML Page
-app.get("/bookappointments", (req, res) => {
-  res.sendFile(path.join(__dirname, "bookappointments.html"));
-});
+
+// app.use(express.static(__dirname));
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
+
+// app.get('/payment', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'payment.html'));
+// });
+// app.get('/blood', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'blood.html'));
+// });
+// app.get("/bookappointments", (req, res) => {
+//   res.sendFile(path.join(__dirname, "bookappointments.html"));
+// });
 
 // Start server
 const PORT = process.env.PORT || 5000;

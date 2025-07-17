@@ -1482,7 +1482,7 @@
     <div style="font-family: Arial, sans-serif; text-align: center;">
 
         <!-- Search Section -->
-        <div style="width: 80%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+        <!-- <div style="width: 80%; margin: 20px auto; padding: 20px; background: #f8f9fa; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
             <h2 style="color: #b71c33;">Find Nearby Clinics</h2>
             
             <input type="text" id="city" placeholder="Enter City" style="padding: 10px; width: 20%; margin: 5px; border: 1px solid #ccc; border-radius: 5px;">
@@ -1492,7 +1492,7 @@
             <button onclick="searchClinics()" style="padding: 10px 20px; margin-top: 10px; background: #b71c33; color: white; border: none; border-radius: 5px; cursor: pointer;">
                 Search
             </button>
-        </div>
+        </div> -->
     
         <!-- Clinics Section (Hidden Initially) -->
         <div id="clinicSection" style="display: none; margin-top: 20px;">
@@ -1537,8 +1537,8 @@
         </script>
     
     </div>
-
-<section class="discover-problem-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; box-sizing: border-box;">
+<!-- find doctors near you -->
+<section class="discover-problem-area" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; box-sizing: border-box;">
 
   <!-- Card 1 -->
   <a href="/consult?utm_source=corecard&utm_medium=referral&utm_campaign=practohomepage" class="card1" style="display: block; width: 100%; max-width: 300px; text-align: center; border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #fff; text-decoration: none; color: inherit; flex-shrink: 0;">
@@ -1563,91 +1563,276 @@
 
 </section>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-<div style="font-family: Arial, sans-serif; text-align: center; background-color: #fff; margin: 0 auto; padding: 0; width: 80%;">
+    body {
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #004080;
+    }
+
+    .test-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .test-card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+    }
+
+    .test-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .test-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .test-info {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .test-price {
+      color: #e60000;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .test-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .test-icons span {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .test-icons img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .book-btn {
+      margin-top: auto;
+      background-color: #004080;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .book-btn:hover {
+      background-color: #0059b3;
+    }
+
+    @media (max-width: 768px) {
+      .test-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .test-card {
+        width: 90%;
+      }
+    }
+  </style>
+  <h2>Popular Tests</h2>
+
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-name">PCOD Profile</div>
+      <div class="test-info">Includes: 9 Test Parameter(s)</div>
+      <div class="test-icons">
+        <img src="images/thyroid.png" alt="blood">
+        <span>Sample: Blood</span>
+      </div>
+      <div class="test-icons">
+        <img src="https://img.icons8.com/ios/50/report-card.png" alt="report">
+        <span>Reports in 6 hours</span>
+      </div>
+      <div class="test-price">₹6520/-</div>
+      <a href="payment.html?test=PCOD%20Profile&price=6520" style="text-align: center; text-decoration: none; display: inline-block;" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="test-card">
+      <div class="test-name">Arthritis Profile</div>
+      <div class="test-info">Includes: 13 Test Parameter(s)</div>
+      <div class="test-icons">
+        <img src="images/artherisis.png" alt="blood">
+        <span>Sample: Blood</span>
+      </div>
+      <div class="test-icons">
+        <img src="https://img.icons8.com/ios/50/report-card.png" alt="report">
+        <span>Reports in 6 hours</span>
+      </div>
+      <div class="test-price">₹9020/-</div>
+      <a href="payment.html?test=Arthritis%20Profile&price=9020" style="text-align: center; text-decoration: none; display: inline-block;" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="test-card">
+      <div class="test-name">Anti-Aging/Nutrition Panel</div>
+      <div class="test-info">Includes: 6 Test Parameter(s)</div>
+      <div class="test-icons">
+        <img src="images/anti-aging.png" alt="blood">
+        <span>Sample: Blood</span>
+      </div>
+      <div class="test-icons">
+        <img src="https://img.icons8.com/ios/50/report-card.png" alt="report">
+        <span>Reports in 6 hours</span>
+      </div>
+      <div class="test-price">₹5550/-</div>
+      <a href="payment.html?test=Anti-Aging/Nutrition%20Panel&price=5550" style="text-align: center; text-decoration: none; display: inline-block;" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="test-card">
+      <div class="test-name">Anaemia Profile</div>
+      <div class="test-info">Includes: 7 Test Parameter(s)</div>
+      <div class="test-icons">
+        <img src="images/anemia.png" alt="blood">
+        <span>Sample: Blood</span>
+      </div>
+      <div class="test-icons">
+        <img src="https://img.icons8.com/ios/50/report-card.png" alt="report">
+        <span>Reports in 6 hours</span>
+      </div>
+      <div class="test-price">₹5420/-</div>
+      <a href="payment.html?test=Anaemia%20Profile&price=5420" style="text-align: center; text-decoration: none; display: inline-block;" class="book-btn">Book Now</a>
+    </div>
+
+    <div class="test-card">
+      <div class="test-name">Obesity Profile</div>
+      <div class="test-info">Includes: 11 Test Parameter(s)</div>
+      <div class="test-icons">
+        <img src="images/obesity_clinic.png" alt="blood">
+        <span>Sample: Blood</span>
+      </div>
+      <div class="test-icons">
+        <img src="https://img.icons8.com/ios/50/report-card.png" alt="report">
+        <span>Reports in 6 hours</span>
+      </div>
+      <div class="test-price">₹13220/-</div>
+      <a href="payment.html?test=Obesity%20Profile&price=13220" style="text-align: center; text-decoration: none; display: inline-block;" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+<!-- Book Lab Tests -->
+<div style="font-family: Arial, sans-serif; text-align: center; background-color: #fff; margin: 30px auto; padding: 0; width: 80%;">
     <h1 style="color: #00A6A6; font-size: 28px; padding-top: 30px; margin-bottom: 20px;">Book Lab Tests Online</h1>
 
     <div style="display: grid; grid-template-columns: repeat(10, 1fr); gap: 10px; width: 100%; margin: 0 auto; padding-bottom: 20px;">
         <!-- Row 1 -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Diabetes')">
             <img src="images/diabets.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Diabetes</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Pregnancy')">
             <img src="images/pregnancy.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Pregnancy</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Thyroid')">
             <img src="images/thyroid.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Thyroid</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Liver')">
             <img src="images/liver.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Liver</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('COVID')">
             <img src="images/covid.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">COVID</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Prostate')">
             <img src="images/prostate.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Prostate</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Fertility')">
             <img src="images/fertility.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Fertility</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Bone')">
             <img src="images/bone.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Bone</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Gastro')">
             <img src="images/gastro.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Gastro</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Cervix')">
             <img src="images/cervix.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Cervix</span>
         </div>
         
         <!-- Row 2 -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Heart')">
             <img src="images/heart.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Heart</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Kidney')">
             <img src="images/kidney.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Kidney</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Cancer')">
             <img src="images/cancer.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Cancer</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Breast')">
             <img src="images/breast.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Breast</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Vitamins')">
             <img src="images/vitamins.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Vitamins</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Tuberculosis')">
             <img src="images/tb.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Tuberculosis</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Anemia')">
             <img src="images/anemia.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Anemia</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Lungs')">
             <img src="images/lungs.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Lungs</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Fever')">
             <img src="images/fever.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Fever</span>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; cursor: pointer;" onclick="filterTests('Allergy')">
             <img src="images/allergy.png" style="width: 60px; height: 60px; border-radius: 50%; background-color: #fff; padding: 10px;">
             <span style="font-size: 12px; margin-top: 5px;">Allergy</span>
         </div>
@@ -1691,77 +1876,6 @@
         }
     </style>
 </div>
-
-<!-- Our Services -->
-<div style="margin: 0 auto; width: 80%;">
-
-  <div style="text-align: center; padding: 40px 15px; box-sizing: border-box;">
-    <h2 style="color: #3E2E92; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Our Services</h2>
-
-    <!-- Service Category Buttons -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">
-      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Laboratory Services</button>
-      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Radiology Services</button>
-      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Advanced Radiology</button>
-    </div>
-
-    <!-- Scrollable Cards -->
-    <div class="services-cards-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 15px; padding: 10px; box-sizing: border-box; scroll-behavior: smooth;">
-      
-      <!-- Card Template -->
-      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
-        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">CLINICAL PATHOLOGY</h3>
-        <p style="font-size: 14px; color: #333;">Clinical Pathology is a highly specialized branch in health care. Its realm is vast and variegated. Also...</p>
-        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
-      </div>
-
-      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
-        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">MICROBIOLOGY</h3>
-        <p style="font-size: 14px; color: #333;">In the unseen landscape teeming beneath the microscope tip and beyond the naked eye lies the...</p>
-        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
-      </div>
-
-      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
-        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">HAEMATOLOGY</h3>
-        <p style="font-size: 14px; color: #333;">The domain of Hematology is a pivotal field in medical science dedicated to the comprehensive...</p>
-        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
-      </div>
-
-      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
-        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">SEROLOGY</h3>
-        <p style="font-size: 14px; color: #333;">Serology, a cornerstone of diagnostic medicine, meticulously examines antibodies in bodily fluids...</p>
-        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
-      </div>
-
-    </div>
-
-    <!-- View More -->
-    <div style="text-align: right; margin-top: 20px; padding-right: 10px;">
-      <a href="#" style="text-decoration: none; color: #0097A7; font-weight: bold; font-size: 16px;">VIEW MORE</a>
-    </div>
-  </div>
-</div>
-
-<!-- Responsive CSS -->
-<style>
-  @media (max-width: 768px) {
-    .services-cards-container {
-      gap: 10px !important;
-      padding: 0 5px !important;
-    }
-
-    .services-cards-container > div {
-      width: 220px !important;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .services-cards-container {
-      justify-content: center;
-    }
-  }
-</style>
-
 
 <!-- Search a Test -->
 <div style="width: 80%; margin: auto;">
@@ -1852,11 +1966,11 @@
 
   <!-- Test Grid -->
   <div id="test-prices-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 10px 15px;">
-    <!-- Test items go here -->
+    <!-- Test items will be rendered here by JavaScript -->
   </div>
 
   <!-- Modal Overlay -->
-  <div id="booking-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; display: flex;">
+  <div id="booking-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
     <div id="booking-modal" style="position: relative; background: #fff; width: 400px; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); max-height: 90vh; overflow-y: auto;">
       <h2 style="text-align: center;">Book Test</h2>
 
@@ -1901,45 +2015,224 @@
     </div>
   </div>
 
-    <script>
-    // Sample data for tests
-            
+  <script>
+    // Function to open the booking form with the selected test name
+    function openBookingForm(testName) {
+        document.getElementById("test-name").value = testName;
+        document.getElementById("booking-modal-overlay").style.display = "flex";
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById("booking-form").reset();
+        document.getElementById("booking-modal-overlay").style.display = "none";
+    }
+
+    // Sample data for tests with categories
+    const tests = [
+        { name: "FASTING PLASMA GLUCOSE", price: 120, rating: 4.5, category: "Diabetes" },
+        { name: "COMPLETE BLOOD PICTURE (CBP)", price: 390, rating: 4.2, category: "General" },
+        { name: "CREATININE", price: 260, rating: 4.0, category: "Kidney" },
+        { name: "POST LUNCH GLUCOSE", price: 120, rating: 3.8, category: "Diabetes" },
+        { name: "GLYCATED HEMOGLOBIN (HbA1c)", price: 580, rating: 4.7, category: "Diabetes" },
+        { name: "THYROID PROFILE", price: 650, rating: 4.6, category: "Thyroid" },
+        { name: "LIPID PROFILE", price: 750, rating: 4.4, category: "Heart" },
+        { name: "COMPLETE URINE EXAMINATION (CUE)", price: 150, rating: 3.9, category: "Kidney" },
+        { name: "LIVER FUNCTION TEST (LFT-A)", price: 450, rating: 4.1, category: "Liver" },
+        { name: "ELECTROCARDIOGRAM (ECG)", price: 250, rating: 4.3, category: "Heart" },
+        { name: "THYROID STIMULATING HORMONE (TSH)- Ultrasensitive", price: 250, rating: 4.0, category: "Thyroid" },
+        { name: "ERYTHROCYTE SEDIMENTATION RATE (ESR)", price: 290, rating: 3.7, category: "General" },
+        { name: "UREA", price: 150, rating: 3.5, category: "Kidney" },
+        { name: "X-CHEST PA VIEW", price: 250, rating: 4.2, category: "Lungs" },
+        { name: "URIC ACID", price: 180, rating: 3.8, category: "Kidney" },
+        { name: "ULTRASOUND-ABDOMEN AND PELVIS", price: 1200, rating: 4.8, category: "Liver" },
+        { name: "RANDOM PLASMA GLUCOSE", price: 120, rating: 3.9, category: "Diabetes" },
+        { name: "C-REACTIVE PROTEIN (CRP)", price: 250, rating: 4.1, category: "General" },
+        { name: "VITAMIN B12", price: 250, rating: 4.0, category: "Vitamins" },
+        { name: "ELECTROLYTES", price: 250, rating: 3.6, category: "General" },
+        { name: "CALCIUM", price: 250, rating: 3.7, category: "Bone" },
+        { name: "PREGNANCY TEST (URINE)", price: 200, rating: 4.0, category: "Pregnancy" },
+        { name: "BETA HCG (QUANTITATIVE)", price: 400, rating: 4.2, category: "Pregnancy" },
+        { name: "PROSTATE SPECIFIC ANTIGEN (PSA)", price: 600, rating: 4.1, category: "Prostate" },
+        { name: "SEMEN ANALYSIS", price: 500, rating: 4.0, category: "Fertility" },
+        { name: "MAMMOGRAPHY", price: 1500, rating: 4.5, category: "Breast" },
+        { name: "TUBERCULOSIS TEST (TB GOLD)", price: 1200, rating: 4.3, category: "Tuberculosis" },
+        { name: "COMPLETE HEMOGRAM", price: 300, rating: 4.1, category: "Anemia" },
+        { name: "ALLERGY PANEL TEST", price: 2500, rating: 4.4, category: "Allergy" },
+        { name: "FEBRILE ANTIBODY TEST", price: 350, rating: 3.9, category: "Fever" }
+    ];
+
+    // Function to filter tests by category
+    function filterTests(category) {
+        const filteredTests = tests.filter(test => test.category === category);
+        renderTests(filteredTests);
+        document.getElementById("search-box").value = ""; // Clear search box
+        document.getElementById("sort-by").value = "popular"; // Reset sort
+    }
+
+    // Function to render test items
+    function renderTests(testList) {
+        const grid = document.getElementById("test-prices-grid");
+        grid.innerHTML = ""; // Clear the grid
+
+        testList.forEach(test => {
+            const item = document.createElement("div");
+            item.className = "test-price-item";
+            item.innerHTML = `
+                <div>${test.name}</div>
+                <div class="price">₹ ${test.price}</div>
+                <a href="#" onclick="openBookingForm('${test.name}')">
+                    BOOK <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="cart">
+                </a>
+            `;
+            grid.appendChild(item);
+        });
+    }
+
     // Search functionality
-            const searchBox = document.getElementById("search-box");
-            searchBox.addEventListener("input", () => {
-                const searchTerm = searchBox.value.toLowerCase();
-                const filteredTests = tests.filter(test => 
-                    test.name.toLowerCase().includes(searchTerm)
-                );
-                renderTests(filteredTests);
-            });
-    
-            // Sort functionality
-            const sortBy = document.getElementById("sort-by");
-            sortBy.addEventListener("change", () => {
-                const sortValue = sortBy.value;
-                let sortedTests = [...tests];
-    
-                switch (sortValue) {
-                    case "price-low-to-high":
-                        sortedTests.sort((a, b) => a.price - b.price);
-                        break;
-                    case "price-high-to-low":
-                        sortedTests.sort((a, b) => b.price - a.price);
-                        break;
-                    case "ratings":
-                        sortedTests.sort((a, b) => b.rating - a.rating);
-                        break;
-                    case "popular":
-                    default:
-                        // Default sorting (by popularity or original order)
-                        break;
-                }
-    
-                renderTests(sortedTests);
-            });
-    </script>
+    const searchBox = document.getElementById("search-box");
+    searchBox.addEventListener("input", () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        const filteredTests = tests.filter(test => 
+            test.name.toLowerCase().includes(searchTerm)
+        );
+        renderTests(filteredTests);
+    });
+
+    // Sort functionality
+    const sortBy = document.getElementById("sort-by");
+    sortBy.addEventListener("change", () => {
+        const sortValue = sortBy.value;
+        let sortedTests = [...tests]; // Create a copy of the original array
+
+        switch (sortValue) {
+            case "price-low-to-high":
+                sortedTests.sort((a, b) => a.price - b.price);
+                break;
+            case "price-high-to-low":
+                sortedTests.sort((a, b) => b.price - a.price);
+                break;
+            case "ratings":
+                sortedTests.sort((a, b) => b.rating - a.rating);
+                break;
+            case "popular":
+            default:
+                // Default sorting (by popularity or original order)
+                break;
+        }
+
+        renderTests(sortedTests);
+    });
+
+    function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let name = document.getElementById('name').value.trim();
+        let phone = document.getElementById('phone').value.trim();
+        let email = document.getElementById('email').value.trim();
+
+        // Validate required fields
+        if (name === '' || phone === '' || email === '') {
+            alert('Please fill in all required fields (Name, Phone, Email).');
+            return;
+        }
+
+        const formData = {
+            testName: document.getElementById('test-name').value,
+            name: name,
+            phone: phone,
+            email: email,
+            floor: document.getElementById('floor').value.trim(),
+            houseNumber: document.getElementById('house-number').value.trim(),
+            area: document.getElementById('area').value.trim(),
+            mandal: document.getElementById('mandal').value.trim(),
+            district: document.getElementById('district').value.trim(),
+            pincode: document.getElementById('pincode').value.trim()
+        };
+
+        console.log('Form Data:', formData);
+
+        alert('Booking confirmed!');
+        document.getElementById("booking-form").reset();
+        closeModal();
+    }
+
+    // Initial render - show all tests
+    renderTests(tests);
+  </script>
 </div>
+
+
+
+<!-- Our Services -->
+<div style="margin: 0 auto; width: 80%;">
+
+  <div style="text-align: center; padding: 40px 15px; box-sizing: border-box;">
+    <h2 style="color: #3E2E92; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Our Services</h2>
+
+    <!-- Service Category Buttons -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">
+      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Laboratory Services</button>
+      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Radiology Services</button>
+      <button style="border: 2px solid #000; background: white; padding: 8px 16px; border-radius: 30px; font-size: 14px; cursor: pointer;">Advanced Radiology</button>
+    </div>
+
+    <!-- Scrollable Cards -->
+    <div class="services-cards-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 15px; padding: 10px; box-sizing: border-box; scroll-behavior: smooth;">
+      
+      <!-- Card Template -->
+      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">CLINICAL PATHOLOGY</h3>
+        <p style="font-size: 14px; color: #333;">Clinical Pathology is a highly specialized branch in health care. Its realm is vast and variegated. Also...</p>
+        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+      </div>
+
+      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">MICROBIOLOGY</h3>
+        <p style="font-size: 14px; color: #333;">In the unseen landscape teeming beneath the microscope tip and beyond the naked eye lies the...</p>
+        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+      </div>
+
+      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">HAEMATOLOGY</h3>
+        <p style="font-size: 14px; color: #333;">The domain of Hematology is a pivotal field in medical science dedicated to the comprehensive...</p>
+        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+      </div>
+
+      <div style="flex: 0 0 auto; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; width: 250px; text-align: left;">
+        <h3 style="color: #3E2E92; font-size: 18px; font-weight: bold;">SEROLOGY</h3>
+        <p style="font-size: 14px; color: #333;">Serology, a cornerstone of diagnostic medicine, meticulously examines antibodies in bodily fluids...</p>
+        <button style="margin-top: 10px; padding: 8px 15px; border: 2px solid #0097A7; background: white; color: #0097A7; border-radius: 20px; cursor: pointer; font-size: 14px;">Know more ></button>
+      </div>
+
+    </div>
+
+    <!-- View More -->
+    <div style="text-align: right; margin-top: 20px; padding-right: 10px;">
+      <a href="#" style="text-decoration: none; color: #0097A7; font-weight: bold; font-size: 16px;">VIEW MORE</a>
+    </div>
+  </div>
+</div>
+<!-- Responsive CSS -->
+<style>
+  @media (max-width: 768px) {
+    .services-cards-container {
+      gap: 10px !important;
+      padding: 0 5px !important;
+    }
+
+    .services-cards-container > div {
+      width: 220px !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .services-cards-container {
+      justify-content: center;
+    }
+  }
+</style>
+
 
 <!-- highlight section -->
 <div style="background: #0097A7; color: white; text-align: center; padding: 40px 20px; margin-top: 30px;">
@@ -2405,7 +2698,7 @@
 
 <!-- test booking online forms and all -->
 
-
+<!-- 
  <script>
     // Function to open the booking form with the selected test name
     function openBookingForm(testName) {
@@ -2499,7 +2792,7 @@
         document.getElementById("booking-form").reset();
         closeModal();
     }
-</script>
+</script> -->
 
     
 </body>

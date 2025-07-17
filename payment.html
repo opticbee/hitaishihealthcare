@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f6fa;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 25px;
+    }
+    .test-info {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    .amount {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+      margin-bottom: 30px;
+    }
+    .pay-btn {
+      background-color: #00bcd4;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+    .pay-btn:hover {
+      background-color: #0097a7;
+    }
+    .back-btn {
+      background-color: #f44336;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+    .back-btn:hover {
+      background-color: #d32f2f;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+      .test-info {
+        font-size: 16px;
+      }
+      .amount {
+        font-size: 20px;
+      }
+      .pay-btn, .back-btn {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book Test Payment</h2>
+    <div class="test-info"><strong>Test Name:</strong> <span id="test-name">Loading...</span></div>
+    <div class="amount">Amount: ₹<span id="test-price">0</span></div>
+    <button class="pay-btn" onclick="payNow()">Pay Now</button>
+    <button class="back-btn" onclick="goBack()">Back to Tests</button>
+  </div>
+
+  <script>
+    // Get test name and price from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const testName = urlParams.get("test") || "Selected Test";
+    const testPrice = parseInt(urlParams.get("price") || "0");
+
+    // Display on page
+    document.getElementById("test-name").textContent = testName;
+    document.getElementById("test-price").textContent = testPrice;
+
+    function payNow() {
+      const options = {
+        key: "YOUR_KEY_ID_HERE", // ✅ Replace with your Razorpay Key
+        amount: testPrice * 100, // amount in paise
+        currency: "INR",
+        name: "Hitaishi HealthCare",
+        description: testName,
+        image: "https://yourdomain.com/logo.png", // optional logo
+        handler: function (response) {
+          alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+          console.log("Payment successful", response);
+          // Optional: redirect to success page or save in DB
+        },
+        prefill: {
+          name: "",
+          email: "",
+          contact: ""
+        },
+        theme: {
+          color: "#00bcd4"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
+    function goBack() {
+      window.location.href = "index.html"; // Change this if your main page has different name
+    }
+  </script>
+</body>
+</html>

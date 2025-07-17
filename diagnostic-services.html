@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnostic Tests</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f2f6fa;
+    }
+    h2 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 280px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .sub-tests {
+      display: none;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .sub-test-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 220px;
+      text-align: center;
+    }
+    .book-btn {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .book-btn:hover {
+      background-color: #0097a7;
+    }
+    @media screen and (max-width: 600px) {
+      .card, .sub-test-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>🧪 Diagnostic Test Categories</h2>
+  <div class="container" id="main-cards">
+    <div class="card" onclick="toggleSubTests('cbc')">Complete Blood Count (CBC)</div>
+    <div class="card" onclick="toggleSubTests('pathology')">Laboratory / Pathology Tests</div>
+    <div class="card" onclick="toggleSubTests('microbiology')">🔬 Microbiology & Culture Tests</div>
+    <div class="card" onclick="toggleSubTests('radiology')">📷 Radiology & Imaging Tests</div>
+    <div class="card" onclick="toggleSubTests('cardiology')">❤️ Cardiology Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('neurology')">🧠 Neurology Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('ophthalmology')">👁️‍🗨️ Ophthalmology Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('ent')">👂 ENT Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('dental')">🦷 Dental Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('fertility')">👶 Prenatal & Fertility Testing</div>
+    <div class="card" onclick="toggleSubTests('genetic')">🧬 Genetic & Specialized Diagnostics</div>
+    <div class="card" onclick="toggleSubTests('packages')">💉 Health Packages</div>
+  </div>
+
+  <!-- CBC -->
+  <div class="container sub-tests" id="cbc">
+    <div class="sub-test-card">
+      <strong>Complete Blood Count (CBC)</strong>
+      <p>₹ 300</p>
+      <button class="book-btn" onclick="bookTest('Complete Blood Count (CBC)', 300)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>Hemoglobin (Hb)</strong>
+      <p>₹ 100</p>
+      <button class="book-btn" onclick="bookTest('Hemoglobin (Hb)', 100)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>White Blood Cell Count (WBC)</strong>
+      <p>₹ 150</p>
+      <button class="book-btn" onclick="bookTest('White Blood Cell Count (WBC)', 150)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>Platelet Count</strong>
+      <p>₹ 120</p>
+      <button class="book-btn" onclick="bookTest('Platelet Count', 120)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>Red Blood Cell Count (RBC)</strong>
+      <p>₹ 130</p>
+      <button class="book-btn" onclick="bookTest('Red Blood Cell Count (RBC)', 130)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>Mean Corpuscular Volume (MCV)</strong>
+      <p>₹ 110</p>
+      <button class="book-btn" onclick="bookTest('Mean Corpuscular Volume (MCV)', 110)">Book Now</button>
+    </div>
+    <div class="sub-test-card">
+      <strong>Mean Corpuscular Hemoglobin (MCH)</strong>
+      <p>₹ 120</p>
+      <button class="book-btn" onclick="bookTest('Mean Corpuscular Hemoglobin (MCH)', 120)">Book Now</button>
+    </div>
+  </div>
+
+  <!-- Pathology -->
+  <div class="container sub-tests" id="pathology">
+    <div class="sub-test-card"><strong>Blood Sugar (F/PP)</strong><p>₹ 150</p><button class="book-btn" onclick="bookTest('Blood Sugar (F/PP)', 150)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Liver Function Test (LFT)</strong><p>₹ 800</p><button class="book-btn" onclick="bookTest('Liver Function Test (LFT)', 800)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Kidney Function Test (KFT)</strong><p>₹ 850</p><button class="book-btn" onclick="bookTest('Kidney Function Test (KFT)', 850)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Thyroid Profile (T3, T4, TSH)</strong><p>₹ 650</p><button class="book-btn" onclick="bookTest('Thyroid Profile (T3, T4, TSH)', 650)">Book Now</button></div>
+  </div>
+
+  <!-- Microbiology -->
+  <div class="container sub-tests" id="microbiology">
+    <div class="sub-test-card"><strong>Blood Culture</strong><p>₹ 600</p><button class="book-btn" onclick="bookTest('Blood Culture', 600)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Urine Culture</strong><p>₹ 500</p><button class="book-btn" onclick="bookTest('Urine Culture', 500)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Sputum Culture</strong><p>₹ 550</p><button class="book-btn" onclick="bookTest('Sputum Culture', 550)">Book Now</button></div>
+  </div>
+
+  <!-- Radiology -->
+  <div class="container sub-tests" id="radiology">
+    <div class="sub-test-card"><strong>X-Ray (Chest)</strong><p>₹ 400</p><button class="book-btn" onclick="bookTest('X-Ray (Chest)', 400)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Ultrasound (Abdomen)</strong><p>₹ 1200</p><button class="book-btn" onclick="bookTest('Ultrasound (Abdomen)', 1200)">Book Now</button></div>
+    <div class="sub-test-card"><strong>CT Scan (Head)</strong><p>₹ 3000</p><button class="book-btn" onclick="bookTest('CT Scan (Head)', 3000)">Book Now</button></div>
+  </div>
+
+  <!-- Cardiology -->
+  <div class="container sub-tests" id="cardiology">
+    <div class="sub-test-card"><strong>ECG</strong><p>₹ 360</p><button class="book-btn" onclick="bookTest('ECG', 360)">Book Now</button></div>
+    <div class="sub-test-card"><strong>2D Echo with Color Doppler</strong><p>₹ 2000</p><button class="book-btn" onclick="bookTest('2D Echo with Color Doppler', 2000)">Book Now</button></div>
+    <div class="sub-test-card"><strong>TMT - Cardiac Stress Test</strong><p>₹ 2000</p><button class="book-btn" onclick="bookTest('TMT - Cardiac Stress Test', 2000)">Book Now</button></div>
+  </div>
+
+  <!-- Neurology -->
+  <div class="container sub-tests" id="neurology">
+    <div class="sub-test-card"><strong>EEG</strong><p>₹ 2000</p><button class="book-btn" onclick="bookTest('EEG', 2000)">Book Now</button></div>
+    <div class="sub-test-card"><strong>NCV</strong><p>₹ 3000</p><button class="book-btn" onclick="bookTest('NCV', 3000)">Book Now</button></div>
+  </div>
+
+  <!-- Ophthalmology -->
+  <div class="container sub-tests" id="ophthalmology">
+    <div class="sub-test-card"><strong>Fundus Photography</strong><p>₹ 600</p><button class="book-btn" onclick="bookTest('Fundus Photography', 600)">Book Now</button></div>
+  </div>
+
+  <!-- ENT -->
+  <div class="container sub-tests" id="ent">
+    <div class="sub-test-card"><strong>Pure Tone Audiometry</strong><p>₹ 1000</p><button class="book-btn" onclick="bookTest('Pure Tone Audiometry', 1000)">Book Now</button></div>
+  </div>
+
+  <!-- Dental -->
+  <div class="container sub-tests" id="dental">
+    <div class="sub-test-card"><strong>OPG (Full Mouth X-ray)</strong><p>₹ 800</p><button class="book-btn" onclick="bookTest('OPG (Full Mouth X-ray)', 800)">Book Now</button></div>
+  </div>
+
+  <!-- Fertility -->
+  <div class="container sub-tests" id="fertility">
+    <div class="sub-test-card"><strong>NT Scan</strong><p>₹ 1500</p><button class="book-btn" onclick="bookTest('NT Scan', 1500)">Book Now</button></div>
+  </div>
+
+  <!-- Genetic -->
+  <div class="container sub-tests" id="genetic">
+    <div class="sub-test-card"><strong>BRCA1 / BRCA2</strong><p>₹ 10000</p><button class="book-btn" onclick="bookTest('BRCA1 / BRCA2', 10000)">Book Now</button></div>
+  </div>
+
+  <!-- Packages -->
+  <div class="container sub-tests" id="packages">
+    <div class="sub-test-card"><strong>Full Body Checkup</strong><p>₹ 3500</p><button class="book-btn" onclick="bookTest('Full Body Checkup', 3500)">Book Now</button></div>
+    <div class="sub-test-card"><strong>Heart Health Package</strong><p>₹ 2500</p><button class="book-btn" onclick="bookTest('Heart Health Package', 2500)">Book Now</button></div>
+  </div>
+
+  <script>
+    function toggleSubTests(id) {
+      document.querySelectorAll('.sub-tests').forEach(section => {
+        section.style.display = (section.id === id && section.style.display !== 'flex') ? 'flex' : 'none';
+      });
+    }
+
+    function bookTest(testName, price) {
+      // Redirect to payment page with test details
+      window.location.href = `payment.html?test=${encodeURIComponent(testName)}&price=${price}`;
+    }
+  </script>
+</body>
+</html>
